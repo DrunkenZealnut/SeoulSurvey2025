@@ -349,6 +349,12 @@
             width: 100%;
         }
 
+        .chart-container-xl {
+            position: relative;
+            height: 550px;
+            width: 100%;
+        }
+
         /* Info Box */
         .info-box {
             background: linear-gradient(135deg, var(--primary-light), #fff);
@@ -817,6 +823,7 @@
             .problem-header, .solution-header { flex-direction: column; }
             .chart-container { height: 300px; }
             .chart-container-lg { height: 400px; }
+            .chart-container-xl { height: 450px; }
             .nav-item { padding: 14px 12px; font-size: 12px; }
         }
 
@@ -924,9 +931,13 @@
         <a class="nav-item" onclick="scrollToSection('ranking')">순위 비교</a>
         <a class="nav-item" onclick="scrollToSection('neighbors')">인접구 비교</a>
         <a class="nav-item" onclick="scrollToSection('jobs')">일자리</a>
+        <a class="nav-item" onclick="scrollToSection('transport')">교통</a>
+        <a class="nav-item" onclick="scrollToSection('community')">소속감/동네</a>
+        <a class="nav-item" onclick="scrollToSection('single')">1인가구</a>
         <a class="nav-item" onclick="scrollToSection('education')">교육</a>
         <a class="nav-item" onclick="scrollToSection('leisure')">여가/시간</a>
         <a class="nav-item" onclick="scrollToSection('economy')">소득/경제</a>
+        <a class="nav-item" onclick="scrollToSection('severity')">취약점 맵</a>
         <a class="nav-item" onclick="scrollToSection('problems')">문제 진단</a>
         <a class="nav-item" onclick="scrollToSection('solutions')">정책 제언</a>
         <a class="nav-item" onclick="scrollToSection('strengths')">강점 활용</a>
@@ -953,9 +964,9 @@
                 <div class="kpi-rank rank-warn">13위 / 25구</div>
             </div>
             <div class="kpi-card kpi-bad">
-                <div class="kpi-value">6.83</div>
+                <div class="kpi-value">6.82</div>
                 <div class="kpi-label">지역생활 만족도</div>
-                <div class="kpi-sub">서울 평균 7.12 (-0.29)</div>
+                <div class="kpi-sub">서울 평균 7.12 (-0.30)</div>
                 <div class="kpi-rank rank-bad">18위 / 25구</div>
             </div>
             <div class="kpi-card kpi-good">
@@ -999,12 +1010,12 @@
             <div class="section-icon">&#128293;</div>
             <div>
                 <h2 class="section-title">레이더 차트 - 종합 비교</h2>
-                <p class="section-subtitle">동대문구 vs 서울 평균 vs 동북권 평균 (7개 차원)</p>
+                <p class="section-subtitle">동대문구 vs 서울 평균 (10개 차원)</p>
             </div>
         </div>
 
         <div class="card">
-            <div class="chart-container">
+            <div class="chart-container-xl">
                 <canvas id="radarChart"></canvas>
             </div>
         </div>
@@ -1097,11 +1108,11 @@
                         <tr class="highlight-row">
                             <td>&#9733; 동대문구</td>
                             <td>6.83</td>
-                            <td>6.83</td>
+                            <td>6.82</td>
                             <td>5.87</td>
                             <td>6.16</td>
-                            <td>7.04</td>
-                            <td>6.01</td>
+                            <td>6.50</td>
+                            <td>4.41</td>
                         </tr>
                         <tr>
                             <td>성동구</td>
@@ -1146,7 +1157,7 @@
                             <td>6.39</td>
                             <td>6.58</td>
                             <td>7.04</td>
-                            <td>6.18</td>
+                            <td>5.39</td>
                         </tr>
                     </tbody>
                 </table>
@@ -1172,7 +1183,87 @@
 
         <div class="info-box" style="margin-top: 20px;">
             <p>
-                <strong>핵심 발견:</strong> 동대문구 근로시간 만족도(4.94)는 서울 평균(5.76) 대비 <strong style="color:var(--accent);">-0.82점(-14.2%)</strong>으로, 전 항목 중 서울 대비 가장 큰 격차를 보입니다. 전통시장/도소매업 중심의 장시간 근로가 주된 원인으로 분석됩니다.
+                <strong>핵심 발견:</strong> 동대문구 일자리 충분도(4.41)는 서울 평균(5.39) 대비 <strong style="color:var(--accent);">-0.98점(-18.2%)</strong>으로, 서울시 25개 구 중 최하위권입니다. 근로시간 만족도(4.94)도 서울 평균(5.76) 대비 <strong style="color:var(--accent);">-0.82점(-14.2%)</strong>의 심각한 격차를 보입니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section: 교통 상세 -->
+    <section id="transport" class="section reveal">
+        <div class="section-header">
+            <div class="section-icon">&#128652;</div>
+            <div>
+                <h2 class="section-title">교통 만족도 상세</h2>
+                <p class="section-subtitle">동대문구 vs 서울 평균 (5개 교통수단별 비교)</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="chart-container-sm">
+                <canvas id="transportChart"></canvas>
+            </div>
+        </div>
+
+        <div class="info-box" style="margin-top: 20px;">
+            <p>
+                <strong>핵심 발견:</strong> 교통 전 항목에서 서울 평균 이하이며, 특히 <strong style="color:var(--accent);">택시 만족도(5.78 vs 6.48, -0.70점)</strong>의 격차가 가장 크고, <strong style="color:var(--accent);">지하철 만족도(6.88 vs 7.47, -0.59점)</strong>도 심각합니다. 1호선 노후화와 심야 교통 취약이 주요 원인입니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section: 지역사회 소속감 & 동네 만족도 -->
+    <section id="community" class="section reveal">
+        <div class="section-header">
+            <div class="section-icon">&#129309;</div>
+            <div>
+                <h2 class="section-title">지역사회 소속감 & 동네 만족도</h2>
+                <p class="section-subtitle">동대문구 vs 서울 평균 (소속감 5항목 + 동네만족 5항목)</p>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">지역사회 소속감</div>
+                <div class="card-desc">주민 간 유대감 및 공동체 의식 (10점 만점)</div>
+                <div class="chart-container-sm">
+                    <canvas id="belongingChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">동네 만족도</div>
+                <div class="card-desc">생활편의 및 안전도 (10점 만점)</div>
+                <div class="chart-container-sm">
+                    <canvas id="neighborhoodChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box" style="margin-top: 20px;">
+            <p>
+                <strong>핵심 발견:</strong> 소속감 종합 3.44 vs 서울 3.90으로 <strong style="color:var(--accent);">-0.46점(-11.8%)</strong> 격차. 특히 <strong style="color:var(--accent);">"어려운 일 서로 도움"(2.78 vs 3.47, -0.69점)</strong>이 최악이며, 공공편의시설 충분도(5.47 vs 6.01, -0.54점)도 심각합니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section: 1인 가구 생활환경 -->
+    <section id="single" class="section reveal">
+        <div class="section-header">
+            <div class="section-icon">&#128100;</div>
+            <div>
+                <h2 class="section-title">1인 가구 생활환경</h2>
+                <p class="section-subtitle">동대문구 vs 서울 평균 (점수 높을수록 불편/어려움)</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="chart-container-sm">
+                <canvas id="singleChart"></canvas>
+            </div>
+        </div>
+
+        <div class="info-box" style="margin-top: 20px;">
+            <p>
+                <strong>핵심 발견:</strong> 동대문구 1인 가구 <strong style="color:var(--accent);">고립감/외로움(4.44)</strong>이 서울 평균(3.94) 대비 <strong style="color:var(--accent);">+0.50점(12.7% 높음)</strong>으로 심각합니다. 주거환경 불안전(3.82 vs 3.53)과 아플 때 대처 어려움(4.40 vs 4.22)도 서울 평균을 상회합니다.
             </p>
         </div>
     </section>
@@ -1257,227 +1348,366 @@
         </div>
     </section>
 
-    <!-- Section 8: 문제점 진단 -->
+    <!-- Section: 취약점 심각도 맵 -->
+    <section id="severity" class="section reveal">
+        <div class="section-header">
+            <div class="section-icon">&#128680;</div>
+            <div>
+                <h2 class="section-title">취약점 심각도 맵</h2>
+                <p class="section-subtitle">서울 평균 대비 격차가 큰 12대 지표 (격차 절대값 기준 내림차순)</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="chart-container-xl">
+                <canvas id="severityChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: 문제점 진단 (8대 핵심 취약점) -->
     <section id="problems" class="section reveal">
         <div class="section-header">
             <div class="section-icon">&#128680;</div>
             <div>
-                <h2 class="section-title">문제점 진단</h2>
-                <p class="section-subtitle">5대 핵심 문제 및 원인 분석</p>
+                <h2 class="section-title">8대 핵심 취약점 진단</h2>
+                <p class="section-subtitle">서울서베이 데이터 기반 동대문구 8대 핵심 취약점 및 원인 분석</p>
             </div>
         </div>
 
-        <!-- 문제 1 -->
+        <!-- 취약점 1 -->
         <div class="problem-card severity-critical">
             <div class="problem-header">
-                <div class="problem-title">문제 1: 주택 만족도 최하위권 (21위/25구)</div>
-                <div class="severity-badge severity-critical">CRITICAL</div>
+                <div class="problem-title">취약점 1: 일자리 충분도 서울 최악 수준</div>
+                <div class="severity-badge severity-critical">CRITICAL (격차 -0.98)</div>
             </div>
             <div class="problem-stat">
-                <div class="problem-stat-value">5.87</div>
+                <div class="problem-stat-value">4.41</div>
                 <div>
-                    <div class="problem-stat-label">동대문구 vs 서울 6.39 (<strong style="color:var(--accent);">-0.52점, -8.1%</strong>)</div>
-                    <div class="problem-stat-label">25개 구 중 21위, 하위 5개 구 포함</div>
+                    <div class="problem-stat-label">동대문구 vs 서울 5.39 (<strong style="color:var(--accent);">-0.98점, -18.2%</strong>)</div>
+                    <div class="problem-stat-label">서울시 25개 구 중 최하위권</div>
                 </div>
             </div>
             <div class="problem-causes">
                 <h4>원인 분석</h4>
                 <ul>
-                    <li>다세대/다가구 주택 밀집 지역으로 노후 주택 비율이 높음</li>
-                    <li>재건축/재개발 사업 지연으로 주거환경 개선이 더딘 상황</li>
-                    <li>주차공간 부족으로 주거 편의성 저하</li>
+                    <li>전통시장(청량리시장, 경동시장) 중심의 도-소매업 편중</li>
+                    <li>대기업/IT기업 등 양질의 일자리 입지가 거의 없음</li>
+                    <li>청년층 유출 가속화 요인</li>
                 </ul>
             </div>
         </div>
 
-        <!-- 문제 2 -->
+        <!-- 취약점 2 -->
         <div class="problem-card severity-critical">
             <div class="problem-header">
-                <div class="problem-title">문제 2: 기반시설 만족도 하위권 (19위/25구)</div>
-                <div class="severity-badge severity-critical">CRITICAL</div>
-            </div>
-            <div class="problem-stat">
-                <div class="problem-stat-value">6.16</div>
-                <div>
-                    <div class="problem-stat-label">동대문구 vs 서울 6.58 (<strong style="color:var(--accent);">-0.42점</strong>)</div>
-                    <div class="problem-stat-label">도로, 공원, 공공시설 등 인프라 노후화</div>
-                </div>
-            </div>
-            <div class="problem-causes">
-                <h4>원인 분석</h4>
-                <ul>
-                    <li>구도심 지역으로 인프라 노후화가 심각</li>
-                    <li>녹지공간 부족 (1인당 공원면적 저조)</li>
-                    <li>도시재생 사업 진행 중이나 주민 체감도가 낮은 상태</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- 문제 3 -->
-        <div class="problem-card severity-high">
-            <div class="problem-header">
-                <div class="problem-title">문제 3: 지역생활 만족도 하위권 (18위/25구)</div>
-                <div class="severity-badge severity-high">HIGH</div>
-            </div>
-            <div class="problem-stat">
-                <div class="problem-stat-value">6.83</div>
-                <div>
-                    <div class="problem-stat-label">동대문구 vs 서울 7.12 (<strong style="color:var(--accent);">-0.29점</strong>)</div>
-                    <div class="problem-stat-label">주거환경+인프라 불만이 복합적으로 작용</div>
-                </div>
-            </div>
-            <div class="problem-causes">
-                <h4>원인 분석</h4>
-                <ul>
-                    <li>주택+인프라 불만이 지역 전반 만족도 하락으로 연결</li>
-                    <li>상대적으로 생활편의시설(의료, 상업, 문화) 접근성 저조</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- 문제 4 -->
-        <div class="problem-card severity-high">
-            <div class="problem-header">
-                <div class="problem-title">문제 4: 걱정 수준 높음</div>
-                <div class="severity-badge severity-high">HIGH</div>
-            </div>
-            <div class="problem-stat">
-                <div class="problem-stat-value">4.52</div>
-                <div>
-                    <div class="problem-stat-label">동대문구 vs 서울 4.26 (<strong style="color:var(--accent);">+0.26점, 높을수록 걱정 많음</strong>)</div>
-                    <div class="problem-stat-label">서울 평균 대비 걱정 수준이 유의미하게 높음</div>
-                </div>
-            </div>
-            <div class="problem-causes">
-                <h4>원인 분석</h4>
-                <ul>
-                    <li>경제적 불안정 (높은 소득 보유율에도 불구하고 소득 수준 낮음)</li>
-                    <li>노후 주거환경으로 인한 일상적 불안감</li>
-                    <li>근로시간/임금 불만족과 연계된 복합적 스트레스</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- 문제 5 -->
-        <div class="problem-card severity-high">
-            <div class="problem-header">
-                <div class="problem-title">문제 5: 근로시간 만족도 극히 낮음</div>
-                <div class="severity-badge severity-high">HIGH</div>
+                <div class="problem-title">취약점 2: 근로시간 만족도 극히 낮음</div>
+                <div class="severity-badge severity-critical">CRITICAL (격차 -0.82)</div>
             </div>
             <div class="problem-stat">
                 <div class="problem-stat-value">4.94</div>
                 <div>
                     <div class="problem-stat-label">동대문구 vs 서울 5.76 (<strong style="color:var(--accent);">-0.82점, -14.2%</strong>)</div>
-                    <div class="problem-stat-label">전 항목 중 서울 대비 가장 큰 격차</div>
+                    <div class="problem-stat-label">전 항목 중 서울 대비 가장 큰 격차 중 하나</div>
                 </div>
             </div>
             <div class="problem-causes">
                 <h4>원인 분석</h4>
                 <ul>
-                    <li>전통시장(청량리, 경동시장)/도소매 중심 산업구조로 장시간 근로 만연</li>
-                    <li>근로환경 개선 지연 (영세 자영업 비율 높음)</li>
-                    <li>워라밸(Work-Life Balance) 문화 정착 미흡</li>
+                    <li>도소매-서비스업 장시간 근로 관행</li>
+                    <li>패션-의류 산업 특성상 불규칙한 근무시간</li>
+                    <li>사업주-근로자 간 근로조건 개선 여력 부족</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 취약점 3 -->
+        <div class="problem-card severity-critical">
+            <div class="problem-header">
+                <div class="problem-title">취약점 3: 사교육 환경 만족도 최하위</div>
+                <div class="severity-badge severity-critical">CRITICAL (격차 -0.73)</div>
+            </div>
+            <div class="problem-stat">
+                <div class="problem-stat-value">5.46</div>
+                <div>
+                    <div class="problem-stat-label">동대문구 vs 서울 6.19 (<strong style="color:var(--accent);">-0.73점, -11.8%</strong>)</div>
+                    <div class="problem-stat-label">교육환경 종합도 5.98 vs 서울 6.55 (-0.57)</div>
+                </div>
+            </div>
+            <div class="problem-causes">
+                <h4>원인 분석</h4>
+                <ul>
+                    <li>강남-서초-송파 등 교육특구 대비 큰 격차</li>
+                    <li>학원가 인프라 부족, 우수 교사 확보 어려움</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 취약점 4 -->
+        <div class="problem-card severity-critical">
+            <div class="problem-header">
+                <div class="problem-title">취약점 4: 교통수단 만족도 전 항목 하위</div>
+                <div class="severity-badge severity-critical">CRITICAL (격차 -0.54~-0.70)</div>
+            </div>
+            <div class="problem-stat">
+                <div class="problem-stat-value">6.50</div>
+                <div>
+                    <div class="problem-stat-label">교통종합 6.50 vs 서울 7.04 (<strong style="color:var(--accent);">-0.54점</strong>)</div>
+                    <div class="problem-stat-label">택시 5.78 vs 서울 6.48 (-0.70) / 지하철 6.88 vs 서울 7.47 (-0.59)</div>
+                </div>
+            </div>
+            <div class="problem-causes">
+                <h4>원인 분석</h4>
+                <ul>
+                    <li>1호선 노후화, 배차 간격, 혼잡도 문제</li>
+                    <li>택시 수급 불균형, 심야 교통 취약</li>
+                    <li>택시 만족도(-0.70)가 전체 항목 중 최악 격차</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 취약점 5 -->
+        <div class="problem-card severity-high">
+            <div class="problem-header">
+                <div class="problem-title">취약점 5: 1인 가구 고립감 심각</div>
+                <div class="severity-badge severity-high">HIGH (격차 +0.50)</div>
+            </div>
+            <div class="problem-stat">
+                <div class="problem-stat-value">4.44</div>
+                <div>
+                    <div class="problem-stat-label">외로움/고립감 4.44 vs 서울 3.94 (<strong style="color:var(--accent);">+0.50점, 12.7% 높음</strong>)</div>
+                    <div class="problem-stat-label">주거환경 불안전 3.82 vs 서울 3.53 / 아플 때 대처 어려움 4.40 vs 서울 4.22</div>
+                </div>
+            </div>
+            <div class="problem-causes">
+                <h4>원인 분석</h4>
+                <ul>
+                    <li>고령 1인 가구 밀집, 사회적 돌봄 사각지대</li>
+                    <li>종합 불편 4.14 vs 서울 3.93 (+0.20)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 취약점 6 -->
+        <div class="problem-card severity-high">
+            <div class="problem-header">
+                <div class="problem-title">취약점 6: 지역사회 소속감 최하위권</div>
+                <div class="severity-badge severity-high">HIGH (격차 -0.46)</div>
+            </div>
+            <div class="problem-stat">
+                <div class="problem-stat-value">3.44</div>
+                <div>
+                    <div class="problem-stat-label">소속감 종합 3.44 vs 서울 3.90 (<strong style="color:var(--accent);">-0.46점, -11.8%</strong>)</div>
+                    <div class="problem-stat-label">어려운 일 서로도움 2.78 vs 서울 3.47 (-0.69) | 행사참여 2.67 vs 서울 3.10 (-0.43)</div>
+                </div>
+            </div>
+            <div class="problem-causes">
+                <h4>원인 분석</h4>
+                <ul>
+                    <li>주민 간 유대감 약화, 공동체 의식 부재</li>
+                    <li>"어려운 일 서로도움" 2.78점으로 소속감 하위항목 중 최악</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 취약점 7 -->
+        <div class="problem-card severity-high">
+            <div class="problem-header">
+                <div class="problem-title">취약점 7: 주택 만족도 + 자치구 거주의향 최하위권</div>
+                <div class="severity-badge severity-high">HIGH (격차 -0.52, -0.54)</div>
+            </div>
+            <div class="problem-stat">
+                <div class="problem-stat-value">5.87</div>
+                <div>
+                    <div class="problem-stat-label">주택 만족도 5.87 vs 서울 6.39 (<strong style="color:var(--accent);">-0.52점, 21위/25구</strong>)</div>
+                    <div class="problem-stat-label">자치구 거주의향 6.03 vs 서울 6.56 (<strong style="color:var(--accent);">-0.54점, 최하위권</strong>)</div>
+                </div>
+            </div>
+            <div class="problem-causes">
+                <h4>원인 분석</h4>
+                <ul>
+                    <li>노후 주택, 열악한 주거환경이 이탈 의향으로 직결</li>
+                    <li>"살고 싶지 않은 동네" 인식 확산 위험</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 취약점 8 -->
+        <div class="problem-card severity-high">
+            <div class="problem-header">
+                <div class="problem-title">취약점 8: 동네 공공편의시설 부족</div>
+                <div class="severity-badge severity-high">HIGH (격차 -0.54)</div>
+            </div>
+            <div class="problem-stat">
+                <div class="problem-stat-value">5.47</div>
+                <div>
+                    <div class="problem-stat-label">공공편의시설 충분도 5.47 vs 서울 6.01 (<strong style="color:var(--accent);">-0.54점, 최하위권</strong>)</div>
+                    <div class="problem-stat-label">동네만족 종합 5.97 vs 서울 6.36 (-0.39) / 운동적합 6.16 vs 서울 6.49 (-0.33)</div>
+                </div>
+            </div>
+            <div class="problem-causes">
+                <h4>원인 분석</h4>
+                <ul>
+                    <li>공원, 체육시설, 도서관 등 생활SOC 부족</li>
+                    <li>장보기 편리 6.10 vs 서울 6.43 (-0.33) / 안전한편 6.17 vs 서울 6.52 (-0.35)</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Section 9: 정책 제언 -->
+    <!-- Section 9: 정책 제언 (8대 정책 대안) -->
     <section id="solutions" class="section reveal">
         <div class="section-header">
             <div class="section-icon">&#128161;</div>
             <div>
-                <h2 class="section-title">정책 제언</h2>
-                <p class="section-subtitle">5대 정책 대안 및 기대효과</p>
+                <h2 class="section-title">8대 정책 대안</h2>
+                <p class="section-subtitle">8대 핵심 취약점 대응 정책 제언 및 기대효과</p>
             </div>
         </div>
 
         <!-- 대안 1 -->
         <div class="solution-card priority-urgent">
             <div class="solution-header">
-                <div class="solution-title">대안 1: 주거환경 종합 개선 프로젝트</div>
-                <div class="priority-badge priority-urgent">URGENT</div>
+                <div class="solution-title">대안 1: 양질의 일자리 생태계 구축</div>
+                <div class="priority-badge priority-urgent">URGENT - 취약점 1,2 대응</div>
             </div>
             <ul class="solution-items">
-                <li>노후 다세대/다가구 주택 리모델링 지원 확대 (에너지 효율화, 외벽 개선)</li>
-                <li>주민 참여형 소규모 주거환경 정비사업 추진</li>
-                <li>주차환경 개선: 공영주차장 확충, 주차관제 시스템 도입</li>
+                <li>이문-휘경 지식산업센터 유치로 IT/스타트업 클러스터 조성</li>
+                <li>동대문 DDP 일대 패션테크-디자인 산업 고도화</li>
+                <li>청량리역세권 개발 연계 오피스 타운 조성</li>
+                <li>전통시장 스마트화 및 근무환경 현대화</li>
+                <li>소규모 사업장 워라밸 컨설팅 및 인센티브 제공</li>
             </ul>
             <div class="expected-effect">
                 <span class="expected-effect-icon">&#127919;</span>
-                기대효과: 주택만족도 5.87 &#8594; 6.3 이상 (2년 내)
+                기대효과: 일자리 충분도 4.41 &#8594; 5.0+, 근로시간 만족도 4.94 &#8594; 5.4+
             </div>
         </div>
 
         <!-- 대안 2 -->
         <div class="solution-card priority-urgent">
             <div class="solution-header">
-                <div class="solution-title">대안 2: 인프라 현대화 및 녹지 확충</div>
-                <div class="priority-badge priority-urgent">URGENT</div>
+                <div class="solution-title">대안 2: 교육환경 혁신</div>
+                <div class="priority-badge priority-urgent">URGENT - 취약점 3 대응</div>
             </div>
             <ul class="solution-items">
-                <li>도시재생 뉴딜사업 가속화 (이문/휘경 도시재생 등)</li>
-                <li>보행환경 개선: 유니버설 디자인 적용, 무장애 보도 정비</li>
-                <li>소공원/쌈지공원 조성으로 녹지 접근성 향상</li>
-                <li>공공편의시설 리뉴얼 (도서관, 체육시설, 커뮤니티 센터)</li>
+                <li>경희대-한국외대-서울시립대 연계 지역 교육 프로그램 확대</li>
+                <li>공공형 학습지원센터-방과후교실 대폭 확충</li>
+                <li>AI 기반 맞춤형 학습 플랫폼 도입 (디지털 사교육 대안)</li>
+                <li>구립 도서관-학습실 야간 운영 확대</li>
             </ul>
             <div class="expected-effect">
                 <span class="expected-effect-icon">&#127919;</span>
-                기대효과: 기반시설만족도 6.16 &#8594; 6.5 이상
+                기대효과: 교육환경 5.98 &#8594; 6.3+, 사교육 만족도 5.46 &#8594; 5.9+
             </div>
         </div>
 
         <!-- 대안 3 -->
-        <div class="solution-card priority-high">
+        <div class="solution-card priority-urgent">
             <div class="solution-header">
-                <div class="solution-title">대안 3: 근로환경 개선 및 양질의 일자리 창출</div>
-                <div class="priority-badge priority-high">HIGH</div>
+                <div class="solution-title">대안 3: 교통 인프라 대대적 개선</div>
+                <div class="priority-badge priority-urgent">URGENT - 취약점 4 대응</div>
             </div>
             <ul class="solution-items">
-                <li>전통시장(청량리, 경동시장 등) 스마트화 및 근무환경 개선</li>
-                <li>창업 지원: 청년 창업 인큐베이팅, 소상공인 디지털 전환 지원</li>
-                <li>워라밸 프로그램: 소규모 사업장 근로시간 단축 인센티브</li>
-                <li>이문동 일대 지식산업센터 조성으로 양질의 일자리 유치</li>
+                <li>1호선 노후 시설 개선 건의 (지하철 만족도 6.88 &#8594; 7.2+)</li>
+                <li>마을버스-지선버스 노선 최적화 및 증편</li>
+                <li>심야 교통수단 확충: 심야버스, 수요응답형 교통(DRT) 도입</li>
+                <li>택시 승차 거부 방지 대책 및 택시 전용 승하차장 확대</li>
+                <li>자전거 도로 확충 및 공유 킥보드 인프라 정비</li>
             </ul>
             <div class="expected-effect">
                 <span class="expected-effect-icon">&#127919;</span>
-                기대효과: 근로시간 만족도 4.94 &#8594; 5.5 이상
+                기대효과: 교통 종합 6.50 &#8594; 6.8+
             </div>
         </div>
 
         <!-- 대안 4 -->
-        <div class="solution-card priority-medium">
+        <div class="solution-card priority-high">
             <div class="solution-header">
-                <div class="solution-title">대안 4: 교육환경 강화</div>
-                <div class="priority-badge priority-medium">MEDIUM</div>
+                <div class="solution-title">대안 4: 1인 가구 사회안전망 구축</div>
+                <div class="priority-badge priority-high">HIGH - 취약점 5 대응</div>
             </div>
             <ul class="solution-items">
-                <li>미취학 아동 보육시설 확충 및 공공보육 강화</li>
-                <li>방과후 프로그램 다양화 및 접근성 개선</li>
-                <li>평생교육 기회 확대: 온라인/오프라인 하이브리드 프로그램</li>
-                <li>대학(경희대, 한국외대 등) 연계 지역사회 교육 프로그램</li>
+                <li>AI 안부확인 시스템 도입 (고립감 4.44 &#8594; 3.9 이하)</li>
+                <li>1인 가구 커뮤니티 센터 운영 (같이밥먹기, 공동취미)</li>
+                <li>긴급 의료 연계 시스템: 응급SOS 버튼, 원격 의료 상담</li>
+                <li>청년 1인 가구 주거안전 점검 서비스</li>
+                <li>독거노인 돌봄 서비스 확대: 주 2회 방문 &#8594; 매일 연락</li>
             </ul>
             <div class="expected-effect">
                 <span class="expected-effect-icon">&#127919;</span>
-                기대효과: 교육만족도 6.12 &#8594; 6.5 이상
+                기대효과: 고립감 4.44 &#8594; 3.9 이하
             </div>
         </div>
 
         <!-- 대안 5 -->
-        <div class="solution-card priority-medium">
+        <div class="solution-card priority-high">
             <div class="solution-header">
-                <div class="solution-title">대안 5: 걱정 해소 및 심리적 안정 지원</div>
-                <div class="priority-badge priority-medium">MEDIUM</div>
+                <div class="solution-title">대안 5: 지역 공동체 재생</div>
+                <div class="priority-badge priority-high">HIGH - 취약점 6 대응</div>
             </div>
             <ul class="solution-items">
-                <li>마음건강센터 운영 강화: 찾아가는 심리상담 서비스</li>
-                <li>경제적 어려움 완화: 긴급생활안정자금 지원 확대</li>
-                <li>1인 가구/고령 가구 대상 사회안전망 확충</li>
-                <li>지역 커뮤니티 활성화: 주민자치회, 마을공동체 프로그램</li>
+                <li>마을공동체 활성화 사업: 골목축제, 주민텃밭, 마을장터</li>
+                <li>주민자치회 권한 강화 및 예산 확대</li>
+                <li>동별 커뮤니티 공간 조성 (카페형 주민센터)</li>
+                <li>이웃사촌 매칭 프로그램 (같은 동네 취미 활동 연결)</li>
             </ul>
             <div class="expected-effect">
                 <span class="expected-effect-icon">&#127919;</span>
-                기대효과: 걱정도 4.52 &#8594; 4.3 이하
+                기대효과: 소속감 3.44 &#8594; 3.8+
+            </div>
+        </div>
+
+        <!-- 대안 6 -->
+        <div class="solution-card priority-high">
+            <div class="solution-header">
+                <div class="solution-title">대안 6: 주거환경 종합 개선</div>
+                <div class="priority-badge priority-high">HIGH - 취약점 7 대응</div>
+            </div>
+            <ul class="solution-items">
+                <li>노후 다세대-다가구 그린리모델링 (에너지 효율화)</li>
+                <li>청량리-이문 재개발 사업 주민 소통 강화</li>
+                <li>임대주택 품질 관리 강화 및 주거복지 상담 확대</li>
+                <li>공영주차장 확충 (주차만족 6.38 &#8594; 6.6+)</li>
+            </ul>
+            <div class="expected-effect">
+                <span class="expected-effect-icon">&#127919;</span>
+                기대효과: 주택만족도 5.87 &#8594; 6.2+, 거주의향 6.03 &#8594; 6.4+
+            </div>
+        </div>
+
+        <!-- 대안 7 -->
+        <div class="solution-card priority-high">
+            <div class="solution-header">
+                <div class="solution-title">대안 7: 생활SOC 대폭 확충</div>
+                <div class="priority-badge priority-high">HIGH - 취약점 8 대응</div>
+            </div>
+            <ul class="solution-items">
+                <li>소공원-쌈지공원 10개소 이상 신설</li>
+                <li>실내체육시설-건강증진센터 확대</li>
+                <li>동네 도서관-공유서재 네트워크 구축</li>
+                <li>어린이집-육아시설 인프라 보강</li>
+            </ul>
+            <div class="expected-effect">
+                <span class="expected-effect-icon">&#127919;</span>
+                기대효과: 공공편의시설 5.47 &#8594; 5.8+
+            </div>
+        </div>
+
+        <!-- 대안 8 -->
+        <div class="solution-card priority-medium">
+            <div class="solution-header">
+                <div class="solution-title">대안 8: 동대문 브랜드 포지셔닝</div>
+                <div class="priority-badge priority-medium">MEDIUM - 종합 대응</div>
+            </div>
+            <ul class="solution-items">
+                <li>"서울의 다문화-패션 허브" 브랜드 전략 수립</li>
+                <li>DDP-동대문시장-청량리역세권 연결 관광루트 조성</li>
+                <li>지역 청년 창업가 육성 프로그램</li>
+            </ul>
+            <div class="expected-effect">
+                <span class="expected-effect-icon">&#127919;</span>
+                기대효과: 지역생활 만족도 6.82 &#8594; 7.0+
             </div>
         </div>
     </section>
@@ -1506,8 +1736,8 @@
                 <p>서울 평균(6.55)을 상회하는 문화여가시설 만족도는 DDP(동대문디자인플라자), 동대문역사문화공원 등의 자산이 작용합니다. 이를 문화 인프라 특화 전략으로 발전시킬 수 있습니다.</p>
             </div>
             <div class="strength-card">
-                <h4>교통 만족도 평균 수준 (7.04점)</h4>
-                <p>서울 평균과 동일한 교통 만족도는 지하철 1/2호선, 경의중앙선 등 대중교통 인프라가 양호함을 의미합니다. 이를 활용한 접근성 강화 마케팅이 가능합니다.</p>
+                <h4>주말 시간만족도 상위 (4.92점)</h4>
+                <p>서울 평균(4.30)을 크게 상회하는 주말 시간 만족도는 DDP, 청계천 등 여가자원의 풍부함을 반영합니다. 이를 활용한 주말 문화프로그램 확대가 가능합니다.</p>
             </div>
             <div class="strength-card" style="grid-column: 1 / -1;">
                 <h4>DDP/동대문 패션 클러스터 &#8594; 문화/창조산업 허브로 포지셔닝</h4>
@@ -1595,16 +1825,16 @@ const ORANGE = '#F39C12';
 const SECONDARY = '#2C3E50';
 
 // ==========================================
-// Section 2: Radar Chart
+// Section 2: Radar Chart (10 dimensions)
 // ==========================================
 new Chart(document.getElementById('radarChart'), {
     type: 'radar',
     data: {
-        labels: ['삶의 만족도', '지역생활', '행복도', '주택 만족도', '기반시설', '교통 만족도', '일자리'],
+        labels: ['삶의만족도', '지역생활', '주택', '기반시설', '교통종합', '일자리충분도', '동네만족도', '지역사회소속감', '교육환경', '거주의향'],
         datasets: [
             {
                 label: '동대문구',
-                data: [6.83, 6.83, 6.82, 5.87, 6.16, 7.04, 6.01],
+                data: [6.83, 6.82, 5.87, 6.16, 6.50, 4.41, 5.97, 3.44, 5.98, 6.03],
                 borderColor: ACCENT,
                 backgroundColor: 'rgba(231,76,60,0.15)',
                 borderWidth: 3,
@@ -1615,24 +1845,12 @@ new Chart(document.getElementById('radarChart'), {
             },
             {
                 label: '서울 평균',
-                data: [6.84, 7.12, 6.74, 6.39, 6.58, 7.04, 6.18],
+                data: [6.84, 7.12, 6.39, 6.58, 7.04, 5.39, 6.36, 3.90, 6.55, 6.56],
                 borderColor: PRIMARY,
                 backgroundColor: 'rgba(0,168,142,0.1)',
                 borderWidth: 2,
                 pointRadius: 4,
                 pointBackgroundColor: PRIMARY,
-                pointBorderColor: '#fff',
-                pointBorderWidth: 2,
-            },
-            {
-                label: '동북권 평균',
-                data: [6.84, 7.13, 6.81, 6.16, 6.43, 6.82, 6.01],
-                borderColor: BLUE,
-                backgroundColor: 'rgba(41,128,185,0.08)',
-                borderWidth: 2,
-                borderDash: [5, 5],
-                pointRadius: 3,
-                pointBackgroundColor: BLUE,
                 pointBorderColor: '#fff',
                 pointBorderWidth: 2,
             }
@@ -1643,17 +1861,17 @@ new Chart(document.getElementById('radarChart'), {
         maintainAspectRatio: false,
         scales: {
             r: {
-                min: 5,
+                min: 3,
                 max: 8,
                 ticks: {
-                    stepSize: 0.5,
+                    stepSize: 1,
                     backdropColor: 'transparent',
                     font: { size: 11 }
                 },
                 grid: { color: 'rgba(0,0,0,0.06)' },
                 angleLines: { color: 'rgba(0,0,0,0.06)' },
                 pointLabels: {
-                    font: { size: 13, weight: '600' },
+                    font: { size: 12, weight: '600' },
                     color: SECONDARY
                 }
             }
@@ -1774,7 +1992,7 @@ new Chart(document.getElementById('neighborRadarChart'), {
         datasets: [
             {
                 label: '동대문구',
-                data: [6.83, 6.83, 5.87, 6.16, 7.04, 6.01],
+                data: [6.83, 6.82, 5.87, 6.16, 6.50, 4.41],
                 borderColor: ACCENT,
                 backgroundColor: 'rgba(231,76,60,0.15)',
                 borderWidth: 3,
@@ -1828,7 +2046,7 @@ new Chart(document.getElementById('neighborRadarChart'), {
         maintainAspectRatio: false,
         scales: {
             r: {
-                min: 4.5,
+                min: 4,
                 max: 8,
                 ticks: {
                     stepSize: 0.5,
@@ -1895,6 +2113,250 @@ new Chart(document.getElementById('jobChart'), {
             x: {
                 grid: { display: false },
                 ticks: { font: { size: 13, weight: '500' } }
+            }
+        },
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: {
+                    usePointStyle: true,
+                    padding: 20,
+                    font: { size: 13 }
+                }
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(ctx) {
+                        return ctx.dataset.label + ': ' + ctx.parsed.y + '점';
+                    }
+                }
+            }
+        }
+    }
+});
+
+// ==========================================
+// Transport Satisfaction Chart
+// ==========================================
+new Chart(document.getElementById('transportChart'), {
+    type: 'bar',
+    data: {
+        labels: ['교통종합', '버스', '지하철', '택시', '시외버스'],
+        datasets: [
+            {
+                label: '동대문구',
+                data: [6.50, 7.12, 6.88, 5.78, 6.14],
+                backgroundColor: ACCENT,
+                borderRadius: 6,
+                barPercentage: 0.6,
+                categoryPercentage: 0.7,
+            },
+            {
+                label: '서울 평균',
+                data: [7.04, 7.45, 7.47, 6.48, 6.53],
+                backgroundColor: PRIMARY,
+                borderRadius: 6,
+                barPercentage: 0.6,
+                categoryPercentage: 0.7,
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                min: 5,
+                max: 8,
+                grid: { color: 'rgba(0,0,0,0.04)' },
+                ticks: { font: { size: 12 } }
+            },
+            x: {
+                grid: { display: false },
+                ticks: { font: { size: 13, weight: '500' } }
+            }
+        },
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: {
+                    usePointStyle: true,
+                    padding: 20,
+                    font: { size: 13 }
+                }
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(ctx) {
+                        return ctx.dataset.label + ': ' + ctx.parsed.y + '점';
+                    }
+                }
+            }
+        }
+    }
+});
+
+// ==========================================
+// Belonging Chart (지역사회 소속감)
+// ==========================================
+new Chart(document.getElementById('belongingChart'), {
+    type: 'bar',
+    data: {
+        labels: ['소속감 종합', '알고지내는편', '동네 이야기', '어려운일\n서로도움', '행사/모임\n참여'],
+        datasets: [
+            {
+                label: '동대문구',
+                data: [3.44, 4.82, 3.50, 2.78, 2.67],
+                backgroundColor: ACCENT,
+                borderRadius: 6,
+                barPercentage: 0.6,
+                categoryPercentage: 0.7,
+            },
+            {
+                label: '서울 평균',
+                data: [3.90, 4.99, 4.06, 3.47, 3.10],
+                backgroundColor: PRIMARY,
+                borderRadius: 6,
+                barPercentage: 0.6,
+                categoryPercentage: 0.7,
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                min: 2,
+                max: 6,
+                grid: { color: 'rgba(0,0,0,0.04)' },
+                ticks: { font: { size: 11 } }
+            },
+            x: {
+                grid: { display: false },
+                ticks: { font: { size: 11, weight: '500' }, maxRotation: 0 }
+            }
+        },
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: {
+                    usePointStyle: true,
+                    padding: 16,
+                    font: { size: 12 }
+                }
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(ctx) {
+                        return ctx.dataset.label + ': ' + ctx.parsed.y + '점';
+                    }
+                }
+            }
+        }
+    }
+});
+
+// ==========================================
+// Neighborhood Satisfaction Chart (동네 만족도)
+// ==========================================
+new Chart(document.getElementById('neighborhoodChart'), {
+    type: 'bar',
+    data: {
+        labels: ['동네만족\n종합', '운동 적합', '장보기 편리', '공공편의\n시설', '안전한편'],
+        datasets: [
+            {
+                label: '동대문구',
+                data: [5.97, 6.16, 6.10, 5.47, 6.17],
+                backgroundColor: ACCENT,
+                borderRadius: 6,
+                barPercentage: 0.6,
+                categoryPercentage: 0.7,
+            },
+            {
+                label: '서울 평균',
+                data: [6.36, 6.49, 6.43, 6.01, 6.52],
+                backgroundColor: PRIMARY,
+                borderRadius: 6,
+                barPercentage: 0.6,
+                categoryPercentage: 0.7,
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                min: 5,
+                max: 7,
+                grid: { color: 'rgba(0,0,0,0.04)' },
+                ticks: { font: { size: 11 } }
+            },
+            x: {
+                grid: { display: false },
+                ticks: { font: { size: 11, weight: '500' }, maxRotation: 0 }
+            }
+        },
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: {
+                    usePointStyle: true,
+                    padding: 16,
+                    font: { size: 12 }
+                }
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(ctx) {
+                        return ctx.dataset.label + ': ' + ctx.parsed.y + '점';
+                    }
+                }
+            }
+        }
+    }
+});
+
+// ==========================================
+// Single Household Chart (1인 가구)
+// ==========================================
+new Chart(document.getElementById('singleChart'), {
+    type: 'bar',
+    data: {
+        labels: ['고립감/외로움', '주거환경 불안전', '아플때 대처\n어려움', '가사 어려움', '종합 불편'],
+        datasets: [
+            {
+                label: '동대문구 (높을수록 나쁨)',
+                data: [4.44, 3.82, 4.40, 4.25, 4.14],
+                backgroundColor: ACCENT,
+                borderRadius: 6,
+                barPercentage: 0.6,
+                categoryPercentage: 0.7,
+            },
+            {
+                label: '서울 평균',
+                data: [3.94, 3.53, 4.22, 4.14, 3.93],
+                backgroundColor: '#B0BEC5',
+                borderRadius: 6,
+                barPercentage: 0.6,
+                categoryPercentage: 0.7,
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                min: 3,
+                max: 5,
+                grid: { color: 'rgba(0,0,0,0.04)' },
+                ticks: { font: { size: 12 } }
+            },
+            x: {
+                grid: { display: false },
+                ticks: { font: { size: 12, weight: '500' }, maxRotation: 0 }
             }
         },
         plugins: {
@@ -2127,6 +2589,96 @@ new Chart(document.getElementById('highIncomeChart'), {
         }
     }]
 });
+
+// ==========================================
+// Severity Map (취약점 심각도 맵)
+// ==========================================
+(function() {
+    const severityData = [
+        { label: '일자리 충분도', gap: -0.98 },
+        { label: '근로시간 만족도', gap: -0.82 },
+        { label: '사교육 환경', gap: -0.73 },
+        { label: '택시 만족도', gap: -0.70 },
+        { label: '어려운일 서로도움', gap: -0.69 },
+        { label: '지하철 만족도', gap: -0.59 },
+        { label: '교육환경 종합', gap: -0.57 },
+        { label: '동네 이야기', gap: -0.56 },
+        { label: '교통 종합', gap: -0.54 },
+        { label: '공공편의시설', gap: -0.54 },
+        { label: '거주의향', gap: -0.54 },
+        { label: '주택 만족도', gap: -0.52 }
+    ];
+
+    // Sort by gap ascending (most negative first)
+    severityData.sort((a, b) => a.gap - b.gap);
+
+    const labels = severityData.map(d => d.label);
+    const values = severityData.map(d => d.gap);
+    const maxAbsGap = Math.max(...values.map(v => Math.abs(v)));
+
+    // Red gradient: most severe = dark red, least severe = lighter red
+    const colors = values.map(v => {
+        const intensity = Math.abs(v) / maxAbsGap;
+        const r = 231;
+        const g = Math.round(76 + (1 - intensity) * 100);
+        const b = Math.round(60 + (1 - intensity) * 100);
+        return `rgb(${r}, ${g}, ${b})`;
+    });
+
+    new Chart(document.getElementById('severityChart'), {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: '서울 평균 대비 격차',
+                data: values,
+                backgroundColor: colors,
+                borderColor: colors.map(c => c.replace('rgb', 'rgba').replace(')', ', 0.8)')),
+                borderWidth: 1,
+                borderRadius: 4,
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    min: -1.1,
+                    max: 0,
+                    grid: { color: 'rgba(0,0,0,0.06)' },
+                    ticks: {
+                        font: { size: 12 },
+                        callback: function(val) { return val.toFixed(2); }
+                    },
+                    title: {
+                        display: true,
+                        text: '서울 평균 대비 격차 (점)',
+                        font: { size: 13, weight: '600' },
+                        color: SECONDARY
+                    }
+                },
+                y: {
+                    ticks: {
+                        font: { size: 13, weight: '600' },
+                        color: SECONDARY
+                    },
+                    grid: { display: false }
+                }
+            },
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function(ctx) {
+                            return '격차: ' + ctx.parsed.x.toFixed(2) + '점';
+                        }
+                    }
+                }
+            }
+        }
+    });
+})();
 
 </script>
 </body>
