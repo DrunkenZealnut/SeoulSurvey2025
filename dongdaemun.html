@@ -1,0 +1,2133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동대문구 심층 분석 리포트 | 2025 서울서베이</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap');
+
+        :root {
+            --primary: #00A88E;
+            --primary-dark: #008B74;
+            --primary-light: #E8F8F5;
+            --secondary: #2C3E50;
+            --accent: #E74C3C;
+            --accent-warm: #F39C12;
+            --blue: #2980B9;
+            --bg: #F0F4F8;
+            --card: #FFFFFF;
+            --text: #2C3E50;
+            --text-light: #7F8C8D;
+            --border: #E8ECF1;
+            --shadow: 0 2px 20px rgba(0,0,0,0.06);
+            --shadow-hover: 0 8px 30px rgba(0,0,0,0.12);
+            --radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --critical: #E74C3C;
+            --critical-bg: #FDEDEC;
+            --high: #F39C12;
+            --high-bg: #FEF5E7;
+            --medium: #F1C40F;
+            --medium-bg: #FEF9E7;
+            --good: #00A88E;
+            --good-bg: #E8F8F5;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #00A88E 0%, #00796B 50%, #004D40 100%);
+            color: white;
+            padding: 60px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 52px);
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 700px;
+            font-weight: 300;
+        }
+
+        .hero-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 24px;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.12);
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: var(--transition);
+        }
+
+        .hero-back:hover {
+            background: rgba(255,255,255,0.25);
+        }
+
+        /* Navigation */
+        .nav {
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            gap: 4px;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .nav-inner::-webkit-scrollbar { display: none; }
+
+        .nav-item {
+            padding: 16px 16px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-light);
+            cursor: pointer;
+            white-space: nowrap;
+            border-bottom: 3px solid transparent;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 32px 24px;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 48px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .section-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .section-subtitle {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 28px;
+            transition: var(--transition);
+            border: 1px solid var(--border);
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 4px;
+        }
+
+        .card-desc {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        /* Grid layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr));
+            gap: 24px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+            gap: 24px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+            gap: 16px;
+        }
+
+        /* KPI Cards */
+        .kpi-card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 24px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kpi-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary);
+        }
+
+        .kpi-card.kpi-good::before { background: var(--good); }
+        .kpi-card.kpi-bad::before { background: var(--critical); }
+        .kpi-card.kpi-warn::before { background: var(--high); }
+
+        .kpi-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .kpi-value {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .kpi-card.kpi-good .kpi-value { color: var(--good); }
+        .kpi-card.kpi-bad .kpi-value { color: var(--critical); }
+        .kpi-card.kpi-warn .kpi-value { color: var(--high); }
+
+        .kpi-label {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-top: 8px;
+            font-weight: 500;
+        }
+
+        .kpi-sub {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-top: 4px;
+            opacity: 0.7;
+        }
+
+        .kpi-rank {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 3px 10px;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .kpi-rank.rank-good { background: var(--good-bg); color: var(--good); }
+        .kpi-rank.rank-bad { background: var(--critical-bg); color: var(--critical); }
+        .kpi-rank.rank-warn { background: var(--high-bg); color: var(--high); }
+
+        /* Chart Container */
+        .chart-container {
+            position: relative;
+            height: 400px;
+            width: 100%;
+        }
+
+        .chart-container-sm {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+
+        .chart-container-lg {
+            position: relative;
+            height: 500px;
+            width: 100%;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: linear-gradient(135deg, var(--primary-light), #fff);
+            border-left: 4px solid var(--primary);
+            border-radius: 0 12px 12px 0;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+        }
+
+        .info-box p {
+            font-size: 14px;
+            color: var(--secondary);
+            line-height: 1.8;
+        }
+
+        .info-box strong {
+            color: var(--primary-dark);
+        }
+
+        /* Tags */
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .tag-green { background: #E8F8F5; color: #00A88E; }
+        .tag-red { background: #FDEDEC; color: #E74C3C; }
+        .tag-orange { background: #FEF5E7; color: #F39C12; }
+        .tag-blue { background: #EBF5FB; color: #2980B9; }
+
+        /* Problem Cards */
+        .problem-card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 28px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .problem-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+
+        .problem-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 5px;
+        }
+
+        .problem-card.severity-critical::before { background: var(--critical); }
+        .problem-card.severity-high::before { background: var(--high); }
+        .problem-card.severity-medium::before { background: var(--medium); }
+
+        .problem-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .problem-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .severity-badge {
+            padding: 4px 14px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 700;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .severity-critical { background: var(--critical-bg); color: var(--critical); }
+        .severity-high { background: var(--high-bg); color: var(--high); }
+        .severity-medium { background: var(--medium-bg); color: #B7950B; }
+
+        .problem-stat {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--bg);
+            border-radius: 10px;
+            margin-bottom: 12px;
+        }
+
+        .problem-stat-value {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--accent);
+        }
+
+        .problem-stat-label {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .problem-causes {
+            margin-top: 12px;
+        }
+
+        .problem-causes h4 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .problem-causes ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .problem-causes li {
+            padding: 6px 0 6px 20px;
+            font-size: 14px;
+            position: relative;
+            color: var(--text);
+        }
+
+        .problem-causes li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 13px;
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+        /* Solution Cards */
+        .solution-card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 28px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .solution-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+
+        .solution-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 5px;
+            background: var(--primary);
+        }
+
+        .solution-card.priority-urgent::before { background: var(--critical); }
+        .solution-card.priority-high::before { background: var(--high); }
+        .solution-card.priority-medium::before { background: var(--blue); }
+
+        .solution-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .solution-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .priority-badge {
+            padding: 4px 14px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 700;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .priority-urgent { background: var(--critical-bg); color: var(--critical); }
+        .priority-high { background: var(--high-bg); color: var(--high); }
+        .priority-medium { background: #EBF5FB; color: var(--blue); }
+
+        .solution-items {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 16px;
+        }
+
+        .solution-items li {
+            padding: 6px 0 6px 24px;
+            font-size: 14px;
+            position: relative;
+            color: var(--text);
+        }
+
+        .solution-items li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 10px;
+            height: 10px;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+        }
+
+        .expected-effect {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            background: var(--primary-light);
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .expected-effect-icon {
+            font-size: 18px;
+        }
+
+        /* Strength Card */
+        .strength-card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 24px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 4px solid var(--primary);
+        }
+
+        .strength-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+
+        .strength-card h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+
+        .strength-card p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Comparison Bar */
+        .compare-bar {
+            margin: 10px 0;
+        }
+
+        .compare-bar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        .compare-bar-label {
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .compare-bar-values {
+            display: flex;
+            gap: 16px;
+            font-size: 12px;
+        }
+
+        .compare-bar-values span {
+            font-weight: 600;
+        }
+
+        .compare-bar-track {
+            height: 12px;
+            background: #E8ECF1;
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .compare-bar-fill {
+            height: 100%;
+            border-radius: 6px;
+            transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .compare-bar-marker {
+            position: absolute;
+            top: -4px;
+            width: 3px;
+            height: 20px;
+            background: var(--secondary);
+            border-radius: 2px;
+            transition: left 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Neighbor Table */
+        .neighbor-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 13px;
+        }
+
+        .neighbor-table thead th {
+            background: var(--secondary);
+            color: white;
+            padding: 12px 14px;
+            text-align: center;
+            font-weight: 600;
+            position: sticky;
+            top: 56px;
+        }
+
+        .neighbor-table thead th:first-child {
+            border-radius: 8px 0 0 0;
+            text-align: left;
+        }
+
+        .neighbor-table thead th:last-child {
+            border-radius: 0 8px 0 0;
+        }
+
+        .neighbor-table tbody tr {
+            transition: var(--transition);
+        }
+
+        .neighbor-table tbody tr:hover {
+            background: var(--primary-light);
+        }
+
+        .neighbor-table tbody tr.highlight-row {
+            background: #E8F8F5;
+            font-weight: 700;
+        }
+
+        .neighbor-table tbody tr.highlight-row:hover {
+            background: #D0F0EA;
+        }
+
+        .neighbor-table td {
+            padding: 10px 14px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .neighbor-table td:first-child {
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .cell-good { color: var(--good); font-weight: 700; }
+        .cell-bad { color: var(--critical); font-weight: 700; }
+
+        .table-scroll {
+            overflow-x: auto;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary);
+            color: rgba(255,255,255,0.7);
+            padding: 40px 24px;
+            text-align: center;
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        .footer strong {
+            color: white;
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Back to top */
+        .back-to-top {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(0,168,142,0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,168,142,0.5);
+        }
+
+        /* Scroll reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero { padding: 40px 0 60px; }
+            .container { padding: 24px 16px; }
+            .card { padding: 20px; }
+            .kpi-value { font-size: 28px; }
+            .problem-header, .solution-header { flex-direction: column; }
+            .chart-container { height: 300px; }
+            .chart-container-lg { height: 400px; }
+            .nav-item { padding: 14px 12px; font-size: 12px; }
+        }
+
+        /* Print styles */
+        @media print {
+            .nav, .back-to-top { display: none !important; }
+            .hero { padding: 20px 0 30px; }
+            .card, .problem-card, .solution-card, .strength-card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
+            .kpi-card { break-inside: avoid; }
+            body { background: white; }
+            .reveal { opacity: 1; transform: none; }
+        }
+
+        /* Legend */
+        .chart-legend {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+
+        .chart-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .chart-legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        /* Summary row */
+        .summary-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 14px 20px;
+            background: var(--bg);
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .summary-row-label {
+            flex: 0 0 140px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .summary-row-bars {
+            flex: 1;
+            display: flex;
+            gap: 4px;
+            align-items: center;
+        }
+
+        .summary-bar {
+            height: 24px;
+            border-radius: 4px;
+            transition: width 1.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 8px;
+            font-size: 11px;
+            font-weight: 700;
+            color: white;
+            min-width: 40px;
+        }
+
+        .summary-row-diff {
+            flex: 0 0 80px;
+            text-align: right;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .diff-positive { color: var(--good); }
+        .diff-negative { color: var(--critical); }
+    </style>
+</head>
+<body>
+
+<!-- Hero -->
+<header class="hero">
+    <div class="hero-content">
+        <div class="hero-badge">
+            &#127983; 동북권 | 사례수 1,347가구원
+        </div>
+        <h1>동대문구<br>심층 분석 리포트</h1>
+        <p>2025 서울서베이 기반 동대문구 vs 서울시 비교 분석 및 정책 제언. 25개 자치구 속 동대문구의 현주소를 객관적 데이터로 진단합니다.</p>
+        <a href="index.html" class="hero-back">&#8592; 서울서베이 메인 대시보드로 돌아가기</a>
+    </div>
+</header>
+
+<!-- Navigation -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a class="nav-item active" onclick="scrollToSection('scorecard')">종합 성적표</a>
+        <a class="nav-item" onclick="scrollToSection('radar')">레이더 비교</a>
+        <a class="nav-item" onclick="scrollToSection('ranking')">순위 비교</a>
+        <a class="nav-item" onclick="scrollToSection('neighbors')">인접구 비교</a>
+        <a class="nav-item" onclick="scrollToSection('jobs')">일자리</a>
+        <a class="nav-item" onclick="scrollToSection('education')">교육</a>
+        <a class="nav-item" onclick="scrollToSection('leisure')">여가/시간</a>
+        <a class="nav-item" onclick="scrollToSection('economy')">소득/경제</a>
+        <a class="nav-item" onclick="scrollToSection('problems')">문제 진단</a>
+        <a class="nav-item" onclick="scrollToSection('solutions')">정책 제언</a>
+        <a class="nav-item" onclick="scrollToSection('strengths')">강점 활용</a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <!-- Section 1: 종합 성적표 -->
+    <section id="scorecard" class="section reveal">
+        <div class="section-header">
+            <div class="section-icon">&#128202;</div>
+            <div>
+                <h2 class="section-title">종합 성적표</h2>
+                <p class="section-subtitle">동대문구 핵심 지표 요약 (10점 만점 기준, 서울 25개 구 대비)</p>
+            </div>
+        </div>
+
+        <div class="grid-4" style="margin-bottom: 24px;">
+            <div class="kpi-card kpi-warn">
+                <div class="kpi-value">6.83</div>
+                <div class="kpi-label">삶의 만족도</div>
+                <div class="kpi-sub">서울 평균 6.84</div>
+                <div class="kpi-rank rank-warn">13위 / 25구</div>
+            </div>
+            <div class="kpi-card kpi-bad">
+                <div class="kpi-value">6.83</div>
+                <div class="kpi-label">지역생활 만족도</div>
+                <div class="kpi-sub">서울 평균 7.12 (-0.29)</div>
+                <div class="kpi-rank rank-bad">18위 / 25구</div>
+            </div>
+            <div class="kpi-card kpi-good">
+                <div class="kpi-value">7.10</div>
+                <div class="kpi-label">행복도(전날)</div>
+                <div class="kpi-sub">서울 평균 6.74 (+0.36)</div>
+                <div class="kpi-rank rank-good">평균 이상</div>
+            </div>
+            <div class="kpi-card kpi-bad">
+                <div class="kpi-value">4.52</div>
+                <div class="kpi-label">걱정도</div>
+                <div class="kpi-sub">서울 평균 4.26 (높을수록 나쁨)</div>
+                <div class="kpi-rank rank-bad">높음</div>
+            </div>
+        </div>
+        <div class="grid-3">
+            <div class="kpi-card kpi-bad">
+                <div class="kpi-value">5.87</div>
+                <div class="kpi-label">주택 만족도</div>
+                <div class="kpi-sub">서울 평균 6.39 (-0.52)</div>
+                <div class="kpi-rank rank-bad">21위 / 25구</div>
+            </div>
+            <div class="kpi-card kpi-bad">
+                <div class="kpi-value">6.16</div>
+                <div class="kpi-label">기반시설 만족도</div>
+                <div class="kpi-sub">서울 평균 6.58 (-0.42)</div>
+                <div class="kpi-rank rank-bad">19위 / 25구</div>
+            </div>
+            <div class="kpi-card kpi-good">
+                <div class="kpi-value">83.6<span style="font-size:20px;">%</span></div>
+                <div class="kpi-label">소득 보유율</div>
+                <div class="kpi-sub">서울 평균 77.9% (+5.7%p)</div>
+                <div class="kpi-rank rank-good">상위권</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: 레이더 차트 -->
+    <section id="radar" class="section reveal">
+        <div class="section-header">
+            <div class="section-icon">&#128293;</div>
+            <div>
+                <h2 class="section-title">레이더 차트 - 종합 비교</h2>
+                <p class="section-subtitle">동대문구 vs 서울 평균 vs 동북권 평균 (7개 차원)</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="chart-container">
+                <canvas id="radarChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: 순위 비교 -->
+    <section id="ranking" class="section reveal">
+        <div class="section-header">
+            <div class="section-icon">&#127942;</div>
+            <div>
+                <h2 class="section-title">25개 자치구 순위 비교</h2>
+                <p class="section-subtitle">삶의 만족도, 주택 만족도, 기반시설 만족도 기준</p>
+            </div>
+        </div>
+
+        <div class="grid-2" style="margin-bottom: 24px;">
+            <div class="card">
+                <div class="card-title">삶의 만족도 순위</div>
+                <div class="card-desc">25개 자치구 (10점 만점, 동대문구 강조)</div>
+                <div class="chart-container-lg">
+                    <canvas id="rankLifeChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">주택 만족도 순위</div>
+                <div class="card-desc">25개 자치구 (10점 만점, 동대문구 강조)</div>
+                <div class="chart-container-lg">
+                    <canvas id="rankHousingChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-title">기반시설 만족도 순위</div>
+            <div class="card-desc">25개 자치구 (10점 만점, 동대문구 강조)</div>
+            <div class="chart-container-lg">
+                <canvas id="rankInfraChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: 동북권 인접구 비교 -->
+    <section id="neighbors" class="section reveal">
+        <div class="section-header">
+            <div class="section-icon">&#128506;</div>
+            <div>
+                <h2 class="section-title">동북권 인접구 비교</h2>
+                <p class="section-subtitle">동대문구와 인접한 종로, 중구, 성동, 광진, 중랑, 성북 6개구 비교</p>
+            </div>
+        </div>
+
+        <div class="card" style="margin-bottom: 24px;">
+            <div class="chart-container">
+                <canvas id="neighborRadarChart"></canvas>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="table-scroll">
+                <table class="neighbor-table">
+                    <thead>
+                        <tr>
+                            <th>자치구</th>
+                            <th>삶의 만족도</th>
+                            <th>지역생활</th>
+                            <th>주택 만족도</th>
+                            <th>기반시설</th>
+                            <th>교통</th>
+                            <th>일자리</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>종로구</td>
+                            <td>6.72</td>
+                            <td>6.97</td>
+                            <td class="cell-bad">5.15</td>
+                            <td class="cell-bad">5.11</td>
+                            <td>7.15</td>
+                            <td>6.30</td>
+                        </tr>
+                        <tr>
+                            <td>중구</td>
+                            <td class="cell-bad">6.43</td>
+                            <td>7.01</td>
+                            <td>5.94</td>
+                            <td>6.14</td>
+                            <td>7.20</td>
+                            <td>6.28</td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td>&#9733; 동대문구</td>
+                            <td>6.83</td>
+                            <td>6.83</td>
+                            <td>5.87</td>
+                            <td>6.16</td>
+                            <td>7.04</td>
+                            <td>6.01</td>
+                        </tr>
+                        <tr>
+                            <td>성동구</td>
+                            <td class="cell-good">7.35</td>
+                            <td class="cell-good">7.44</td>
+                            <td class="cell-good">6.57</td>
+                            <td class="cell-good">6.78</td>
+                            <td>6.99</td>
+                            <td>6.27</td>
+                        </tr>
+                        <tr>
+                            <td>광진구</td>
+                            <td>6.64</td>
+                            <td>7.10</td>
+                            <td class="cell-bad">5.51</td>
+                            <td>6.22</td>
+                            <td>6.79</td>
+                            <td>6.17</td>
+                        </tr>
+                        <tr>
+                            <td>중랑구</td>
+                            <td>6.74</td>
+                            <td>7.04</td>
+                            <td>6.12</td>
+                            <td>6.13</td>
+                            <td>6.81</td>
+                            <td>5.99</td>
+                        </tr>
+                        <tr>
+                            <td>성북구</td>
+                            <td>6.82</td>
+                            <td>7.29</td>
+                            <td>6.50</td>
+                            <td>6.43</td>
+                            <td>6.67</td>
+                            <td>6.01</td>
+                        </tr>
+                        <tr style="background:#f0f4f8; font-weight:600;">
+                            <td>서울 평균</td>
+                            <td>6.84</td>
+                            <td>7.12</td>
+                            <td>6.39</td>
+                            <td>6.58</td>
+                            <td>7.04</td>
+                            <td>6.18</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: 일자리 만족도 -->
+    <section id="jobs" class="section reveal">
+        <div class="section-header">
+            <div class="section-icon">&#128188;</div>
+            <div>
+                <h2 class="section-title">일자리 만족도 상세</h2>
+                <p class="section-subtitle">동대문구 vs 서울 평균 (5개 하위 지표)</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="chart-container-sm">
+                <canvas id="jobChart"></canvas>
+            </div>
+        </div>
+
+        <div class="info-box" style="margin-top: 20px;">
+            <p>
+                <strong>핵심 발견:</strong> 동대문구 근로시간 만족도(4.94)는 서울 평균(5.76) 대비 <strong style="color:var(--accent);">-0.82점(-14.2%)</strong>으로, 전 항목 중 서울 대비 가장 큰 격차를 보입니다. 전통시장/도소매업 중심의 장시간 근로가 주된 원인으로 분석됩니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 5: 교육 만족도 -->
+    <section id="education" class="section reveal">
+        <div class="section-header">
+            <div class="section-icon">&#127891;</div>
+            <div>
+                <h2 class="section-title">교육 만족도</h2>
+                <p class="section-subtitle">동대문구 vs 서울 평균 교육 환경 비교</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="chart-container-sm">
+                <canvas id="eduChart"></canvas>
+            </div>
+        </div>
+
+        <div class="info-box" style="margin-top: 20px;">
+            <p>
+                <strong>핵심 발견:</strong> 교육 전 항목에서 서울 평균 이하이며, 특히 <strong style="color:var(--accent);">평생교육(5.35 vs 6.09, -0.74점)</strong>의 격차가 두드러집니다. 미취학 보육환경(6.10 vs 6.87, -0.77점)도 상당한 격차를 보입니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 6: 여가활동/시간 -->
+    <section id="leisure" class="section reveal">
+        <div class="section-header">
+            <div class="section-icon">&#127926;</div>
+            <div>
+                <h2 class="section-title">여가활동 / 시간 사용</h2>
+                <p class="section-subtitle">문화여가, 시간 만족도 비교</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="chart-container-sm">
+                <canvas id="leisureChart"></canvas>
+            </div>
+        </div>
+
+        <div class="info-box" style="margin-top: 20px;">
+            <p>
+                <strong>강점 발견:</strong> <strong style="color:var(--primary);">문화여가시설 만족도(6.67)</strong>는 서울 평균(6.55)보다 높아 강점으로 활용 가능합니다. 주말 시간 만족도(4.92 vs 4.30)도 서울 평균을 상회합니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 7: 소득/경제 -->
+    <section id="economy" class="section reveal">
+        <div class="section-header">
+            <div class="section-icon">&#128176;</div>
+            <div>
+                <h2 class="section-title">소득 / 경제</h2>
+                <p class="section-subtitle">소득 보유율 및 가구 소득 분포 비교</p>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">소득 보유율</div>
+                <div class="card-desc">경제활동 참여 인구 비율</div>
+                <div class="chart-container-sm">
+                    <canvas id="incomeRateChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">고소득 가구 비율 (월 800만원 이상)</div>
+                <div class="card-desc">가구 소득 800만원 이상 비율 비교</div>
+                <div class="chart-container-sm">
+                    <canvas id="highIncomeChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box" style="margin-top: 20px;">
+            <p>
+                <strong>핵심 발견:</strong> 소득 보유율 <strong style="color:var(--primary);">83.6%</strong>로 서울 평균(77.9%)보다 높은 편이지만, 고소득(800만원 이상) 가구 비율은 <strong style="color:var(--accent);">14.1%</strong>로 서울 평균(17.0%)보다 낮아 소득 수준의 질적 차이가 존재합니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 8: 문제점 진단 -->
+    <section id="problems" class="section reveal">
+        <div class="section-header">
+            <div class="section-icon">&#128680;</div>
+            <div>
+                <h2 class="section-title">문제점 진단</h2>
+                <p class="section-subtitle">5대 핵심 문제 및 원인 분석</p>
+            </div>
+        </div>
+
+        <!-- 문제 1 -->
+        <div class="problem-card severity-critical">
+            <div class="problem-header">
+                <div class="problem-title">문제 1: 주택 만족도 최하위권 (21위/25구)</div>
+                <div class="severity-badge severity-critical">CRITICAL</div>
+            </div>
+            <div class="problem-stat">
+                <div class="problem-stat-value">5.87</div>
+                <div>
+                    <div class="problem-stat-label">동대문구 vs 서울 6.39 (<strong style="color:var(--accent);">-0.52점, -8.1%</strong>)</div>
+                    <div class="problem-stat-label">25개 구 중 21위, 하위 5개 구 포함</div>
+                </div>
+            </div>
+            <div class="problem-causes">
+                <h4>원인 분석</h4>
+                <ul>
+                    <li>다세대/다가구 주택 밀집 지역으로 노후 주택 비율이 높음</li>
+                    <li>재건축/재개발 사업 지연으로 주거환경 개선이 더딘 상황</li>
+                    <li>주차공간 부족으로 주거 편의성 저하</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 문제 2 -->
+        <div class="problem-card severity-critical">
+            <div class="problem-header">
+                <div class="problem-title">문제 2: 기반시설 만족도 하위권 (19위/25구)</div>
+                <div class="severity-badge severity-critical">CRITICAL</div>
+            </div>
+            <div class="problem-stat">
+                <div class="problem-stat-value">6.16</div>
+                <div>
+                    <div class="problem-stat-label">동대문구 vs 서울 6.58 (<strong style="color:var(--accent);">-0.42점</strong>)</div>
+                    <div class="problem-stat-label">도로, 공원, 공공시설 등 인프라 노후화</div>
+                </div>
+            </div>
+            <div class="problem-causes">
+                <h4>원인 분석</h4>
+                <ul>
+                    <li>구도심 지역으로 인프라 노후화가 심각</li>
+                    <li>녹지공간 부족 (1인당 공원면적 저조)</li>
+                    <li>도시재생 사업 진행 중이나 주민 체감도가 낮은 상태</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 문제 3 -->
+        <div class="problem-card severity-high">
+            <div class="problem-header">
+                <div class="problem-title">문제 3: 지역생활 만족도 하위권 (18위/25구)</div>
+                <div class="severity-badge severity-high">HIGH</div>
+            </div>
+            <div class="problem-stat">
+                <div class="problem-stat-value">6.83</div>
+                <div>
+                    <div class="problem-stat-label">동대문구 vs 서울 7.12 (<strong style="color:var(--accent);">-0.29점</strong>)</div>
+                    <div class="problem-stat-label">주거환경+인프라 불만이 복합적으로 작용</div>
+                </div>
+            </div>
+            <div class="problem-causes">
+                <h4>원인 분석</h4>
+                <ul>
+                    <li>주택+인프라 불만이 지역 전반 만족도 하락으로 연결</li>
+                    <li>상대적으로 생활편의시설(의료, 상업, 문화) 접근성 저조</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 문제 4 -->
+        <div class="problem-card severity-high">
+            <div class="problem-header">
+                <div class="problem-title">문제 4: 걱정 수준 높음</div>
+                <div class="severity-badge severity-high">HIGH</div>
+            </div>
+            <div class="problem-stat">
+                <div class="problem-stat-value">4.52</div>
+                <div>
+                    <div class="problem-stat-label">동대문구 vs 서울 4.26 (<strong style="color:var(--accent);">+0.26점, 높을수록 걱정 많음</strong>)</div>
+                    <div class="problem-stat-label">서울 평균 대비 걱정 수준이 유의미하게 높음</div>
+                </div>
+            </div>
+            <div class="problem-causes">
+                <h4>원인 분석</h4>
+                <ul>
+                    <li>경제적 불안정 (높은 소득 보유율에도 불구하고 소득 수준 낮음)</li>
+                    <li>노후 주거환경으로 인한 일상적 불안감</li>
+                    <li>근로시간/임금 불만족과 연계된 복합적 스트레스</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 문제 5 -->
+        <div class="problem-card severity-high">
+            <div class="problem-header">
+                <div class="problem-title">문제 5: 근로시간 만족도 극히 낮음</div>
+                <div class="severity-badge severity-high">HIGH</div>
+            </div>
+            <div class="problem-stat">
+                <div class="problem-stat-value">4.94</div>
+                <div>
+                    <div class="problem-stat-label">동대문구 vs 서울 5.76 (<strong style="color:var(--accent);">-0.82점, -14.2%</strong>)</div>
+                    <div class="problem-stat-label">전 항목 중 서울 대비 가장 큰 격차</div>
+                </div>
+            </div>
+            <div class="problem-causes">
+                <h4>원인 분석</h4>
+                <ul>
+                    <li>전통시장(청량리, 경동시장)/도소매 중심 산업구조로 장시간 근로 만연</li>
+                    <li>근로환경 개선 지연 (영세 자영업 비율 높음)</li>
+                    <li>워라밸(Work-Life Balance) 문화 정착 미흡</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: 정책 제언 -->
+    <section id="solutions" class="section reveal">
+        <div class="section-header">
+            <div class="section-icon">&#128161;</div>
+            <div>
+                <h2 class="section-title">정책 제언</h2>
+                <p class="section-subtitle">5대 정책 대안 및 기대효과</p>
+            </div>
+        </div>
+
+        <!-- 대안 1 -->
+        <div class="solution-card priority-urgent">
+            <div class="solution-header">
+                <div class="solution-title">대안 1: 주거환경 종합 개선 프로젝트</div>
+                <div class="priority-badge priority-urgent">URGENT</div>
+            </div>
+            <ul class="solution-items">
+                <li>노후 다세대/다가구 주택 리모델링 지원 확대 (에너지 효율화, 외벽 개선)</li>
+                <li>주민 참여형 소규모 주거환경 정비사업 추진</li>
+                <li>주차환경 개선: 공영주차장 확충, 주차관제 시스템 도입</li>
+            </ul>
+            <div class="expected-effect">
+                <span class="expected-effect-icon">&#127919;</span>
+                기대효과: 주택만족도 5.87 &#8594; 6.3 이상 (2년 내)
+            </div>
+        </div>
+
+        <!-- 대안 2 -->
+        <div class="solution-card priority-urgent">
+            <div class="solution-header">
+                <div class="solution-title">대안 2: 인프라 현대화 및 녹지 확충</div>
+                <div class="priority-badge priority-urgent">URGENT</div>
+            </div>
+            <ul class="solution-items">
+                <li>도시재생 뉴딜사업 가속화 (이문/휘경 도시재생 등)</li>
+                <li>보행환경 개선: 유니버설 디자인 적용, 무장애 보도 정비</li>
+                <li>소공원/쌈지공원 조성으로 녹지 접근성 향상</li>
+                <li>공공편의시설 리뉴얼 (도서관, 체육시설, 커뮤니티 센터)</li>
+            </ul>
+            <div class="expected-effect">
+                <span class="expected-effect-icon">&#127919;</span>
+                기대효과: 기반시설만족도 6.16 &#8594; 6.5 이상
+            </div>
+        </div>
+
+        <!-- 대안 3 -->
+        <div class="solution-card priority-high">
+            <div class="solution-header">
+                <div class="solution-title">대안 3: 근로환경 개선 및 양질의 일자리 창출</div>
+                <div class="priority-badge priority-high">HIGH</div>
+            </div>
+            <ul class="solution-items">
+                <li>전통시장(청량리, 경동시장 등) 스마트화 및 근무환경 개선</li>
+                <li>창업 지원: 청년 창업 인큐베이팅, 소상공인 디지털 전환 지원</li>
+                <li>워라밸 프로그램: 소규모 사업장 근로시간 단축 인센티브</li>
+                <li>이문동 일대 지식산업센터 조성으로 양질의 일자리 유치</li>
+            </ul>
+            <div class="expected-effect">
+                <span class="expected-effect-icon">&#127919;</span>
+                기대효과: 근로시간 만족도 4.94 &#8594; 5.5 이상
+            </div>
+        </div>
+
+        <!-- 대안 4 -->
+        <div class="solution-card priority-medium">
+            <div class="solution-header">
+                <div class="solution-title">대안 4: 교육환경 강화</div>
+                <div class="priority-badge priority-medium">MEDIUM</div>
+            </div>
+            <ul class="solution-items">
+                <li>미취학 아동 보육시설 확충 및 공공보육 강화</li>
+                <li>방과후 프로그램 다양화 및 접근성 개선</li>
+                <li>평생교육 기회 확대: 온라인/오프라인 하이브리드 프로그램</li>
+                <li>대학(경희대, 한국외대 등) 연계 지역사회 교육 프로그램</li>
+            </ul>
+            <div class="expected-effect">
+                <span class="expected-effect-icon">&#127919;</span>
+                기대효과: 교육만족도 6.12 &#8594; 6.5 이상
+            </div>
+        </div>
+
+        <!-- 대안 5 -->
+        <div class="solution-card priority-medium">
+            <div class="solution-header">
+                <div class="solution-title">대안 5: 걱정 해소 및 심리적 안정 지원</div>
+                <div class="priority-badge priority-medium">MEDIUM</div>
+            </div>
+            <ul class="solution-items">
+                <li>마음건강센터 운영 강화: 찾아가는 심리상담 서비스</li>
+                <li>경제적 어려움 완화: 긴급생활안정자금 지원 확대</li>
+                <li>1인 가구/고령 가구 대상 사회안전망 확충</li>
+                <li>지역 커뮤니티 활성화: 주민자치회, 마을공동체 프로그램</li>
+            </ul>
+            <div class="expected-effect">
+                <span class="expected-effect-icon">&#127919;</span>
+                기대효과: 걱정도 4.52 &#8594; 4.3 이하
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: 강점 활용 전략 -->
+    <section id="strengths" class="section reveal">
+        <div class="section-header">
+            <div class="section-icon">&#11088;</div>
+            <div>
+                <h2 class="section-title">강점 활용 전략</h2>
+                <p class="section-subtitle">동대문구의 강점을 살려 지역 경쟁력 강화</p>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="strength-card">
+                <h4>높은 소득 보유율 (83.6%)</h4>
+                <p>서울 평균(77.9%) 대비 높은 경제활동 참여율을 활용하여, 지역 경제 활성화와 소비 인프라 확충에 활용할 수 있습니다. 지역상권 특화 프로그램과 연계하면 시너지 효과를 기대할 수 있습니다.</p>
+            </div>
+            <div class="strength-card">
+                <h4>행복도 상위 (7.10점)</h4>
+                <p>서울 평균(6.74)보다 높은 행복도는 지역 공동체의 사회적 자본이 견실함을 보여줍니다. 행복한 공동체 기반의 주민 참여형 사업을 추진하면 정책 실효성이 높아집니다.</p>
+            </div>
+            <div class="strength-card">
+                <h4>문화여가시설 만족도 양호 (6.67점)</h4>
+                <p>서울 평균(6.55)을 상회하는 문화여가시설 만족도는 DDP(동대문디자인플라자), 동대문역사문화공원 등의 자산이 작용합니다. 이를 문화 인프라 특화 전략으로 발전시킬 수 있습니다.</p>
+            </div>
+            <div class="strength-card">
+                <h4>교통 만족도 평균 수준 (7.04점)</h4>
+                <p>서울 평균과 동일한 교통 만족도는 지하철 1/2호선, 경의중앙선 등 대중교통 인프라가 양호함을 의미합니다. 이를 활용한 접근성 강화 마케팅이 가능합니다.</p>
+            </div>
+            <div class="strength-card" style="grid-column: 1 / -1;">
+                <h4>DDP/동대문 패션 클러스터 &#8594; 문화/창조산업 허브로 포지셔닝</h4>
+                <p>동대문디자인플라자(DDP), 동대문 패션타운 등 세계적으로 알려진 문화/패션 자산을 보유하고 있습니다. 이를 창조산업 허브, 디자인/패션 스타트업 집적지로 발전시키면 양질의 일자리 창출과 지역 브랜드 가치 향상을 동시에 달성할 수 있습니다.</p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div style="max-width: 1280px; margin: 0 auto;">
+        <strong>동대문구 심층 분석 리포트</strong><br>
+        데이터 출처: 2025 서울서베이 도시정책지표조사 (제23회)<br>
+        서울특별시 빅데이터담당관 | 조사 기간: 2025.08.16 ~ 09.29<br><br>
+        <a href="index.html">&#8592; 서울서베이 메인 대시보드로 돌아가기</a>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
+
+<script>
+// ==========================================
+// Utility
+// ==========================================
+function scrollToSection(id) {
+    const el = document.getElementById(id);
+    if (el) {
+        const navHeight = document.querySelector('.nav').offsetHeight;
+        const y = el.getBoundingClientRect().top + window.pageYOffset - navHeight - 16;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+}
+
+// Back to Top
+const backToTopBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+    backToTopBtn.classList.toggle('show', window.scrollY > 400);
+});
+
+// Scroll reveal
+const revealElements = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.05 });
+revealElements.forEach(el => revealObserver.observe(el));
+
+// Active nav on scroll
+const sections = document.querySelectorAll('.section');
+const navItems = document.querySelectorAll('.nav-item');
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (window.pageYOffset >= top) {
+            current = section.getAttribute('id');
+        }
+    });
+    navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('onclick') && item.getAttribute('onclick').includes(current)) {
+            item.classList.add('active');
+        }
+    });
+});
+
+// ==========================================
+// Chart.js defaults
+// ==========================================
+Chart.defaults.font.family = "'Noto Sans KR', sans-serif";
+Chart.defaults.font.size = 12;
+Chart.defaults.color = '#7F8C8D';
+
+const PRIMARY = '#00A88E';
+const PRIMARY_DARK = '#008B74';
+const ACCENT = '#E74C3C';
+const BLUE = '#2980B9';
+const ORANGE = '#F39C12';
+const SECONDARY = '#2C3E50';
+
+// ==========================================
+// Section 2: Radar Chart
+// ==========================================
+new Chart(document.getElementById('radarChart'), {
+    type: 'radar',
+    data: {
+        labels: ['삶의 만족도', '지역생활', '행복도', '주택 만족도', '기반시설', '교통 만족도', '일자리'],
+        datasets: [
+            {
+                label: '동대문구',
+                data: [6.83, 6.83, 6.82, 5.87, 6.16, 7.04, 6.01],
+                borderColor: ACCENT,
+                backgroundColor: 'rgba(231,76,60,0.15)',
+                borderWidth: 3,
+                pointRadius: 5,
+                pointBackgroundColor: ACCENT,
+                pointBorderColor: '#fff',
+                pointBorderWidth: 2,
+            },
+            {
+                label: '서울 평균',
+                data: [6.84, 7.12, 6.74, 6.39, 6.58, 7.04, 6.18],
+                borderColor: PRIMARY,
+                backgroundColor: 'rgba(0,168,142,0.1)',
+                borderWidth: 2,
+                pointRadius: 4,
+                pointBackgroundColor: PRIMARY,
+                pointBorderColor: '#fff',
+                pointBorderWidth: 2,
+            },
+            {
+                label: '동북권 평균',
+                data: [6.84, 7.13, 6.81, 6.16, 6.43, 6.82, 6.01],
+                borderColor: BLUE,
+                backgroundColor: 'rgba(41,128,185,0.08)',
+                borderWidth: 2,
+                borderDash: [5, 5],
+                pointRadius: 3,
+                pointBackgroundColor: BLUE,
+                pointBorderColor: '#fff',
+                pointBorderWidth: 2,
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            r: {
+                min: 5,
+                max: 8,
+                ticks: {
+                    stepSize: 0.5,
+                    backdropColor: 'transparent',
+                    font: { size: 11 }
+                },
+                grid: { color: 'rgba(0,0,0,0.06)' },
+                angleLines: { color: 'rgba(0,0,0,0.06)' },
+                pointLabels: {
+                    font: { size: 13, weight: '600' },
+                    color: SECONDARY
+                }
+            }
+        },
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: {
+                    usePointStyle: true,
+                    padding: 20,
+                    font: { size: 13, weight: '500' }
+                }
+            }
+        }
+    }
+});
+
+// ==========================================
+// Section 3: Ranking Charts
+// ==========================================
+function createRankingChart(canvasId, data, label) {
+    // Sort descending
+    const sorted = Object.entries(data).sort((a, b) => b[1] - a[1]);
+    const labels = sorted.map(d => d[0]);
+    const values = sorted.map(d => d[1]);
+    const colors = labels.map(l => l === '동대문' ? ACCENT : '#B0BEC5');
+    const borderColors = labels.map(l => l === '동대문' ? '#C0392B' : '#90A4AE');
+
+    new Chart(document.getElementById(canvasId), {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: label,
+                data: values,
+                backgroundColor: colors,
+                borderColor: borderColors,
+                borderWidth: 1,
+                borderRadius: 3,
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    min: Math.min(...values) - 0.3,
+                    grid: { color: 'rgba(0,0,0,0.04)' },
+                    ticks: { font: { size: 11 } }
+                },
+                y: {
+                    ticks: {
+                        font: function(context) {
+                            const label = context.tick.label;
+                            return {
+                                size: 11,
+                                weight: label === '동대문' ? '700' : '400'
+                            };
+                        },
+                        color: function(context) {
+                            const label = context.tick.label;
+                            return label === '동대문' ? ACCENT : '#7F8C8D';
+                        }
+                    },
+                    grid: { display: false }
+                }
+            },
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function(ctx) {
+                            return ctx.parsed.x + '점';
+                        }
+                    }
+                }
+            }
+        }
+    });
+}
+
+const lifeData = {
+    '종로': 6.72, '중구': 6.43, '용산': 6.64, '성동': 7.35, '광진': 6.64,
+    '동대문': 6.83, '중랑': 6.74, '성북': 6.82, '강북': 6.33, '도봉': 6.93,
+    '노원': 7.06, '은평': 7.04, '서대문': 7.01, '마포': 7.26, '양천': 7.16,
+    '강서': 7.02, '구로': 6.96, '금천': 6.47, '영등포': 6.10, '동작': 6.88,
+    '관악': 6.72, '서초': 7.13, '강남': 6.62, '송파': 7.07, '강동': 6.44
+};
+
+const housingData = {
+    '종로': 5.15, '중구': 5.94, '용산': 6.36, '성동': 6.57, '광진': 5.51,
+    '동대문': 5.87, '중랑': 6.12, '성북': 6.50, '강북': 5.16, '도봉': 6.64,
+    '노원': 6.59, '은평': 6.81, '서대문': 7.15, '마포': 6.77, '양천': 6.86,
+    '강서': 6.18, '구로': 7.38, '금천': 6.83, '영등포': 5.49, '동작': 6.41,
+    '관악': 5.95, '서초': 6.44, '강남': 6.84, '송파': 6.42, '강동': 6.57
+};
+
+const infraData = {
+    '종로': 5.11, '중구': 6.14, '용산': 6.30, '성동': 6.78, '광진': 6.22,
+    '동대문': 6.16, '중랑': 6.13, '성북': 6.43, '강북': 5.63, '도봉': 7.08,
+    '노원': 6.45, '은평': 7.16, '서대문': 7.13, '마포': 7.07, '양천': 6.86,
+    '강서': 6.64, '구로': 7.39, '금천': 7.08, '영등포': 5.67, '동작': 6.53,
+    '관악': 6.07, '서초': 6.99, '강남': 7.18, '송파': 6.26, '강동': 6.80
+};
+
+createRankingChart('rankLifeChart', lifeData, '삶의 만족도');
+createRankingChart('rankHousingChart', housingData, '주택 만족도');
+createRankingChart('rankInfraChart', infraData, '기반시설 만족도');
+
+// ==========================================
+// Neighbor Radar Chart
+// ==========================================
+new Chart(document.getElementById('neighborRadarChart'), {
+    type: 'radar',
+    data: {
+        labels: ['삶의 만족도', '지역생활', '주택 만족도', '기반시설', '교통', '일자리'],
+        datasets: [
+            {
+                label: '동대문구',
+                data: [6.83, 6.83, 5.87, 6.16, 7.04, 6.01],
+                borderColor: ACCENT,
+                backgroundColor: 'rgba(231,76,60,0.15)',
+                borderWidth: 3,
+                pointRadius: 5,
+                pointBackgroundColor: ACCENT,
+                pointBorderColor: '#fff',
+                pointBorderWidth: 2,
+            },
+            {
+                label: '성동구',
+                data: [7.35, 7.44, 6.57, 6.78, 6.99, 6.27],
+                borderColor: PRIMARY,
+                backgroundColor: 'rgba(0,168,142,0.08)',
+                borderWidth: 2,
+                pointRadius: 3,
+                pointBackgroundColor: PRIMARY,
+            },
+            {
+                label: '성북구',
+                data: [6.82, 7.29, 6.50, 6.43, 6.67, 6.01],
+                borderColor: BLUE,
+                backgroundColor: 'rgba(41,128,185,0.06)',
+                borderWidth: 2,
+                pointRadius: 3,
+                pointBackgroundColor: BLUE,
+            },
+            {
+                label: '종로구',
+                data: [6.72, 6.97, 5.15, 5.11, 7.15, 6.30],
+                borderColor: ORANGE,
+                backgroundColor: 'rgba(243,156,18,0.06)',
+                borderWidth: 1.5,
+                borderDash: [4, 4],
+                pointRadius: 2,
+                pointBackgroundColor: ORANGE,
+            },
+            {
+                label: '중랑구',
+                data: [6.74, 7.04, 6.12, 6.13, 6.81, 5.99],
+                borderColor: '#8E44AD',
+                backgroundColor: 'rgba(142,68,173,0.06)',
+                borderWidth: 1.5,
+                borderDash: [4, 4],
+                pointRadius: 2,
+                pointBackgroundColor: '#8E44AD',
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            r: {
+                min: 4.5,
+                max: 8,
+                ticks: {
+                    stepSize: 0.5,
+                    backdropColor: 'transparent',
+                    font: { size: 10 }
+                },
+                grid: { color: 'rgba(0,0,0,0.06)' },
+                angleLines: { color: 'rgba(0,0,0,0.06)' },
+                pointLabels: {
+                    font: { size: 13, weight: '600' },
+                    color: SECONDARY
+                }
+            }
+        },
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: {
+                    usePointStyle: true,
+                    padding: 16,
+                    font: { size: 12 }
+                }
+            }
+        }
+    }
+});
+
+// ==========================================
+// Section 4: Job Satisfaction
+// ==========================================
+new Chart(document.getElementById('jobChart'), {
+    type: 'bar',
+    data: {
+        labels: ['하는 일', '임금/소득', '근로시간', '근무환경', '전반적'],
+        datasets: [
+            {
+                label: '동대문구',
+                data: [6.27, 5.11, 4.94, 5.68, 6.01],
+                backgroundColor: ACCENT,
+                borderRadius: 6,
+                barPercentage: 0.6,
+                categoryPercentage: 0.7,
+            },
+            {
+                label: '서울 평균',
+                data: [6.27, 5.45, 5.76, 6.11, 6.18],
+                backgroundColor: PRIMARY,
+                borderRadius: 6,
+                barPercentage: 0.6,
+                categoryPercentage: 0.7,
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                min: 4,
+                max: 7,
+                grid: { color: 'rgba(0,0,0,0.04)' },
+                ticks: { font: { size: 12 } }
+            },
+            x: {
+                grid: { display: false },
+                ticks: { font: { size: 13, weight: '500' } }
+            }
+        },
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: {
+                    usePointStyle: true,
+                    padding: 20,
+                    font: { size: 13 }
+                }
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(ctx) {
+                        return ctx.dataset.label + ': ' + ctx.parsed.y + '점';
+                    }
+                }
+            }
+        }
+    }
+});
+
+// ==========================================
+// Section 5: Education
+// ==========================================
+new Chart(document.getElementById('eduChart'), {
+    type: 'bar',
+    data: {
+        labels: ['미취학 보육환경', '공교육환경', '학교 외 교육', '평생교육'],
+        datasets: [
+            {
+                label: '동대문구',
+                data: [6.10, 6.12, 6.26, 5.35],
+                backgroundColor: ACCENT,
+                borderRadius: 6,
+                barPercentage: 0.6,
+                categoryPercentage: 0.7,
+            },
+            {
+                label: '서울 평균',
+                data: [6.87, 6.63, 6.42, 6.09],
+                backgroundColor: PRIMARY,
+                borderRadius: 6,
+                barPercentage: 0.6,
+                categoryPercentage: 0.7,
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                min: 4.5,
+                max: 7.5,
+                grid: { color: 'rgba(0,0,0,0.04)' },
+                ticks: { font: { size: 12 } }
+            },
+            x: {
+                grid: { display: false },
+                ticks: { font: { size: 13, weight: '500' } }
+            }
+        },
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: {
+                    usePointStyle: true,
+                    padding: 20,
+                    font: { size: 13 }
+                }
+            }
+        }
+    }
+});
+
+// ==========================================
+// Section 6: Leisure
+// ==========================================
+new Chart(document.getElementById('leisureChart'), {
+    type: 'bar',
+    data: {
+        labels: ['문화여가시설', '전반적 여가활동', '시간만족 평일', '시간만족 주말'],
+        datasets: [
+            {
+                label: '동대문구',
+                data: [6.67, 5.50, 5.67, 4.92],
+                backgroundColor: function(ctx) {
+                    const val = ctx.dataset.data[ctx.dataIndex];
+                    const seoulAvg = [6.55, 5.67, 5.48, 4.30];
+                    return val >= seoulAvg[ctx.dataIndex] ? PRIMARY : ACCENT;
+                },
+                borderRadius: 6,
+                barPercentage: 0.6,
+                categoryPercentage: 0.7,
+            },
+            {
+                label: '서울 평균',
+                data: [6.55, 5.67, 5.48, 4.30],
+                backgroundColor: '#B0BEC5',
+                borderRadius: 6,
+                barPercentage: 0.6,
+                categoryPercentage: 0.7,
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                min: 3.5,
+                max: 7.5,
+                grid: { color: 'rgba(0,0,0,0.04)' },
+                ticks: { font: { size: 12 } }
+            },
+            x: {
+                grid: { display: false },
+                ticks: { font: { size: 13, weight: '500' } }
+            }
+        },
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: {
+                    usePointStyle: true,
+                    padding: 20,
+                    font: { size: 13 }
+                }
+            }
+        }
+    }
+});
+
+// ==========================================
+// Section 7: Economy Charts
+// ==========================================
+new Chart(document.getElementById('incomeRateChart'), {
+    type: 'doughnut',
+    data: {
+        labels: ['동대문구 소득 보유율', '비보유'],
+        datasets: [{
+            data: [83.6, 16.4],
+            backgroundColor: [ACCENT, '#E8ECF1'],
+            borderWidth: 0,
+            cutout: '70%',
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: { display: false },
+            tooltip: {
+                callbacks: {
+                    label: function(ctx) {
+                        return ctx.label + ': ' + ctx.parsed + '%';
+                    }
+                }
+            }
+        }
+    },
+    plugins: [{
+        afterDraw: function(chart) {
+            const ctx = chart.ctx;
+            const centerX = (chart.chartArea.left + chart.chartArea.right) / 2;
+            const centerY = (chart.chartArea.top + chart.chartArea.bottom) / 2;
+
+            ctx.save();
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+
+            ctx.font = "900 36px 'Noto Sans KR'";
+            ctx.fillStyle = ACCENT;
+            ctx.fillText('83.6%', centerX, centerY - 10);
+
+            ctx.font = "500 13px 'Noto Sans KR'";
+            ctx.fillStyle = '#7F8C8D';
+            ctx.fillText('서울 77.9%', centerX, centerY + 20);
+
+            ctx.restore();
+        }
+    }]
+});
+
+new Chart(document.getElementById('highIncomeChart'), {
+    type: 'doughnut',
+    data: {
+        labels: ['동대문구 800만원 이상', '기타'],
+        datasets: [{
+            data: [14.1, 85.9],
+            backgroundColor: ['#B0BEC5', '#E8ECF1'],
+            borderWidth: 0,
+            cutout: '70%',
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: { display: false },
+            tooltip: {
+                callbacks: {
+                    label: function(ctx) {
+                        return ctx.label + ': ' + ctx.parsed + '%';
+                    }
+                }
+            }
+        }
+    },
+    plugins: [{
+        afterDraw: function(chart) {
+            const ctx = chart.ctx;
+            const centerX = (chart.chartArea.left + chart.chartArea.right) / 2;
+            const centerY = (chart.chartArea.top + chart.chartArea.bottom) / 2;
+
+            ctx.save();
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+
+            ctx.font = "900 36px 'Noto Sans KR'";
+            ctx.fillStyle = '#7F8C8D';
+            ctx.fillText('14.1%', centerX, centerY - 10);
+
+            ctx.font = "500 13px 'Noto Sans KR'";
+            ctx.fillStyle = '#7F8C8D';
+            ctx.fillText('서울 17.0%', centerX, centerY + 20);
+
+            ctx.restore();
+        }
+    }]
+});
+
+</script>
+</body>
+</html>

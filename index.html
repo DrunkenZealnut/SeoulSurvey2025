@@ -1,0 +1,2557 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 서울서베이 도시정책지표조사 통계 대시보드</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap');
+
+        :root {
+            --primary: #00A88E;
+            --primary-dark: #008B74;
+            --primary-light: #E8F8F5;
+            --secondary: #2C3E50;
+            --accent: #E74C3C;
+            --accent-warm: #F39C12;
+            --bg: #F0F4F8;
+            --card: #FFFFFF;
+            --text: #2C3E50;
+            --text-light: #7F8C8D;
+            --border: #E8ECF1;
+            --shadow: 0 2px 20px rgba(0,0,0,0.06);
+            --shadow-hover: 0 8px 30px rgba(0,0,0,0.12);
+            --radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #00A88E 0%, #00796B 50%, #004D40 100%);
+            color: white;
+            padding: 60px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 52px);
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            font-weight: 300;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin-top: 40px;
+        }
+
+        .hero-stat {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .hero-stat .value {
+            font-size: 32px;
+            font-weight: 900;
+            display: block;
+        }
+
+        .hero-stat .label {
+            font-size: 13px;
+            opacity: 0.8;
+            margin-top: 4px;
+        }
+
+        /* Navigation */
+        .nav {
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            gap: 4px;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .nav-inner::-webkit-scrollbar { display: none; }
+
+        .nav-item {
+            padding: 16px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-light);
+            cursor: pointer;
+            white-space: nowrap;
+            border-bottom: 3px solid transparent;
+            transition: var(--transition);
+        }
+
+        .nav-item:hover, .nav-item.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 32px 24px;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 48px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .section-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .section-subtitle {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 28px;
+            transition: var(--transition);
+            border: 1px solid var(--border);
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 4px;
+        }
+
+        .card-desc {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        /* Grid layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr));
+            gap: 24px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+            gap: 24px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+            gap: 16px;
+        }
+
+        .grid-5 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+            gap: 16px;
+        }
+
+        /* KPI Cards */
+        .kpi-card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 24px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kpi-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary);
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .kpi-value {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .kpi-unit {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+
+        .kpi-label {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-top: 8px;
+            font-weight: 500;
+        }
+
+        .kpi-sub {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-top: 4px;
+            opacity: 0.7;
+        }
+
+        /* Score Bar */
+        .score-bar-container {
+            margin: 12px 0;
+        }
+
+        .score-bar-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .score-bar-label span:first-child { font-weight: 500; }
+        .score-bar-label span:last-child { font-weight: 700; color: var(--primary); }
+
+        .score-bar {
+            height: 10px;
+            background: #E8ECF1;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .score-bar-fill {
+            height: 100%;
+            border-radius: 5px;
+            transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+        }
+
+        /* District Table */
+        .district-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 13px;
+        }
+
+        .district-table thead th {
+            background: var(--secondary);
+            color: white;
+            padding: 12px 16px;
+            text-align: center;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+        }
+
+        .district-table thead th:first-child {
+            border-radius: 8px 0 0 0;
+            text-align: left;
+        }
+
+        .district-table thead th:last-child {
+            border-radius: 0 8px 0 0;
+        }
+
+        .district-table tbody tr {
+            transition: var(--transition);
+        }
+
+        .district-table tbody tr:hover {
+            background: var(--primary-light);
+        }
+
+        .district-table td {
+            padding: 10px 16px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .district-table td:first-child {
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .district-table .highlight {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .district-table .low {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+            border-radius: 8px;
+        }
+
+        /* Trend Chart area */
+        .chart-container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+
+        .chart-container-sm {
+            position: relative;
+            height: 250px;
+            width: 100%;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: linear-gradient(135deg, var(--primary-light), #fff);
+            border-left: 4px solid var(--primary);
+            border-radius: 0 12px 12px 0;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+        }
+
+        .info-box p {
+            font-size: 14px;
+            color: var(--secondary);
+            line-height: 1.8;
+        }
+
+        .info-box strong {
+            color: var(--primary-dark);
+        }
+
+        /* Percentage Indicator */
+        .pct-ring {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 12px;
+        }
+
+        /* Tag */
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .tag-green { background: #E8F8F5; color: #00A88E; }
+        .tag-red { background: #FDEDEC; color: #E74C3C; }
+        .tag-orange { background: #FEF5E7; color: #F39C12; }
+        .tag-blue { background: #EBF5FB; color: #2980B9; }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary);
+            color: rgba(255,255,255,0.7);
+            padding: 40px 24px;
+            text-align: center;
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        .footer strong {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero { padding: 40px 0 60px; }
+            .hero-stats { grid-template-columns: repeat(2, 1fr); }
+            .container { padding: 24px 16px; }
+            .card { padding: 20px; }
+            .kpi-value { font-size: 28px; }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate { animation: fadeInUp 0.6s ease-out forwards; }
+
+        /* Scroll reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Back to top */
+        .back-to-top {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(0,168,142,0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,168,142,0.5);
+        }
+
+        /* Print styles */
+        @media print {
+            .nav, .back-to-top { display: none !important; }
+            .hero { padding: 20px 0 30px; }
+            .card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
+            .kpi-card { break-inside: avoid; }
+            body { background: white; }
+        }
+
+        /* Satisfaction gauge mini */
+        .gauge-mini {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 0;
+        }
+        .gauge-mini-label {
+            flex: 0 0 120px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .gauge-mini-bar {
+            flex: 1;
+            height: 8px;
+            background: #E8ECF1;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .gauge-mini-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 1.5s ease;
+        }
+        .gauge-mini-value {
+            flex: 0 0 50px;
+            text-align: right;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero -->
+<header class="hero">
+    <div class="hero-content">
+        <div class="hero-badge">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 4v4l3 2"/></svg>
+            2025.08.16 ~ 09.29 조사
+        </div>
+        <h1>2025 서울서베이<br>도시정책지표조사</h1>
+        <p>서울시민의 삶의 질, 만족도, 가치관의 변화를 과학적으로 분석한 제23회 서울서베이 결과입니다.</p>
+
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <span class="value">20,000</span>
+                <span class="label">조사 가구 수</span>
+            </div>
+            <div class="hero-stat">
+                <span class="value">34,184</span>
+                <span class="label">가구원 응답자</span>
+            </div>
+            <div class="hero-stat">
+                <span class="value">5,000</span>
+                <span class="label">시민조사 응답자</span>
+            </div>
+            <div class="hero-stat">
+                <span class="value">2,500</span>
+                <span class="label">외국인 응답자</span>
+            </div>
+            <div class="hero-stat">
+                <span class="value">25</span>
+                <span class="label">자치구</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Navigation -->
+<nav class="nav">
+    <div class="nav-inner">
+        <div class="nav-item active" onclick="scrollToSection('overview')">개요</div>
+        <div class="nav-item" onclick="scrollToSection('satisfaction')">삶의 만족도</div>
+        <div class="nav-item" onclick="scrollToSection('happiness')">행복/스트레스</div>
+        <div class="nav-item" onclick="scrollToSection('economy')">경제/소득</div>
+        <div class="nav-item" onclick="scrollToSection('livingenv')">생활환경</div>
+        <div class="nav-item" onclick="scrollToSection('housing')">주거환경</div>
+        <div class="nav-item" onclick="scrollToSection('transport')">교통</div>
+        <div class="nav-item" onclick="scrollToSection('safety')">안전</div>
+        <div class="nav-item" onclick="scrollToSection('jobs')">일자리</div>
+        <div class="nav-item" onclick="scrollToSection('district')">자치구별</div>
+        <div class="nav-item" onclick="scrollToSection('demographics')">인구특성</div>
+        <div class="nav-item" onclick="scrollToSection('digital')">디지털/AI</div>
+        <div class="nav-item" onclick="scrollToSection('society')">사회/가치관</div>
+        <div class="nav-item" onclick="scrollToSection('foreigner')">외국인</div>
+        <div class="nav-item" onclick="scrollToSection('identity')">서울 정체성</div>
+        <div class="nav-item" onclick="scrollToSection('daily')">서울의 일상</div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <!-- 조사 개요 -->
+    <section id="overview" class="section">
+        <div class="section-header">
+            <div class="section-icon">&#128203;</div>
+            <div>
+                <h2 class="section-title">조사 개요</h2>
+                <p class="section-subtitle">제23회 서울서베이 도시정책지표조사 (2003년 시작)</p>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <p>
+                <strong>조사 목적:</strong> 서울시의 현 상태를 과학적으로 조사 및 분석하여 도시경쟁력 향상을 위한 시책추진의 기초자료로 활용<br>
+                <strong>조사 방법:</strong> 가구방문면접조사(Face to Face Interview) 및 온라인 조사<br>
+                <strong>조사 기간:</strong> 2025년 8월 16일 ~ 9월 29일<br>
+                <strong>표본 추출:</strong> 층화집락추출법(Stratified Cluster Sampling), 25개 구별 4가지 주택유형 기준<br>
+                <strong>표본 오차:</strong> 가구 &plusmn;0.69%p / 가구원 &plusmn;0.51%p / 시민 &plusmn;1.39%p / 외국인 &plusmn;1.96%p (95% 신뢰수준)<br>
+                <strong>조사 내용:</strong> 인구와 가구, 경제와 노동, 도시생활과 주거, 건강과 보건, 안전과 재난, 환경, 교통, 문화와 여가, 교육과 돌봄, 가치와 의식 등 10개 분야
+            </p>
+        </div>
+    </section>
+
+    <!-- 삶의 만족도 -->
+    <section id="satisfaction" class="section">
+        <div class="section-header">
+            <div class="section-icon">&#128522;</div>
+            <div>
+                <h2 class="section-title">삶의 만족도</h2>
+                <p class="section-subtitle">서울 시민의 삶의 질과 행복 지표 (10점 만점)</p>
+            </div>
+        </div>
+
+        <div class="grid-4" style="margin-bottom: 24px;">
+            <div class="kpi-card">
+                <div class="kpi-value">6.84</div>
+                <div class="kpi-label">전반적인 삶의 만족도</div>
+                <div class="kpi-sub">10점 만점 평균</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">7.12</div>
+                <div class="kpi-label">지역 생활 만족도</div>
+                <div class="kpi-sub">현재 거주지역 기준</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">6.74</div>
+                <div class="kpi-label">전날 행복도</div>
+                <div class="kpi-sub">자주 행복했다 10점</div>
+            </div>
+            <div class="kpi-card" style="--primary: #E74C3C;">
+                <div class="kpi-value" style="color:#E74C3C;">4.26</div>
+                <div class="kpi-label">전날 걱정 정도</div>
+                <div class="kpi-sub">낮을수록 좋음</div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">연령별 삶의 만족도</div>
+                <div class="card-desc">10대에서 60대 이상까지의 전반적 삶의 만족도 비교</div>
+                <div class="chart-container">
+                    <canvas id="ageLifeChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">삶의 지표 종합</div>
+                <div class="card-desc">주요 삶의 질 지표를 레이더 차트로 비교</div>
+                <div class="chart-container">
+                    <canvas id="radarChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 행복/스트레스 -->
+    <section id="happiness" class="section">
+        <div class="section-header">
+            <div class="section-icon">&#128154;</div>
+            <div>
+                <h2 class="section-title">행복지수 / 스트레스 / 외로움</h2>
+                <p class="section-subtitle">서울 시민의 마음과 행복 (2025년 결과)</p>
+            </div>
+        </div>
+
+        <div class="grid-5" style="margin-bottom: 24px;">
+            <div class="kpi-card">
+                <div class="kpi-value">6.61</div>
+                <div class="kpi-label">행복지수</div>
+                <div class="kpi-sub">전년 6.54 대비 +0.07</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">43.9<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">스트레스 경험</div>
+                <div class="kpi-sub">지난 2주간 (전년 38.0%)</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">5.41</div>
+                <div class="kpi-label">스트레스 체감도</div>
+                <div class="kpi-sub">전년 5.14 대비 +0.27</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">3.50</div>
+                <div class="kpi-label">외로움(가족)</div>
+                <div class="kpi-sub">전년 3.90 대비 -0.40</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">48.3<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">여가시간 충분</div>
+                <div class="kpi-sub">전년 52.7% 대비 감소</div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">행복지수 추이 (2021~2025)</div>
+                <div class="card-desc">전년 대비 모든 항목에서 상승</div>
+                <div class="chart-container">
+                    <canvas id="happinessTrendChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">항목별 행복지수</div>
+                <div class="card-desc">건강상태가 가장 높고, 재정상태가 가장 낮음</div>
+                <div class="chart-container">
+                    <canvas id="happinessItemChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-2" style="margin-top: 24px;">
+            <div class="card">
+                <div class="card-title">주요 스트레스 요인 (1+2순위 합산)</div>
+                <div class="card-desc">사회생활 대인관계가 1위, 전년 대비 상승</div>
+                <div class="chart-container">
+                    <canvas id="stressCauseChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">외로움 지표 (10점 만점)</div>
+                <div class="card-desc">전년 대비 모두 감소 (개선)</div>
+                <div style="padding: 10px 0;">
+                    <div class="gauge-mini">
+                        <div class="gauge-mini-label">가족과의 관계</div>
+                        <div class="gauge-mini-bar"><div class="gauge-mini-fill" style="width:35%;background:linear-gradient(90deg,#E74C3C,#C0392B)"></div></div>
+                        <div class="gauge-mini-value" style="color:#E74C3C">3.50</div>
+                    </div>
+                    <div class="gauge-mini">
+                        <div class="gauge-mini-label">가족 외 타인 관계</div>
+                        <div class="gauge-mini-bar"><div class="gauge-mini-fill" style="width:30.9%;background:linear-gradient(90deg,#E74C3C,#C0392B)"></div></div>
+                        <div class="gauge-mini-value" style="color:#E74C3C">3.09</div>
+                    </div>
+                    <div class="gauge-mini">
+                        <div class="gauge-mini-label">같이 있어줄 사람 부족</div>
+                        <div class="gauge-mini-bar"><div class="gauge-mini-fill" style="width:29.2%;background:linear-gradient(90deg,#F39C12,#E67E22)"></div></div>
+                        <div class="gauge-mini-value" style="color:#F39C12">2.92</div>
+                    </div>
+                    <div class="gauge-mini">
+                        <div class="gauge-mini-label">혼자 남겨짐</div>
+                        <div class="gauge-mini-bar"><div class="gauge-mini-fill" style="width:28.9%;background:linear-gradient(90deg,#F39C12,#E67E22)"></div></div>
+                        <div class="gauge-mini-value" style="color:#F39C12">2.89</div>
+                    </div>
+                    <div class="gauge-mini">
+                        <div class="gauge-mini-label">사람들 사이 고립</div>
+                        <div class="gauge-mini-bar"><div class="gauge-mini-fill" style="width:28.8%;background:linear-gradient(90deg,#F39C12,#E67E22)"></div></div>
+                        <div class="gauge-mini-value" style="color:#F39C12">2.88</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 경제/소득 -->
+    <section id="economy" class="section">
+        <div class="section-header">
+            <div class="section-icon">&#128176;</div>
+            <div>
+                <h2 class="section-title">경제 / 소득</h2>
+                <p class="section-subtitle">서울 시민의 소득, 소비, 생계 현황</p>
+            </div>
+        </div>
+
+        <div class="grid-5" style="margin-bottom: 24px;">
+            <div class="kpi-card">
+                <div class="kpi-value">55.5<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">가구소득 400만+</div>
+                <div class="kpi-sub">월 평균 가구소득</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">61.1<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">근로소득 300만+</div>
+                <div class="kpi-sub">직업이 있는 가구원</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">5.57</div>
+                <div class="kpi-label">소득 만족도</div>
+                <div class="kpi-sub">10점 만점</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">42.1<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">가구 부채 비율</div>
+                <div class="kpi-sub">전년 42.5% 대비 감소</div>
+            </div>
+            <div class="kpi-card" style="--primary: #E74C3C;">
+                <div class="kpi-value" style="color:#E74C3C">31.9<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">생계 어려움 경험</div>
+                <div class="kpi-sub">가끔 + 매우 자주</div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">가구 월평균 소득 분포 (2024 vs 2025)</div>
+                <div class="card-desc">300~400만원 구간이 20.7%로 최다, 400만원 이상 55.5%</div>
+                <div class="chart-container">
+                    <canvas id="incomeChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">연령별 소득 여부</div>
+                <div class="card-desc">만 19세 이상 가구원 기준 소득 보유율</div>
+                <div class="chart-container">
+                    <canvas id="incomeByAgeChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 생활환경 만족도 -->
+    <section id="livingenv" class="section">
+        <div class="section-header">
+            <div class="section-icon">&#127795;</div>
+            <div>
+                <h2 class="section-title">생활환경 만족도</h2>
+                <p class="section-subtitle">주거, 경제, 사회, 교육, 문화여가 환경 종합 (전년 대비 모두 상승)</p>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">생활환경 만족도 (10점 평균)</div>
+                <div class="card-desc">2021~2025년 5개년 추이 비교</div>
+                <div class="chart-container">
+                    <canvas id="livingEnvTrendChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">2025년 환경별 만족도 상세</div>
+                <div class="card-desc">주거환경이 가장 높고 경제환경이 가장 낮음</div>
+                <div style="padding: 15px 0;">
+                    <div class="gauge-mini">
+                        <div class="gauge-mini-label">주거환경</div>
+                        <div class="gauge-mini-bar"><div class="gauge-mini-fill" style="width:70.5%;background:linear-gradient(90deg,#00A88E,#008B74)"></div></div>
+                        <div class="gauge-mini-value">7.05</div>
+                    </div>
+                    <div class="gauge-mini">
+                        <div class="gauge-mini-label">사회환경</div>
+                        <div class="gauge-mini-bar"><div class="gauge-mini-fill" style="width:62.7%;background:linear-gradient(90deg,#2980B9,#1A5276)"></div></div>
+                        <div class="gauge-mini-value">6.27</div>
+                    </div>
+                    <div class="gauge-mini">
+                        <div class="gauge-mini-label">교육환경</div>
+                        <div class="gauge-mini-bar"><div class="gauge-mini-fill" style="width:62.6%;background:linear-gradient(90deg,#8E44AD,#6C3483)"></div></div>
+                        <div class="gauge-mini-value">6.26</div>
+                    </div>
+                    <div class="gauge-mini">
+                        <div class="gauge-mini-label">문화여가환경</div>
+                        <div class="gauge-mini-bar"><div class="gauge-mini-fill" style="width:62.0%;background:linear-gradient(90deg,#F39C12,#E67E22)"></div></div>
+                        <div class="gauge-mini-value">6.20</div>
+                    </div>
+                    <div class="gauge-mini">
+                        <div class="gauge-mini-label">경제환경</div>
+                        <div class="gauge-mini-bar"><div class="gauge-mini-fill" style="width:60.6%;background:linear-gradient(90deg,#E74C3C,#C0392B)"></div></div>
+                        <div class="gauge-mini-value">6.06</div>
+                    </div>
+                    <div style="margin-top:16px; padding-top:16px; border-top:1px solid var(--border);">
+                        <div class="gauge-mini">
+                            <div class="gauge-mini-label">교통 종합</div>
+                            <div class="gauge-mini-bar"><div class="gauge-mini-fill" style="width:70.4%;background:linear-gradient(90deg,#00A88E,#008B74)"></div></div>
+                            <div class="gauge-mini-value">7.04</div>
+                        </div>
+                        <div class="gauge-mini">
+                            <div class="gauge-mini-label">공교육 만족도</div>
+                            <div class="gauge-mini-bar"><div class="gauge-mini-fill" style="width:69.1%;background:linear-gradient(90deg,#2980B9,#1A5276)"></div></div>
+                            <div class="gauge-mini-value">6.91</div>
+                        </div>
+                        <div class="gauge-mini">
+                            <div class="gauge-mini-label">동네 안전</div>
+                            <div class="gauge-mini-bar"><div class="gauge-mini-fill" style="width:65.2%;background:linear-gradient(90deg,#8E44AD,#6C3483)"></div></div>
+                            <div class="gauge-mini-value">6.52</div>
+                        </div>
+                        <div class="gauge-mini">
+                            <div class="gauge-mini-label">보행환경(도심)</div>
+                            <div class="gauge-mini-bar"><div class="gauge-mini-fill" style="width:67.5%;background:linear-gradient(90deg,#F39C12,#E67E22)"></div></div>
+                            <div class="gauge-mini-value">6.75</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-3" style="margin-top: 24px;">
+            <div class="kpi-card">
+                <div class="kpi-value">7h 4m</div>
+                <div class="kpi-label">평균 수면시간</div>
+                <div class="kpi-sub">전년 7시간 5분 대비 유사</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">6.37</div>
+                <div class="kpi-label">야간보행 안전도</div>
+                <div class="kpi-sub">전년 5.99 대비 +0.38</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">6.03</div>
+                <div class="kpi-label">문화환경 만족도</div>
+                <div class="kpi-sub">전년 5.82 대비 +0.21</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 주거환경 -->
+    <section id="housing" class="section">
+        <div class="section-header">
+            <div class="section-icon">&#127968;</div>
+            <div>
+                <h2 class="section-title">주거환경</h2>
+                <p class="section-subtitle">주택, 기반시설, 주차장 등 주거환경 만족도</p>
+            </div>
+        </div>
+
+        <div class="grid-3" style="margin-bottom: 24px;">
+            <div class="kpi-card">
+                <div class="kpi-value">6.39</div>
+                <div class="kpi-label">주택 만족도</div>
+                <div class="kpi-sub">만족 59.3%</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">6.58</div>
+                <div class="kpi-label">기반시설 만족도</div>
+                <div class="kpi-sub">만족 60.2%</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">6.61</div>
+                <div class="kpi-label">주차장 이용 만족도</div>
+                <div class="kpi-sub">만족 59.2%</div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">주거점유 형태</div>
+                <div class="card-desc">서울 가구의 주거형태 분포</div>
+                <div class="chart-container">
+                    <canvas id="housingTypeChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">주거환경 만족도 상세</div>
+                <div class="card-desc">항목별 10점 만점 기준 만족도 비교</div>
+                <div style="padding: 10px 0;">
+                    <div class="gauge-mini">
+                        <div class="gauge-mini-label">주택</div>
+                        <div class="gauge-mini-bar"><div class="gauge-mini-fill" style="width:63.9%;background:linear-gradient(90deg,#00A88E,#008B74)"></div></div>
+                        <div class="gauge-mini-value">6.39</div>
+                    </div>
+                    <div class="gauge-mini">
+                        <div class="gauge-mini-label">기반시설</div>
+                        <div class="gauge-mini-bar"><div class="gauge-mini-fill" style="width:65.8%;background:linear-gradient(90deg,#00A88E,#008B74)"></div></div>
+                        <div class="gauge-mini-value">6.58</div>
+                    </div>
+                    <div class="gauge-mini">
+                        <div class="gauge-mini-label">주차장 이용</div>
+                        <div class="gauge-mini-bar"><div class="gauge-mini-fill" style="width:66.1%;background:linear-gradient(90deg,#00A88E,#008B74)"></div></div>
+                        <div class="gauge-mini-value">6.61</div>
+                    </div>
+                    <div class="gauge-mini">
+                        <div class="gauge-mini-label">지하철/경전철</div>
+                        <div class="gauge-mini-bar"><div class="gauge-mini-fill" style="width:74.7%;background:linear-gradient(90deg,#2980B9,#1A5276)"></div></div>
+                        <div class="gauge-mini-value">7.47</div>
+                    </div>
+                    <div class="gauge-mini">
+                        <div class="gauge-mini-label">시내버스</div>
+                        <div class="gauge-mini-bar"><div class="gauge-mini-fill" style="width:74.5%;background:linear-gradient(90deg,#2980B9,#1A5276)"></div></div>
+                        <div class="gauge-mini-value">7.45</div>
+                    </div>
+                    <div class="gauge-mini">
+                        <div class="gauge-mini-label">시외/고속버스</div>
+                        <div class="gauge-mini-bar"><div class="gauge-mini-fill" style="width:65.3%;background:linear-gradient(90deg,#8E44AD,#6C3483)"></div></div>
+                        <div class="gauge-mini-value">6.53</div>
+                    </div>
+                    <div class="gauge-mini">
+                        <div class="gauge-mini-label">택시</div>
+                        <div class="gauge-mini-bar"><div class="gauge-mini-fill" style="width:64.8%;background:linear-gradient(90deg,#8E44AD,#6C3483)"></div></div>
+                        <div class="gauge-mini-value">6.48</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 교통 -->
+    <section id="transport" class="section">
+        <div class="section-header">
+            <div class="section-icon">&#128651;</div>
+            <div>
+                <h2 class="section-title">교통수단 이용 만족도</h2>
+                <p class="section-subtitle">대중교통 및 교통수단별 만족도 비교 (10점 만점)</p>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">교통수단별 만족도</div>
+                <div class="card-desc">서울시민이 평가한 교통수단 만족도 순위</div>
+                <div class="chart-container">
+                    <canvas id="transportChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">교통수단별 만족 비율</div>
+                <div class="card-desc">약간 만족 + 매우 만족 응답 비율 (%)</div>
+                <div class="chart-container">
+                    <canvas id="transportSatChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 안전 -->
+    <section id="safety" class="section">
+        <div class="section-header">
+            <div class="section-icon">&#128737;</div>
+            <div>
+                <h2 class="section-title">안전을 위협하는 불안 요인</h2>
+                <p class="section-subtitle">서울 시민이 느끼는 가장 큰 안전 위협 (1+2+3순위 합산)</p>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">안전 위협 불안 요인 순위</div>
+                <div class="card-desc">2024년 vs 2025년 비교 (1+2+3순위 합산, %)</div>
+                <div class="chart-container">
+                    <canvas id="safetyChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">야간보행 안전도 변화</div>
+                <div class="card-desc">안전하다고 느끼는 비율 전년 대비 9.3%p 상승</div>
+                <div class="chart-container">
+                    <canvas id="nightSafetyChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 일자리 -->
+    <section id="jobs" class="section">
+        <div class="section-header">
+            <div class="section-icon">&#128188;</div>
+            <div>
+                <h2 class="section-title">일자리</h2>
+                <p class="section-subtitle">고용 현황, 일자리 충분도, 근로 만족도</p>
+            </div>
+        </div>
+
+        <div class="grid-5" style="margin-bottom: 24px;">
+            <div class="kpi-card">
+                <div class="kpi-value">68.5<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">지난 1주 근로율</div>
+                <div class="kpi-sub">가구원 기준</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">67.2<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">상용직 임금근로자</div>
+                <div class="kpi-sub">임시/일용 14.5%, 자영업 15.9%</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">5.39</div>
+                <div class="kpi-label">일자리 충분도</div>
+                <div class="kpi-sub">충분 33.8%</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">6.27</div>
+                <div class="kpi-label">하는 일 만족도</div>
+                <div class="kpi-sub">근로자 기준</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">6.18</div>
+                <div class="kpi-label">전반적 일자리 만족</div>
+                <div class="kpi-sub">근무환경 6.11, 임금 5.45</div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">연령별 근로 현황</div>
+                <div class="card-desc">연령대별 지난 1주일간 근로 여부</div>
+                <div class="chart-container">
+                    <canvas id="employmentChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">일을 하지 않은 이유</div>
+                <div class="card-desc">비근로자 9,797명 응답 기준</div>
+                <div class="chart-container">
+                    <canvas id="notWorkReasonChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-2" style="margin-top: 24px;">
+            <div class="card">
+                <div class="card-title">고용형태 분포</div>
+                <div class="card-desc">직업이 있는 서울 시민 기준 (%)</div>
+                <div class="chart-container-sm">
+                    <canvas id="employTypeChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">가구 부채 비율 추이</div>
+                <div class="card-desc">서울시 10가구 중 4가구 이상 부채 보유</div>
+                <div class="chart-container-sm">
+                    <canvas id="debtTrendChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 자치구별 -->
+    <section id="district" class="section">
+        <div class="section-header">
+            <div class="section-icon">&#127959;</div>
+            <div>
+                <h2 class="section-title">자치구별 주요 지표</h2>
+                <p class="section-subtitle">서울 25개 자치구의 삶의 만족도, 행복도, 주거환경 만족도 비교</p>
+            </div>
+        </div>
+
+        <div class="card" style="margin-bottom: 24px;">
+            <div class="card-title">자치구별 삶의 만족도 비교</div>
+            <div class="card-desc">전반적 삶의 만족도 10점 평균 (높을수록 좋음)</div>
+            <div style="height: 400px;">
+                <canvas id="districtChart"></canvas>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">자치구별 주요 지표 요약</div>
+            <div class="card-desc">삶의 만족도, 지역 만족도, 행복도, 주택 만족도 비교 (상위/하위 하이라이트)</div>
+            <div class="table-scroll">
+                <table class="district-table">
+                    <thead>
+                        <tr>
+                            <th>자치구</th>
+                            <th>사례수</th>
+                            <th>삶의 만족도</th>
+                            <th>지역생활 만족도</th>
+                            <th>행복도</th>
+                            <th>주택 만족도</th>
+                            <th>기반시설 만족도</th>
+                        </tr>
+                    </thead>
+                    <tbody id="districtTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 인구특성 -->
+    <section id="demographics" class="section">
+        <div class="section-header">
+            <div class="section-icon">&#128101;</div>
+            <div>
+                <h2 class="section-title">인구 특성</h2>
+                <p class="section-subtitle">가구주 연령, 학력, 가구원 수, 1인 가구 현황</p>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">가구주 연령 분포</div>
+                <div class="card-desc">서울시 가구주 20,000가구 기준</div>
+                <div class="chart-container">
+                    <canvas id="ageDistChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">가구원 수 분포</div>
+                <div class="card-desc">평균 가구원 수 2.10명, 1인 가구 39.9%</div>
+                <div class="chart-container">
+                    <canvas id="householdSizeChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-3" style="margin-top: 24px;">
+            <div class="kpi-card">
+                <div class="kpi-value">39.9<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">1인 가구 비율</div>
+                <div class="kpi-sub">2021년 34.9% &rarr; 지속 증가</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">2.10<span class="kpi-unit">명</span></div>
+                <div class="kpi-label">평균 가구원 수</div>
+                <div class="kpi-sub">만 15세 이상 1.84명</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">31.82<span class="kpi-unit">년</span></div>
+                <div class="kpi-label">서울시 평균 거주기간</div>
+                <div class="kpi-sub">자치구 평균 15.67년</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 디지털/AI -->
+    <section id="digital" class="section">
+        <div class="section-header">
+            <div class="section-icon">&#129302;</div>
+            <div>
+                <h2 class="section-title">디지털 / AI 활용</h2>
+                <p class="section-subtitle">서울 시민의 AI 서비스 이용 현황 (시민조사 5,000명)</p>
+            </div>
+        </div>
+
+        <div class="grid-5" style="margin-bottom: 24px;">
+            <div class="kpi-card">
+                <div class="kpi-value">86.3<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">AI 서비스 경험률</div>
+                <div class="kpi-sub">20대 98.8% / 60대+ 68.7%</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">60.0<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">대화형 AI 이용</div>
+                <div class="kpi-sub">ChatGPT 등</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">48.2<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">AI 번역기 이용</div>
+                <div class="kpi-sub">파파고, DeepL 등</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">27.0<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">웨어러블 기기</div>
+                <div class="kpi-sub">모바일 헬스 14.0%</div>
+            </div>
+            <div class="kpi-card" style="--primary: #8E44AD;">
+                <div class="kpi-value" style="color:#8E44AD">5.90</div>
+                <div class="kpi-label">주4일제 도입 지지</div>
+                <div class="kpi-sub">10점 만점</div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">연령별 AI 서비스 이용률</div>
+                <div class="card-desc">대화형 AI 기준 (%), 20대 이하 84.5%로 가장 높음</div>
+                <div class="chart-container">
+                    <canvas id="aiAgeChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">주 4일제/4.5일제 지지도 (10점)</div>
+                <div class="card-desc">30대가 7.21로 가장 높고 60세 이상 4.39로 가장 낮음</div>
+                <div class="chart-container">
+                    <canvas id="fourDayChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 사회와 가치관 -->
+    <section id="society" class="section">
+        <div class="section-header">
+            <div class="section-icon">&#129309;</div>
+            <div>
+                <h2 class="section-title">사회와 가치관</h2>
+                <p class="section-subtitle">사회적 신뢰, 공정성, 차별, 준법 정신</p>
+            </div>
+        </div>
+
+        <div class="grid-5" style="margin-bottom: 24px;">
+            <div class="kpi-card">
+                <div class="kpi-value">8.81</div>
+                <div class="kpi-label">가족 신뢰</div>
+                <div class="kpi-sub">전년 대비 상승</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">90.5<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">사회적 지원망</div>
+                <div class="kpi-sub">도움받을 사람 있음</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">80.7<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">준법 정신</div>
+                <div class="kpi-sub">법 지킨다 (전년 75.6%)</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">6.8<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">자원봉사 경험</div>
+                <div class="kpi-sub">전년 6.4% 대비 상승</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">28.8<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">기부 경험</div>
+                <div class="kpi-sub">전년 26.4% 대비 상승</div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">사회적 신뢰 (10점 만점)</div>
+                <div class="card-desc">가족 &gt; 친구 &gt; 공공기관 &gt; 이웃 순</div>
+                <div class="chart-container">
+                    <canvas id="trustChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">사회 공정성 인식 (10점 만점)</div>
+                <div class="card-desc">교육기회가 가장 높고, 정치활동이 가장 낮음</div>
+                <div class="chart-container">
+                    <canvas id="fairnessChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 외국인 -->
+    <section id="foreigner" class="section">
+        <div class="section-header">
+            <div class="section-icon">&#127758;</div>
+            <div>
+                <h2 class="section-title">서울의 외국인 (2,500명 조사)</h2>
+                <p class="section-subtitle">서울 거주 외국인의 삶의 질, 행복, 서울 이미지 평가</p>
+            </div>
+        </div>
+
+        <div class="grid-5" style="margin-bottom: 24px;">
+            <div class="kpi-card">
+                <div class="kpi-value">7.62</div>
+                <div class="kpi-label">삶의 질 만족도</div>
+                <div class="kpi-sub">전년 6.97 대비 +0.65</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">7.55</div>
+                <div class="kpi-label">행복지수</div>
+                <div class="kpi-sub">전년 7.19 대비 +0.36</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">7.99</div>
+                <div class="kpi-label">트렌디한 문화도시</div>
+                <div class="kpi-sub">서울 이미지 1위</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">7.81</div>
+                <div class="kpi-label">출신국 소속감</div>
+                <div class="kpi-sub">서울시 5.65</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">8.13</div>
+                <div class="kpi-label">문화여가 만족도</div>
+                <div class="kpi-sub">삶의 질 중 가장 높음</div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">외국인이 본 서울 이미지 (10점 평균)</div>
+                <div class="card-desc">전년 대비 모든 항목 점수가 크게 상승</div>
+                <div class="chart-container">
+                    <canvas id="foreignImageChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">외국인 삶의 질 만족도 항목별</div>
+                <div class="card-desc">2024 vs 2025 비교 (10점 만점)</div>
+                <div class="chart-container">
+                    <canvas id="foreignLifeChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 서울 정체성 -->
+    <section id="identity" class="section">
+        <div class="section-header">
+            <div class="section-icon">&#127961;</div>
+            <div>
+                <h2 class="section-title">서울 시민의 정체성</h2>
+                <p class="section-subtitle">자부심, 향후 거주 의향, 랜드마크, 통근/통학</p>
+            </div>
+        </div>
+
+        <div class="grid-4" style="margin-bottom: 24px;">
+            <div class="kpi-card">
+                <div class="kpi-value">69.0<span class="kpi-unit">점</span></div>
+                <div class="kpi-label">시민 자부심</div>
+                <div class="kpi-sub">100점 만점 (전년 68.6)</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">73.2<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">10년 후 서울 거주 의향</div>
+                <div class="kpi-sub">전년 67.8% 대비 +5.4%p</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">66.2<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">통근 비율</div>
+                <div class="kpi-sub">통학 10.5%</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">28.5<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">통근 1위: 버스</div>
+                <div class="kpi-sub">승용차 22.4%, 버스+지하철 17.0%</div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">서울의 랜드마크 (시민 vs 외국인)</div>
+                <div class="card-desc">중복응답 기준 (%)</div>
+                <div class="chart-container">
+                    <canvas id="landmarkChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">서울시민 자부심 & 거주의향 추이</div>
+                <div class="card-desc">둘 다 상승 추세</div>
+                <div class="chart-container">
+                    <canvas id="prideTrendChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 서울의 일상 -->
+    <section id="daily" class="section">
+        <div class="section-header">
+            <div class="section-icon">&#127969;</div>
+            <div>
+                <h2 class="section-title">서울의 일상</h2>
+                <p class="section-subtitle">주거형태, 가사노동, 가족 시간, 정주 의사</p>
+            </div>
+        </div>
+
+        <div class="grid-2" style="margin-bottom: 24px;">
+            <div class="card">
+                <div class="card-title">가사노동 분담 정도</div>
+                <div class="card-desc">비해당 응답 가구 제외 기준</div>
+                <div class="chart-container">
+                    <canvas id="houseworkChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">10년 후 서울 거주 의향</div>
+                <div class="card-desc">서울에 계속 살고 싶은 정도 (10점 만점)</div>
+                <div class="chart-container">
+                    <canvas id="residenceIntentChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-3">
+            <div class="kpi-card">
+                <div class="kpi-value">43.4<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">자기집 비율</div>
+                <div class="kpi-sub">보증부월세 29.9% / 전세 25.7%</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">67.4<span class="kpi-unit">%</span></div>
+                <div class="kpi-label">가족 식사 비율</div>
+                <div class="kpi-sub">자주 또는 항상 함께 식사</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">7.08</div>
+                <div class="kpi-label">서울 정주 의사</div>
+                <div class="kpi-sub">10점 만점 (그렇다 73.2%)</div>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 24px;">
+            <div class="card-title">1인 가구 비율 추이 (2021~2025)</div>
+            <div class="card-desc">서울시 1인 가구 비율은 지속적으로 증가하여 약 40%에 육박</div>
+            <div class="chart-container-sm">
+                <canvas id="singleHouseholdTrendChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- 권역별 -->
+    <section class="section">
+        <div class="section-header">
+            <div class="section-icon">&#127760;</div>
+            <div>
+                <h2 class="section-title">권역별 비교</h2>
+                <p class="section-subtitle">도심권, 동북권, 서북권, 서남권, 동남권 5개 권역</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">권역별 주요 지표 비교</div>
+            <div class="card-desc">삶의 만족도, 행복도, 주거환경 만족도, 교통 만족도</div>
+            <div style="height: 350px;">
+                <canvas id="regionChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#9650;</button>
+
+<!-- Footer -->
+<footer class="footer">
+    <strong>2025 서울서베이 도시정책지표조사 통계 대시보드</strong><br>
+    출처: 서울특별시 | 제23회 서울서베이 결과보고서 및 지역사회조사 보고서 (2025.12)<br>
+    조사 승인번호: 제 20101 1호 | 문의: 서울특별시 디지털도시국 데이터전략과 (02-2133-4281)<br>
+    본 대시보드는 공개된 조사 데이터를 기반으로 제작되었습니다.
+</footer>
+
+<script>
+// Chart.js defaults
+Chart.defaults.font.family = "'Noto Sans KR', sans-serif";
+Chart.defaults.font.size = 12;
+Chart.defaults.color = '#7F8C8D';
+Chart.defaults.plugins.legend.labels.usePointStyle = true;
+Chart.defaults.plugins.legend.labels.pointStyleWidth = 10;
+
+const PRIMARY = '#00A88E';
+const PRIMARY_DARK = '#008B74';
+const ACCENT = '#E74C3C';
+const BLUE = '#2980B9';
+const ORANGE = '#F39C12';
+const PURPLE = '#8E44AD';
+const PINK = '#E91E63';
+const TEAL = '#009688';
+const COLORS = [PRIMARY, BLUE, ORANGE, PURPLE, PINK, TEAL, ACCENT, '#3498DB', '#1ABC9C', '#F1C40F'];
+
+// 1. Age Life Satisfaction
+new Chart(document.getElementById('ageLifeChart'), {
+    type: 'bar',
+    data: {
+        labels: ['10대', '20대', '30대', '40대', '50대', '60세 이상'],
+        datasets: [
+            {
+                label: '삶의 만족도',
+                data: [7.18, 7.06, 7.05, 6.97, 6.82, 6.51],
+                backgroundColor: PRIMARY,
+                borderRadius: 6,
+            },
+            {
+                label: '행복도',
+                data: [6.75, 7.05, 6.97, 6.88, 6.69, 6.46],
+                backgroundColor: BLUE,
+                borderRadius: 6,
+            },
+            {
+                label: '걱정 정도',
+                data: [3.99, 4.19, 4.26, 4.16, 4.36, 4.36],
+                backgroundColor: ACCENT,
+                borderRadius: 6,
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'top' } },
+        scales: {
+            y: { beginAtZero: true, max: 8, grid: { color: '#F0F0F0' } },
+            x: { grid: { display: false } }
+        }
+    }
+});
+
+// 2. Radar Chart
+new Chart(document.getElementById('radarChart'), {
+    type: 'radar',
+    data: {
+        labels: ['삶의 만족도', '지역생활 만족도', '행복도', '주택 만족도', '교통(지하철)', '일자리 충분도', '소득 만족도'],
+        datasets: [{
+            label: '2025 서울',
+            data: [6.84, 7.12, 6.74, 6.39, 7.47, 5.39, 5.57],
+            backgroundColor: 'rgba(0, 168, 142, 0.15)',
+            borderColor: PRIMARY,
+            borderWidth: 2,
+            pointBackgroundColor: PRIMARY,
+            pointRadius: 4,
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            r: {
+                beginAtZero: true,
+                max: 8,
+                ticks: { stepSize: 2, font: { size: 10 } },
+                pointLabels: { font: { size: 11, weight: '600' } }
+            }
+        },
+        plugins: { legend: { display: false } }
+    }
+});
+
+// 3. Income Distribution (2024 vs 2025)
+new Chart(document.getElementById('incomeChart'), {
+    type: 'bar',
+    data: {
+        labels: ['100만원\n미만', '100~200', '200~300', '300~400', '400~500', '500~600', '600~700', '700~800', '800~900', '900만원\n이상'],
+        datasets: [
+            {
+                label: '2024',
+                data: [1.8, 8.2, 14.9, 19.9, 11.7, 13.0, 12.2, 8.5, 4.7, 5.0],
+                backgroundColor: '#BDC3C799',
+                borderRadius: 3,
+            },
+            {
+                label: '2025',
+                data: [1.4, 6.5, 16.0, 20.7, 11.8, 12.0, 12.0, 8.1, 5.2, 6.4],
+                backgroundColor: PRIMARY + 'CC',
+                borderRadius: 3,
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'top' } },
+        scales: {
+            y: { beginAtZero: true, title: { display: true, text: '%' }, grid: { color: '#F0F0F0' } },
+            x: { grid: { display: false }, ticks: { font: { size: 10 } } }
+        }
+    }
+});
+
+// 4. Income by Age
+new Chart(document.getElementById('incomeByAgeChart'), {
+    type: 'bar',
+    data: {
+        labels: ['10대', '20대', '30대', '40대', '50대', '60세 이상'],
+        datasets: [
+            {
+                label: '소득 있음',
+                data: [8.4, 62.0, 90.4, 87.1, 83.9, 71.6],
+                backgroundColor: PRIMARY,
+                borderRadius: 4,
+            },
+            {
+                label: '소득 없음',
+                data: [91.6, 38.0, 9.6, 12.9, 16.1, 28.4],
+                backgroundColor: '#E8ECF1',
+                borderRadius: 4,
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'top' } },
+        scales: {
+            y: { stacked: true, max: 100, grid: { color: '#F0F0F0' } },
+            x: { stacked: true, grid: { display: false } }
+        }
+    }
+});
+
+// 5. Housing Type
+new Chart(document.getElementById('housingTypeChart'), {
+    type: 'doughnut',
+    data: {
+        labels: ['자기집 (43.4%)', '보증부월세 (29.9%)', '전세 (25.7%)', '월세 (0.8%)', '기타 (0.2%)'],
+        datasets: [{
+            data: [43.4, 29.9, 25.7, 0.8, 0.2],
+            backgroundColor: [PRIMARY, BLUE, ORANGE, PURPLE, '#BDC3C7'],
+            borderWidth: 0,
+            spacing: 2,
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: '55%',
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: { font: { size: 12 }, padding: 12 }
+            }
+        }
+    }
+});
+
+// 6. Transport Satisfaction
+new Chart(document.getElementById('transportChart'), {
+    type: 'bar',
+    data: {
+        labels: ['지하철/경전철', '시내버스/마을버스', '시외/고속버스', '택시'],
+        datasets: [{
+            label: '만족도 (10점)',
+            data: [7.47, 7.45, 6.53, 6.48],
+            backgroundColor: [PRIMARY, PRIMARY_DARK, BLUE, PURPLE],
+            borderRadius: 8,
+            barThickness: 50,
+        }]
+    },
+    options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+            x: { beginAtZero: true, max: 10, grid: { color: '#F0F0F0' } },
+            y: { grid: { display: false } }
+        }
+    }
+});
+
+// 7. Transport Satisfaction %
+new Chart(document.getElementById('transportSatChart'), {
+    type: 'bar',
+    data: {
+        labels: ['시내버스', '지하철', '시외버스', '택시'],
+        datasets: [
+            { label: '만족', data: [78.4, 75.0, 57.0, 57.4], backgroundColor: PRIMARY, borderRadius: 4 },
+            { label: '보통', data: [18.3, 19.8, 37.3, 33.4], backgroundColor: '#BDC3C7', borderRadius: 4 },
+            { label: '불만족', data: [3.3, 5.2, 5.7, 9.2], backgroundColor: ACCENT, borderRadius: 4 },
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'top' } },
+        scales: {
+            y: { stacked: true, max: 100, grid: { color: '#F0F0F0' } },
+            x: { stacked: true, grid: { display: false } }
+        }
+    }
+});
+
+// 8. Employment by Age
+new Chart(document.getElementById('employmentChart'), {
+    type: 'bar',
+    data: {
+        labels: ['20대', '30대', '40대', '50대', '60세 이상'],
+        datasets: [
+            { label: '일하였음', data: [59.8, 90.2, 86.5, 82.7, 54.5], backgroundColor: PRIMARY, borderRadius: 4 },
+            { label: '하지 않았음', data: [40.2, 9.8, 13.5, 17.3, 45.5], backgroundColor: '#E8ECF1', borderRadius: 4 }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'top' } },
+        scales: {
+            y: { stacked: true, max: 100, grid: { color: '#F0F0F0' } },
+            x: { stacked: true, grid: { display: false } }
+        }
+    }
+});
+
+// 9. Not Working Reasons
+new Chart(document.getElementById('notWorkReasonChart'), {
+    type: 'doughnut',
+    data: {
+        labels: ['육아/가사 (40.1%)', '정규교육/진학 (30.4%)', '쉬었음 (14.0%)', '건강상 어려움 (7.1%)', '취업준비 (3.8%)', '구직활동 (0.6%)', '기타 (3.9%)'],
+        datasets: [{
+            data: [40.1, 30.4, 14.0, 7.1, 3.8, 0.6, 3.9],
+            backgroundColor: [PRIMARY, BLUE, ORANGE, ACCENT, PURPLE, PINK, '#BDC3C7'],
+            borderWidth: 0,
+            spacing: 2,
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: '50%',
+        plugins: {
+            legend: { position: 'right', labels: { font: { size: 11 }, padding: 8 } }
+        }
+    }
+});
+
+// 10. District Chart
+const districtData = [
+    {name:'종로구', n:909, life:6.72, region:6.21, happy:6.05, housing:5.15, infra:5.11},
+    {name:'중구', n:697, life:6.43, region:6.39, happy:5.96, housing:5.94, infra:6.14},
+    {name:'용산구', n:840, life:6.64, region:6.85, happy:6.51, housing:6.36, infra:6.30},
+    {name:'성동구', n:1207, life:7.35, region:7.62, happy:7.04, housing:6.57, infra:6.78},
+    {name:'광진구', n:1294, life:6.64, region:6.82, happy:6.21, housing:5.51, infra:6.22},
+    {name:'동대문구', n:1347, life:6.83, region:6.83, happy:6.82, housing:5.87, infra:6.16},
+    {name:'중랑구', n:1388, life:6.74, region:7.10, happy:6.79, housing:6.12, infra:6.13},
+    {name:'성북구', n:1497, life:6.82, region:6.93, happy:6.63, housing:6.50, infra:6.43},
+    {name:'강북구', n:1226, life:6.33, region:6.55, happy:5.63, housing:5.16, infra:5.63},
+    {name:'도봉구', n:1289, life:6.93, region:7.44, happy:6.25, housing:6.64, infra:7.08},
+    {name:'노원구', n:1623, life:7.06, region:7.62, happy:7.26, housing:6.59, infra:6.45},
+    {name:'은평구', n:1537, life:7.04, region:7.55, happy:6.80, housing:6.81, infra:7.16},
+    {name:'서대문구', n:1220, life:7.01, region:7.23, happy:7.10, housing:7.15, infra:7.13},
+    {name:'마포구', n:1369, life:7.26, region:7.85, happy:7.40, housing:6.77, infra:7.07},
+    {name:'양천구', n:1608, life:7.16, region:7.34, happy:7.03, housing:6.86, infra:6.86},
+    {name:'강서구', n:1712, life:7.02, region:7.02, happy:6.61, housing:6.18, infra:6.64},
+    {name:'구로구', n:1500, life:6.96, region:7.75, happy:7.18, housing:7.38, infra:7.39},
+    {name:'금천구', n:1025, life:6.47, region:6.79, happy:6.03, housing:6.83, infra:7.08},
+    {name:'영등포구', n:1314, life:6.10, region:6.03, happy:5.81, housing:5.49, infra:5.67},
+    {name:'동작구', n:1403, life:6.88, region:7.41, happy:6.75, housing:6.41, infra:6.53},
+    {name:'관악구', n:1561, life:6.72, region:6.85, happy:6.38, housing:5.95, infra:6.07},
+    {name:'서초구', n:1502, life:7.13, region:7.41, happy:7.31, housing:6.44, infra:6.99},
+    {name:'강남구', n:1702, life:6.62, region:7.21, happy:6.82, housing:6.84, infra:7.18},
+    {name:'송파구', n:1845, life:7.07, region:7.22, happy:7.02, housing:6.42, infra:6.26},
+    {name:'강동구', n:1569, life:6.44, region:6.59, happy:6.12, housing:6.57, infra:6.80},
+];
+
+new Chart(document.getElementById('districtChart'), {
+    type: 'bar',
+    data: {
+        labels: districtData.map(d => d.name),
+        datasets: [{
+            label: '삶의 만족도',
+            data: districtData.map(d => d.life),
+            backgroundColor: districtData.map(d => d.life >= 7.0 ? PRIMARY : d.life < 6.5 ? ACCENT + '99' : BLUE + '99'),
+            borderRadius: 4,
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: { display: false },
+            tooltip: {
+                callbacks: {
+                    afterLabel: function(ctx) {
+                        const d = districtData[ctx.dataIndex];
+                        return `지역만족: ${d.region} | 행복: ${d.happy}`;
+                    }
+                }
+            }
+        },
+        scales: {
+            y: { min: 5.5, max: 7.5, grid: { color: '#F0F0F0' } },
+            x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 45 } }
+        }
+    }
+});
+
+// District Table
+const tbody = document.getElementById('districtTableBody');
+const sorted = [...districtData].sort((a, b) => b.life - a.life);
+const top3Life = sorted.slice(0, 3).map(d => d.name);
+const bot3Life = sorted.slice(-3).map(d => d.name);
+
+districtData.forEach(d => {
+    const isTop = top3Life.includes(d.name);
+    const isBot = bot3Life.includes(d.name);
+    const cls = isTop ? 'highlight' : isBot ? 'low' : '';
+    tbody.innerHTML += `<tr>
+        <td class="${cls}">${d.name}</td>
+        <td>${d.n.toLocaleString()}</td>
+        <td class="${cls}">${d.life}</td>
+        <td>${d.region}</td>
+        <td>${d.happy}</td>
+        <td>${d.housing}</td>
+        <td>${d.infra}</td>
+    </tr>`;
+});
+
+// 11. Age Distribution
+new Chart(document.getElementById('ageDistChart'), {
+    type: 'bar',
+    data: {
+        labels: ['20대 이하', '30대', '40대', '50대', '60세 이상'],
+        datasets: [{
+            label: '가구주 비율 (%)',
+            data: [3.4, 20.3, 20.7, 18.6, 37.0],
+            backgroundColor: [BLUE, PRIMARY, ORANGE, PURPLE, ACCENT],
+            borderRadius: 8,
+            barThickness: 50,
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+            y: { beginAtZero: true, grid: { color: '#F0F0F0' } },
+            x: { grid: { display: false } }
+        }
+    }
+});
+
+// 12. Household Size
+new Chart(document.getElementById('householdSizeChart'), {
+    type: 'doughnut',
+    data: {
+        labels: ['1인 (39.9%)', '2인 (26.2%)', '3인 (18.6%)', '4인 (14.8%)', '5인 이상 (0.5%)'],
+        datasets: [{
+            data: [39.9, 26.2, 18.6, 14.8, 0.5],
+            backgroundColor: [PRIMARY, BLUE, ORANGE, PURPLE, '#BDC3C7'],
+            borderWidth: 0,
+            spacing: 3,
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: '55%',
+        plugins: {
+            legend: { position: 'bottom', labels: { font: { size: 12 }, padding: 12 } }
+        }
+    }
+});
+
+// 13. Housework
+new Chart(document.getElementById('houseworkChart'), {
+    type: 'bar',
+    data: {
+        labels: ['아내 전적\n책임', '아내 주로,\n남편 약간', '공평하게\n나눔', '남편 주로,\n아내 약간', '남편 전적\n책임'],
+        datasets: [{
+            label: '비율 (%)',
+            data: [14.9, 62.1, 21.6, 1.1, 0.2],
+            backgroundColor: [ACCENT, ORANGE, PRIMARY, BLUE, PURPLE],
+            borderRadius: 6,
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+            y: { beginAtZero: true, grid: { color: '#F0F0F0' } },
+            x: { grid: { display: false } }
+        }
+    }
+});
+
+// 14. Residence Intent
+new Chart(document.getElementById('residenceIntentChart'), {
+    type: 'bar',
+    data: {
+        labels: ['10대', '20대', '30대', '40대', '50대', '60세 이상'],
+        datasets: [
+            {
+                label: '서울시 거주 의향',
+                data: [7.57, 7.21, 7.28, 7.13, 7.01, 6.76],
+                backgroundColor: PRIMARY,
+                borderRadius: 4,
+            },
+            {
+                label: '자치구 거주 의향',
+                data: [7.09, 6.44, 6.46, 6.63, 6.63, 6.63],
+                backgroundColor: BLUE,
+                borderRadius: 4,
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'top' } },
+        scales: {
+            y: { min: 5.5, max: 8, grid: { color: '#F0F0F0' } },
+            x: { grid: { display: false } }
+        }
+    }
+});
+
+// 15. Single Household Trend
+new Chart(document.getElementById('singleHouseholdTrendChart'), {
+    type: 'line',
+    data: {
+        labels: ['2021', '2022', '2023', '2024', '2025'],
+        datasets: [{
+            label: '1인 가구 비율 (%)',
+            data: [34.9, 36.8, 38.2, 39.3, 39.9],
+            borderColor: PRIMARY,
+            backgroundColor: 'rgba(0,168,142,0.1)',
+            fill: true,
+            tension: 0.4,
+            pointRadius: 6,
+            pointBackgroundColor: PRIMARY,
+            borderWidth: 3,
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+            y: { min: 33, max: 42, grid: { color: '#F0F0F0' } },
+            x: { grid: { display: false } }
+        }
+    }
+});
+
+// NEW: Happiness Trend
+new Chart(document.getElementById('happinessTrendChart'), {
+    type: 'line',
+    data: {
+        labels: ['2021', '2022', '2023', '2024', '2025'],
+        datasets: [{
+            label: '행복지수',
+            data: [6.27, 6.72, 6.61, 6.54, 6.61],
+            borderColor: PRIMARY,
+            backgroundColor: 'rgba(0,168,142,0.1)',
+            fill: true,
+            tension: 0.4,
+            pointRadius: 6,
+            pointBackgroundColor: PRIMARY,
+            borderWidth: 3,
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+            y: { min: 6.0, max: 7.0, grid: { color: '#F0F0F0' } },
+            x: { grid: { display: false } }
+        }
+    }
+});
+
+// NEW: Happiness Items
+new Chart(document.getElementById('happinessItemChart'), {
+    type: 'bar',
+    data: {
+        labels: ['건강상태', '가정생활', '주위 친지/\n친구 관계', '사회생활', '재정상태'],
+        datasets: [{
+            label: '행복지수',
+            data: [7.10, 6.70, 6.66, 6.59, 6.01],
+            backgroundColor: [PRIMARY, BLUE, ORANGE, PURPLE, ACCENT],
+            borderRadius: 8,
+            barThickness: 45,
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+            y: { min: 5.5, max: 7.5, grid: { color: '#F0F0F0' } },
+            x: { grid: { display: false } }
+        }
+    }
+});
+
+// NEW: Stress Causes
+new Chart(document.getElementById('stressCauseChart'), {
+    type: 'bar',
+    data: {
+        labels: ['사회생활\n대인관계', '과도한\n업무/학습', '재정상태', '가족/친구\n관계', '건강상태', '가족돌봄\n가사노동', '실직/\n미취업'],
+        datasets: [
+            {
+                label: '2024',
+                data: [44.8, 40.8, 30.1, 27.4, 22.9, 14.0, 3.7],
+                backgroundColor: '#BDC3C7',
+                borderRadius: 4,
+            },
+            {
+                label: '2025',
+                data: [46.5, 39.5, 29.3, 26.2, 22.2, 15.3, 3.5],
+                backgroundColor: PRIMARY,
+                borderRadius: 4,
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'top' } },
+        scales: {
+            y: { beginAtZero: true, max: 50, grid: { color: '#F0F0F0' } },
+            x: { grid: { display: false }, ticks: { font: { size: 10 } } }
+        }
+    }
+});
+
+// NEW: Living Environment Trend
+new Chart(document.getElementById('livingEnvTrendChart'), {
+    type: 'line',
+    data: {
+        labels: ['2021', '2022', '2023', '2024', '2025'],
+        datasets: [
+            {
+                label: '주거환경',
+                data: [6.41, 7.20, 6.89, 6.90, 7.05],
+                borderColor: PRIMARY,
+                backgroundColor: 'transparent',
+                tension: 0.4,
+                pointRadius: 5,
+                borderWidth: 2.5,
+            },
+            {
+                label: '사회환경',
+                data: [6.07, 6.52, 6.32, 6.10, 6.27],
+                borderColor: BLUE,
+                backgroundColor: 'transparent',
+                tension: 0.4,
+                pointRadius: 5,
+                borderWidth: 2.5,
+            },
+            {
+                label: '교육환경',
+                data: [5.74, 6.20, 6.27, 6.04, 6.26],
+                borderColor: PURPLE,
+                backgroundColor: 'transparent',
+                tension: 0.4,
+                pointRadius: 5,
+                borderWidth: 2.5,
+            },
+            {
+                label: '경제환경',
+                data: [5.50, 6.41, 6.15, 5.83, 6.06],
+                borderColor: ACCENT,
+                backgroundColor: 'transparent',
+                tension: 0.4,
+                pointRadius: 5,
+                borderWidth: 2.5,
+            },
+            {
+                label: '문화여가',
+                data: [null, null, null, null, 6.20],
+                borderColor: ORANGE,
+                backgroundColor: 'transparent',
+                tension: 0.4,
+                pointRadius: 5,
+                borderWidth: 2.5,
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'top', labels: { font: { size: 11 } } } },
+        scales: {
+            y: { min: 5.0, max: 7.5, grid: { color: '#F0F0F0' } },
+            x: { grid: { display: false } }
+        }
+    }
+});
+
+// NEW: Safety Chart
+new Chart(document.getElementById('safetyChart'), {
+    type: 'bar',
+    data: {
+        labels: ['환경오염', '사이버\n범죄', '경제적\n위험', '자연재해', '인재', '신종질병', '범죄', '도덕성\n부족', '국가안보', '사회갈등'],
+        datasets: [
+            {
+                label: '2024',
+                data: [33.1, 35.5, 31.9, 35.8, 34.0, 25.0, 23.6, 28.5, null, null],
+                backgroundColor: '#BDC3C7',
+                borderRadius: 3,
+            },
+            {
+                label: '2025',
+                data: [36.7, 35.3, 35.1, 34.2, 29.5, 26.7, 22.1, 20.9, 16.1, 0.1],
+                backgroundColor: ACCENT,
+                borderRadius: 3,
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'top' } },
+        scales: {
+            y: { beginAtZero: true, max: 40, grid: { color: '#F0F0F0' } },
+            x: { grid: { display: false }, ticks: { font: { size: 9 } } }
+        }
+    }
+});
+
+// NEW: Night Safety
+new Chart(document.getElementById('nightSafetyChart'), {
+    type: 'bar',
+    data: {
+        labels: ['2024', '2025'],
+        datasets: [
+            { label: '안전함', data: [49.0, 58.3], backgroundColor: PRIMARY, borderRadius: 4 },
+            { label: '보통', data: [36.8, 31.2], backgroundColor: '#BDC3C7', borderRadius: 4 },
+            { label: '불안함', data: [14.2, 10.5], backgroundColor: ACCENT, borderRadius: 4 },
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'top' } },
+        scales: {
+            y: { stacked: true, max: 100, grid: { color: '#F0F0F0' } },
+            x: { stacked: true, grid: { display: false } }
+        }
+    }
+});
+
+// NEW: Employment Type
+new Chart(document.getElementById('employTypeChart'), {
+    type: 'doughnut',
+    data: {
+        labels: ['상용직 임금근로자 (67.2%)', '자영업자 (15.9%)', '임시/일용직 (14.5%)', '무급/기타 (2.5%)'],
+        datasets: [{
+            data: [67.2, 15.9, 14.5, 2.5],
+            backgroundColor: [PRIMARY, BLUE, ORANGE, '#BDC3C7'],
+            borderWidth: 0,
+            spacing: 2,
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: '55%',
+        plugins: { legend: { position: 'bottom', labels: { font: { size: 11 }, padding: 10 } } }
+    }
+});
+
+// NEW: Debt Trend
+new Chart(document.getElementById('debtTrendChart'), {
+    type: 'line',
+    data: {
+        labels: ['2021', '2022', '2023', '2024', '2025'],
+        datasets: [{
+            label: '가구 부채 비율 (%)',
+            data: [43.0, 41.1, 37.4, 42.5, 42.1],
+            borderColor: ACCENT,
+            backgroundColor: 'rgba(231,76,60,0.1)',
+            fill: true,
+            tension: 0.4,
+            pointRadius: 6,
+            pointBackgroundColor: ACCENT,
+            borderWidth: 3,
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+            y: { min: 34, max: 46, grid: { color: '#F0F0F0' } },
+            x: { grid: { display: false } }
+        }
+    }
+});
+
+// NEW: AI Age Chart
+new Chart(document.getElementById('aiAgeChart'), {
+    type: 'bar',
+    data: {
+        labels: ['20대 이하', '30대', '40대', '50대', '60세 이상'],
+        datasets: [
+            { label: '대화형 AI', data: [84.5, 80.8, 67.6, 52.2, 33.9], backgroundColor: PRIMARY, borderRadius: 4 },
+            { label: 'AI 번역기', data: [56.1, 55.9, 59.7, 45.3, 34.1], backgroundColor: BLUE, borderRadius: 4 },
+            { label: '추천 시스템', data: [56.2, 54.5, 52.4, 43.8, 29.5], backgroundColor: ORANGE, borderRadius: 4 },
+            { label: '사용 안함', data: [1.2, 3.0, 6.1, 14.0, 31.3], backgroundColor: '#BDC3C7', borderRadius: 4 },
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'top', labels: { font: { size: 11 } } } },
+        scales: {
+            y: { beginAtZero: true, max: 90, grid: { color: '#F0F0F0' } },
+            x: { grid: { display: false } }
+        }
+    }
+});
+
+// NEW: 4-day Workweek
+new Chart(document.getElementById('fourDayChart'), {
+    type: 'bar',
+    data: {
+        labels: ['20대 이하', '30대', '40대', '50대', '60세 이상'],
+        datasets: [
+            { label: '주 4일제', data: [6.62, 7.09, 6.29, 5.25, 4.22], backgroundColor: PURPLE, borderRadius: 4 },
+            { label: '주 4.5일제', data: [6.86, 7.33, 6.61, 5.55, 4.57], backgroundColor: BLUE, borderRadius: 4 },
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'top' } },
+        scales: {
+            y: { min: 3, max: 8, grid: { color: '#F0F0F0' } },
+            x: { grid: { display: false } }
+        }
+    }
+});
+
+// NEW: Social Trust
+new Chart(document.getElementById('trustChart'), {
+    type: 'bar',
+    data: {
+        labels: ['가족', '친구', '공공기관', '이웃', '국내거주\n외국인', '처음만난\n낯선 사람'],
+        datasets: [{
+            label: '신뢰도 (10점)',
+            data: [8.81, 7.29, 5.55, 4.64, 2.86, 2.75],
+            backgroundColor: [PRIMARY, PRIMARY_DARK, BLUE, ORANGE, PURPLE, ACCENT],
+            borderRadius: 8,
+            barThickness: 45,
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+            y: { beginAtZero: true, max: 10, grid: { color: '#F0F0F0' } },
+            x: { grid: { display: false } }
+        }
+    }
+});
+
+// NEW: Social Fairness
+new Chart(document.getElementById('fairnessChart'), {
+    type: 'bar',
+    data: {
+        labels: ['교육기회', '병역이행', '지역균형\n발전', '복지혜택', '성별대우', '경제사회적\n배분구조', '취업기회', '과세/납세', '법 집행', '정치활동'],
+        datasets: [
+            { label: '2024', data: [6.09, 5.56, 5.20, 4.96, 5.12, 5.05, 5.06, 5.25, 4.92, 4.87], backgroundColor: '#BDC3C7', borderRadius: 3 },
+            { label: '2025', data: [6.35, 5.85, 5.54, 5.25, 5.32, 5.27, 5.39, 5.21, 5.05, 4.86], backgroundColor: PRIMARY, borderRadius: 3 },
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'top' } },
+        scales: {
+            y: { min: 4, max: 7, grid: { color: '#F0F0F0' } },
+            x: { grid: { display: false }, ticks: { font: { size: 9 } } }
+        }
+    }
+});
+
+// NEW: Foreigner Image Chart
+new Chart(document.getElementById('foreignImageChart'), {
+    type: 'bar',
+    data: {
+        labels: ['트렌디한\n문화도시', '관광 매력', '국제도시', '전통+현대\n조화', '다문화\n포용도시', '친환경\n도시', '미래지향\n도시'],
+        datasets: [{
+            label: '2025 점수',
+            data: [7.99, 7.91, 7.90, 7.88, 7.88, 7.72, 7.82],
+            backgroundColor: PRIMARY,
+            borderRadius: 6,
+            barThickness: 40,
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+            y: { min: 7.0, max: 8.2, grid: { color: '#F0F0F0' } },
+            x: { grid: { display: false }, ticks: { font: { size: 10 } } }
+        }
+    }
+});
+
+// NEW: Foreigner Life Quality
+new Chart(document.getElementById('foreignLifeChart'), {
+    type: 'bar',
+    data: {
+        labels: ['종합', '주거환경', '경제환경', '복지환경', '사회환경', '교육환경', '도시안전', '문화여가'],
+        datasets: [
+            { label: '2024', data: [6.97, 6.73, 7.04, 7.31, 7.16, 6.92, 6.92, 7.08], backgroundColor: '#BDC3C7', borderRadius: 3 },
+            { label: '2025', data: [7.62, 7.50, 7.31, 7.69, 7.28, 6.99, 7.80, 8.13], backgroundColor: PRIMARY, borderRadius: 3 },
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'top' } },
+        scales: {
+            y: { min: 6.0, max: 8.5, grid: { color: '#F0F0F0' } },
+            x: { grid: { display: false }, ticks: { font: { size: 10 } } }
+        }
+    }
+});
+
+// NEW: Landmark Chart
+new Chart(document.getElementById('landmarkChart'), {
+    type: 'bar',
+    data: {
+        labels: ['한강', '광화문\n(광장)', '고궁', 'N서울\n타워', '청계천', '롯데월드\n타워', '시청앞\n광장', '남대문', '동대문\n(DDP)'],
+        datasets: [
+            {
+                label: '시민',
+                data: [48.3, 40.2, 36.9, 19.4, 12.1, 12.0, 7.3, 14.2, 5.7],
+                backgroundColor: PRIMARY,
+                borderRadius: 4,
+            },
+            {
+                label: '외국인',
+                data: [22.3, 40.3, 32.8, 28.1, 10.3, 14.3, 14.1, 6.2, 20.4],
+                backgroundColor: BLUE,
+                borderRadius: 4,
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'top' } },
+        scales: {
+            y: { beginAtZero: true, max: 55, grid: { color: '#F0F0F0' } },
+            x: { grid: { display: false }, ticks: { font: { size: 9 } } }
+        }
+    }
+});
+
+// NEW: Pride Trend
+new Chart(document.getElementById('prideTrendChart'), {
+    type: 'line',
+    data: {
+        labels: ['2023', '2024', '2025'],
+        datasets: [
+            {
+                label: '시민 자부심 (100점)',
+                data: [68.4, 68.6, 69.0],
+                borderColor: PRIMARY,
+                backgroundColor: 'rgba(0,168,142,0.1)',
+                fill: true,
+                tension: 0.4,
+                pointRadius: 6,
+                borderWidth: 3,
+                yAxisID: 'y',
+            },
+            {
+                label: '10년후 서울거주 의향 (%)',
+                data: [63.4, 67.8, 73.2],
+                borderColor: BLUE,
+                backgroundColor: 'rgba(41,128,185,0.1)',
+                fill: true,
+                tension: 0.4,
+                pointRadius: 6,
+                borderWidth: 3,
+                yAxisID: 'y1',
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'top' } },
+        scales: {
+            y: { min: 66, max: 71, position: 'left', title: { display: true, text: '자부심 (점)' }, grid: { color: '#F0F0F0' } },
+            y1: { min: 60, max: 76, position: 'right', title: { display: true, text: '거주의향 (%)' }, grid: { drawOnChartArea: false } },
+            x: { grid: { display: false } }
+        }
+    }
+});
+
+// 16. Region Chart
+new Chart(document.getElementById('regionChart'), {
+    type: 'bar',
+    data: {
+        labels: ['도심권', '동북권', '서북권', '서남권', '동남권'],
+        datasets: [
+            { label: '삶의 만족도', data: [6.61, 6.84, 7.10, 6.80, 6.82], backgroundColor: PRIMARY, borderRadius: 4 },
+            { label: '행복도', data: [6.22, 6.81, 7.07, 6.58, 6.82], backgroundColor: BLUE, borderRadius: 4 },
+            { label: '주택 만족도', data: [5.88, 6.16, 6.89, 6.40, 6.57], backgroundColor: ORANGE, borderRadius: 4 },
+            { label: '지하철 만족도', data: [7.61, 7.29, 7.81, 7.36, 7.58], backgroundColor: PURPLE, borderRadius: 4 },
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'top' } },
+        scales: {
+            y: { min: 5, max: 8.5, grid: { color: '#F0F0F0' } },
+            x: { grid: { display: false } }
+        }
+    }
+});
+
+// Scroll to section
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+    event.target.classList.add('active');
+}
+
+// Back to top button
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('show', window.scrollY > 600);
+});
+
+// Scroll reveal animations
+const revealElements = document.querySelectorAll('.card, .kpi-card, .info-box');
+revealElements.forEach(el => el.classList.add('reveal'));
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+revealElements.forEach(el => revealObserver.observe(el));
+
+// Intersection Observer for active nav
+const sections = document.querySelectorAll('.section');
+const navItems = document.querySelectorAll('.nav-item');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const id = entry.target.id;
+            if (id) {
+                navItems.forEach(item => {
+                    item.classList.toggle('active', item.getAttribute('onclick')?.includes(id));
+                });
+            }
+        }
+    });
+}, { threshold: 0.3 });
+
+sections.forEach(section => {
+    if (section.id) observer.observe(section);
+});
+</script>
+
+</body>
+</html>
