@@ -194,6 +194,19 @@ dialog.modal::backdrop{background:rgba(0,0,0,.45);backdrop-filter:blur(4px);}
     <div><h3 style="font-size:14px;font-weight:600;margin-bottom:10px;color:var(--text-light)">결제수단</h3><div class="chart-wrap" style="height:280px;"><canvas id="methodChart"></canvas></div></div>
     <div><h3 style="font-size:14px;font-weight:600;margin-bottom:10px;color:var(--text-light)">비목</h3><div class="chart-wrap" style="height:280px;"><canvas id="categoryChart"></canvas></div></div>
   </div>
+
+  <div style="background:#F8FAFB;border-radius:10px;padding:14px 16px;margin-top:18px;font-size:13px;color:var(--text);border-left:4px solid var(--primary);">
+    <b style="color:var(--text);">비목별 의미</b> <span class="muted" style="font-size:12px;">— 「지방재정법」 · 행정안전부 「지방자치단체 업무추진비 집행기준」 기반</span>
+    <ul style="margin:8px 0 0 18px;line-height:1.75;color:var(--text-light);">
+      <li><b style="color:var(--text);">시책</b> (시책추진업무추진비) — 시책·정책·사업 추진 경비. 의장단·상임위원장·의원·사무국이 정례회·임시회·예산·보도·개원식 등 의정활동을 추진하면서 사용. <b>이 데이터의 약 97%</b></li>
+      <li><b style="color:var(--text);">기관</b> (기관운영업무추진비) — 의회사무국 같은 <b>기관 자체 운영</b> 경비. 직원 격려, 경조사비(소속직원 결혼·부친상 등), 사무국 회식</li>
+      <li><b style="color:var(--text);">부서</b> (부서운영업무추진비) — 각 <b>부서(팀·과)</b> 단위 운영 경비. 부서직원 격려·간식, 방문응대 커피</li>
+      <li><b style="color:var(--text);">정원가산</b> (정원가산업무추진비) — 정원 외 인건비 가산 항목 (식사 자리에는 거의 사용 안 됨, 본 데이터엔 없음)</li>
+    </ul>
+    <div style="margin-top:8px;padding-top:8px;border-top:1px dashed var(--border);font-size:12px;color:var(--text-light);">
+      📝 OCR 보정: 일부 행에 "<code>사책</code>"으로 표기된 7건은 한자 변환·OCR 단계에서 "<b>시</b>"가 "<b>사</b>"로 잘못 인식된 것으로 보여 <b>"시책"으로 통합 처리</b>했습니다. 모두 실질 내용이 시책추진과 동일(예: 의정현안 간담회, 개원 3주년 기념식 등).
+    </div>
+  </div>
 </section>
 
 <section class="section">

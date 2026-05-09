@@ -24,6 +24,7 @@ import {
   parseAmount,
   splitAmountMethod,
   normalizeMethod,
+  normalizeCategory,
   weekday,
   isWeekend,
   hourOf,
@@ -109,7 +110,11 @@ function processOne(folderPath) {
 
     if (amount == null) flags.push('amount_invalid');
 
-    const category = cleanText(m.category);
+    const category_raw_str = cleanText(m.category);
+    const category = normalizeCategory(m.category);
+    if (category_raw_str && category !== category_raw_str) {
+      flags.push('category_normalized');
+    }
 
     // 무효 행: date 없거나 amount 없는 경우 review로 분리
     if (!date || amount == null || amount <= 0) {
@@ -151,6 +156,7 @@ function processOne(folderPath) {
       method,
       method_raw,
       category,
+      category_raw: category_raw_str,
       year_month: ym,
       weekday: wd,
       is_weekend: isWeekend(date),

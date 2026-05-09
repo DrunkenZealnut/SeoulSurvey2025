@@ -138,6 +138,22 @@ export function normalizeMethod(s) {
   return t || '';
 }
 
+// 비목 정규화 — OCR 변형(사책→시책) 보정 + 한글 없는 노이즈 제거.
+// 표준 분류: 시책추진 / 기관운영 / 부서운영 / 정원가산
+export function normalizeCategory(s) {
+  if (s == null) return '';
+  const t = cleanText(s).replace(/<[^>]+>/g, '').replace(/['"`▌│{}\\]/g, '').trim();
+  if (!t) return '';
+  if (/사책/.test(t)) return '시책'; // OCR 오인식: 시→사
+  if (/시책/.test(t)) return '시책';
+  if (/기관/.test(t)) return '기관';
+  if (/부서/.test(t)) return '부서';
+  if (/정원\s*가산|정원가산/.test(t)) return '정원가산';
+  // 한글이 전혀 없으면 OCR 노이즈로 간주, 빈값 처리
+  if (!/[가-힣]/.test(t)) return '';
+  return t;
+}
+
 export function isWeekend(isoDate) {
   if (!isoDate) return false;
   const d = new Date(isoDate + 'T00:00:00Z');

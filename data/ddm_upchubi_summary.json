@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T14:14:49.107Z",
+  "generated_at": "2026-05-09T14:33:52.493Z",
   "totals": {
     "total_amount": 151001366.39999998,
     "total_count": 1317,
@@ -440,8 +440,8 @@
   "by_category": [
     {
       "category": "시책",
-      "total_amount": 143638126.4,
-      "count": 1278
+      "total_amount": 144802626.4,
+      "count": 1285
     },
     {
       "category": "기관",
@@ -449,19 +449,9 @@
       "count": 27
     },
     {
-      "category": "사책",
-      "total_amount": 1164500,
-      "count": 7
-    },
-    {
       "category": "부서",
       "total_amount": 602740,
       "count": 4
-    },
-    {
-      "category": "i +u ו ∧ו",
-      "total_amount": 69000,
-      "count": 1
     }
   ],
   "by_weekday": [
