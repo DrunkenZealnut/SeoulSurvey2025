@@ -44,6 +44,13 @@ function extractFolderYM(folder) {
   return m ? `${m[1]}-${m[2]}` : null;
 }
 
+// 폴더 연도 보정 — PDF 원본에 연도가 잘못 인쇄된 케이스를 사용자 확인 기반으로 수정.
+// (동대문구의회 사이트 게시 시점 = 폴더 라벨, PDF 내부 일자 컬럼은 직전 연도 오타)
+const FOLDER_YEAR_OVERRIDE = {
+  '20260509_090705_2025-11_180873_업무추진비집행내역_11월_': 2025,
+  '20260509_073652_2025-12_180874_업무추진비집행내역_12월_': 2025,
+};
+
 function findMdFile(folderPath) {
   const entries = fs.readdirSync(folderPath);
   // 폴더명과 동일한 .md (가장 흔함)
@@ -69,6 +76,7 @@ function processOne(folderPath) {
   const md = fs.readFileSync(mdPath, 'utf8');
   const tableRows = extractRows(md);
   const folderYM = extractFolderYM(folderName);
+  const yearOverride = FOLDER_YEAR_OVERRIDE[folderName];
 
   const rows = [];
   const review = [];
@@ -94,8 +102,13 @@ function processOne(folderPath) {
     if (!user_raw) flags.push('user_missing');
     if (!venue_raw) flags.push('venue_missing');
 
-    const date = parseDate(m.date);
+    let date = parseDate(m.date);
     if (!date) flags.push('date_invalid');
+    // 사용자 확인 기반 연도 보정 (PDF 원본의 연도 오타 수정)
+    if (date && yearOverride) {
+      date = String(yearOverride) + date.slice(4);
+      flags.push('year_overridden');
+    }
 
     const time = parseTime(m.time);
     const seq = parseInt0(m.seq);
