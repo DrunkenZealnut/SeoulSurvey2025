@@ -395,8 +395,52 @@ function main() {
         method: r.method,
         category: r.category,
       }));
-    delete b.rows; // 직렬화에서 제외
   }
+
+  // C 버킷(의회 안건 사무처리) 추가 세분화 — 집행목적 카테고리별 sub-bucket
+  {
+    const cRows = buckets.C_council_business.rows;
+    const grouped = new Map();
+    for (const r of cRows) {
+      const k = r.purpose_short || '미상';
+      if (!grouped.has(k)) grouped.set(k, []);
+      grouped.get(k).push(r);
+    }
+    const subBuckets = [...grouped.entries()]
+      .map(([purpose_short, rs]) => {
+        const total_amount = rs.reduce((s, x) => s + x.amount, 0);
+        const headcounts = rs.filter((x) => x.headcount && x.headcount > 0);
+        const avg_headcount = headcounts.length
+          ? headcounts.reduce((s, x) => s + x.headcount, 0) / headcounts.length
+          : null;
+        return {
+          purpose_short,
+          count: rs.length,
+          total_amount,
+          avg_amount: total_amount / rs.length,
+          avg_headcount,
+          by_venue: annotateVenueKey(topByKey(rs, (r) => r.venue_norm, 5)),
+          by_user: topByKey(rs, (r) => r.user_raw, 5),
+          samples: rs
+            .slice()
+            .sort((a, b) => b.amount - a.amount)
+            .slice(0, 3)
+            .map((r) => ({
+              date: r.date,
+              user_raw: r.user_raw,
+              venue_raw: r.venue_raw,
+              purpose: r.purpose,
+              amount: r.amount,
+              headcount: r.headcount,
+            })),
+        };
+      })
+      .sort((a, b) => b.total_amount - a.total_amount);
+    buckets.C_council_business.sub_buckets = subBuckets;
+  }
+
+  // 직렬화에서 rows 제외
+  for (const key of BUCKETS) delete buckets[key].rows;
   // 월별 시계열 (5-bucket stacked)
   const bucketByYM = new Map();
   for (const r of rows) {

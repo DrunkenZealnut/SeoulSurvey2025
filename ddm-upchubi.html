@@ -262,6 +262,12 @@ dialog.modal::backdrop{background:rgba(0,0,0,.45);backdrop-filter:blur(4px);}
 
   <h3 style="font-size:15px;font-weight:600;margin:24px 0 10px;">7.3 카테고리별 상세 (TOP 식당·사용자·용도·대표 사례)</h3>
   <div id="bucketDetails"></div>
+
+  <h3 style="font-size:15px;font-weight:600;margin:32px 0 10px;">7.4 🔵 "의회 안건 사무처리" 1,054건 추가 세분화</h3>
+  <p class="desc" style="margin-top:0;">전체 80%를 차지하는 가장 큰 분류를 집행목적별로 7개 sub-bucket으로 더 쪼갰습니다. 각 sub-bucket의 평균 단가·인원·TOP 식당·TOP 사용자·대표 사례를 함께 보여줍니다.</p>
+
+  <div class="chart-wrap" style="height:280px;margin-bottom:18px;"><canvas id="cSubChart"></canvas></div>
+  <div id="cSubCards"></div>
 </section>
 
 <section class="section" id="downloads">
@@ -731,6 +737,63 @@ const bucketCardsHtml = BUCKET_ORDER.map(k => {
   </div>`;
 }).join('');
 document.getElementById('bucketDetails').innerHTML = bucketCardsHtml;
+
+// 7.4 의회 안건 사무처리 sub-bucket 세분화
+const cSub = (summary.buckets.C_council_business.sub_buckets || []);
+new Chart(document.getElementById('cSubChart'), {
+  type:'bar',
+  data:{
+    labels: cSub.map(b => b.purpose_short),
+    datasets:[
+      {label:'금액(원)', data: cSub.map(b => b.total_amount), backgroundColor:'#2980B9', yAxisID:'y1'},
+      {label:'건수',     data: cSub.map(b => b.count),         backgroundColor:'rgba(41,128,185,.3)', yAxisID:'y2'},
+    ],
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{tooltip:{callbacks:{label:(ctx)=>ctx.dataset.label==='금액(원)'?`${won(ctx.parsed.y)}`:`${ctx.parsed.y}건`}}},
+    scales:{
+      y1:{type:'linear',position:'left',ticks:{callback:v=>(v/1e6).toFixed(0)+'M'},title:{display:true,text:'금액'}},
+      y2:{type:'linear',position:'right',grid:{drawOnChartArea:false},title:{display:true,text:'건수'}},
+    }},
+});
+
+const cTotal = cSub.reduce((s,b)=>s+b.count,0) || 1;
+const cTotalA = cSub.reduce((s,b)=>s+b.total_amount,0) || 1;
+document.getElementById('cSubCards').innerHTML = cSub.map(b => {
+  const venuePills = b.by_venue.slice(0,5).map(v => `<span class="tag">${v.display_name||v.key} · ${v.count}회</span>`).join('');
+  const userPills = b.by_user.slice(0,5).map(u => `<span class="tag">${u.key} · ${u.count}회</span>`).join('');
+  const samples = b.samples.map(r => `<tr>
+    <td>${r.date}</td>
+    <td>${r.user_raw}</td>
+    <td>${r.venue_raw}</td>
+    <td style="max-width:340px;">${r.purpose}</td>
+    <td class="num">${r.headcount ?? '-'}</td>
+    <td class="num"><b>${won(r.amount)}</b></td>
+  </tr>`).join('');
+  return `
+  <div class="top3-card" style="border-left:4px solid #2980B9;padding:18px 22px;">
+    <div class="v-head" style="padding-bottom:10px;">
+      <div>
+        <div class="v-name" style="color:#2980B9;font-size:17px;">${b.purpose_short}</div>
+        <div class="v-meta" style="margin-top:6px;">
+          <span><b>${b.count.toLocaleString()}건</b> (${(b.count/cTotal*100).toFixed(1)}%)</span>
+          <span><b>${won(b.total_amount)}</b> (${(b.total_amount/cTotalA*100).toFixed(1)}%)</span>
+          <span>평균 <b>${won(b.avg_amount)}</b>/건</span>
+          <span>평균 <b>${(b.avg_headcount||0).toFixed(1)}명</b>/회</span>
+        </div>
+      </div>
+    </div>
+    <h4>TOP 식당</h4>
+    <div class="user-tags" style="margin-bottom:10px;">${venuePills || '<span class="muted">없음</span>'}</div>
+    <h4>주 사용자</h4>
+    <div class="user-tags" style="margin-bottom:10px;">${userPills || '<span class="muted">없음</span>'}</div>
+    <h4>대표 사례 (금액 큰 순 ${b.samples.length}건)</h4>
+    <table class="sample-table">
+      <thead><tr><th>일자</th><th>사용자</th><th>식당</th><th>집행목적</th><th class="num">인원</th><th class="num">금액</th></tr></thead>
+      <tbody>${samples}</tbody>
+    </table>
+  </div>`;
+}).join('');
 
 // 카드 차트들 — DOM 삽입 후 렌더
 top3.forEach((v, idx) => {

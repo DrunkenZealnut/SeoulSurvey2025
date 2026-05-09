@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T14:43:42.177Z",
+  "generated_at": "2026-05-09T14:48:15.852Z",
   "totals": {
     "total_amount": 151001366.39999998,
     "total_count": 1317,
@@ -1961,6 +1961,591 @@
           "headcount": 70,
           "method": "법인카드",
           "category": "시책"
+        }
+      ],
+      "sub_buckets": [
+        {
+          "purpose_short": "의회 회의",
+          "count": 468,
+          "total_amount": 50587718.900000006,
+          "avg_amount": 108093.41645299147,
+          "avg_headcount": 8.070294784580499,
+          "by_venue": [
+            {
+              "key": "청마루한우",
+              "count": 56,
+              "amount": 8539000,
+              "display_name": "청마루한우"
+            },
+            {
+              "key": "최강낙자",
+              "count": 23,
+              "amount": 2990000,
+              "display_name": "최강낙지"
+            },
+            {
+              "key": "참숯갈비화로촌",
+              "count": 20,
+              "amount": 2616000,
+              "display_name": "참숯갈비화로촌"
+            },
+            {
+              "key": "경성농장",
+              "count": 15,
+              "amount": 2058000,
+              "display_name": "경성농장"
+            },
+            {
+              "key": "옥돌",
+              "count": 19,
+              "amount": 1964000,
+              "display_name": "옥돌"
+            }
+          ],
+          "by_user": [
+            {
+              "key": "의정팀장",
+              "count": 57,
+              "amount": 9435000
+            },
+            {
+              "key": "국주임",
+              "count": 54,
+              "amount": 7804100
+            },
+            {
+              "key": "의사담당",
+              "count": 100,
+              "amount": 6821716.2
+            },
+            {
+              "key": "국서무",
+              "count": 41,
+              "amount": 6053300
+            },
+            {
+              "key": "의회홍보팀장",
+              "count": 44,
+              "amount": 5000600
+            }
+          ],
+          "samples": [
+            {
+              "date": "2025-02-06",
+              "user_raw": "의정팀장",
+              "venue_raw": "장어시대",
+              "purpose": "제339회 정례회 관련 관계자 간담회",
+              "amount": 495000,
+              "headcount": 18
+            },
+            {
+              "date": "2023-07-18",
+              "user_raw": "의정팀장",
+              "venue_raw": "청마루 한우",
+              "purpose": "제322회 임시회 추진 관련 관계자 업무협의",
+              "amount": 414000,
+              "headcount": 31
+            },
+            {
+              "date": "2025-03-17",
+              "user_raw": "의정팀장",
+              "venue_raw": "조영환의 대양한방숯",
+              "purpose": "제340회 임시회 추진 관련 관계자 간담회",
+              "amount": 373000,
+              "headcount": 14
+            }
+          ]
+        },
+        {
+          "purpose_short": "현안 협의",
+          "count": 224,
+          "total_amount": 26825610,
+          "avg_amount": 119757.1875,
+          "avg_headcount": 8.576744186046511,
+          "by_venue": [
+            {
+              "key": "청마루한우",
+              "count": 29,
+              "amount": 4501000,
+              "display_name": "청마루한우"
+            },
+            {
+              "key": "최강낙자",
+              "count": 22,
+              "amount": 3076000,
+              "display_name": "최강낙지"
+            },
+            {
+              "key": "장어시대",
+              "count": 7,
+              "amount": 1692000,
+              "display_name": "장어시대"
+            },
+            {
+              "key": "참숯갈비화로촌",
+              "count": 9,
+              "amount": 1251000,
+              "display_name": "참숯갈비화로촌"
+            },
+            {
+              "key": "옥돌",
+              "count": 9,
+              "amount": 1014000,
+              "display_name": "옥돌"
+            }
+          ],
+          "by_user": [
+            {
+              "key": "의정팀장",
+              "count": 42,
+              "amount": 7374700
+            },
+            {
+              "key": "사무국장",
+              "count": 61,
+              "amount": 5135110
+            },
+            {
+              "key": "국주임",
+              "count": 33,
+              "amount": 4793400
+            },
+            {
+              "key": "국서무",
+              "count": 23,
+              "amount": 3261800
+            },
+            {
+              "key": "회계담당",
+              "count": 25,
+              "amount": 2893000
+            }
+          ],
+          "samples": [
+            {
+              "date": "2024-06-24",
+              "user_raw": "의정팀장",
+              "venue_raw": "마루샤브 용두직영점",
+              "purpose": "현안업무 추진에 따른 간담회",
+              "amount": 428000,
+              "headcount": 15
+            },
+            {
+              "date": "2025-07-29",
+              "user_raw": "의정팀장",
+              "venue_raw": "한춘상 일미간장게장",
+              "purpose": "현안업무 추진에 따른 간담회",
+              "amount": 400000,
+              "headcount": 13
+            },
+            {
+              "date": "2023-10-26",
+              "user_raw": "의정팀장",
+              "venue_raw": "장어시대",
+              "purpose": "의회 현안 관련 관계자 업무협의 간담회",
+              "amount": 350000,
+              "headcount": 14
+            }
+          ]
+        },
+        {
+          "purpose_short": "언론·보도",
+          "count": 140,
+          "total_amount": 11564781,
+          "avg_amount": 82605.57857142857,
+          "avg_headcount": 5.401515151515151,
+          "by_venue": [
+            {
+              "key": "경성농장",
+              "count": 9,
+              "amount": 780400,
+              "display_name": "경성농장"
+            },
+            {
+              "key": "청마루한우",
+              "count": 5,
+              "amount": 690000,
+              "display_name": "청마루한우"
+            },
+            {
+              "key": "갈비명가이상답십리점",
+              "count": 2,
+              "amount": 508000,
+              "display_name": "갈비명가이상 답십리점"
+            },
+            {
+              "key": "민수정육식당",
+              "count": 1,
+              "amount": 471300,
+              "display_name": "민수정육식당"
+            },
+            {
+              "key": "고기여행",
+              "count": 2,
+              "amount": 395000,
+              "display_name": "고기여행"
+            }
+          ],
+          "by_user": [
+            {
+              "key": "의회홍보팀장",
+              "count": 70,
+              "amount": 7010381
+            },
+            {
+              "key": "홍보담당",
+              "count": 70,
+              "amount": 4554400
+            }
+          ],
+          "samples": [
+            {
+              "date": "2023-03-27",
+              "user_raw": "의회홍보팀장",
+              "venue_raw": "민수정육식당",
+              "purpose": "기자간담회",
+              "amount": 471300,
+              "headcount": 16
+            },
+            {
+              "date": "2024-07-16",
+              "user_raw": "의회홍보팀장",
+              "venue_raw": "청마루한우",
+              "purpose": "기자간담회",
+              "amount": 315000,
+              "headcount": 11
+            },
+            {
+              "date": "2023-02-14",
+              "user_raw": "의회홍보팀장",
+              "venue_raw": "대영식당",
+              "purpose": "지역매체 기자간담회",
+              "amount": 280000,
+              "headcount": 10
+            }
+          ]
+        },
+        {
+          "purpose_short": "의안·자료수집",
+          "count": 156,
+          "total_amount": 11470400,
+          "avg_amount": 73528.20512820513,
+          "avg_headcount": 5.352112676056338,
+          "by_venue": [
+            {
+              "key": "참숯갈비화로촌",
+              "count": 7,
+              "amount": 743000,
+              "display_name": "참숯갈비화로촌"
+            },
+            {
+              "key": "경성농장",
+              "count": 9,
+              "amount": 622000,
+              "display_name": "경성농장"
+            },
+            {
+              "key": "옥돌",
+              "count": 4,
+              "amount": 533000,
+              "display_name": "옥돌"
+            },
+            {
+              "key": "친친",
+              "count": 6,
+              "amount": 475000,
+              "display_name": "친친"
+            },
+            {
+              "key": "반달식당",
+              "count": 7,
+              "amount": 451000,
+              "display_name": "반달식당"
+            }
+          ],
+          "by_user": [
+            {
+              "key": "전문위원",
+              "count": 32,
+              "amount": 2347500
+            },
+            {
+              "key": "정책지원관(행정)",
+              "count": 19,
+              "amount": 1690400
+            },
+            {
+              "key": "행정기획전문위원",
+              "count": 21,
+              "amount": 1448000
+            },
+            {
+              "key": "복지건설전문위원",
+              "count": 22,
+              "amount": 1291500
+            },
+            {
+              "key": "전문위원(행정)",
+              "count": 14,
+              "amount": 1150300
+            }
+          ],
+          "samples": [
+            {
+              "date": "2025-09-19",
+              "user_raw": "행정정책지원관",
+              "venue_raw": "무명스키야키",
+              "purpose": "의원 요구자료 관련 업무협의 간담회",
+              "amount": 284300,
+              "headcount": 6
+            },
+            {
+              "date": "2025-03-21",
+              "user_raw": "정책지원관(행정)",
+              "venue_raw": "청량리횟집",
+              "purpose": "의원 요구자료 관련 업무협의 간담회",
+              "amount": 282000,
+              "headcount": 8
+            },
+            {
+              "date": "2022-10-18",
+              "user_raw": "전문위원",
+              "venue_raw": "가도",
+              "purpose": "의안자료 수집 및 의정활동 자료수집 관련 업무협의",
+              "amount": 250000,
+              "headcount": 10
+            }
+          ]
+        },
+        {
+          "purpose_short": "행사·기념",
+          "count": 16,
+          "total_amount": 5612750,
+          "avg_amount": 350796.875,
+          "avg_headcount": 32.93333333333333,
+          "by_venue": [
+            {
+              "key": "마루샤브용두직영점",
+              "count": 1,
+              "amount": 1840000,
+              "display_name": "마루샤브 용두직영점"
+            },
+            {
+              "key": "떡향기",
+              "count": 3,
+              "amount": 1250000,
+              "display_name": "떡향기"
+            },
+            {
+              "key": "남원정통추어탕",
+              "count": 2,
+              "amount": 539000,
+              "display_name": "남원정통추어탕"
+            },
+            {
+              "key": "카페프렌즈",
+              "count": 1,
+              "amount": 330000,
+              "display_name": "카페프렌즈"
+            },
+            {
+              "key": "함경면옥",
+              "count": 1,
+              "amount": 317000,
+              "display_name": "함경면옥"
+            }
+          ],
+          "by_user": [
+            {
+              "key": "국서무",
+              "count": 6,
+              "amount": 3533750
+            },
+            {
+              "key": "국주임",
+              "count": 4,
+              "amount": 1111000
+            },
+            {
+              "key": "의정팀장",
+              "count": 3,
+              "amount": 565000
+            },
+            {
+              "key": "서무주임",
+              "count": 2,
+              "amount": 274000
+            },
+            {
+              "key": "사무국장",
+              "count": 1,
+              "amount": 129000
+            }
+          ],
+          "samples": [
+            {
+              "date": "2025-01-07",
+              "user_raw": "국서무",
+              "venue_raw": "마루샤브 용두직영점",
+              "purpose": "2025 신년인사회에 따른 간담회",
+              "amount": 1840000,
+              "headcount": 64
+            },
+            {
+              "date": "2025-01-07",
+              "user_raw": "국서무",
+              "venue_raw": "떡향기",
+              "purpose": "2025 신년인사회 기념식 물품(행사용 떡)",
+              "amount": 450000,
+              "headcount": null
+            },
+            {
+              "date": "2025-07-16",
+              "user_raw": "국서무",
+              "venue_raw": "떡향기",
+              "purpose": "제9대 의회 개원 3주년 기념식 물품(행사용 떡)",
+              "amount": 450000,
+              "headcount": 70
+            }
+          ]
+        },
+        {
+          "purpose_short": "관계자 간담",
+          "count": 48,
+          "total_amount": 4500800,
+          "avg_amount": 93766.66666666667,
+          "avg_headcount": 7.533333333333333,
+          "by_venue": [
+            {
+              "key": "청마루한우",
+              "count": 4,
+              "amount": 908000,
+              "display_name": "청마루한우"
+            },
+            {
+              "key": "함경면옥",
+              "count": 1,
+              "amount": 443000,
+              "display_name": "함경면옥"
+            },
+            {
+              "key": "부산횟집",
+              "count": 1,
+              "amount": 435000,
+              "display_name": "부산횟집"
+            },
+            {
+              "key": "참숯갈비화로촌",
+              "count": 3,
+              "amount": 262000,
+              "display_name": "참숯갈비화로촌"
+            },
+            {
+              "key": "한잔바다회",
+              "count": 1,
+              "amount": 209000,
+              "display_name": "한잔 바다회"
+            }
+          ],
+          "by_user": [
+            {
+              "key": "사무국장",
+              "count": 23,
+              "amount": 1211000
+            },
+            {
+              "key": "국서무",
+              "count": 3,
+              "amount": 844500
+            },
+            {
+              "key": "국주임",
+              "count": 4,
+              "amount": 550000
+            },
+            {
+              "key": "홍보담당",
+              "count": 1,
+              "amount": 435000
+            },
+            {
+              "key": "정책지원관(행정)",
+              "count": 4,
+              "amount": 376700
+            }
+          ],
+          "samples": [
+            {
+              "date": "2025-04-19",
+              "user_raw": "국서무",
+              "venue_raw": "함경면옥",
+              "purpose": "선농대제 관련 관계자 간담회",
+              "amount": 443000,
+              "headcount": 25
+            },
+            {
+              "date": "2023-07-06",
+              "user_raw": "홍보담당",
+              "venue_raw": "부산횟집",
+              "purpose": "의회홍보관련 관계자 간담회",
+              "amount": 435000,
+              "headcount": 15
+            },
+            {
+              "date": "2023-04-05",
+              "user_raw": "국서무",
+              "venue_raw": "청마루 한우",
+              "purpose": "정책지원관 등 신규임용에 따른 관계자 간담회",
+              "amount": 342000,
+              "headcount": 15
+            }
+          ]
+        },
+        {
+          "purpose_short": "회의록",
+          "count": 2,
+          "total_amount": 121700,
+          "avg_amount": 60850,
+          "avg_headcount": 4.5,
+          "by_venue": [
+            {
+              "key": "청마루한우",
+              "count": 1,
+              "amount": 62000,
+              "display_name": "청마루한우"
+            },
+            {
+              "key": "만나네마라탕",
+              "count": 1,
+              "amount": 59700,
+              "display_name": "만나네마라탕"
+            }
+          ],
+          "by_user": [
+            {
+              "key": "의사담당",
+              "count": 2,
+              "amount": 121700
+            }
+          ],
+          "samples": [
+            {
+              "date": "2024-05-01",
+              "user_raw": "의사담당",
+              "venue_raw": "청마루한우",
+              "purpose": "보존 회의록 책자 발간 관련 업무 협의",
+              "amount": 62000,
+              "headcount": 5
+            },
+            {
+              "date": "2024-05-17",
+              "user_raw": "의사담당",
+              "venue_raw": "만나네 마라탕",
+              "purpose": "보존 회의록 책자 발간 관련 업무 협의",
+              "amount": 59700,
+              "headcount": 4
+            }
+          ]
         }
       ]
     },
