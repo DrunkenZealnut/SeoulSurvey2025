@@ -226,8 +226,55 @@ dialog.modal::backdrop{background:rgba(0,0,0,.45);backdrop-filter:blur(4px);}
   <div id="top3Cards"></div>
 </section>
 
+<section class="section">
+  <h2>7. 구의원 참석 식사 분리 <span class="badge">member attendance</span></h2>
+  <p class="desc">집행목적 텍스트를 키워드 룰로 분석하여 식사 자리에 <b>구의원이 동석</b>한 건과 <b>사무국 단독 집행</b>을 분리했습니다. 룰 기반 추정이므로 100% 정확하지 않으며, 의심 케이스는 "동석 가능"으로 분류합니다.</p>
+
+  <div style="background:#F8FAFB;border-radius:10px;padding:14px 16px;margin-bottom:18px;font-size:13px;color:var(--text-light);border-left:4px solid var(--blue);">
+    <b style="color:var(--text);">분류 룰 요약</b>
+    <ul style="margin:6px 0 0 18px;line-height:1.7;">
+      <li><b style="color:var(--good);">의원 동석</b>: "직원 및 의원 간담", "사무국 및 의원 간담", "의원 등 간담", "의장단 월례", "의원 송년회", "의원 회식/격려", "의원 및 관계자 간담" 등 명확한 동석 패턴</li>
+      <li><b style="color:var(--high);">동석 가능</b>: 의원 국내·국외 출장, 한마음 체육대회 등 의원 관련 일정으로 본인 동석 가능성 있음</li>
+      <li><b style="color:var(--text-light);">미동석</b>: "의원 요구자료", "의원 연구실/사무실", "의원 수첩", 의원 단어 자체가 없는 일반 사무국 업무</li>
+    </ul>
+  </div>
+
+  <h3 style="font-size:15px;font-weight:600;margin:14px 0 10px;">7.1 동석 비율 (전체 1,317건 기준)</h3>
+  <div class="kpi-grid" id="memberKpiGrid"></div>
+
+  <h3 style="font-size:15px;font-weight:600;margin:24px 0 10px;">7.2 월별 추이 — 동석 / 동석 가능 / 미동석</h3>
+  <div class="chart-wrap"><canvas id="memberTSChart"></canvas></div>
+
+  <h3 style="font-size:15px;font-weight:600;margin:24px 0 10px;">7.3 구의원 동석 식사 분석 (64건 / 836만원)</h3>
+  <div class="split">
+    <div>
+      <h4 style="font-size:13px;font-weight:600;margin-bottom:8px;color:var(--text-light);text-transform:uppercase;letter-spacing:.04em;">동석 식사 TOP 식당</h4>
+      <table class="list" id="attendedVenueTable">
+        <thead><tr><th>#</th><th>식당</th><th class="num">건수</th><th class="num">총액</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div>
+      <h4 style="font-size:13px;font-weight:600;margin-bottom:8px;color:var(--text-light);text-transform:uppercase;letter-spacing:.04em;">동석 식사 발의 사용자(직책)</h4>
+      <table class="list" id="attendedUserTable">
+        <thead><tr><th>#</th><th>사용자</th><th class="num">건수</th><th class="num">총액</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <h4 style="font-size:13px;font-weight:600;margin:18px 0 8px;color:var(--text-light);text-transform:uppercase;letter-spacing:.04em;">동석 식사 용도 분포</h4>
+  <div class="bar-list" id="attendedPurposeBars"></div>
+
+  <h4 style="font-size:13px;font-weight:600;margin:24px 0 8px;color:var(--text-light);text-transform:uppercase;letter-spacing:.04em;">의원 동석 대표 사례 (금액 큰 순 10건)</h4>
+  <table class="sample-table" id="attendedSamples">
+    <thead><tr><th>일자</th><th>사용자</th><th>식당</th><th>집행목적</th><th class="num">인원</th><th class="num">금액</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</section>
+
 <section class="section" id="downloads">
-  <h2>7. 원본 데이터 다운로드 <span class="badge">data</span></h2>
+  <h2>8. 원본 데이터 다운로드 <span class="badge">data</span></h2>
   <p class="desc" style="margin-top:0;">정제·집계된 데이터셋과 분포 기반 이상치 탐지 결과(별도 분석용)를 함께 제공합니다.</p>
   <p class="desc">정제된 데이터셋을 직접 받아 자체 분석을 진행할 수 있습니다.</p>
   <div class="download-grid">
@@ -586,6 +633,68 @@ const cardsHtml = top3.map((v, idx) => {
   </div>`;
 }).join('');
 document.getElementById('top3Cards').innerHTML = cardsHtml;
+
+// 7) 구의원 참석 식사 분리
+const ma = summary.member_attendance;
+const totalMA = ma.attended.count + ma.likely.count + ma.not_attended.count;
+const totalMAA = ma.attended.total_amount + ma.likely.total_amount + ma.not_attended.total_amount;
+const memberKpis = [
+  {label:'의원 동석', value: ma.attended.count.toLocaleString()+'건', sub:`${won(ma.attended.total_amount)} · ${(ma.attended.count/totalMA*100).toFixed(1)}%`, color:'#00A88E'},
+  {label:'동석 가능', value: ma.likely.count.toLocaleString()+'건', sub:`${won(ma.likely.total_amount)} · ${(ma.likely.count/totalMA*100).toFixed(1)}%`, color:'#F39C12'},
+  {label:'사무국 단독', value: ma.not_attended.count.toLocaleString()+'건', sub:`${won(ma.not_attended.total_amount)} · ${(ma.not_attended.count/totalMA*100).toFixed(1)}%`, color:'#7F8C8D'},
+];
+document.getElementById('memberKpiGrid').innerHTML = memberKpis.map(k => `
+  <div class="kpi" style="border-left:4px solid ${k.color};">
+    <div class="label">${k.label}</div>
+    <div class="value" style="color:${k.color};">${k.value}</div>
+    <div class="sub">${k.sub}</div>
+  </div>
+`).join('');
+
+// 7.2 월별 추이 (스택)
+const mc = summary.member_coverage;
+new Chart(document.getElementById('memberTSChart'), {
+  type:'bar',
+  data:{
+    labels: mc.map(x => x.ym),
+    datasets:[
+      {label:'의원 동석', data: mc.map(x => x.attended), backgroundColor:'#00A88E', stack:'s'},
+      {label:'동석 가능', data: mc.map(x => x.likely), backgroundColor:'#F39C12', stack:'s'},
+      {label:'사무국 단독', data: mc.map(x => x.not_attended), backgroundColor:'rgba(127,140,141,.55)', stack:'s'},
+    ],
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{tooltip:{callbacks:{label:(ctx)=>`${ctx.dataset.label}: ${ctx.parsed.y}건`}}},
+    scales:{x:{stacked:true,ticks:{font:{size:10},maxRotation:60,minRotation:45}},y:{stacked:true,title:{display:true,text:'건수'}}}},
+});
+
+// 7.3 동석 식사 TOP 식당 / 사용자 / 용도 / 사례
+const aa = summary.attended_analysis;
+document.querySelector('#attendedVenueTable tbody').innerHTML = aa.by_venue.slice(0,10).map((v,i) => `
+  <tr><td><span class="rank-pill">${i+1}</span></td><td><b>${v.display_name || v.key}</b></td><td class="num">${v.count}건</td><td class="num">${won(v.amount)}</td></tr>
+`).join('');
+document.querySelector('#attendedUserTable tbody').innerHTML = aa.by_user.slice(0,10).map((u,i) => `
+  <tr><td><span class="rank-pill">${i+1}</span></td><td><b>${u.key}</b></td><td class="num">${u.count}건</td><td class="num">${won(u.amount)}</td></tr>
+`).join('');
+const totalAttCount = aa.by_purpose.reduce((s,p)=>s+p.count,0) || 1;
+document.getElementById('attendedPurposeBars').innerHTML = aa.by_purpose.map(p => {
+  const pct = (p.count / totalAttCount * 100).toFixed(0);
+  return `<div class="bar-item">
+    <div>${p.key}</div>
+    <div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div></div>
+    <div class="bar-cnt">${p.count}건 · ${won(p.amount)}</div>
+  </div>`;
+}).join('');
+document.querySelector('#attendedSamples tbody').innerHTML = aa.samples.map(r => `
+  <tr>
+    <td>${r.date}</td>
+    <td>${r.user_raw}</td>
+    <td>${r.venue_raw}</td>
+    <td style="max-width:340px;">${r.purpose}</td>
+    <td class="num">${r.headcount ?? '-'}</td>
+    <td class="num"><b>${won(r.amount)}</b></td>
+  </tr>
+`).join('');
 
 // 카드 차트들 — DOM 삽입 후 렌더
 top3.forEach((v, idx) => {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T14:02:02.248Z",
+  "generated_at": "2026-05-09T14:14:49.107Z",
   "totals": {
     "total_amount": 151001366.39999998,
     "total_count": 1317,
@@ -593,5 +593,819 @@
       "total_amount": 121700,
       "count": 2
     }
-  ]
+  ],
+  "member_attendance": {
+    "attended": {
+      "count": 64,
+      "total_amount": 8361440
+    },
+    "likely": {
+      "count": 36,
+      "total_amount": 6771010
+    },
+    "not_attended": {
+      "count": 1217,
+      "total_amount": 135868916.4
+    }
+  },
+  "member_coverage": [
+    {
+      "ym": "2022-07",
+      "attended": 2,
+      "likely": 0,
+      "not_attended": 21,
+      "attended_amount": 234000,
+      "likely_amount": 0,
+      "not_attended_amount": 1538400
+    },
+    {
+      "ym": "2022-08",
+      "attended": 9,
+      "likely": 3,
+      "not_attended": 35,
+      "attended_amount": 757500,
+      "likely_amount": 306300,
+      "not_attended_amount": 2567316.2
+    },
+    {
+      "ym": "2022-09",
+      "attended": 4,
+      "likely": 0,
+      "not_attended": 17,
+      "attended_amount": 388000,
+      "likely_amount": 0,
+      "not_attended_amount": 1380036.5
+    },
+    {
+      "ym": "2022-10",
+      "attended": 10,
+      "likely": 0,
+      "not_attended": 23,
+      "attended_amount": 778440,
+      "likely_amount": 0,
+      "not_attended_amount": 2127800
+    },
+    {
+      "ym": "2022-11",
+      "attended": 19,
+      "likely": 2,
+      "not_attended": 31,
+      "attended_amount": 1679000,
+      "likely_amount": 213000,
+      "not_attended_amount": 2096450
+    },
+    {
+      "ym": "2022-12",
+      "attended": 9,
+      "likely": 2,
+      "not_attended": 25,
+      "attended_amount": 2285500,
+      "likely_amount": 372000,
+      "not_attended_amount": 2378800
+    },
+    {
+      "ym": "2023-01",
+      "attended": 1,
+      "likely": 0,
+      "not_attended": 19,
+      "attended_amount": 28000,
+      "likely_amount": 0,
+      "not_attended_amount": 2624500
+    },
+    {
+      "ym": "2023-02",
+      "attended": 2,
+      "likely": 0,
+      "not_attended": 22,
+      "attended_amount": 571000,
+      "likely_amount": 0,
+      "not_attended_amount": 1825500
+    },
+    {
+      "ym": "2023-03",
+      "attended": 1,
+      "likely": 0,
+      "not_attended": 29,
+      "attended_amount": 449000,
+      "likely_amount": 0,
+      "not_attended_amount": 3456950
+    },
+    {
+      "ym": "2023-04",
+      "attended": 0,
+      "likely": 3,
+      "not_attended": 27,
+      "attended_amount": 0,
+      "likely_amount": 344500,
+      "not_attended_amount": 3471640
+    },
+    {
+      "ym": "2023-05",
+      "attended": 1,
+      "likely": 8,
+      "not_attended": 21,
+      "attended_amount": 426000,
+      "likely_amount": 2158010,
+      "not_attended_amount": 2040000
+    },
+    {
+      "ym": "2023-06",
+      "attended": 0,
+      "likely": 0,
+      "not_attended": 32,
+      "attended_amount": 0,
+      "likely_amount": 0,
+      "not_attended_amount": 3435900
+    },
+    {
+      "ym": "2023-07",
+      "attended": 1,
+      "likely": 0,
+      "not_attended": 51,
+      "attended_amount": 147000,
+      "likely_amount": 0,
+      "not_attended_amount": 8875960
+    },
+    {
+      "ym": "2023-08",
+      "attended": 1,
+      "likely": 0,
+      "not_attended": 39,
+      "attended_amount": 135000,
+      "likely_amount": 0,
+      "not_attended_amount": 2820780
+    },
+    {
+      "ym": "2023-09",
+      "attended": 0,
+      "likely": 0,
+      "not_attended": 36,
+      "attended_amount": 0,
+      "likely_amount": 0,
+      "not_attended_amount": 4265110
+    },
+    {
+      "ym": "2023-10",
+      "attended": 0,
+      "likely": 0,
+      "not_attended": 34,
+      "attended_amount": 0,
+      "likely_amount": 0,
+      "not_attended_amount": 3404200
+    },
+    {
+      "ym": "2023-11",
+      "attended": 2,
+      "likely": 0,
+      "not_attended": 39,
+      "attended_amount": 257000,
+      "likely_amount": 0,
+      "not_attended_amount": 3564600
+    },
+    {
+      "ym": "2023-12",
+      "attended": 0,
+      "likely": 7,
+      "not_attended": 50,
+      "attended_amount": 0,
+      "likely_amount": 618200,
+      "not_attended_amount": 6785090
+    },
+    {
+      "ym": "2024-01",
+      "attended": 0,
+      "likely": 0,
+      "not_attended": 31,
+      "attended_amount": 0,
+      "likely_amount": 0,
+      "not_attended_amount": 4305710
+    },
+    {
+      "ym": "2024-02",
+      "attended": 0,
+      "likely": 0,
+      "not_attended": 22,
+      "attended_amount": 0,
+      "likely_amount": 0,
+      "not_attended_amount": 1677200
+    },
+    {
+      "ym": "2024-03",
+      "attended": 0,
+      "likely": 0,
+      "not_attended": 25,
+      "attended_amount": 0,
+      "likely_amount": 0,
+      "not_attended_amount": 2598680
+    },
+    {
+      "ym": "2024-04",
+      "attended": 0,
+      "likely": 1,
+      "not_attended": 28,
+      "attended_amount": 0,
+      "likely_amount": 213000,
+      "not_attended_amount": 2841600
+    },
+    {
+      "ym": "2024-05",
+      "attended": 0,
+      "likely": 1,
+      "not_attended": 31,
+      "attended_amount": 0,
+      "likely_amount": 252000,
+      "not_attended_amount": 2696000
+    },
+    {
+      "ym": "2024-06",
+      "attended": 0,
+      "likely": 0,
+      "not_attended": 30,
+      "attended_amount": 0,
+      "likely_amount": 0,
+      "not_attended_amount": 5131250
+    },
+    {
+      "ym": "2024-07",
+      "attended": 0,
+      "likely": 0,
+      "not_attended": 33,
+      "attended_amount": 0,
+      "likely_amount": 0,
+      "not_attended_amount": 3366500
+    },
+    {
+      "ym": "2024-08",
+      "attended": 0,
+      "likely": 0,
+      "not_attended": 24,
+      "attended_amount": 0,
+      "likely_amount": 0,
+      "not_attended_amount": 2244790
+    },
+    {
+      "ym": "2024-09",
+      "attended": 0,
+      "likely": 2,
+      "not_attended": 22,
+      "attended_amount": 0,
+      "likely_amount": 788000,
+      "not_attended_amount": 2430900
+    },
+    {
+      "ym": "2024-10",
+      "attended": 0,
+      "likely": 1,
+      "not_attended": 31,
+      "attended_amount": 0,
+      "likely_amount": 120000,
+      "not_attended_amount": 2808600
+    },
+    {
+      "ym": "2024-11",
+      "attended": 0,
+      "likely": 1,
+      "not_attended": 25,
+      "attended_amount": 0,
+      "likely_amount": 113000,
+      "not_attended_amount": 2174000
+    },
+    {
+      "ym": "2024-12",
+      "attended": 0,
+      "likely": 0,
+      "not_attended": 33,
+      "attended_amount": 0,
+      "likely_amount": 0,
+      "not_attended_amount": 4160400
+    },
+    {
+      "ym": "2025-01",
+      "attended": 0,
+      "likely": 0,
+      "not_attended": 28,
+      "attended_amount": 0,
+      "likely_amount": 0,
+      "not_attended_amount": 5151431
+    },
+    {
+      "ym": "2025-02",
+      "attended": 0,
+      "likely": 3,
+      "not_attended": 35,
+      "attended_amount": 0,
+      "likely_amount": 1068000,
+      "not_attended_amount": 3842600
+    },
+    {
+      "ym": "2025-03",
+      "attended": 0,
+      "likely": 1,
+      "not_attended": 35,
+      "attended_amount": 0,
+      "likely_amount": 145000,
+      "not_attended_amount": 4111400
+    },
+    {
+      "ym": "2025-04",
+      "attended": 0,
+      "likely": 0,
+      "not_attended": 36,
+      "attended_amount": 0,
+      "likely_amount": 0,
+      "not_attended_amount": 3698600
+    },
+    {
+      "ym": "2025-05",
+      "attended": 1,
+      "likely": 0,
+      "not_attended": 55,
+      "attended_amount": 137000,
+      "likely_amount": 0,
+      "not_attended_amount": 5811300
+    },
+    {
+      "ym": "2025-06",
+      "attended": 0,
+      "likely": 0,
+      "not_attended": 36,
+      "attended_amount": 0,
+      "likely_amount": 0,
+      "not_attended_amount": 3597332.7
+    },
+    {
+      "ym": "2025-07",
+      "attended": 0,
+      "likely": 1,
+      "not_attended": 40,
+      "attended_amount": 0,
+      "likely_amount": 60000,
+      "not_attended_amount": 7502790
+    },
+    {
+      "ym": "2025-08",
+      "attended": 0,
+      "likely": 0,
+      "not_attended": 17,
+      "attended_amount": 0,
+      "likely_amount": 0,
+      "not_attended_amount": 1326400
+    },
+    {
+      "ym": "2025-09",
+      "attended": 1,
+      "likely": 0,
+      "not_attended": 34,
+      "attended_amount": 89000,
+      "likely_amount": 0,
+      "not_attended_amount": 4132700
+    },
+    {
+      "ym": "2025-10",
+      "attended": 0,
+      "likely": 0,
+      "not_attended": 15,
+      "attended_amount": 0,
+      "likely_amount": 0,
+      "not_attended_amount": 1599700
+    }
+  ],
+  "attended_analysis": {
+    "by_venue": [
+      {
+        "key": "청마루한우",
+        "count": 6,
+        "amount": 1129000,
+        "display_name": "청마루한우"
+      },
+      {
+        "key": "할머니홍어집",
+        "count": 4,
+        "amount": 835000,
+        "display_name": "할머니홍어집"
+      },
+      {
+        "key": "최강낙자",
+        "count": 3,
+        "amount": 742000,
+        "display_name": "최강낙지"
+      },
+      {
+        "key": "조영환의대양한방숯불갈비",
+        "count": 3,
+        "amount": 618000,
+        "display_name": "조영환의대양한방숯불"
+      },
+      {
+        "key": "마루샤브용두직영점",
+        "count": 1,
+        "amount": 406000,
+        "display_name": "마루샤브 용두직영점"
+      },
+      {
+        "key": "우리식당",
+        "count": 1,
+        "amount": 369000,
+        "display_name": "우리식당"
+      },
+      {
+        "key": "고기여행",
+        "count": 2,
+        "amount": 318000,
+        "display_name": "고기여행"
+      },
+      {
+        "key": "파파존스피자답십리",
+        "count": 1,
+        "amount": 299500,
+        "display_name": "파파존스피자 답십리"
+      },
+      {
+        "key": "경성농장",
+        "count": 3,
+        "amount": 279000,
+        "display_name": "경성농장"
+      },
+      {
+        "key": "마구로준",
+        "count": 1,
+        "amount": 250000,
+        "display_name": "마구로준"
+      },
+      {
+        "key": "우정김밥분식",
+        "count": 3,
+        "amount": 247000,
+        "display_name": "우정김밥분식"
+      },
+      {
+        "key": "참숯갈비화로촌",
+        "count": 2,
+        "amount": 225000,
+        "display_name": "참숯갈비화로촌"
+      },
+      {
+        "key": "교촌치킨용두점",
+        "count": 1,
+        "amount": 213000,
+        "display_name": "교촌치킨 용두점"
+      },
+      {
+        "key": "내일은해가뜬다",
+        "count": 1,
+        "amount": 180000,
+        "display_name": "내일은해가뜬다"
+      },
+      {
+        "key": "용두동동태탕,동태찜",
+        "count": 2,
+        "amount": 176000,
+        "display_name": "용두동동태탕, 동태찜"
+      }
+    ],
+    "by_user": [
+      {
+        "key": "사무국장",
+        "count": 29,
+        "amount": 2369040
+      },
+      {
+        "key": "의정팀장",
+        "count": 12,
+        "amount": 2268500
+      },
+      {
+        "key": "서무주임",
+        "count": 14,
+        "amount": 1886400
+      },
+      {
+        "key": "회계담당",
+        "count": 4,
+        "amount": 1022500
+      },
+      {
+        "key": "의장팀장",
+        "count": 1,
+        "amount": 426000
+      },
+      {
+        "key": "국서무",
+        "count": 2,
+        "amount": 226000
+      },
+      {
+        "key": "국주임",
+        "count": 2,
+        "amount": 163000
+      }
+    ],
+    "by_purpose": [
+      {
+        "key": "기타",
+        "count": 19,
+        "amount": 3340500
+      },
+      {
+        "key": "현안 협의",
+        "count": 31,
+        "amount": 3082940
+      },
+      {
+        "key": "관계자 간담",
+        "count": 4,
+        "amount": 1101000
+      },
+      {
+        "key": "의회 회의",
+        "count": 9,
+        "amount": 719000
+      },
+      {
+        "key": "민원·다과",
+        "count": 1,
+        "amount": 118000
+      }
+    ],
+    "samples": [
+      {
+        "date": "2022-12-19",
+        "time": "19:42:20",
+        "user_raw": "회계담당",
+        "venue_raw": "최강낙지",
+        "purpose": "2023 예산 관련 집행부 직원 및 의원 간담회",
+        "amount": 487000,
+        "headcount": 18,
+        "method": "카드"
+      },
+      {
+        "date": "2023-03-06",
+        "time": "19:23:31",
+        "user_raw": "의정팀장",
+        "venue_raw": "할머니홍어집",
+        "purpose": "의장단 월례회의 관련 관계자 간담회",
+        "amount": 449000,
+        "headcount": 17,
+        "method": "카드"
+      },
+      {
+        "date": "2023-05-22",
+        "time": "18:46:59",
+        "user_raw": "의장팀장",
+        "venue_raw": "조영환의 대양한방숮",
+        "purpose": "의장단 월례회의 관련 관계자 간담회",
+        "amount": 426000,
+        "headcount": 15,
+        "method": "카드"
+      },
+      {
+        "date": "2022-12-26",
+        "time": "16:31:35",
+        "user_raw": "회계담당",
+        "venue_raw": "청마루한우",
+        "purpose": "2023 의회운영 관련 집행부 직원 및 의원 간담회",
+        "amount": 425000,
+        "headcount": 22,
+        "method": "카드"
+      },
+      {
+        "date": "2023-02-13",
+        "time": "20:18:39",
+        "user_raw": "의정팀장",
+        "venue_raw": "마루샤브 용두직영점",
+        "purpose": "몽골 울란바토르 바양걸구의회 의원 간담회",
+        "amount": 406000,
+        "headcount": 14,
+        "method": "카드"
+      },
+      {
+        "date": "2022-12-26",
+        "time": "19:11:27",
+        "user_raw": "서무주임",
+        "venue_raw": "우리식당",
+        "purpose": "의회현안 관련 직원 및 의원 등 간담회",
+        "amount": 369000,
+        "headcount": 16,
+        "method": "카드"
+      },
+      {
+        "date": "2022-12-19",
+        "time": "19:34:41",
+        "user_raw": "서무주임",
+        "venue_raw": "고기여행",
+        "purpose": "구의회 의장협의회 월례회의 추진 직원 및 의원 간담회",
+        "amount": 300000,
+        "headcount": 12,
+        "method": "카드"
+      },
+      {
+        "date": "2022-12-22",
+        "time": "14:33:49",
+        "user_raw": "의정팀장",
+        "venue_raw": "파파존스피자 답십리",
+        "purpose": "의원 송년회 관련 집행부 직원 및 의원 간담회",
+        "amount": 299500,
+        "headcount": 15,
+        "method": "카드"
+      },
+      {
+        "date": "2022-11-18",
+        "time": "22:51:58",
+        "user_raw": "사무국장",
+        "venue_raw": "마구로준",
+        "purpose": "의회현안 관련 의원 및 관계자 간담회",
+        "amount": 250000,
+        "headcount": 11,
+        "method": "카드"
+      },
+      {
+        "date": "2022-12-22",
+        "time": "14:45:15",
+        "user_raw": "의정팀장",
+        "venue_raw": "교촌치킨 용두점",
+        "purpose": "의원 국외출장 추진 관련 직원 및 의원 간담회",
+        "amount": 213000,
+        "headcount": 15,
+        "method": "카드"
+      }
+    ]
+  },
+  "likely_analysis": {
+    "by_venue": [
+      {
+        "key": "청마루한우",
+        "count": 7,
+        "amount": 1433000,
+        "display_name": "청마루한우"
+      },
+      {
+        "key": "한양출장외식",
+        "count": 1,
+        "amount": 1350000,
+        "display_name": "한양출장외식"
+      },
+      {
+        "key": "할머니홍어집",
+        "count": 2,
+        "amount": 636000,
+        "display_name": "할머니홍어집"
+      },
+      {
+        "key": "화로촌",
+        "count": 1,
+        "amount": 486000,
+        "display_name": "화로촌"
+      },
+      {
+        "key": "청마루",
+        "count": 1,
+        "amount": 462000,
+        "display_name": "청마루"
+      },
+      {
+        "key": "고기여행",
+        "count": 1,
+        "amount": 412000,
+        "display_name": "고기여행"
+      },
+      {
+        "key": "친친",
+        "count": 2,
+        "amount": 202000,
+        "display_name": "친친"
+      },
+      {
+        "key": "조영환의대양한방숯불갈비",
+        "count": 1,
+        "amount": 175000,
+        "display_name": "조영환의대양한방숯불"
+      },
+      {
+        "key": "롯데마트청량리점",
+        "count": 1,
+        "amount": 156410,
+        "display_name": "롯데마트 청량리점"
+      },
+      {
+        "key": "우정김밥분식",
+        "count": 1,
+        "amount": 150000,
+        "display_name": "우정김밥분식"
+      },
+      {
+        "key": "최강낙자",
+        "count": 1,
+        "amount": 145000,
+        "display_name": "최강낙지"
+      },
+      {
+        "key": "옥돌",
+        "count": 1,
+        "amount": 134000,
+        "display_name": "옥돌"
+      },
+      {
+        "key": "안동김숙닭발편육",
+        "count": 1,
+        "amount": 128000,
+        "display_name": "안동김숙닭발편육"
+      },
+      {
+        "key": "중국성",
+        "count": 1,
+        "amount": 120000,
+        "display_name": "중국성"
+      },
+      {
+        "key": "알리고",
+        "count": 1,
+        "amount": 113000,
+        "display_name": "알리고"
+      }
+    ],
+    "by_user": [
+      {
+        "key": "국주임",
+        "count": 6,
+        "amount": 1815000
+      },
+      {
+        "key": "의회홍보팀장",
+        "count": 4,
+        "amount": 1736000
+      },
+      {
+        "key": "의정팀장",
+        "count": 7,
+        "amount": 1214100
+      },
+      {
+        "key": "의사담당",
+        "count": 6,
+        "amount": 555200
+      },
+      {
+        "key": "서무주임",
+        "count": 3,
+        "amount": 344300
+      },
+      {
+        "key": "정책지원관(복지)",
+        "count": 2,
+        "amount": 233000
+      },
+      {
+        "key": "인사팀장",
+        "count": 1,
+        "amount": 213000
+      },
+      {
+        "key": "사무국장",
+        "count": 2,
+        "amount": 175000
+      },
+      {
+        "key": "회계담당",
+        "count": 1,
+        "amount": 156410
+      },
+      {
+        "key": "홍보담당",
+        "count": 2,
+        "amount": 135000
+      }
+    ],
+    "by_purpose": [
+      {
+        "key": "의회 회의",
+        "count": 11,
+        "amount": 2543200
+      },
+      {
+        "key": "기타",
+        "count": 3,
+        "amount": 1407500
+      },
+      {
+        "key": "현안 협의",
+        "count": 8,
+        "amount": 1037300
+      },
+      {
+        "key": "관계자 간담",
+        "count": 6,
+        "amount": 862000
+      },
+      {
+        "key": "민원·다과",
+        "count": 6,
+        "amount": 786010
+      },
+      {
+        "key": "언론·보도",
+        "count": 2,
+        "amount": 135000
+      }
+    ]
+  }
 }

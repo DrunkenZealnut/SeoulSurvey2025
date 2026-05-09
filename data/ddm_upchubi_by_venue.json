@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T14:02:02.256Z",
+  "generated_at": "2026-05-09T14:14:49.128Z",
   "venues": [
     {
       "venue_norm": "청마루한우",
@@ -313,6 +313,18 @@
           "amount": 2888500
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 6,
+          "likely": 7,
+          "not_attended": 108
+        },
+        "amount": {
+          "attended": 1129000,
+          "likely": 1433000,
+          "not_attended": 16937500
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 90,
         "오후(14-18)": 2,
@@ -667,6 +679,18 @@
           "amount": 706000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 3,
+          "likely": 1,
+          "not_attended": 63
+        },
+        "amount": {
+          "attended": 742000,
+          "likely": 145000,
+          "not_attended": 7982000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 62,
         "오후(14-18)": 0,
@@ -825,6 +849,18 @@
           "amount": 2230800
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 4
+        },
+        "amount": {
+          "attended": 406000,
+          "likely": 0,
+          "not_attended": 6509800
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 4,
         "오후(14-18)": 0,
@@ -1114,6 +1150,18 @@
           "amount": 457000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 2,
+          "likely": 0,
+          "not_attended": 43
+        },
+        "amount": {
+          "attended": 225000,
+          "likely": 0,
+          "not_attended": 5297000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 41,
         "오후(14-18)": 0,
@@ -1432,6 +1480,18 @@
           "amount": 605400
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 3,
+          "likely": 0,
+          "not_attended": 43
+        },
+        "amount": {
+          "attended": 279000,
+          "likely": 0,
+          "not_attended": 5228400
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 38,
         "오후(14-18)": 0,
@@ -1690,6 +1750,18 @@
           "amount": 109000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 1,
+          "not_attended": 36
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 134000,
+          "not_attended": 3716000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 36,
         "오후(14-18)": 0,
@@ -1948,6 +2020,18 @@
           "amount": 477000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 4,
+          "likely": 2,
+          "not_attended": 18
+        },
+        "amount": {
+          "attended": 835000,
+          "likely": 636000,
+          "not_attended": 2093000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 18,
         "오후(14-18)": 1,
@@ -2180,6 +2264,18 @@
           "amount": 242000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 3,
+          "likely": 1,
+          "not_attended": 14
+        },
+        "amount": {
+          "attended": 618000,
+          "likely": 175000,
+          "not_attended": 2583000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 12,
         "오후(14-18)": 0,
@@ -2443,6 +2539,18 @@
           "amount": 525000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 1,
+          "not_attended": 27
+        },
+        "amount": {
+          "attended": 369000,
+          "likely": 36000,
+          "not_attended": 2912000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 27,
         "오후(14-18)": 0,
@@ -2706,6 +2814,18 @@
           "amount": 428500
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 3,
+          "likely": 1,
+          "not_attended": 26
+        },
+        "amount": {
+          "attended": 247000,
+          "likely": 150000,
+          "not_attended": 2221000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 26,
         "오후(14-18)": 1,
@@ -2864,6 +2984,18 @@
           "amount": 326000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 10
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2578000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 10,
         "오후(14-18)": 0,
@@ -3133,6 +3265,18 @@
           "amount": 511000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 29
+        },
+        "amount": {
+          "attended": 75000,
+          "likely": 0,
+          "not_attended": 2257000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 28,
         "오후(14-18)": 0,
@@ -3366,6 +3510,18 @@
           "amount": 975500
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 1,
+          "not_attended": 19
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 120000,
+          "not_attended": 2019500
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 15,
         "오후(14-18)": 0,
@@ -3639,6 +3795,18 @@
           "amount": 169000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 2,
+          "likely": 2,
+          "not_attended": 22
+        },
+        "amount": {
+          "attended": 90000,
+          "likely": 202000,
+          "not_attended": 1793000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 22,
         "오후(14-18)": 0,
@@ -3842,6 +4010,18 @@
           "amount": 646400
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 14
+        },
+        "amount": {
+          "attended": 108000,
+          "likely": 0,
+          "not_attended": 1877000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 7,
         "오후(14-18)": 2,
@@ -4050,6 +4230,18 @@
           "amount": 863000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 2,
+          "likely": 1,
+          "not_attended": 8
+        },
+        "amount": {
+          "attended": 318000,
+          "likely": 412000,
+          "not_attended": 1251000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 5,
         "오후(14-18)": 0,
@@ -4304,6 +4496,18 @@
           "amount": 235300
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 31
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1925932.7
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 24,
         "오후(14-18)": 4,
@@ -4597,6 +4801,18 @@
           "amount": 435081
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 31
+        },
+        "amount": {
+          "attended": 96000,
+          "likely": 0,
+          "not_attended": 1807081
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 28,
         "오후(14-18)": 0,
@@ -4760,6 +4976,18 @@
           "amount": 1485000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 4
+        },
+        "amount": {
+          "attended": 112000,
+          "likely": 0,
+          "not_attended": 1700000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 1,
@@ -4986,6 +5214,18 @@
           "amount": 95000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 2,
+          "likely": 0,
+          "not_attended": 16
+        },
+        "amount": {
+          "attended": 176000,
+          "likely": 0,
+          "not_attended": 1635000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 18,
         "오후(14-18)": 0,
@@ -5214,6 +5454,18 @@
           "amount": 388000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 16
+        },
+        "amount": {
+          "attended": 96000,
+          "likely": 0,
+          "not_attended": 1658000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 12,
         "오후(14-18)": 2,
@@ -5377,6 +5629,18 @@
           "amount": 665800
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 1,
+          "not_attended": 6
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 462000,
+          "not_attended": 1288800
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 6,
         "오후(14-18)": 1,
@@ -5585,6 +5849,18 @@
           "amount": 275000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 16
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1644000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 14,
         "오후(14-18)": 0,
@@ -5834,6 +6110,18 @@
           "amount": 429000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 17
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1630000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 17,
         "오후(14-18)": 0,
@@ -6072,6 +6360,18 @@
           "amount": 233000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 1,
+          "not_attended": 17
+        },
+        "amount": {
+          "attended": 135000,
+          "likely": 44000,
+          "not_attended": 1346000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 17,
         "오후(14-18)": 0,
@@ -6300,6 +6600,18 @@
           "amount": 478000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 14
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1376000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 14,
         "오후(14-18)": 0,
@@ -6413,6 +6725,18 @@
           "amount": 1350000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 1,
+          "not_attended": 0
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 1350000,
+          "not_attended": 0
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 1,
@@ -6536,6 +6860,18 @@
           "amount": 82000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 6
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1279000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 5,
         "오후(14-18)": 1,
@@ -6669,6 +7005,18 @@
           "amount": 350000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 3
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1250000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 3,
@@ -6862,6 +7210,18 @@
           "amount": 153000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 11
+        },
+        "amount": {
+          "attended": 144000,
+          "likely": 0,
+          "not_attended": 1048400
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 11,
         "오후(14-18)": 0,
@@ -7080,6 +7440,18 @@
           "amount": 325000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 12
+        },
+        "amount": {
+          "attended": 70000,
+          "likely": 0,
+          "not_attended": 1061000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 11,
         "오후(14-18)": 0,
@@ -7313,6 +7685,18 @@
           "amount": 91000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 16
+        },
+        "amount": {
+          "attended": 35000,
+          "likely": 0,
+          "not_attended": 1058000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 17,
         "오후(14-18)": 0,
@@ -7537,6 +7921,18 @@
           "amount": 167000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 15
+        },
+        "amount": {
+          "attended": 86000,
+          "likely": 0,
+          "not_attended": 997000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 14,
         "오후(14-18)": 0,
@@ -7711,6 +8107,18 @@
           "amount": 238940
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 6
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1003490
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 4,
@@ -7944,6 +8352,18 @@
           "amount": 494000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 18
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 993000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 16,
         "오후(14-18)": 0,
@@ -8098,6 +8518,18 @@
           "amount": 199000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 5
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 922500
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 4,
         "오후(14-18)": 0,
@@ -8231,6 +8663,18 @@
           "amount": 891550
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 3
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 891550
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 1,
@@ -8354,6 +8798,18 @@
           "amount": 443000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 97000,
+          "likely": 0,
+          "not_attended": 760000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 3,
         "오후(14-18)": 0,
@@ -8552,6 +9008,18 @@
           "amount": 48000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 1,
+          "not_attended": 13
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 72000,
+          "not_attended": 780000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 11,
         "오후(14-18)": 2,
@@ -8685,6 +9153,18 @@
           "amount": 847000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 1,
+          "not_attended": 3
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 486000,
+          "not_attended": 361000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 4,
         "오후(14-18)": 0,
@@ -8833,6 +9313,18 @@
           "amount": 200000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 4
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 814000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 1,
@@ -8936,6 +9428,18 @@
           "amount": 814000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 814000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 1,
@@ -9039,6 +9543,18 @@
           "amount": 803000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 4
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 803000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -9207,6 +9723,18 @@
           "amount": 84000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 1,
+          "not_attended": 6
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 113000,
+          "not_attended": 641500
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 6,
         "오후(14-18)": 0,
@@ -9320,6 +9848,18 @@
           "amount": 741000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 741000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -9483,6 +10023,18 @@
           "amount": 127000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 11
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 711000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 10,
         "오후(14-18)": 0,
@@ -9701,6 +10253,18 @@
           "amount": 64000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 11
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 684000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 11,
         "오후(14-18)": 0,
@@ -9834,6 +10398,18 @@
           "amount": 660000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 3
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 660000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 3,
         "오후(14-18)": 0,
@@ -9972,6 +10548,18 @@
           "amount": 655000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 7
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 655000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 6,
         "오후(14-18)": 1,
@@ -10085,6 +10673,18 @@
           "amount": 651300
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 651300
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 1,
@@ -10173,6 +10773,18 @@
           "amount": 651000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 651000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -10346,6 +10958,18 @@
           "amount": 186000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 10
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 648000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 10,
         "오후(14-18)": 0,
@@ -10539,6 +11163,18 @@
           "amount": 25000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 9
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 618500
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -10732,6 +11368,18 @@
           "amount": 82000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 10
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 602000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 10,
         "오후(14-18)": 0,
@@ -10845,6 +11493,18 @@
           "amount": 600000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 600000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -11003,6 +11663,18 @@
           "amount": 204000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 11
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 573000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 11,
         "오후(14-18)": 0,
@@ -11121,6 +11793,18 @@
           "amount": 555000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 555000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -11219,6 +11903,18 @@
           "amount": 185000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 539000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -11377,6 +12073,18 @@
           "amount": 150000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 8
+        },
+        "amount": {
+          "attended": 28000,
+          "likely": 0,
+          "not_attended": 505000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 7,
         "오후(14-18)": 0,
@@ -11520,6 +12228,18 @@
           "amount": 49800
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 4
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 530200
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 3,
         "오후(14-18)": 0,
@@ -11623,6 +12343,18 @@
           "amount": 520000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 520000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 1,
@@ -11701,6 +12433,18 @@
           "amount": 512000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 512000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -11784,6 +12528,18 @@
           "amount": 508000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 508000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -11913,6 +12669,18 @@
           "amount": 89400
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 1,
+          "not_attended": 3
+        },
+        "amount": {
+          "attended": 89400,
+          "likely": 104300,
+          "not_attended": 283100
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 5,
         "오후(14-18)": 0,
@@ -12026,6 +12794,18 @@
           "amount": 471300
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 471300
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -12099,6 +12879,18 @@
           "amount": 460000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 460000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -12233,6 +13025,18 @@
           "amount": 99000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 1,
+          "not_attended": 4
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 75000,
+          "not_attended": 347000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 5,
         "오후(14-18)": 0,
@@ -12346,6 +13150,18 @@
           "amount": 420000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 420000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 1,
@@ -12464,6 +13280,18 @@
           "amount": 294000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 4
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 416000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -12582,6 +13410,18 @@
           "amount": 408500
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 3
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 408500
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -12675,6 +13515,18 @@
           "amount": 400000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 400000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -12778,6 +13630,18 @@
           "amount": 384000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 4
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 384000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 4,
         "오후(14-18)": 0,
@@ -12921,6 +13785,18 @@
           "amount": 91000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 5
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 377000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 5,
         "오후(14-18)": 0,
@@ -13064,6 +13940,18 @@
           "amount": 338700
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 3
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 338700
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 3,
         "오후(14-18)": 0,
@@ -13227,6 +14115,18 @@
           "amount": 108000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 1,
+          "not_attended": 8
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 32000,
+          "not_attended": 303000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 9,
         "오후(14-18)": 0,
@@ -13371,6 +14271,18 @@
           "amount": 334000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 4
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 334000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 4,
         "오후(14-18)": 0,
@@ -13510,6 +14422,18 @@
           "amount": 45000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 3
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 333000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -13654,6 +14578,18 @@
           "amount": 327400
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 1,
+          "not_attended": 5
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 33200,
+          "not_attended": 294200
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 6,
         "오후(14-18)": 0,
@@ -13767,6 +14703,18 @@
           "amount": 320000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 320000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -13856,6 +14804,18 @@
           "amount": 280000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 316000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -13954,6 +14914,18 @@
           "amount": 305000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 305000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -14087,6 +15059,18 @@
           "amount": 53000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 4
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 304000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 4,
         "오후(14-18)": 0,
@@ -14232,6 +15216,18 @@
           "amount": 51000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 5
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 302000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 5,
         "오후(14-18)": 0,
@@ -14345,6 +15341,18 @@
           "amount": 299500
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 0
+        },
+        "amount": {
+          "attended": 299500,
+          "likely": 0,
+          "not_attended": 0
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 1,
@@ -14478,6 +15486,18 @@
           "amount": 141000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 6
+        },
+        "amount": {
+          "attended": 28500,
+          "likely": 0,
+          "not_attended": 269000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 7,
         "오후(14-18)": 0,
@@ -14591,6 +15611,18 @@
           "amount": 295000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 295000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -14679,6 +15711,18 @@
           "amount": 134490
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 1,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 156410,
+          "not_attended": 134490
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 2,
@@ -14827,6 +15871,18 @@
           "amount": 72000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 5
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 289000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 5,
         "오후(14-18)": 0,
@@ -14960,6 +16016,18 @@
           "amount": 183500
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 288500
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -15043,6 +16111,18 @@
           "amount": 284300
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 284300
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -15116,6 +16196,18 @@
           "amount": 282000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 282000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -15189,6 +16281,18 @@
           "amount": 278000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 278000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -15287,6 +16391,18 @@
           "amount": 69280
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 4
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 275060
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 3,
         "오후(14-18)": 1,
@@ -15390,6 +16506,18 @@
           "amount": 263000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 263000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -15463,6 +16591,18 @@
           "amount": 250000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 0
+        },
+        "amount": {
+          "attended": 250000,
+          "likely": 0,
+          "not_attended": 0
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -15571,6 +16711,18 @@
           "amount": 94000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 5
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 249500
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 5,
         "오후(14-18)": 0,
@@ -15714,6 +16866,18 @@
           "amount": 98000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 3
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 249500
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 3,
         "오후(14-18)": 0,
@@ -15852,6 +17016,18 @@
           "amount": 40000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 5
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 248000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 5,
         "오후(14-18)": 0,
@@ -15975,6 +17151,18 @@
           "amount": 244000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 244000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -16073,6 +17261,18 @@
           "amount": 243000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 243000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -16156,6 +17356,18 @@
           "amount": 242800
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 242800
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -16229,6 +17441,18 @@
           "amount": 236000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 236000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 1,
@@ -16322,6 +17546,18 @@
           "amount": 235000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 180000,
+          "likely": 0,
+          "not_attended": 55000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -16435,6 +17671,18 @@
           "amount": 95000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 140000,
+          "likely": 0,
+          "not_attended": 95000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -16518,6 +17766,18 @@
           "amount": 230000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 230000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -16611,6 +17871,18 @@
           "amount": 189000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 226000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 1,
@@ -16694,6 +17966,18 @@
           "amount": 226000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 226000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -16797,6 +18081,18 @@
           "amount": 69000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 5
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 218500
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 3,
         "오후(14-18)": 0,
@@ -16940,6 +18236,18 @@
           "amount": 44000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 4
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 218000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 4,
         "오후(14-18)": 0,
@@ -17074,6 +18382,18 @@
           "amount": 217000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 24000,
+          "likely": 0,
+          "not_attended": 193000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 3,
@@ -17183,6 +18503,18 @@
           "amount": 215600
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 215600
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -17286,6 +18618,18 @@
           "amount": 56700
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 214800
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -17369,6 +18713,18 @@
           "amount": 214000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 214000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -17442,6 +18798,18 @@
           "amount": 213000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 0
+        },
+        "amount": {
+          "attended": 213000,
+          "likely": 0,
+          "not_attended": 0
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 1,
@@ -17515,6 +18883,18 @@
           "amount": 210000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 210000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -17588,6 +18968,18 @@
           "amount": 209000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 209000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -17661,6 +19053,18 @@
           "amount": 204000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 204000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -17734,6 +19138,18 @@
           "amount": 201000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 201000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -17837,6 +19253,18 @@
           "amount": 64000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 3
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 198000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 3,
         "오후(14-18)": 0,
@@ -17965,6 +19393,18 @@
           "amount": 66300
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 6
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 195200
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 6,
         "오후(14-18)": 0,
@@ -18133,6 +19573,18 @@
           "amount": 33200
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 5
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 189700
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 5,
         "오후(14-18)": 0,
@@ -18281,6 +19733,18 @@
           "amount": 189000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 5
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 189000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 5,
         "오후(14-18)": 0,
@@ -18394,6 +19858,18 @@
           "amount": 188600
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 188600
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -18467,6 +19943,18 @@
           "amount": 184800
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 184800
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -18560,6 +20048,18 @@
           "amount": 77000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 1,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 63000,
+          "not_attended": 121000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 3,
         "오후(14-18)": 0,
@@ -18669,6 +20169,18 @@
           "amount": 177300
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 3
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 177300
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 3,
         "오후(14-18)": 0,
@@ -18762,6 +20274,18 @@
           "amount": 176000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 176000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -18835,6 +20359,18 @@
           "amount": 166000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 166000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -18908,6 +20444,18 @@
           "amount": 165000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 165000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -18981,6 +20529,18 @@
           "amount": 163000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 163000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -19069,6 +20629,18 @@
           "amount": 159600
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 159600
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -19172,6 +20744,18 @@
           "amount": 91600
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 4
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 158000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 4,
         "오후(14-18)": 0,
@@ -19285,6 +20869,18 @@
           "amount": 150000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 3
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 150000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -19378,6 +20974,18 @@
           "amount": 149000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 149000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -19451,6 +21059,18 @@
           "amount": 149000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 149000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -19524,6 +21144,18 @@
           "amount": 146000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 0
+        },
+        "amount": {
+          "attended": 146000,
+          "likely": 0,
+          "not_attended": 0
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -19597,6 +21229,18 @@
           "amount": 136000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 136000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -19695,6 +21339,18 @@
           "amount": 133400
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 4
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 133400
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 4,
         "오후(14-18)": 0,
@@ -19798,6 +21454,18 @@
           "amount": 132000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 132000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -19892,6 +21560,18 @@
           "amount": 50000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 131000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -20000,6 +21680,18 @@
           "amount": 50000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 4
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 130000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 4,
         "오후(14-18)": 0,
@@ -20103,6 +21795,18 @@
           "amount": 128000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 1,
+          "not_attended": 0
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 128000,
+          "not_attended": 0
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 1,
@@ -20176,6 +21880,18 @@
           "amount": 128000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 128000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -20269,6 +21985,18 @@
           "amount": 13800
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 3
+        },
+        "amount": {
+          "attended": 13800,
+          "likely": 0,
+          "not_attended": 112400
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 4,
         "오후(14-18)": 0,
@@ -20388,6 +22116,18 @@
           "amount": 123000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 66000,
+          "likely": 0,
+          "not_attended": 57000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -20506,6 +22246,18 @@
           "amount": 23000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 3
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 120000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -20619,6 +22371,18 @@
           "amount": 48000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 120000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -20702,6 +22466,18 @@
           "amount": 120000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 120000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 1,
@@ -20791,6 +22567,18 @@
           "amount": 58700
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 3
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 119700
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 3,
         "오후(14-18)": 0,
@@ -20939,6 +22727,18 @@
           "amount": 22500
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 2,
+          "likely": 0,
+          "not_attended": 7
+        },
+        "amount": {
+          "attended": 14500,
+          "likely": 0,
+          "not_attended": 104500
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 9,
         "오후(14-18)": 0,
@@ -21052,6 +22852,18 @@
           "amount": 119000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 119000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -21125,6 +22937,18 @@
           "amount": 118000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 118000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -21198,6 +23022,18 @@
           "amount": 117000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 117000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -21271,6 +23107,18 @@
           "amount": 116000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 0
+        },
+        "amount": {
+          "attended": 116000,
+          "likely": 0,
+          "not_attended": 0
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -21344,6 +23192,18 @@
           "amount": 113000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 113000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -21417,6 +23277,18 @@
           "amount": 113000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 113000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -21505,6 +23377,18 @@
           "amount": 112000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 112000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -21588,6 +23472,18 @@
           "amount": 110000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 110000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 1,
@@ -21671,6 +23567,18 @@
           "amount": 110000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 110000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -21774,6 +23682,18 @@
           "amount": 60000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 1,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 60000,
+          "not_attended": 50000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -21873,6 +23793,18 @@
           "amount": 108000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 108000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -21961,6 +23893,18 @@
           "amount": 106500
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 106500
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -22054,6 +23998,18 @@
           "amount": 103000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 75000,
+          "likely": 0,
+          "not_attended": 28000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -22152,6 +24108,18 @@
           "amount": 83000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 103000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -22245,6 +24213,18 @@
           "amount": 102090
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 55640,
+          "likely": 0,
+          "not_attended": 46450
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -22328,6 +24308,18 @@
           "amount": 102000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 102000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -22401,6 +24393,18 @@
           "amount": 100800
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 100800
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -22484,6 +24488,18 @@
           "amount": 100000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 100000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -22567,6 +24583,18 @@
           "amount": 100000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 100000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -22640,6 +24668,18 @@
           "amount": 99400
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 99400
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -22713,6 +24753,18 @@
           "amount": 99000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 99000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -22786,6 +24838,18 @@
           "amount": 98000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 98000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -22859,6 +24923,18 @@
           "amount": 98000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 98000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -22932,6 +25008,18 @@
           "amount": 96000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 96000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -23015,6 +25103,18 @@
           "amount": 95000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 95000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -23098,6 +25198,18 @@
           "amount": 95000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 95000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -23192,6 +25304,18 @@
           "amount": 57000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 94000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -23275,6 +25399,18 @@
           "amount": 94000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 94000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -23348,6 +25484,18 @@
           "amount": 91900
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 91900
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 1,
@@ -23421,6 +25569,18 @@
           "amount": 91000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 91000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -23499,6 +25659,18 @@
           "amount": 89700
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 89700
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -23608,6 +25780,18 @@
           "amount": 52400
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 3
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 89300
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 3,
         "오후(14-18)": 0,
@@ -23701,6 +25885,18 @@
           "amount": 89200
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 89200
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -23809,6 +26005,18 @@
           "amount": 53000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 3
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 89036.5
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 3,
         "오후(14-18)": 0,
@@ -23902,6 +26110,18 @@
           "amount": 87000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 87000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -23975,6 +26195,18 @@
           "amount": 87000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 87000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 1,
@@ -24048,6 +26280,18 @@
           "amount": 86000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 86000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -24121,6 +26365,18 @@
           "amount": 84000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 84000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -24194,6 +26450,18 @@
           "amount": 83000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 83000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -24267,6 +26535,18 @@
           "amount": 83000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 83000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -24340,6 +26620,18 @@
           "amount": 82500
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 1,
+          "not_attended": 0
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 82500,
+          "not_attended": 0
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -24413,6 +26705,18 @@
           "amount": 80000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 80000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -24486,6 +26790,18 @@
           "amount": 79000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 79000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -24559,6 +26875,18 @@
           "amount": 74000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 74000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -24632,6 +26960,18 @@
           "amount": 74000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 74000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -24715,6 +27055,18 @@
           "amount": 74000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 74000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -24798,6 +27150,18 @@
           "amount": 70000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 70000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -24871,6 +27235,18 @@
           "amount": 69000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 69000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -24944,6 +27320,18 @@
           "amount": 68000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 68000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -25017,6 +27405,18 @@
           "amount": 65000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 65000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -25090,6 +27490,18 @@
           "amount": 64800
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 64800
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -25163,6 +27575,18 @@
           "amount": 64000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 64000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -25252,6 +27676,18 @@
           "amount": 62100
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 62100
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -25335,6 +27771,18 @@
           "amount": 61000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 61000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -25408,6 +27856,18 @@
           "amount": 59500
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 59500
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -25481,6 +27941,18 @@
           "amount": 59000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 59000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -25554,6 +28026,18 @@
           "amount": 58000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 0
+        },
+        "amount": {
+          "attended": 58000,
+          "likely": 0,
+          "not_attended": 0
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -25627,6 +28111,18 @@
           "amount": 58000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 58000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -25700,6 +28196,18 @@
           "amount": 57600
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 57600
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -25773,6 +28281,18 @@
           "amount": 55900
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 55900
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -25846,6 +28366,18 @@
           "amount": 55000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 55000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -25919,6 +28451,18 @@
           "amount": 53000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 53000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 1,
@@ -25992,6 +28536,18 @@
           "amount": 53000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 53000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -26065,6 +28621,18 @@
           "amount": 52000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 52000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -26138,6 +28706,18 @@
           "amount": 50000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 50000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -26232,6 +28812,18 @@
           "amount": 27000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 49500
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -26325,6 +28917,18 @@
           "amount": 49300
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 49300
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -26408,6 +29012,18 @@
           "amount": 47800
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 47800
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -26506,6 +29122,18 @@
           "amount": 29800
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 3
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 46816.2
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 3,
         "오후(14-18)": 0,
@@ -26599,6 +29227,18 @@
           "amount": 46100
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 46100
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -26672,6 +29312,18 @@
           "amount": 45700
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 45700
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -26745,6 +29397,18 @@
           "amount": 45000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 45000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -26818,6 +29482,18 @@
           "amount": 45000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 45000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -26891,6 +29567,18 @@
           "amount": 44500
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 44500
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -26964,6 +29652,18 @@
           "amount": 43900
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 43900
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -27037,6 +29737,18 @@
           "amount": 43000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 43000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -27110,6 +29822,18 @@
           "amount": 42010
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 42010
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -27183,6 +29907,18 @@
           "amount": 40000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 40000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -27256,6 +29992,18 @@
           "amount": 40000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 40000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -27339,6 +30087,18 @@
           "amount": 39300
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 21100,
+          "likely": 0,
+          "not_attended": 18200
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 2,
         "오후(14-18)": 0,
@@ -27432,6 +30192,18 @@
           "amount": 38800
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 2
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 38800
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -27515,6 +30287,18 @@
           "amount": 38000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 38000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -27588,6 +30372,18 @@
           "amount": 37500
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 37500
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -27661,6 +30457,18 @@
           "amount": 36000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 36000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -27734,6 +30542,18 @@
           "amount": 36000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 36000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -27807,6 +30627,18 @@
           "amount": 35500
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 35500
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 1,
@@ -27880,6 +30712,18 @@
           "amount": 34400
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 34400
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -27953,6 +30797,18 @@
           "amount": 34000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 0
+        },
+        "amount": {
+          "attended": 34000,
+          "likely": 0,
+          "not_attended": 0
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -28026,6 +30882,18 @@
           "amount": 33000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 1,
+          "not_attended": 0
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 33000,
+          "not_attended": 0
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -28099,6 +30967,18 @@
           "amount": 33000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 33000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -28172,6 +31052,18 @@
           "amount": 32800
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 32800
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -28245,6 +31137,18 @@
           "amount": 30900
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 30900
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -28318,6 +31222,18 @@
           "amount": 30600
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 30600
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -28391,6 +31307,18 @@
           "amount": 30400
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 30400
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -28464,6 +31392,18 @@
           "amount": 30100
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 30100
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -28537,6 +31477,18 @@
           "amount": 30000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 30000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 1,
@@ -28610,6 +31562,18 @@
           "amount": 29800
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 29800
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 1,
@@ -28683,6 +31647,18 @@
           "amount": 28800
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 28800
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -28756,6 +31732,18 @@
           "amount": 28500
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 28500
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -28829,6 +31817,18 @@
           "amount": 28000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 28000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -28902,6 +31902,18 @@
           "amount": 28000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 28000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -28975,6 +31987,18 @@
           "amount": 27000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 27000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -29048,6 +32072,18 @@
           "amount": 25800
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 25800
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -29121,6 +32157,18 @@
           "amount": 25200
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 25200
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -29194,6 +32242,18 @@
           "amount": 24500
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 1,
+          "not_attended": 0
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 24500,
+          "not_attended": 0
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 1,
@@ -29267,6 +32327,18 @@
           "amount": 24000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 24000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -29340,6 +32412,18 @@
           "amount": 24000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 24000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -29413,6 +32497,18 @@
           "amount": 22600
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 22600
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -29486,6 +32582,18 @@
           "amount": 22000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 22000
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -29559,6 +32667,18 @@
           "amount": 21600
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 21600
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -29632,6 +32752,18 @@
           "amount": 21500
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 21500
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -29705,6 +32837,18 @@
           "amount": 21000
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 1,
+          "likely": 0,
+          "not_attended": 0
+        },
+        "amount": {
+          "attended": 21000,
+          "likely": 0,
+          "not_attended": 0
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -29778,6 +32922,18 @@
           "amount": 19700
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 19700
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -29851,6 +33007,18 @@
           "amount": 18400
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 18400
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -29924,6 +33092,18 @@
           "amount": 18300
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 18300
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,
@@ -29997,6 +33177,18 @@
           "amount": 9100
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 1,
+          "not_attended": 0
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 9100,
+          "not_attended": 0
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 0,
         "오후(14-18)": 0,
@@ -30070,6 +33262,18 @@
           "amount": 3200
         }
       ],
+      "member_attendance": {
+        "count": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 1
+        },
+        "amount": {
+          "attended": 0,
+          "likely": 0,
+          "not_attended": 3200
+        }
+      },
       "time_buckets": {
         "점심(11-14)": 1,
         "오후(14-18)": 0,

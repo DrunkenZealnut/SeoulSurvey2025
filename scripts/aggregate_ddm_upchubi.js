@@ -9,6 +9,7 @@ import { fileURLToPath } from 'node:url';
 import { normalizeVenue, displayName, clusterKeys } from './lib/venue.js';
 import { runAll } from './lib/anomaly.js';
 import { classifyPurpose } from './lib/purpose.js';
+import { classifyMemberAttendance } from './lib/member.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -37,12 +38,13 @@ function main() {
   const raw = load('ddm_upchubi.raw.json');
   const rows = raw.rows;
 
-  // 1) venue_norm + purpose category 채우기
+  // 1) venue_norm + purpose category + 구의원 참석 분류
   for (const r of rows) {
     r.venue_norm = normalizeVenue(r.venue_raw);
     const cls = classifyPurpose(r.purpose);
     r.purpose_cat = cls.cat;
     r.purpose_short = cls.short;
+    r.member_attended = classifyMemberAttendance(r.purpose);
   }
 
   // 2) fuzzy 클러스터링으로 alias 그룹핑
@@ -109,6 +111,15 @@ function main() {
       purposeMap.set(cat, e);
     }
     const purpose_breakdown = [...purposeMap.values()].sort((a, b) => b.count - a.count);
+
+    // 구의원 참석 분포
+    const memberMap = { attended: 0, likely: 0, not_attended: 0 };
+    const memberAmount = { attended: 0, likely: 0, not_attended: 0 };
+    for (const r of v.rows) {
+      const k = r.member_attended || 'not_attended';
+      memberMap[k]++;
+      memberAmount[k] += r.amount;
+    }
 
     // method 분포
     const methodMap = new Map();
@@ -186,6 +197,7 @@ function main() {
       by_year_month,
       purpose_breakdown,
       method_breakdown,
+      member_attendance: { count: memberMap, amount: memberAmount },
       time_buckets: timeBuckets,
       weekday_count: weekday,
       weekend_count: weekend,
@@ -267,6 +279,76 @@ function main() {
     .map(([purpose_short, e]) => ({ purpose_short, total_amount: e.total_amount, count: e.count }))
     .sort((a, b) => b.total_amount - a.total_amount);
 
+  // 구의원 참석 분석
+  const memberAttendance = {
+    attended: { count: 0, total_amount: 0 },
+    likely: { count: 0, total_amount: 0 },
+    not_attended: { count: 0, total_amount: 0 },
+  };
+  const memberByYM = new Map();
+  for (const r of rows) {
+    const k = r.member_attended || 'not_attended';
+    memberAttendance[k].count++;
+    memberAttendance[k].total_amount += r.amount;
+    if (!memberByYM.has(r.year_month))
+      memberByYM.set(r.year_month, {
+        ym: r.year_month,
+        attended: 0,
+        likely: 0,
+        not_attended: 0,
+        attended_amount: 0,
+        likely_amount: 0,
+        not_attended_amount: 0,
+      });
+    const e = memberByYM.get(r.year_month);
+    e[k]++;
+    e[k + '_amount'] += r.amount;
+  }
+  const memberCoverage = [...memberByYM.values()].sort((a, b) => a.ym.localeCompare(b.ym));
+
+  function topByKey(rs, keyFn, limit = 10) {
+    const m = new Map();
+    for (const r of rs) {
+      const k = keyFn(r);
+      if (!k) continue;
+      const e = m.get(k) || { key: k, count: 0, amount: 0 };
+      e.count++;
+      e.amount += r.amount;
+      m.set(k, e);
+    }
+    return [...m.values()].sort((a, b) => b.amount - a.amount).slice(0, limit);
+  }
+  const attendedRows = rows.filter((r) => r.member_attended === 'attended');
+  const likelyRows = rows.filter((r) => r.member_attended === 'likely');
+  const venueDisplayMap = new Map(venueList.map((v) => [v.venue_norm, v.display_name]));
+  function annotateVenueKey(arr) {
+    return arr.map((x) => ({ ...x, display_name: venueDisplayMap.get(x.key) || x.key }));
+  }
+  const attendedAnalysis = {
+    by_venue: annotateVenueKey(topByKey(attendedRows, (r) => r.venue_norm, 15)),
+    by_user: topByKey(attendedRows, (r) => r.user_raw, 10),
+    by_purpose: topByKey(attendedRows, (r) => r.purpose_short, 12),
+    samples: attendedRows
+      .slice()
+      .sort((a, b) => b.amount - a.amount)
+      .slice(0, 10)
+      .map((r) => ({
+        date: r.date,
+        time: r.time,
+        user_raw: r.user_raw,
+        venue_raw: r.venue_raw,
+        purpose: r.purpose,
+        amount: r.amount,
+        headcount: r.headcount,
+        method: r.method,
+      })),
+  };
+  const likelyAnalysis = {
+    by_venue: annotateVenueKey(topByKey(likelyRows, (r) => r.venue_norm, 15)),
+    by_user: topByKey(likelyRows, (r) => r.user_raw, 10),
+    by_purpose: topByKey(likelyRows, (r) => r.purpose_short, 12),
+  };
+
   const totals = {
     total_amount: rows.reduce((s, x) => s + x.amount, 0),
     total_count: rows.length,
@@ -288,6 +370,10 @@ function main() {
     by_weekday,
     by_hour_bucket,
     by_purpose,
+    member_attendance: memberAttendance,
+    member_coverage: memberCoverage,
+    attended_analysis: attendedAnalysis,
+    likely_analysis: likelyAnalysis,
   };
 
   // 5) anomaly
