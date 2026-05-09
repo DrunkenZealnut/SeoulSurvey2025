@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-05-09T14:48:15.852Z",
+  "generated_at": "2026-05-09T23:35:23.073Z",
   "totals": {
-    "total_amount": 151001366.39999998,
-    "total_count": 1317,
-    "distinct_venues": 267,
+    "total_amount": 157993266.39999998,
+    "total_count": 1381,
+    "distinct_venues": 282,
     "distinct_users": 35,
-    "coverage_months": 40,
+    "coverage_months": 42,
     "date_min": "2022-07",
-    "date_max": "2025-10"
+    "date_max": "2026-02"
   },
   "coverage": [
     {
@@ -209,6 +209,16 @@
       "year_month": "2025-10",
       "row_count": 15,
       "total_amount": 1599700
+    },
+    {
+      "year_month": "2026-01",
+      "row_count": 35,
+      "total_amount": 3415700
+    },
+    {
+      "year_month": "2026-02",
+      "row_count": 29,
+      "total_amount": 3576200
     }
   ],
   "by_year": [
@@ -231,43 +241,48 @@
       "year": 2025,
       "total_amount": 42273253.7,
       "count": 338
+    },
+    {
+      "year": 2026,
+      "total_amount": 6991900,
+      "count": 64
     }
   ],
   "by_user": [
     {
       "user_raw": "의정팀장",
-      "total_amount": 21583300,
-      "count": 126
+      "total_amount": 22772100,
+      "count": 130
     },
     {
       "user_raw": "국주임",
-      "total_amount": 19352840,
-      "count": 112
+      "total_amount": 20438840,
+      "count": 117
     },
     {
       "user_raw": "국서무",
-      "total_amount": 17409840,
-      "count": 80
+      "total_amount": 17971840,
+      "count": 83
     },
     {
       "user_raw": "의회홍보팀장",
-      "total_amount": 14785781,
-      "count": 132
+      "total_amount": 15765281,
+      "count": 141
     },
     {
       "user_raw": "사무국장",
-      "total_amount": 14242300,
-      "count": 163
-    },
-    {
-      "user_raw": "홍보담당",
-      "total_amount": 9039736.5,
-      "count": 131
+      "total_amount": 15341500,
+      "count": 176
     },
     {
       "user_raw": "의사담당",
-      "total_amount": 9013316.2,
-      "count": 121
+      "total_amount": 9434116.2,
+      "count": 127
+    },
+    {
+      "user_raw": "홍보담당",
+      "total_amount": 9267236.5,
+      "count": 135
     },
     {
       "user_raw": "회계담당",
@@ -276,18 +291,18 @@
     },
     {
       "user_raw": "인사담당",
-      "total_amount": 5313842.7,
-      "count": 40
+      "total_amount": 5690442.7,
+      "count": 46
     },
     {
       "user_raw": "서무주임",
-      "total_amount": 4549300,
-      "count": 36
+      "total_amount": 4737600,
+      "count": 38
     },
     {
       "user_raw": "전문위원",
-      "total_amount": 2959500,
-      "count": 38
+      "total_amount": 3253700,
+      "count": 42
     },
     {
       "user_raw": "정책지원관(행정)",
@@ -310,6 +325,11 @@
       "count": 14
     },
     {
+      "user_raw": "정책지원관",
+      "total_amount": 1962800,
+      "count": 25
+    },
+    {
       "user_raw": "복지건설전문위원",
       "total_amount": 1806200,
       "count": 31
@@ -328,11 +348,6 @@
       "user_raw": "전문위원(복지)",
       "total_amount": 1650400,
       "count": 16
-    },
-    {
-      "user_raw": "정책지원관",
-      "total_amount": 1393800,
-      "count": 17
     },
     {
       "user_raw": "인사팀장",
@@ -413,18 +428,18 @@
   "by_method": [
     {
       "method": "법인카드",
-      "total_amount": 75153702.7,
-      "count": 590
+      "total_amount": 78234302.7,
+      "count": 621
     },
     {
       "method": "카드",
-      "total_amount": 55618130,
-      "count": 444
+      "total_amount": 59315930,
+      "count": 473
     },
     {
       "method": "제로페이",
-      "total_amount": 19860533.7,
-      "count": 276
+      "total_amount": 20074033.7,
+      "count": 280
     },
     {
       "method": "현금",
@@ -440,18 +455,18 @@
   "by_category": [
     {
       "category": "시책",
-      "total_amount": 144802626.4,
-      "count": 1285
+      "total_amount": 150991226.4,
+      "count": 1346
     },
     {
       "category": "기관",
-      "total_amount": 5527000,
-      "count": 27
+      "total_amount": 6142000,
+      "count": 28
     },
     {
       "category": "부서",
-      "total_amount": 602740,
-      "count": 4
+      "total_amount": 791040,
+      "count": 6
     }
   ],
   "by_weekday": [
@@ -462,28 +477,28 @@
     },
     {
       "weekday": 1,
-      "total_amount": 28066182.7,
-      "count": 209
+      "total_amount": 29280982.7,
+      "count": 222
     },
     {
       "weekday": 2,
-      "total_amount": 30901196.2,
-      "count": 252
+      "total_amount": 32363196.2,
+      "count": 265
     },
     {
       "weekday": 3,
-      "total_amount": 29451180,
-      "count": 241
+      "total_amount": 30189080,
+      "count": 249
     },
     {
       "weekday": 4,
-      "total_amount": 28438866.5,
-      "count": 270
+      "total_amount": 31064766.5,
+      "count": 288
     },
     {
       "weekday": 5,
-      "total_amount": 32468441,
-      "count": 334
+      "total_amount": 33419741,
+      "count": 346
     },
     {
       "weekday": 6,
@@ -498,15 +513,15 @@
     },
     {
       "bucket": "06-11",
-      "count": 121
+      "count": 126
     },
     {
       "bucket": "12-17",
-      "count": 998
+      "count": 1051
     },
     {
       "bucket": "18-21",
-      "count": 189
+      "count": 195
     },
     {
       "bucket": "22-23",
@@ -520,33 +535,38 @@
   "by_purpose": [
     {
       "purpose_short": "의회 회의",
-      "total_amount": 53849918.900000006,
-      "count": 488
+      "total_amount": 56763218.900000006,
+      "count": 512
     },
     {
       "purpose_short": "현안 협의",
-      "total_amount": 31014850,
-      "count": 264
+      "total_amount": 32775250,
+      "count": 275
     },
     {
       "purpose_short": "기타",
-      "total_amount": 15394440,
-      "count": 70
+      "total_amount": 15598240,
+      "count": 73
     },
     {
       "purpose_short": "언론·보도",
-      "total_amount": 11699781,
-      "count": 142
+      "total_amount": 12424281,
+      "count": 149
     },
     {
       "purpose_short": "의안·자료수집",
-      "total_amount": 11470400,
-      "count": 156
+      "total_amount": 11736100,
+      "count": 161
     },
     {
       "purpose_short": "관계자 간담",
-      "total_amount": 6677800,
-      "count": 59
+      "total_amount": 6944400,
+      "count": 68
+    },
+    {
+      "purpose_short": "경조사·격려",
+      "total_amount": 6066500,
+      "count": 26
     },
     {
       "purpose_short": "행사·기념",
@@ -554,24 +574,19 @@
       "count": 16
     },
     {
-      "purpose_short": "경조사·격려",
-      "total_amount": 5451500,
-      "count": 25
-    },
-    {
       "purpose_short": "청사·시설",
-      "total_amount": 4577836.5,
-      "count": 44
+      "total_amount": 4630836.5,
+      "count": 45
     },
     {
       "purpose_short": "민원·다과",
-      "total_amount": 3198190,
-      "count": 29
+      "total_amount": 3229290,
+      "count": 30
     },
     {
       "purpose_short": "인사 업무",
-      "total_amount": 1399200,
-      "count": 18
+      "total_amount": 1557700,
+      "count": 20
     },
     {
       "purpose_short": "미상",
@@ -590,12 +605,12 @@
       "total_amount": 8361440
     },
     "likely": {
-      "count": 36,
-      "total_amount": 6771010
+      "count": 38,
+      "total_amount": 6889010
     },
     "not_attended": {
-      "count": 1217,
-      "total_amount": 135868916.4
+      "count": 1279,
+      "total_amount": 142742816.4
     }
   },
   "member_coverage": [
@@ -958,6 +973,24 @@
       "attended_amount": 0,
       "likely_amount": 0,
       "not_attended_amount": 1599700
+    },
+    {
+      "ym": "2026-01",
+      "attended": 0,
+      "likely": 1,
+      "not_attended": 34,
+      "attended_amount": 0,
+      "likely_amount": 63000,
+      "not_attended_amount": 3352700
+    },
+    {
+      "ym": "2026-02",
+      "attended": 0,
+      "likely": 1,
+      "not_attended": 28,
+      "attended_amount": 0,
+      "likely_amount": 55000,
+      "not_attended_amount": 3521200
     }
   ],
   "attended_analysis": {
@@ -1378,8 +1411,8 @@
       },
       {
         "key": "현안 협의",
-        "count": 8,
-        "amount": 1037300
+        "count": 10,
+        "amount": 1155300
       },
       {
         "key": "관계자 간담",
@@ -1583,8 +1616,8 @@
       "key": "B_likely",
       "label": "의원 동석 가능",
       "desc": "의원 국내·국외 출장, 한마음 체육대회 등 의원 관련 일정으로 본인 참여 가능성 있는 경우",
-      "count": 36,
-      "total_amount": 6771010,
+      "count": 38,
+      "total_amount": 6889010,
       "by_venue": [
         {
           "key": "청마루한우",
@@ -1690,8 +1723,8 @@
         },
         {
           "key": "현안 협의",
-          "count": 8,
-          "amount": 1037300
+          "count": 10,
+          "amount": 1155300
         },
         {
           "key": "관계자 간담",
@@ -1712,8 +1745,8 @@
       "by_category": [
         {
           "key": "시책",
-          "count": 36,
-          "amount": 6771010
+          "count": 38,
+          "amount": 6889010
         }
       ],
       "samples": [
@@ -1773,19 +1806,19 @@
       "key": "C_council_business",
       "label": "의회 안건 사무처리",
       "desc": "시책 비목 + 의회 회의·의안·보도·행사·현안협의 등 의원 사안을 사무국이 처리(의원 본인은 식사 자리에 없음)",
-      "count": 1054,
-      "total_amount": 110683759.9,
+      "count": 1108,
+      "total_amount": 116496259.9,
       "by_venue": [
         {
           "key": "청마루한우",
-          "count": 101,
-          "amount": 15440000,
+          "count": 105,
+          "amount": 15936000,
           "display_name": "청마루한우"
         },
         {
           "key": "최강낙자",
-          "count": 57,
-          "amount": 7186000,
+          "count": 61,
+          "amount": 7923000,
           "display_name": "최강낙지"
         },
         {
@@ -1796,8 +1829,8 @@
         },
         {
           "key": "경성농장",
-          "count": 41,
-          "amount": 4721400,
+          "count": 42,
+          "amount": 4893400,
           "display_name": "경성농장"
         },
         {
@@ -1819,47 +1852,47 @@
           "display_name": "우리식당"
         },
         {
-          "key": "마루샤브용두직영점",
-          "count": 2,
-          "amount": 2268000,
-          "display_name": "마루샤브 용두직영점"
+          "key": "나주곰탕나주전",
+          "count": 29,
+          "amount": 2270000,
+          "display_name": "나주곰탕 나주전"
         }
       ],
       "by_user": [
         {
           "key": "의정팀장",
-          "count": 102,
-          "amount": 17374700
+          "count": 106,
+          "amount": 18563500
         },
         {
           "key": "국주임",
-          "count": 95,
-          "amount": 14258500
+          "count": 100,
+          "amount": 15344500
         },
         {
           "key": "국서무",
-          "count": 73,
-          "amount": 13693350
+          "count": 76,
+          "amount": 14255350
         },
         {
           "key": "의회홍보팀장",
-          "count": 121,
-          "amount": 12736781
+          "count": 130,
+          "amount": 13716281
         },
         {
           "key": "사무국장",
-          "count": 109,
-          "amount": 8202110
+          "count": 121,
+          "amount": 8686310
         },
         {
           "key": "홍보담당",
-          "count": 110,
-          "amount": 7885100
+          "count": 113,
+          "amount": 8059600
         },
         {
           "key": "의사담당",
-          "count": 108,
-          "amount": 7415816.2
+          "count": 113,
+          "amount": 7821116.2
         },
         {
           "key": "회계담당",
@@ -1870,23 +1903,23 @@
       "by_purpose": [
         {
           "key": "의회 회의",
-          "count": 468,
-          "amount": 50587718.900000006
+          "count": 492,
+          "amount": 53501018.900000006
         },
         {
           "key": "현안 협의",
-          "count": 224,
-          "amount": 26825610
+          "count": 233,
+          "amount": 28468010
         },
         {
           "key": "언론·보도",
-          "count": 140,
-          "amount": 11564781
+          "count": 147,
+          "amount": 12289281
         },
         {
           "key": "의안·자료수집",
-          "count": 156,
-          "amount": 11470400
+          "count": 161,
+          "amount": 11736100
         },
         {
           "key": "행사·기념",
@@ -1895,8 +1928,8 @@
         },
         {
           "key": "관계자 간담",
-          "count": 48,
-          "amount": 4500800
+          "count": 57,
+          "amount": 4767400
         },
         {
           "key": "회의록",
@@ -1907,8 +1940,8 @@
       "by_category": [
         {
           "key": "시책",
-          "count": 1054,
-          "amount": 110683759.9
+          "count": 1108,
+          "amount": 116496259.9
         }
       ],
       "samples": [
@@ -1966,21 +1999,21 @@
       "sub_buckets": [
         {
           "purpose_short": "의회 회의",
-          "count": 468,
-          "total_amount": 50587718.900000006,
-          "avg_amount": 108093.41645299147,
-          "avg_headcount": 8.070294784580499,
+          "count": 492,
+          "total_amount": 53501018.900000006,
+          "avg_amount": 108741.90833333334,
+          "avg_headcount": 8.073118279569892,
           "by_venue": [
             {
               "key": "청마루한우",
-              "count": 56,
-              "amount": 8539000,
+              "count": 59,
+              "amount": 8780000,
               "display_name": "청마루한우"
             },
             {
               "key": "최강낙자",
-              "count": 23,
-              "amount": 2990000,
+              "count": 26,
+              "amount": 3632000,
               "display_name": "최강낙지"
             },
             {
@@ -1991,8 +2024,8 @@
             },
             {
               "key": "경성농장",
-              "count": 15,
-              "amount": 2058000,
+              "count": 16,
+              "amount": 2230000,
               "display_name": "경성농장"
             },
             {
@@ -2005,28 +2038,28 @@
           "by_user": [
             {
               "key": "의정팀장",
-              "count": 57,
-              "amount": 9435000
+              "count": 59,
+              "amount": 10013000
             },
             {
               "key": "국주임",
-              "count": 54,
-              "amount": 7804100
+              "count": 57,
+              "amount": 8431100
             },
             {
               "key": "의사담당",
-              "count": 100,
-              "amount": 6821716.2
+              "count": 105,
+              "amount": 7227016.2
             },
             {
               "key": "국서무",
-              "count": 41,
-              "amount": 6053300
+              "count": 42,
+              "amount": 6208300
             },
             {
               "key": "의회홍보팀장",
-              "count": 44,
-              "amount": 5000600
+              "count": 47,
+              "amount": 5302600
             }
           ],
           "samples": [
@@ -2058,15 +2091,15 @@
         },
         {
           "purpose_short": "현안 협의",
-          "count": 224,
-          "total_amount": 26825610,
-          "avg_amount": 119757.1875,
-          "avg_headcount": 8.576744186046511,
+          "count": 233,
+          "total_amount": 28468010,
+          "avg_amount": 122180.30042918454,
+          "avg_headcount": 8.745535714285714,
           "by_venue": [
             {
               "key": "청마루한우",
-              "count": 29,
-              "amount": 4501000,
+              "count": 30,
+              "amount": 4756000,
               "display_name": "청마루한우"
             },
             {
@@ -2097,23 +2130,23 @@
           "by_user": [
             {
               "key": "의정팀장",
-              "count": 42,
-              "amount": 7374700
-            },
-            {
-              "key": "사무국장",
-              "count": 61,
-              "amount": 5135110
+              "count": 44,
+              "amount": 7985500
             },
             {
               "key": "국주임",
-              "count": 33,
-              "amount": 4793400
+              "count": 35,
+              "amount": 5252400
+            },
+            {
+              "key": "사무국장",
+              "count": 63,
+              "amount": 5230710
             },
             {
               "key": "국서무",
-              "count": 23,
-              "amount": 3261800
+              "count": 25,
+              "amount": 3668800
             },
             {
               "key": "회계담당",
@@ -2139,21 +2172,21 @@
               "headcount": 13
             },
             {
-              "date": "2023-10-26",
+              "date": "2026-01-06",
               "user_raw": "의정팀장",
-              "venue_raw": "장어시대",
-              "purpose": "의회 현안 관련 관계자 업무협의 간담회",
-              "amount": 350000,
-              "headcount": 14
+              "venue_raw": "흑선",
+              "purpose": "의정현안업무 추진 관련 관계자 간담회",
+              "amount": 355800,
+              "headcount": 17
             }
           ]
         },
         {
           "purpose_short": "언론·보도",
-          "count": 140,
-          "total_amount": 11564781,
-          "avg_amount": 82605.57857142857,
-          "avg_headcount": 5.401515151515151,
+          "count": 147,
+          "total_amount": 12289281,
+          "avg_amount": 83600.55102040817,
+          "avg_headcount": 5.359712230215828,
           "by_venue": [
             {
               "key": "경성농장",
@@ -2180,22 +2213,22 @@
               "display_name": "민수정육식당"
             },
             {
-              "key": "고기여행",
-              "count": 2,
-              "amount": 395000,
-              "display_name": "고기여행"
+              "key": "최강낙자",
+              "count": 5,
+              "amount": 469000,
+              "display_name": "최강낙지"
             }
           ],
           "by_user": [
             {
               "key": "의회홍보팀장",
-              "count": 70,
-              "amount": 7010381
+              "count": 76,
+              "amount": 7687881
             },
             {
               "key": "홍보담당",
-              "count": 70,
-              "amount": 4554400
+              "count": 71,
+              "amount": 4601400
             }
           ],
           "samples": [
@@ -2227,10 +2260,10 @@
         },
         {
           "purpose_short": "의안·자료수집",
-          "count": 156,
-          "total_amount": 11470400,
-          "avg_amount": 73528.20512820513,
-          "avg_headcount": 5.352112676056338,
+          "count": 161,
+          "total_amount": 11736100,
+          "avg_amount": 72895.03105590062,
+          "avg_headcount": 5.340136054421769,
           "by_venue": [
             {
               "key": "참숯갈비화로촌",
@@ -2251,23 +2284,23 @@
               "display_name": "옥돌"
             },
             {
+              "key": "반달식당",
+              "count": 8,
+              "amount": 533000,
+              "display_name": "반달식당"
+            },
+            {
               "key": "친친",
               "count": 6,
               "amount": 475000,
               "display_name": "친친"
-            },
-            {
-              "key": "반달식당",
-              "count": 7,
-              "amount": 451000,
-              "display_name": "반달식당"
             }
           ],
           "by_user": [
             {
               "key": "전문위원",
-              "count": 32,
-              "amount": 2347500
+              "count": 33,
+              "amount": 2379700
             },
             {
               "key": "정책지원관(행정)",
@@ -2411,10 +2444,10 @@
         },
         {
           "purpose_short": "관계자 간담",
-          "count": 48,
-          "total_amount": 4500800,
-          "avg_amount": 93766.66666666667,
-          "avg_headcount": 7.533333333333333,
+          "count": 57,
+          "total_amount": 4767400,
+          "avg_amount": 83638.59649122808,
+          "avg_headcount": 7.2407407407407405,
           "by_venue": [
             {
               "key": "청마루한우",
@@ -2450,8 +2483,8 @@
           "by_user": [
             {
               "key": "사무국장",
-              "count": 23,
-              "amount": 1211000
+              "count": 32,
+              "amount": 1477600
             },
             {
               "key": "국서무",
@@ -2553,14 +2586,20 @@
       "key": "D_office_self",
       "label": "사무국 자체 운영",
       "desc": "기관/부서 비목 OR 시책+사무국 자체 업무(직원 경조사, 청사시설, 인사업무, 방문민원 응대 등)",
-      "count": 116,
-      "total_amount": 14568716.5,
+      "count": 123,
+      "total_amount": 15614616.5,
       "by_venue": [
         {
           "key": "청마루한우",
           "count": 6,
           "amount": 1375500,
           "display_name": "청마루한우"
+        },
+        {
+          "key": "주식회사해저식품",
+          "count": 2,
+          "amount": 1215000,
+          "display_name": "주식회사해저식품"
         },
         {
           "key": "농업회사법인모닝팜주식회사(인터넷우체국쇼핑)",
@@ -2579,12 +2618,6 @@
           "count": 1,
           "amount": 651300,
           "display_name": "궁중비법 서가 콩고물 도라지정과"
-        },
-        {
-          "key": "주식회사해저식품",
-          "count": 1,
-          "amount": 600000,
-          "display_name": "주식회사해저식품"
         },
         {
           "key": "카페프렌즈",
@@ -2608,8 +2641,8 @@
       "by_user": [
         {
           "key": "사무국장",
-          "count": 23,
-          "amount": 3496150
+          "count": 24,
+          "amount": 4111150
         },
         {
           "key": "청사담당",
@@ -2623,8 +2656,8 @@
         },
         {
           "key": "인사담당",
-          "count": 19,
-          "amount": 1467290
+          "count": 22,
+          "amount": 1656890
         },
         {
           "key": "회계담당",
@@ -2633,8 +2666,8 @@
         },
         {
           "key": "서무주임",
-          "count": 6,
-          "amount": 744000
+          "count": 8,
+          "amount": 932300
         },
         {
           "key": "의정팀장",
@@ -2650,28 +2683,28 @@
       "by_purpose": [
         {
           "key": "경조사·격려",
-          "count": 25,
-          "amount": 5451500
+          "count": 26,
+          "amount": 6066500
         },
         {
           "key": "청사·시설",
-          "count": 44,
-          "amount": 4577836.5
+          "count": 45,
+          "amount": 4630836.5
         },
         {
           "key": "민원·다과",
-          "count": 22,
-          "amount": 2294180
+          "count": 23,
+          "amount": 2325280
         },
         {
           "key": "인사 업무",
-          "count": 18,
-          "amount": 1399200
+          "count": 20,
+          "amount": 1557700
         },
         {
           "key": "기타",
-          "count": 5,
-          "amount": 351000
+          "count": 7,
+          "amount": 539300
         },
         {
           "key": "미상",
@@ -2687,18 +2720,18 @@
       "by_category": [
         {
           "key": "시책",
-          "count": 85,
-          "amount": 8438976.5
+          "count": 89,
+          "amount": 8681576.5
         },
         {
           "key": "기관",
-          "count": 27,
-          "amount": 5527000
+          "count": 28,
+          "amount": 6142000
         },
         {
           "key": "부서",
-          "count": 4,
-          "amount": 602740
+          "count": 6,
+          "amount": 791040
         }
       ],
       "samples": [
@@ -2723,6 +2756,16 @@
           "category": "기관"
         },
         {
+          "date": "2026-02-05",
+          "user_raw": "사무국장",
+          "venue_raw": "주식회사해저식품",
+          "purpose": "현안업무 추진에 따른 직원 격려",
+          "amount": 615000,
+          "headcount": 41,
+          "method": "법인카드",
+          "category": "기관"
+        },
+        {
           "date": "2025-09-25",
           "user_raw": "사무국장",
           "venue_raw": "주식회사해저식품",
@@ -2741,16 +2784,6 @@
           "headcount": 20,
           "method": "법인카드",
           "category": "기관"
-        },
-        {
-          "date": "2023-07-05",
-          "user_raw": "사무국장",
-          "venue_raw": "청마루 한우",
-          "purpose": "현안업무 추진에 따른 직원 격려 간담회",
-          "amount": 446000,
-          "headcount": 23,
-          "method": "카드",
-          "category": "기관"
         }
       ]
     },
@@ -2758,8 +2791,8 @@
       "key": "E_other",
       "label": "분류 불가",
       "desc": "OCR 깨짐, 광고·홈페이지·음향 등 추론 어려운 일반 운영 협의",
-      "count": 47,
-      "total_amount": 10616440,
+      "count": 48,
+      "total_amount": 10631940,
       "by_venue": [
         {
           "key": "마루샤브용두직영점",
@@ -2833,8 +2866,8 @@
         },
         {
           "key": "의사담당",
-          "count": 4,
-          "amount": 472800
+          "count": 5,
+          "amount": 488300
         },
         {
           "key": "의회홍보팀장",
@@ -2855,8 +2888,8 @@
       "by_purpose": [
         {
           "key": "기타",
-          "count": 43,
-          "amount": 10295440
+          "count": 44,
+          "amount": 10310940
         },
         {
           "key": "미상",
@@ -2872,8 +2905,8 @@
       "by_category": [
         {
           "key": "시책",
-          "count": 46,
-          "amount": 10547440
+          "count": 47,
+          "amount": 10562940
         },
         {
           "key": "(빈값)",
@@ -3455,6 +3488,32 @@
       "D_office_self_amount": 0,
       "E_other": 1,
       "E_other_amount": 78000
+    },
+    {
+      "ym": "2026-01",
+      "A_direct": 0,
+      "A_direct_amount": 0,
+      "B_likely": 1,
+      "B_likely_amount": 63000,
+      "C_council_business": 30,
+      "C_council_business_amount": 3143300,
+      "D_office_self": 3,
+      "D_office_self_amount": 193900,
+      "E_other": 1,
+      "E_other_amount": 15500
+    },
+    {
+      "ym": "2026-02",
+      "A_direct": 0,
+      "A_direct_amount": 0,
+      "B_likely": 1,
+      "B_likely_amount": 55000,
+      "C_council_business": 24,
+      "C_council_business_amount": 2669200,
+      "D_office_self": 4,
+      "D_office_self_amount": 852000,
+      "E_other": 0,
+      "E_other_amount": 0
     }
   ]
 }
