@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T13:28:00.627Z",
+  "generated_at": "2026-05-09T14:02:02.248Z",
   "totals": {
     "total_amount": 151001366.39999998,
     "total_count": 1317,
@@ -525,6 +525,73 @@
     {
       "bucket": "unknown",
       "count": 6
+    }
+  ],
+  "by_purpose": [
+    {
+      "purpose_short": "의회 회의",
+      "total_amount": 53849918.900000006,
+      "count": 488
+    },
+    {
+      "purpose_short": "현안 협의",
+      "total_amount": 31014850,
+      "count": 264
+    },
+    {
+      "purpose_short": "기타",
+      "total_amount": 15394440,
+      "count": 70
+    },
+    {
+      "purpose_short": "언론·보도",
+      "total_amount": 11699781,
+      "count": 142
+    },
+    {
+      "purpose_short": "의안·자료수집",
+      "total_amount": 11470400,
+      "count": 156
+    },
+    {
+      "purpose_short": "관계자 간담",
+      "total_amount": 6677800,
+      "count": 59
+    },
+    {
+      "purpose_short": "행사·기념",
+      "total_amount": 5612750,
+      "count": 16
+    },
+    {
+      "purpose_short": "경조사·격려",
+      "total_amount": 5451500,
+      "count": 25
+    },
+    {
+      "purpose_short": "청사·시설",
+      "total_amount": 4577836.5,
+      "count": 44
+    },
+    {
+      "purpose_short": "민원·다과",
+      "total_amount": 3198190,
+      "count": 29
+    },
+    {
+      "purpose_short": "인사 업무",
+      "total_amount": 1399200,
+      "count": 18
+    },
+    {
+      "purpose_short": "미상",
+      "total_amount": 533000,
+      "count": 4
+    },
+    {
+      "purpose_short": "회의록",
+      "total_amount": 121700,
+      "count": 2
     }
   ]
 }

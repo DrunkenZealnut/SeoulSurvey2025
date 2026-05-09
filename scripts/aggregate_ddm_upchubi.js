@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url';
 
 import { normalizeVenue, displayName, clusterKeys } from './lib/venue.js';
 import { runAll } from './lib/anomaly.js';
+import { classifyPurpose } from './lib/purpose.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -36,9 +37,12 @@ function main() {
   const raw = load('ddm_upchubi.raw.json');
   const rows = raw.rows;
 
-  // 1) venue_norm 채우기 (1차 정규화)
+  // 1) venue_norm + purpose category 채우기
   for (const r of rows) {
     r.venue_norm = normalizeVenue(r.venue_raw);
+    const cls = classifyPurpose(r.purpose);
+    r.purpose_cat = cls.cat;
+    r.purpose_short = cls.short;
   }
 
   // 2) fuzzy 클러스터링으로 alias 그룹핑
@@ -86,11 +90,87 @@ function main() {
     const avg_per_person = headcounts.length
       ? headcounts.reduce((s, x) => s + x.amount / x.headcount, 0) / headcounts.length
       : null;
+    const avg_headcount = headcounts.length
+      ? headcounts.reduce((s, x) => s + x.headcount, 0) / headcounts.length
+      : null;
     const top_users = [...v.users.entries()]
       .map(([user_raw, x]) => ({ user_raw, count: x.count, amount: x.amount }))
       .sort((a, b) => b.amount - a.amount)
-      .slice(0, 3);
+      .slice(0, 5);
     const by_year_month = [...v.ymStats.values()].sort((a, b) => a.ym.localeCompare(b.ym));
+
+    // purpose 분포
+    const purposeMap = new Map();
+    for (const r of v.rows) {
+      const cat = r.purpose_short || '미상';
+      const e = purposeMap.get(cat) || { short: cat, count: 0, amount: 0 };
+      e.count++;
+      e.amount += r.amount;
+      purposeMap.set(cat, e);
+    }
+    const purpose_breakdown = [...purposeMap.values()].sort((a, b) => b.count - a.count);
+
+    // method 분포
+    const methodMap = new Map();
+    for (const r of v.rows) {
+      if (!r.method) continue;
+      const e = methodMap.get(r.method) || { method: r.method, count: 0, amount: 0 };
+      e.count++;
+      e.amount += r.amount;
+      methodMap.set(r.method, e);
+    }
+    const method_breakdown = [...methodMap.values()].sort((a, b) => b.count - a.count);
+
+    // 시간대 (점심/저녁/심야 등)
+    const timeBuckets = { '점심(11-14)': 0, '오후(14-18)': 0, '저녁(18-22)': 0, '심야(22-06)': 0, '오전(06-11)': 0, '미상': 0 };
+    for (const r of v.rows) {
+      if (r.hour == null) timeBuckets['미상']++;
+      else if (r.hour >= 22 || r.hour < 6) timeBuckets['심야(22-06)']++;
+      else if (r.hour < 11) timeBuckets['오전(06-11)']++;
+      else if (r.hour < 14) timeBuckets['점심(11-14)']++;
+      else if (r.hour < 18) timeBuckets['오후(14-18)']++;
+      else timeBuckets['저녁(18-22)']++;
+    }
+
+    // 평일/주말 비율
+    const weekend = v.rows.filter((r) => r.is_weekend).length;
+    const weekday = v.rows.length - weekend;
+
+    // 가장 많이 쓴 달
+    const peakMonth = by_year_month.slice().sort((a, b) => b.count - a.count)[0] || null;
+
+    // 최근 12개월 활성도 (최근 last_used 기준)
+    let recent_count = 0;
+    let recent_amount = 0;
+    if (v.last) {
+      const last = new Date(v.last + 'T00:00:00Z');
+      const cutoff = new Date(last);
+      cutoff.setUTCFullYear(cutoff.getUTCFullYear() - 1);
+      const cutoffStr = cutoff.toISOString().slice(0, 10);
+      for (const r of v.rows) {
+        if (r.date >= cutoffStr) {
+          recent_count++;
+          recent_amount += r.amount;
+        }
+      }
+    }
+
+    // 대표 집행 사례 5개 (금액 큰 순)
+    const sample_rows = v.rows
+      .slice()
+      .sort((a, b) => b.amount - a.amount)
+      .slice(0, 5)
+      .map((r) => ({
+        date: r.date,
+        time: r.time,
+        user_raw: r.user_raw,
+        purpose: r.purpose,
+        purpose_short: r.purpose_short,
+        amount: r.amount,
+        headcount: r.headcount,
+        method: r.method,
+      }));
+
     return {
       venue_norm: v.venue_norm,
       display_name: displayName([...v.aliases]),
@@ -99,10 +179,20 @@ function main() {
       total_count,
       avg_amount,
       avg_per_person,
+      avg_headcount,
       first_used: v.first,
       last_used: v.last,
       top_users,
       by_year_month,
+      purpose_breakdown,
+      method_breakdown,
+      time_buckets: timeBuckets,
+      weekday_count: weekday,
+      weekend_count: weekend,
+      peak_month: peakMonth,
+      recent12m_count: recent_count,
+      recent12m_amount: recent_amount,
+      sample_rows,
     };
   });
 
@@ -118,6 +208,7 @@ function main() {
   const methodMap = new Map();
   const categoryMap = new Map();
   const wdMap = new Map();
+  const purposeMap = new Map();
   const hourBuckets = { '00-05': 0, '06-11': 0, '12-17': 0, '18-21': 0, '22-23': 0, unknown: 0 };
 
   function add(map, key, amount) {
@@ -139,6 +230,7 @@ function main() {
     if (r.method) add(methodMap, r.method, r.amount);
     if (r.category) add(categoryMap, r.category, r.amount);
     if (r.weekday != null) add(wdMap, r.weekday, r.amount);
+    if (r.purpose_short) add(purposeMap, r.purpose_short, r.amount);
     if (r.hour == null) hourBuckets.unknown++;
     else if (r.hour < 6) hourBuckets['00-05']++;
     else if (r.hour < 12) hourBuckets['06-11']++;
@@ -171,6 +263,9 @@ function main() {
     bucket,
     count,
   }));
+  const by_purpose = [...purposeMap.entries()]
+    .map(([purpose_short, e]) => ({ purpose_short, total_amount: e.total_amount, count: e.count }))
+    .sort((a, b) => b.total_amount - a.total_amount);
 
   const totals = {
     total_amount: rows.reduce((s, x) => s + x.amount, 0),
@@ -192,6 +287,7 @@ function main() {
     by_category,
     by_weekday,
     by_hour_bucket,
+    by_purpose,
   };
 
   // 5) anomaly
