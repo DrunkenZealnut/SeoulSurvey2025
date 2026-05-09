@@ -84,3 +84,61 @@ export const MEMBER_LABELS = {
   likely: '의원 동석 가능',
   not_attended: '의원 미동석/사무국 단독',
 };
+
+// === 5단계 통합 추론 분류 ===
+// 비목(category) + 집행목적 카테고리(purpose_short) + 의원동석(member_attended)을
+// 결합해 식사 자리의 성격을 더 세밀하게 분리한다.
+//
+// 라벨:
+//   A_direct           : 🟢 의원 직접 동석 (식사 자리에 의원이 있었음이 명확)
+//   B_likely           : 🟡 의원 동석 가능 (의원 관련 일정/주제로 본인 참여 가능)
+//   C_council_business : 🔵 의회 안건 사무처리 (시책 비목 + 정례회·의안·보도·행사 등 의원 사안을 사무국이 처리, 본인은 미동석)
+//   D_office_self      : ⚪ 사무국 자체 운영 (기관/부서 비목 OR 시책+사무국 자체 업무)
+//   E_other            : ▫️ 분류 불가 (OCR 노이즈, 모호한 내용 등)
+
+const COUNCIL_BUSINESS_PURPOSES = new Set([
+  '의회 회의', '의안·자료수집', '언론·보도', '현안 협의',
+  '행사·기념', '회의록', '관계자 간담',
+]);
+const OFFICE_SELF_PURPOSES = new Set([
+  '경조사·격려', '청사·시설', '인사 업무', '민원·다과',
+]);
+
+export function classifyBucket(row) {
+  const ma = row.member_attended;
+  const cat = row.category;
+  const ps = row.purpose_short || '';
+
+  if (ma === 'attended') return 'A_direct';
+  if (ma === 'likely') return 'B_likely';
+
+  // not_attended — 비목·용도로 추가 분리
+  if (cat === '기관' || cat === '부서') return 'D_office_self';
+  if (cat === '시책') {
+    if (COUNCIL_BUSINESS_PURPOSES.has(ps)) return 'C_council_business';
+    if (OFFICE_SELF_PURPOSES.has(ps)) return 'D_office_self';
+  }
+  return 'E_other';
+}
+
+export const BUCKET_LABELS = {
+  A_direct: '의원 직접 동석',
+  B_likely: '의원 동석 가능',
+  C_council_business: '의회 안건 사무처리',
+  D_office_self: '사무국 자체 운영',
+  E_other: '분류 불가',
+};
+export const BUCKET_COLORS = {
+  A_direct: '#00A88E',
+  B_likely: '#F39C12',
+  C_council_business: '#2980B9',
+  D_office_self: '#7F8C8D',
+  E_other: '#BDC3C7',
+};
+export const BUCKET_DESC = {
+  A_direct: '집행목적에 "직원 및 의원 간담", "의장단 월례", "의원 회식·격려" 등 명확한 동석 패턴이 있는 경우',
+  B_likely: '의원 국내·국외 출장, 한마음 체육대회 등 의원 관련 일정으로 본인 참여 가능성 있는 경우',
+  C_council_business: '시책 비목 + 의회 회의·의안·보도·행사·현안협의 등 의원 사안을 사무국이 처리(의원 본인은 식사 자리에 없음)',
+  D_office_self: '기관/부서 비목 OR 시책+사무국 자체 업무(직원 경조사, 청사시설, 인사업무, 방문민원 응대 등)',
+  E_other: 'OCR 깨짐, 광고·홈페이지·음향 등 추론 어려운 일반 운영 협의',
+};

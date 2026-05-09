@@ -240,50 +240,28 @@ dialog.modal::backdrop{background:rgba(0,0,0,.45);backdrop-filter:blur(4px);}
 </section>
 
 <section class="section">
-  <h2>7. 구의원 참석 식사 분리 <span class="badge">member attendance</span></h2>
-  <p class="desc">집행목적 텍스트를 키워드 룰로 분석하여 식사 자리에 <b>구의원이 동석</b>한 건과 <b>사무국 단독 집행</b>을 분리했습니다. 룰 기반 추정이므로 100% 정확하지 않으며, 의심 케이스는 "동석 가능"으로 분류합니다.</p>
+  <h2>7. 사무국 자체 vs 의원 참여 추론 (5단계) <span class="badge">bucket inference</span></h2>
+  <p class="desc"><b>비목(시책/기관/부서)</b>과 <b>집행목적</b>, <b>의원 동석 키워드</b>를 결합해 식사 자리의 성격을 5단계로 더 세밀하게 분리한 추론 분석입니다. 룰 기반이며 일부 모호 케이스가 있습니다.</p>
 
   <div style="background:#F8FAFB;border-radius:10px;padding:14px 16px;margin-bottom:18px;font-size:13px;color:var(--text-light);border-left:4px solid var(--blue);">
-    <b style="color:var(--text);">분류 룰 요약</b>
-    <ul style="margin:6px 0 0 18px;line-height:1.7;">
-      <li><b style="color:var(--good);">의원 동석</b>: "직원 및 의원 간담", "사무국 및 의원 간담", "의원 등 간담", "의장단 월례", "의원 송년회", "의원 회식/격려", "의원 및 관계자 간담" 등 명확한 동석 패턴</li>
-      <li><b style="color:var(--high);">동석 가능</b>: 의원 국내·국외 출장, 한마음 체육대회 등 의원 관련 일정으로 본인 동석 가능성 있음</li>
-      <li><b style="color:var(--text-light);">미동석</b>: "의원 요구자료", "의원 연구실/사무실", "의원 수첩", 의원 단어 자체가 없는 일반 사무국 업무</li>
+    <b style="color:var(--text);">5단계 분류 룰</b>
+    <ul style="margin:8px 0 0 18px;line-height:1.85;">
+      <li>🟢 <b style="color:#00A88E;">의원 직접 동석</b> — 집행목적에 "직원 및 의원 간담", "의장단 월례", "의원 회식·격려" 등 동석 패턴 명확</li>
+      <li>🟡 <b style="color:#F39C12;">의원 동석 가능</b> — 의원 국내·국외 출장, 한마음 체육대회 등 의원 관련 일정으로 본인 동석 가능</li>
+      <li>🔵 <b style="color:#2980B9;">의회 안건 사무처리</b> — 시책 비목 + 의회 회의·의안·보도·행사·현안협의 등 <b>의원 사안을 사무국이 처리</b>(의원 본인은 식사 자리에 없음)</li>
+      <li>⚪ <b style="color:#7F8C8D;">사무국 자체 운영</b> — 기관/부서 비목 OR 시책+사무국 자체 업무(<b>직원 경조사·청사시설·인사업무·민원응대</b>)</li>
+      <li>▫️ <b style="color:#BDC3C7;">분류 불가</b> — OCR 깨짐, 광고·홈페이지·음향 등 추론 어려운 운영 협의</li>
     </ul>
   </div>
 
-  <h3 style="font-size:15px;font-weight:600;margin:14px 0 10px;">7.1 동석 비율 (전체 1,317건 기준)</h3>
-  <div class="kpi-grid" id="memberKpiGrid"></div>
+  <h3 style="font-size:15px;font-weight:600;margin:14px 0 10px;">7.1 5단계 분포</h3>
+  <div class="kpi-grid" id="bucketKpiGrid"></div>
 
-  <h3 style="font-size:15px;font-weight:600;margin:24px 0 10px;">7.2 월별 추이 — 동석 / 동석 가능 / 미동석</h3>
-  <div class="chart-wrap"><canvas id="memberTSChart"></canvas></div>
+  <h3 style="font-size:15px;font-weight:600;margin:24px 0 10px;">7.2 월별 추이 (5단계 누적)</h3>
+  <div class="chart-wrap"><canvas id="bucketTSChart"></canvas></div>
 
-  <h3 style="font-size:15px;font-weight:600;margin:24px 0 10px;">7.3 구의원 동석 식사 분석 (64건 / 836만원)</h3>
-  <div class="split">
-    <div>
-      <h4 style="font-size:13px;font-weight:600;margin-bottom:8px;color:var(--text-light);text-transform:uppercase;letter-spacing:.04em;">동석 식사 TOP 식당</h4>
-      <table class="list" id="attendedVenueTable">
-        <thead><tr><th>#</th><th>식당</th><th class="num">건수</th><th class="num">총액</th></tr></thead>
-        <tbody></tbody>
-      </table>
-    </div>
-    <div>
-      <h4 style="font-size:13px;font-weight:600;margin-bottom:8px;color:var(--text-light);text-transform:uppercase;letter-spacing:.04em;">동석 식사 발의 사용자(직책)</h4>
-      <table class="list" id="attendedUserTable">
-        <thead><tr><th>#</th><th>사용자</th><th class="num">건수</th><th class="num">총액</th></tr></thead>
-        <tbody></tbody>
-      </table>
-    </div>
-  </div>
-
-  <h4 style="font-size:13px;font-weight:600;margin:18px 0 8px;color:var(--text-light);text-transform:uppercase;letter-spacing:.04em;">동석 식사 용도 분포</h4>
-  <div class="bar-list" id="attendedPurposeBars"></div>
-
-  <h4 style="font-size:13px;font-weight:600;margin:24px 0 8px;color:var(--text-light);text-transform:uppercase;letter-spacing:.04em;">의원 동석 대표 사례 (금액 큰 순 10건)</h4>
-  <table class="sample-table" id="attendedSamples">
-    <thead><tr><th>일자</th><th>사용자</th><th>식당</th><th>집행목적</th><th class="num">인원</th><th class="num">금액</th></tr></thead>
-    <tbody></tbody>
-  </table>
+  <h3 style="font-size:15px;font-weight:600;margin:24px 0 10px;">7.3 카테고리별 상세 (TOP 식당·사용자·용도·대표 사례)</h3>
+  <div id="bucketDetails"></div>
 </section>
 
 <section class="section" id="downloads">
@@ -647,67 +625,112 @@ const cardsHtml = top3.map((v, idx) => {
 }).join('');
 document.getElementById('top3Cards').innerHTML = cardsHtml;
 
-// 7) 구의원 참석 식사 분리
-const ma = summary.member_attendance;
-const totalMA = ma.attended.count + ma.likely.count + ma.not_attended.count;
-const totalMAA = ma.attended.total_amount + ma.likely.total_amount + ma.not_attended.total_amount;
-const memberKpis = [
-  {label:'의원 동석', value: ma.attended.count.toLocaleString()+'건', sub:`${won(ma.attended.total_amount)} · ${(ma.attended.count/totalMA*100).toFixed(1)}%`, color:'#00A88E'},
-  {label:'동석 가능', value: ma.likely.count.toLocaleString()+'건', sub:`${won(ma.likely.total_amount)} · ${(ma.likely.count/totalMA*100).toFixed(1)}%`, color:'#F39C12'},
-  {label:'사무국 단독', value: ma.not_attended.count.toLocaleString()+'건', sub:`${won(ma.not_attended.total_amount)} · ${(ma.not_attended.count/totalMA*100).toFixed(1)}%`, color:'#7F8C8D'},
-];
-document.getElementById('memberKpiGrid').innerHTML = memberKpis.map(k => `
-  <div class="kpi" style="border-left:4px solid ${k.color};">
-    <div class="label">${k.label}</div>
-    <div class="value" style="color:${k.color};">${k.value}</div>
-    <div class="sub">${k.sub}</div>
-  </div>
-`).join('');
+// 7) 5단계 통합 분류 (비목 + 집행목적 + 의원 동석)
+const BUCKET_ORDER = ['A_direct', 'B_likely', 'C_council_business', 'D_office_self', 'E_other'];
+const BUCKET_COLORS_LOCAL = {
+  A_direct: '#00A88E',
+  B_likely: '#F39C12',
+  C_council_business: '#2980B9',
+  D_office_self: '#7F8C8D',
+  E_other: '#BDC3C7',
+};
+const BUCKET_ICONS = {
+  A_direct: '🟢', B_likely: '🟡', C_council_business: '🔵', D_office_self: '⚪', E_other: '▫️',
+};
+const buckets = summary.buckets;
+const bucketTotal = BUCKET_ORDER.reduce((s,k) => s + buckets[k].count, 0);
+const bucketTotalA = BUCKET_ORDER.reduce((s,k) => s + buckets[k].total_amount, 0);
 
-// 7.2 월별 추이 (스택)
-const mc = summary.member_coverage;
-new Chart(document.getElementById('memberTSChart'), {
+// 7.1 KPI
+document.getElementById('bucketKpiGrid').innerHTML = BUCKET_ORDER.map(k => {
+  const b = buckets[k];
+  const color = BUCKET_COLORS_LOCAL[k];
+  const pct = (b.count / bucketTotal * 100).toFixed(1);
+  const aPct = (b.total_amount / bucketTotalA * 100).toFixed(1);
+  return `<div class="kpi" style="border-left:4px solid ${color};">
+    <div class="label">${BUCKET_ICONS[k]} ${b.label}</div>
+    <div class="value" style="color:${color};">${b.count.toLocaleString()}건</div>
+    <div class="sub">${won(b.total_amount)} · ${pct}%건 · 금액 ${aPct}%</div>
+  </div>`;
+}).join('');
+
+// 7.2 월별 stacked
+const bc = summary.bucket_coverage;
+new Chart(document.getElementById('bucketTSChart'), {
   type:'bar',
   data:{
-    labels: mc.map(x => x.ym),
-    datasets:[
-      {label:'의원 동석', data: mc.map(x => x.attended), backgroundColor:'#00A88E', stack:'s'},
-      {label:'동석 가능', data: mc.map(x => x.likely), backgroundColor:'#F39C12', stack:'s'},
-      {label:'사무국 단독', data: mc.map(x => x.not_attended), backgroundColor:'rgba(127,140,141,.55)', stack:'s'},
-    ],
+    labels: bc.map(x => x.ym),
+    datasets: BUCKET_ORDER.map(k => ({
+      label: BUCKET_ICONS[k] + ' ' + buckets[k].label,
+      data: bc.map(x => x[k]),
+      backgroundColor: BUCKET_COLORS_LOCAL[k],
+      stack: 's',
+    })),
   },
   options:{responsive:true,maintainAspectRatio:false,
     plugins:{tooltip:{callbacks:{label:(ctx)=>`${ctx.dataset.label}: ${ctx.parsed.y}건`}}},
     scales:{x:{stacked:true,ticks:{font:{size:10},maxRotation:60,minRotation:45}},y:{stacked:true,title:{display:true,text:'건수'}}}},
 });
 
-// 7.3 동석 식사 TOP 식당 / 사용자 / 용도 / 사례
-const aa = summary.attended_analysis;
-document.querySelector('#attendedVenueTable tbody').innerHTML = aa.by_venue.slice(0,10).map((v,i) => `
-  <tr><td><span class="rank-pill">${i+1}</span></td><td><b>${v.display_name || v.key}</b></td><td class="num">${v.count}건</td><td class="num">${won(v.amount)}</td></tr>
-`).join('');
-document.querySelector('#attendedUserTable tbody').innerHTML = aa.by_user.slice(0,10).map((u,i) => `
-  <tr><td><span class="rank-pill">${i+1}</span></td><td><b>${u.key}</b></td><td class="num">${u.count}건</td><td class="num">${won(u.amount)}</td></tr>
-`).join('');
-const totalAttCount = aa.by_purpose.reduce((s,p)=>s+p.count,0) || 1;
-document.getElementById('attendedPurposeBars').innerHTML = aa.by_purpose.map(p => {
-  const pct = (p.count / totalAttCount * 100).toFixed(0);
-  return `<div class="bar-item">
-    <div>${p.key}</div>
-    <div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div></div>
-    <div class="bar-cnt">${p.count}건 · ${won(p.amount)}</div>
+// 7.3 카테고리별 상세 카드
+const bucketCardsHtml = BUCKET_ORDER.map(k => {
+  const b = buckets[k];
+  const color = BUCKET_COLORS_LOCAL[k];
+  const totalP = b.by_purpose.reduce((s,p) => s + p.count, 0) || 1;
+  const purposeBars = b.by_purpose.slice(0,8).map(p => {
+    const pct = (p.count / totalP * 100).toFixed(0);
+    return `<div class="bar-item">
+      <div>${p.key}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${color};"></div></div>
+      <div class="bar-cnt">${p.count}건</div>
+    </div>`;
+  }).join('');
+  const venuePills = b.by_venue.slice(0,6).map(v => `<span class="tag">${v.display_name || v.key} · ${v.count}건</span>`).join('');
+  const userPills = b.by_user.slice(0,6).map(u => `<span class="tag">${u.key} · ${u.count}건</span>`).join('');
+  const catPills = b.by_category.map(c => `<span class="tag">${c.key} ${c.count}건</span>`).join('');
+  const samples = b.samples.length === 0 ? '<tr><td colspan="6" class="muted" style="text-align:center;padding:14px;">사례 없음</td></tr>' :
+    b.samples.map(r => `<tr>
+      <td>${r.date}</td>
+      <td>${r.user_raw}</td>
+      <td>${r.venue_raw}</td>
+      <td style="max-width:320px;">${r.purpose}</td>
+      <td class="num">${r.headcount ?? '-'}</td>
+      <td class="num"><b>${won(r.amount)}</b></td>
+    </tr>`).join('');
+  return `
+  <div class="top3-card" style="border-left:4px solid ${color};">
+    <div class="v-head">
+      <div>
+        <div class="v-name" style="color:${color};">${BUCKET_ICONS[k]} ${b.label}</div>
+        <div class="v-meta" style="margin-top:8px;">
+          <span><b>${b.count.toLocaleString()}건</b> (${(b.count/bucketTotal*100).toFixed(1)}%)</span>
+          <span><b>${won(b.total_amount)}</b> (${(b.total_amount/bucketTotalA*100).toFixed(1)}%)</span>
+          <span>평균 <b>${won(b.count ? b.total_amount/b.count : 0)}</b>/건</span>
+        </div>
+        <div class="muted" style="font-size:12.5px;margin-top:6px;">${b.desc}</div>
+      </div>
+    </div>
+
+    <h4>비목 분포</h4>
+    <div class="user-tags" style="margin-bottom:10px;">${catPills || '<span class="muted">없음</span>'}</div>
+
+    <h4>TOP 식당</h4>
+    <div class="user-tags" style="margin-bottom:10px;">${venuePills || '<span class="muted">없음</span>'}</div>
+
+    <h4>주 사용자(직책)</h4>
+    <div class="user-tags" style="margin-bottom:10px;">${userPills || '<span class="muted">없음</span>'}</div>
+
+    <h4>용도 분포</h4>
+    <div class="bar-list" style="margin-bottom:14px;">${purposeBars || '<span class="muted">없음</span>'}</div>
+
+    <h4>대표 사례 (금액 큰 순)</h4>
+    <table class="sample-table">
+      <thead><tr><th>일자</th><th>사용자</th><th>식당</th><th>집행목적</th><th class="num">인원</th><th class="num">금액</th></tr></thead>
+      <tbody>${samples}</tbody>
+    </table>
   </div>`;
 }).join('');
-document.querySelector('#attendedSamples tbody').innerHTML = aa.samples.map(r => `
-  <tr>
-    <td>${r.date}</td>
-    <td>${r.user_raw}</td>
-    <td>${r.venue_raw}</td>
-    <td style="max-width:340px;">${r.purpose}</td>
-    <td class="num">${r.headcount ?? '-'}</td>
-    <td class="num"><b>${won(r.amount)}</b></td>
-  </tr>
-`).join('');
+document.getElementById('bucketDetails').innerHTML = bucketCardsHtml;
 
 // 카드 차트들 — DOM 삽입 후 렌더
 top3.forEach((v, idx) => {

@@ -9,7 +9,12 @@ import { fileURLToPath } from 'node:url';
 import { normalizeVenue, displayName, clusterKeys } from './lib/venue.js';
 import { runAll } from './lib/anomaly.js';
 import { classifyPurpose } from './lib/purpose.js';
-import { classifyMemberAttendance } from './lib/member.js';
+import {
+  classifyMemberAttendance,
+  classifyBucket,
+  BUCKET_LABELS,
+  BUCKET_DESC,
+} from './lib/member.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -38,13 +43,14 @@ function main() {
   const raw = load('ddm_upchubi.raw.json');
   const rows = raw.rows;
 
-  // 1) venue_norm + purpose category + 구의원 참석 분류
+  // 1) venue_norm + purpose category + 구의원 참석 + 5단계 통합 분류
   for (const r of rows) {
     r.venue_norm = normalizeVenue(r.venue_raw);
     const cls = classifyPurpose(r.purpose);
     r.purpose_cat = cls.cat;
     r.purpose_short = cls.short;
     r.member_attended = classifyMemberAttendance(r.purpose);
+    r.bucket = classifyBucket(r);
   }
 
   // 2) fuzzy 클러스터링으로 alias 그룹핑
@@ -349,6 +355,65 @@ function main() {
     by_purpose: topByKey(likelyRows, (r) => r.purpose_short, 12),
   };
 
+  // 5단계 통합 분류 — 비목 + 집행목적 + 의원동석 결합
+  const BUCKETS = ['A_direct', 'B_likely', 'C_council_business', 'D_office_self', 'E_other'];
+  const buckets = {};
+  for (const key of BUCKETS) {
+    buckets[key] = {
+      key,
+      label: BUCKET_LABELS[key],
+      desc: BUCKET_DESC[key],
+      count: 0,
+      total_amount: 0,
+      rows: [],
+    };
+  }
+  for (const r of rows) {
+    const b = buckets[r.bucket];
+    b.count++;
+    b.total_amount += r.amount;
+    b.rows.push(r);
+  }
+  // 각 버킷별 TOP & 대표 사례
+  for (const key of BUCKETS) {
+    const b = buckets[key];
+    b.by_venue = annotateVenueKey(topByKey(b.rows, (r) => r.venue_norm, 8));
+    b.by_user = topByKey(b.rows, (r) => r.user_raw, 8);
+    b.by_purpose = topByKey(b.rows, (r) => r.purpose_short, 10);
+    b.by_category = topByKey(b.rows, (r) => r.category || '(빈값)', 5);
+    b.samples = b.rows
+      .slice()
+      .sort((a, b) => b.amount - a.amount)
+      .slice(0, 5)
+      .map((r) => ({
+        date: r.date,
+        user_raw: r.user_raw,
+        venue_raw: r.venue_raw,
+        purpose: r.purpose,
+        amount: r.amount,
+        headcount: r.headcount,
+        method: r.method,
+        category: r.category,
+      }));
+    delete b.rows; // 직렬화에서 제외
+  }
+  // 월별 시계열 (5-bucket stacked)
+  const bucketByYM = new Map();
+  for (const r of rows) {
+    if (!bucketByYM.has(r.year_month)) {
+      const init = { ym: r.year_month };
+      for (const k of BUCKETS) {
+        init[k] = 0;
+        init[k + '_amount'] = 0;
+      }
+      bucketByYM.set(r.year_month, init);
+    }
+    const e = bucketByYM.get(r.year_month);
+    e[r.bucket]++;
+    e[r.bucket + '_amount'] += r.amount;
+  }
+  const bucketCoverage = [...bucketByYM.values()].sort((a, b) => a.ym.localeCompare(b.ym));
+
   const totals = {
     total_amount: rows.reduce((s, x) => s + x.amount, 0),
     total_count: rows.length,
@@ -374,6 +439,8 @@ function main() {
     member_coverage: memberCoverage,
     attended_analysis: attendedAnalysis,
     likely_analysis: likelyAnalysis,
+    buckets,
+    bucket_coverage: bucketCoverage,
   };
 
   // 5) anomaly
