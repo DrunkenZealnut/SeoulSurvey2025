@@ -1,0 +1,530 @@
+{
+  "generated_at": "2026-05-09T13:28:00.627Z",
+  "totals": {
+    "total_amount": 151001366.39999998,
+    "total_count": 1317,
+    "distinct_venues": 267,
+    "distinct_users": 35,
+    "coverage_months": 40,
+    "date_min": "2022-07",
+    "date_max": "2025-10"
+  },
+  "coverage": [
+    {
+      "year_month": "2022-07",
+      "row_count": 23,
+      "total_amount": 1772400
+    },
+    {
+      "year_month": "2022-08",
+      "row_count": 47,
+      "total_amount": 3631116.2
+    },
+    {
+      "year_month": "2022-09",
+      "row_count": 21,
+      "total_amount": 1768036.5
+    },
+    {
+      "year_month": "2022-10",
+      "row_count": 33,
+      "total_amount": 2906240
+    },
+    {
+      "year_month": "2022-11",
+      "row_count": 52,
+      "total_amount": 3988450
+    },
+    {
+      "year_month": "2022-12",
+      "row_count": 36,
+      "total_amount": 5036300
+    },
+    {
+      "year_month": "2023-01",
+      "row_count": 20,
+      "total_amount": 2652500
+    },
+    {
+      "year_month": "2023-02",
+      "row_count": 24,
+      "total_amount": 2396500
+    },
+    {
+      "year_month": "2023-03",
+      "row_count": 30,
+      "total_amount": 3905950
+    },
+    {
+      "year_month": "2023-04",
+      "row_count": 30,
+      "total_amount": 3816140
+    },
+    {
+      "year_month": "2023-05",
+      "row_count": 30,
+      "total_amount": 4624010
+    },
+    {
+      "year_month": "2023-06",
+      "row_count": 32,
+      "total_amount": 3435900
+    },
+    {
+      "year_month": "2023-07",
+      "row_count": 52,
+      "total_amount": 9022960
+    },
+    {
+      "year_month": "2023-08",
+      "row_count": 40,
+      "total_amount": 2955780
+    },
+    {
+      "year_month": "2023-09",
+      "row_count": 36,
+      "total_amount": 4265110
+    },
+    {
+      "year_month": "2023-10",
+      "row_count": 34,
+      "total_amount": 3404200
+    },
+    {
+      "year_month": "2023-11",
+      "row_count": 41,
+      "total_amount": 3821600
+    },
+    {
+      "year_month": "2023-12",
+      "row_count": 57,
+      "total_amount": 7403290
+    },
+    {
+      "year_month": "2024-01",
+      "row_count": 31,
+      "total_amount": 4305710
+    },
+    {
+      "year_month": "2024-02",
+      "row_count": 22,
+      "total_amount": 1677200
+    },
+    {
+      "year_month": "2024-03",
+      "row_count": 25,
+      "total_amount": 2598680
+    },
+    {
+      "year_month": "2024-04",
+      "row_count": 29,
+      "total_amount": 3054600
+    },
+    {
+      "year_month": "2024-05",
+      "row_count": 32,
+      "total_amount": 2948000
+    },
+    {
+      "year_month": "2024-06",
+      "row_count": 30,
+      "total_amount": 5131250
+    },
+    {
+      "year_month": "2024-07",
+      "row_count": 33,
+      "total_amount": 3366500
+    },
+    {
+      "year_month": "2024-08",
+      "row_count": 24,
+      "total_amount": 2244790
+    },
+    {
+      "year_month": "2024-09",
+      "row_count": 24,
+      "total_amount": 3218900
+    },
+    {
+      "year_month": "2024-10",
+      "row_count": 32,
+      "total_amount": 2928600
+    },
+    {
+      "year_month": "2024-11",
+      "row_count": 26,
+      "total_amount": 2287000
+    },
+    {
+      "year_month": "2024-12",
+      "row_count": 33,
+      "total_amount": 4160400
+    },
+    {
+      "year_month": "2025-01",
+      "row_count": 28,
+      "total_amount": 5151431
+    },
+    {
+      "year_month": "2025-02",
+      "row_count": 38,
+      "total_amount": 4910600
+    },
+    {
+      "year_month": "2025-03",
+      "row_count": 36,
+      "total_amount": 4256400
+    },
+    {
+      "year_month": "2025-04",
+      "row_count": 36,
+      "total_amount": 3698600
+    },
+    {
+      "year_month": "2025-05",
+      "row_count": 56,
+      "total_amount": 5948300
+    },
+    {
+      "year_month": "2025-06",
+      "row_count": 36,
+      "total_amount": 3597332.7
+    },
+    {
+      "year_month": "2025-07",
+      "row_count": 41,
+      "total_amount": 7562790
+    },
+    {
+      "year_month": "2025-08",
+      "row_count": 17,
+      "total_amount": 1326400
+    },
+    {
+      "year_month": "2025-09",
+      "row_count": 35,
+      "total_amount": 4221700
+    },
+    {
+      "year_month": "2025-10",
+      "row_count": 15,
+      "total_amount": 1599700
+    }
+  ],
+  "by_year": [
+    {
+      "year": 2022,
+      "total_amount": 19102542.7,
+      "count": 212
+    },
+    {
+      "year": 2023,
+      "total_amount": 51703940,
+      "count": 426
+    },
+    {
+      "year": 2024,
+      "total_amount": 37921630,
+      "count": 341
+    },
+    {
+      "year": 2025,
+      "total_amount": 42273253.7,
+      "count": 338
+    }
+  ],
+  "by_user": [
+    {
+      "user_raw": "의정팀장",
+      "total_amount": 21583300,
+      "count": 126
+    },
+    {
+      "user_raw": "국주임",
+      "total_amount": 19352840,
+      "count": 112
+    },
+    {
+      "user_raw": "국서무",
+      "total_amount": 17409840,
+      "count": 80
+    },
+    {
+      "user_raw": "의회홍보팀장",
+      "total_amount": 14785781,
+      "count": 132
+    },
+    {
+      "user_raw": "사무국장",
+      "total_amount": 14242300,
+      "count": 163
+    },
+    {
+      "user_raw": "홍보담당",
+      "total_amount": 9039736.5,
+      "count": 131
+    },
+    {
+      "user_raw": "의사담당",
+      "total_amount": 9013316.2,
+      "count": 121
+    },
+    {
+      "user_raw": "회계담당",
+      "total_amount": 8275050,
+      "count": 64
+    },
+    {
+      "user_raw": "인사담당",
+      "total_amount": 5313842.7,
+      "count": 40
+    },
+    {
+      "user_raw": "서무주임",
+      "total_amount": 4549300,
+      "count": 36
+    },
+    {
+      "user_raw": "전문위원",
+      "total_amount": 2959500,
+      "count": 38
+    },
+    {
+      "user_raw": "정책지원관(행정)",
+      "total_amount": 2919900,
+      "count": 34
+    },
+    {
+      "user_raw": "청사담당",
+      "total_amount": 2781400,
+      "count": 25
+    },
+    {
+      "user_raw": "정책지원관(복지)",
+      "total_amount": 2467800,
+      "count": 31
+    },
+    {
+      "user_raw": "사무국장 직무대리",
+      "total_amount": 2443100,
+      "count": 14
+    },
+    {
+      "user_raw": "복지건설전문위원",
+      "total_amount": 1806200,
+      "count": 31
+    },
+    {
+      "user_raw": "전문위원(행정)",
+      "total_amount": 1687800,
+      "count": 22
+    },
+    {
+      "user_raw": "행정기획전문위원",
+      "total_amount": 1676500,
+      "count": 25
+    },
+    {
+      "user_raw": "전문위원(복지)",
+      "total_amount": 1650400,
+      "count": 16
+    },
+    {
+      "user_raw": "정책지원관",
+      "total_amount": 1393800,
+      "count": 17
+    },
+    {
+      "user_raw": "인사팀장",
+      "total_amount": 1327000,
+      "count": 10
+    },
+    {
+      "user_raw": "복지건설정책지원관",
+      "total_amount": 832300,
+      "count": 10
+    },
+    {
+      "user_raw": "행정전문위원",
+      "total_amount": 510800,
+      "count": 9
+    },
+    {
+      "user_raw": "의사팀장",
+      "total_amount": 448000,
+      "count": 5
+    },
+    {
+      "user_raw": "의장팀장",
+      "total_amount": 426000,
+      "count": 1
+    },
+    {
+      "user_raw": "인사관리팀장",
+      "total_amount": 395450,
+      "count": 4
+    },
+    {
+      "user_raw": "복지정책전문위원",
+      "total_amount": 373000,
+      "count": 5
+    },
+    {
+      "user_raw": "인사관리팀",
+      "total_amount": 284810,
+      "count": 4
+    },
+    {
+      "user_raw": "행정정책지원관",
+      "total_amount": 284300,
+      "count": 1
+    },
+    {
+      "user_raw": "복지전문위원",
+      "total_amount": 165000,
+      "count": 3
+    },
+    {
+      "user_raw": "청사담담",
+      "total_amount": 159000,
+      "count": 1
+    },
+    {
+      "user_raw": "행정기획정책지원관",
+      "total_amount": 143900,
+      "count": 2
+    },
+    {
+      "user_raw": "홈보담당",
+      "total_amount": 128000,
+      "count": 1
+    },
+    {
+      "user_raw": "행정정책자원관",
+      "total_amount": 124100,
+      "count": 2
+    },
+    {
+      "user_raw": "│복지건설정책지원관│",
+      "total_amount": 48000,
+      "count": 1
+    }
+  ],
+  "by_method": [
+    {
+      "method": "법인카드",
+      "total_amount": 75153702.7,
+      "count": 590
+    },
+    {
+      "method": "카드",
+      "total_amount": 55618130,
+      "count": 444
+    },
+    {
+      "method": "제로페이",
+      "total_amount": 19860533.7,
+      "count": 276
+    },
+    {
+      "method": "현금",
+      "total_amount": 300000,
+      "count": 6
+    },
+    {
+      "method": "000000000000000000000000000000000000",
+      "total_amount": 69000,
+      "count": 1
+    }
+  ],
+  "by_category": [
+    {
+      "category": "시책",
+      "total_amount": 143638126.4,
+      "count": 1278
+    },
+    {
+      "category": "기관",
+      "total_amount": 5527000,
+      "count": 27
+    },
+    {
+      "category": "사책",
+      "total_amount": 1164500,
+      "count": 7
+    },
+    {
+      "category": "부서",
+      "total_amount": 602740,
+      "count": 4
+    },
+    {
+      "category": "i +u ו ∧ו",
+      "total_amount": 69000,
+      "count": 1
+    }
+  ],
+  "by_weekday": [
+    {
+      "weekday": 0,
+      "total_amount": 391500,
+      "count": 2
+    },
+    {
+      "weekday": 1,
+      "total_amount": 28066182.7,
+      "count": 209
+    },
+    {
+      "weekday": 2,
+      "total_amount": 30901196.2,
+      "count": 252
+    },
+    {
+      "weekday": 3,
+      "total_amount": 29451180,
+      "count": 241
+    },
+    {
+      "weekday": 4,
+      "total_amount": 28438866.5,
+      "count": 270
+    },
+    {
+      "weekday": 5,
+      "total_amount": 32468441,
+      "count": 334
+    },
+    {
+      "weekday": 6,
+      "total_amount": 1284000,
+      "count": 9
+    }
+  ],
+  "by_hour_bucket": [
+    {
+      "bucket": "00-05",
+      "count": 1
+    },
+    {
+      "bucket": "06-11",
+      "count": 121
+    },
+    {
+      "bucket": "12-17",
+      "count": 998
+    },
+    {
+      "bucket": "18-21",
+      "count": 189
+    },
+    {
+      "bucket": "22-23",
+      "count": 2
+    },
+    {
+      "bucket": "unknown",
+      "count": 6
+    }
+  ]
+}

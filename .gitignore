@@ -4,3 +4,9 @@
 *.pdf
 서울서베이 도시정책지표조사 정보(2025년)/
 2025_지역사회조사_보고서.pdf
+
+# 동대문구의회 업무추진비 PDF→마크다운 원본 추출 (60MB)
+# Pages 배포에 불필요. data/ 와 scripts/로 재생성 가능.
+ddm_council_upchubi/
+node_modules/
+data/ddm_upchubi.raw.json

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>동대문구의회 업무추진비 분석 | 2025 서울서베이</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap');
+:root {
+  --primary:#00A88E; --primary-dark:#008B74; --primary-light:#E8F8F5;
+  --secondary:#2C3E50; --accent:#E74C3C; --accent-warm:#F39C12; --blue:#2980B9;
+  --bg:#F0F4F8; --card:#FFFFFF; --text:#2C3E50; --text-light:#7F8C8D;
+  --border:#E8ECF1; --shadow:0 2px 20px rgba(0,0,0,.06); --shadow-hover:0 8px 30px rgba(0,0,0,.12);
+  --radius:16px; --transition:all .3s cubic-bezier(.4,0,.2,1);
+  --critical:#E74C3C; --high:#F39C12; --medium:#F1C40F; --good:#00A88E;
+  --critical-bg:#FDEDEC; --high-bg:#FEF5E7; --medium-bg:#FEF9E7; --good-bg:#E8F8F5;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+
+.hero{background:linear-gradient(135deg,#00A88E 0%,#00796B 50%,#004D40 100%);color:#fff;padding:60px 0 80px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;background:rgba(255,255,255,.05);border-radius:50%;}
+.hero-content{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:1;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);backdrop-filter:blur(10px);padding:8px 20px;border-radius:100px;font-size:14px;font-weight:500;margin-bottom:24px;border:1px solid rgba(255,255,255,.2);}
+.hero h1{font-size:clamp(28px,4vw,44px);font-weight:900;margin-bottom:18px;letter-spacing:-.02em;}
+.hero p.lead{font-size:17px;opacity:.92;max-width:780px;margin-bottom:18px;}
+.hero-meta{display:flex;flex-wrap:wrap;gap:14px 22px;font-size:14px;opacity:.85;}
+.hero-meta b{font-weight:600;}
+.hero-links{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px;}
+.hero-links a{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);border-radius:100px;font-size:13px;font-weight:500;}
+.hero-links a:hover{background:rgba(255,255,255,.26);}
+
+.container{max-width:1280px;margin:0 auto;padding:32px 24px 64px;}
+
+.notice{background:#FEF9E7;border-left:4px solid var(--medium);border-radius:8px;padding:14px 18px;margin-bottom:24px;font-size:13.5px;color:#7D6608;}
+.notice b{color:#5D4F00;}
+
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:32px;}
+.kpi{background:var(--card);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);border:1px solid var(--border);}
+.kpi .label{font-size:13px;color:var(--text-light);font-weight:500;margin-bottom:8px;}
+.kpi .value{font-size:28px;font-weight:800;color:var(--primary-dark);letter-spacing:-.02em;}
+.kpi .sub{font-size:12px;color:var(--text-light);margin-top:4px;}
+
+section.section{background:var(--card);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);border:1px solid var(--border);margin-bottom:24px;}
+section h2{font-size:20px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:10px;}
+section h2 .badge{font-size:11px;background:var(--primary-light);color:var(--primary-dark);padding:3px 10px;border-radius:100px;font-weight:600;}
+section .desc{color:var(--text-light);font-size:13.5px;margin-bottom:18px;}
+
+.chart-wrap{position:relative;height:340px;}
+.chart-wrap.tall{height:420px;}
+
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px;}
+.toolbar button{padding:6px 14px;border-radius:100px;border:1px solid var(--border);background:#fff;font-size:13px;font-weight:500;cursor:pointer;transition:var(--transition);font-family:inherit;}
+.toolbar button:hover{border-color:var(--primary);color:var(--primary-dark);}
+.toolbar button.active{background:var(--primary);color:#fff;border-color:var(--primary);}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+@media (max-width:880px){.split{grid-template-columns:1fr;}}
+
+table.list{width:100%;border-collapse:collapse;font-size:14px;}
+table.list th, table.list td{padding:10px 12px;border-bottom:1px solid var(--border);text-align:left;}
+table.list th{background:#FAFBFC;font-weight:600;color:var(--text-light);font-size:12.5px;text-transform:uppercase;letter-spacing:.04em;}
+table.list td.num{text-align:right;font-variant-numeric:tabular-nums;}
+table.list tr.clickable{cursor:pointer;transition:var(--transition);}
+table.list tr.clickable:hover{background:var(--primary-light);}
+.rank-pill{display:inline-block;background:var(--primary-light);color:var(--primary-dark);font-weight:700;font-size:12px;padding:2px 9px;border-radius:100px;min-width:30px;text-align:center;}
+
+.anomaly-list{display:flex;flex-direction:column;gap:10px;}
+.anomaly{padding:12px 14px;border-radius:10px;font-size:13.5px;display:flex;align-items:flex-start;gap:10px;border-left:4px solid;}
+.anomaly.high{background:var(--critical-bg);border-left-color:var(--critical);}
+.anomaly.warn{background:var(--high-bg);border-left-color:var(--high);}
+.anomaly.info{background:var(--good-bg);border-left-color:var(--good);}
+.anomaly .rule-label{font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.05em;}
+
+.heatmap{display:grid;grid-template-columns:60px repeat(24,1fr);gap:2px;font-size:11px;}
+.heatmap .cell{aspect-ratio:1;border-radius:3px;}
+.heatmap .axis{display:flex;align-items:center;justify-content:center;color:var(--text-light);}
+
+.download-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;}
+.download-grid a{padding:14px 16px;background:#FAFBFC;border:1px solid var(--border);border-radius:10px;display:flex;flex-direction:column;gap:4px;font-size:14px;font-weight:500;transition:var(--transition);}
+.download-grid a:hover{border-color:var(--primary);color:var(--primary-dark);transform:translateY(-1px);}
+.download-grid .small{font-size:12px;color:var(--text-light);font-weight:400;}
+
+footer{text-align:center;padding:32px 24px;color:var(--text-light);font-size:13px;border-top:1px solid var(--border);background:#fff;}
+
+dialog.modal{border:none;border-radius:var(--radius);padding:0;max-width:760px;width:90vw;box-shadow:var(--shadow-hover);}
+dialog.modal::backdrop{background:rgba(0,0,0,.45);backdrop-filter:blur(4px);}
+.modal-head{padding:20px 24px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
+.modal-head h3{font-size:18px;font-weight:700;}
+.modal-head button{border:none;background:none;font-size:20px;cursor:pointer;color:var(--text-light);}
+.modal-body{padding:20px 24px;}
+.modal-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin-bottom:18px;}
+.modal-stats .stat{background:#FAFBFC;border-radius:8px;padding:10px 12px;}
+.modal-stats .stat .label{font-size:11px;color:var(--text-light);text-transform:uppercase;letter-spacing:.04em;}
+.modal-stats .stat .value{font-size:18px;font-weight:700;}
+
+.muted{color:var(--text-light);}
+.tag{display:inline-block;background:#F2F4F7;color:var(--text);font-size:11.5px;padding:2px 8px;border-radius:100px;margin-right:4px;}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-content">
+    <span class="hero-badge">📊 데이터 분석 리포트</span>
+    <h1>동대문구의회 업무추진비 분석</h1>
+    <p class="lead">2022년 7월부터 2025년 10월까지 공개된 동대문구의회 업무추진비 집행내역을 정형화·집계·시각화한 결과입니다.</p>
+    <div class="hero-meta" id="heroMeta"></div>
+    <div class="hero-links">
+      <a href="dongdaemun.html">← 동대문구 분석으로</a>
+      <a href="index.html">서울서베이 메인</a>
+      <a href="#downloads">데이터 다운로드 ↓</a>
+    </div>
+  </div>
+</div>
+
+<main class="container">
+
+<div class="notice">
+  <b>데이터 한계 고지</b>: 본 분석은 동대문구의회가 공개한 PDF 업무추진비 집행내역을 OCR/마크다운 추출 후 자동 정제한 결과입니다.
+  <br>① OCR 노이즈로 일부 행이 누락·격리될 수 있습니다(<code>data/ddm_upchubi_review.json</code> 참조). ② 폴더명 연-월과 콘텐츠 일자가 불일치하는 케이스(2025-11/12 폴더 → 실제 2024-11/12 데이터)는 콘텐츠 일자 기준으로 집계했습니다. ③ 사용자 표기는 직책 원본 그대로이며 개인 식별이 아닙니다. ④ 식당명은 자동 fuzzy 그룹핑 후 별칭(alias)을 병합했습니다 — 일부 다른 업소가 합쳐졌을 수 있습니다.
+</div>
+
+<div class="kpi-grid" id="kpiGrid"></div>
+
+<section class="section">
+  <h2>1. 월별 집행 추이 <span class="badge">시계열</span></h2>
+  <p class="desc">월별 집행 총액(라인)과 집행 건수(바)를 함께 표시합니다.</p>
+  <div class="toolbar">
+    <button data-mode="all" class="active">전체 기간</button>
+    <button data-mode="2022">2022</button>
+    <button data-mode="2023">2023</button>
+    <button data-mode="2024">2024</button>
+    <button data-mode="2025">2025</button>
+  </div>
+  <div class="chart-wrap"><canvas id="tsChart"></canvas></div>
+</section>
+
+<section class="section">
+  <h2>2. 식당(업소) TOP 20 <span class="badge">venue</span></h2>
+  <p class="desc">집행 횟수가 누적된 식당·업소를 금액 또는 건수 기준으로 정렬해 보여줍니다. 행을 클릭하면 시계열·주 사용자 분포가 펼쳐집니다.</p>
+  <div class="toolbar">
+    <button data-sort="amount" class="active">금액순</button>
+    <button data-sort="count">건수순</button>
+  </div>
+  <table class="list" id="venueTable">
+    <thead><tr><th>#</th><th>식당</th><th class="num">총 금액</th><th class="num">건수</th><th class="num">평균</th><th>주 사용자(직책)</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<section class="section">
+  <h2>3. 사용자(직책) TOP 15 <span class="badge">user</span></h2>
+  <p class="desc">직책 원본 표기 그대로입니다. 개인 식별 정보가 아닙니다.</p>
+  <div class="chart-wrap"><canvas id="userChart"></canvas></div>
+</section>
+
+<section class="section">
+  <h2>4. 결제수단 · 비목 분포 <span class="badge">distribution</span></h2>
+  <div class="split">
+    <div><h3 style="font-size:14px;font-weight:600;margin-bottom:10px;color:var(--text-light)">결제수단</h3><div class="chart-wrap" style="height:280px;"><canvas id="methodChart"></canvas></div></div>
+    <div><h3 style="font-size:14px;font-weight:600;margin-bottom:10px;color:var(--text-light)">비목</h3><div class="chart-wrap" style="height:280px;"><canvas id="categoryChart"></canvas></div></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>5. 요일·시간대 분포 <span class="badge">heatmap</span></h2>
+  <div class="split">
+    <div><h3 style="font-size:14px;font-weight:600;margin-bottom:10px;color:var(--text-light)">요일별 건수</h3><div class="chart-wrap" style="height:280px;"><canvas id="weekdayChart"></canvas></div></div>
+    <div><h3 style="font-size:14px;font-weight:600;margin-bottom:10px;color:var(--text-light)">시간대별 건수</h3><div class="chart-wrap" style="height:280px;"><canvas id="hourChart"></canvas></div></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>6. 이상 패턴 보고 <span class="badge">anomaly</span></h2>
+  <p class="desc">분포 기반 동적 임계값으로 자동 탐지한 항목입니다. 임계값은 데이터 분포(분위수)로 산정되며 아래에 함께 표시합니다.</p>
+  <div id="thresholdBox" style="background:#F8FAFB;padding:12px 14px;border-radius:8px;font-size:13px;margin-bottom:16px;color:var(--text-light);"></div>
+  <div class="toolbar">
+    <button data-rule="all" class="active">전체</button>
+    <button data-rule="venue_total_outlier">식당 누적 outlier</button>
+    <button data-rule="per_person_outlier">1인당 단가 outlier</button>
+    <button data-rule="venue_burst">반복 사용</button>
+    <button data-rule="same_day_multi">동일 사용자/일자</button>
+    <button data-rule="late_night">심야 집행</button>
+  </div>
+  <div class="anomaly-list" id="anomalyList"></div>
+</section>
+
+<section class="section" id="downloads">
+  <h2>7. 원본 데이터 다운로드 <span class="badge">data</span></h2>
+  <p class="desc">정제된 데이터셋을 직접 받아 자체 분석을 진행할 수 있습니다.</p>
+  <div class="download-grid">
+    <a href="data/ddm_upchubi.json" download>📦 정제된 행 데이터 (JSON)<span class="small">id, 일자, 사용자, 장소, 금액 등 전체 필드</span></a>
+    <a href="data/ddm_upchubi.csv" download>📊 정제된 행 데이터 (CSV)<span class="small">스프레드시트용</span></a>
+    <a href="data/ddm_upchubi_by_venue.json" download>🏪 식당별 집계 (JSON)</a>
+    <a href="data/ddm_upchubi_by_venue.csv" download>🏪 식당별 집계 (CSV)</a>
+    <a href="data/ddm_upchubi_summary.json" download>📈 요약 통계 (JSON)</a>
+    <a href="data/ddm_upchubi_anomalies.json" download>🚩 이상치 탐지 결과 (JSON)</a>
+    <a href="data/ddm_upchubi_review.json" download>🔍 OCR 격리 행 (JSON)<span class="small">파싱 실패한 의심 행</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div>출처: 동대문구의회 공개 PDF 자료를 OCR/마크다운 추출 후 자체 정제 · 본 페이지는 시민·연구 목적의 비영리 분석입니다.</div>
+  <div style="margin-top:6px;">© 2025 서울서베이 분석 프로젝트</div>
+</footer>
+
+<dialog id="venueModal" class="modal">
+  <div class="modal-head">
+    <h3 id="modalTitle">식당 상세</h3>
+    <button id="modalClose">✕</button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-stats" id="modalStats"></div>
+    <h4 style="font-size:13px;color:var(--text-light);margin-bottom:8px;">월별 사용 추이</h4>
+    <div class="chart-wrap" style="height:240px;"><canvas id="modalChart"></canvas></div>
+    <h4 style="font-size:13px;color:var(--text-light);margin:18px 0 8px;">주 사용자 (직책 TOP 3)</h4>
+    <div id="modalUsers"></div>
+  </div>
+</dialog>
+
+<script type="module">
+const won = (n) => Math.round(n).toLocaleString() + '원';
+const fmt = (n, suffix = '') => Math.round(n).toLocaleString() + suffix;
+const COLORS = ['#00A88E','#2980B9','#F39C12','#E74C3C','#9B59B6','#1ABC9C','#34495E','#E67E22','#16A085','#C0392B'];
+
+async function loadJSON(p){const r = await fetch(p); return r.json();}
+
+const [summary, venueData, anomalies, rawData] = await Promise.all([
+  loadJSON('data/ddm_upchubi_summary.json'),
+  loadJSON('data/ddm_upchubi_by_venue.json'),
+  loadJSON('data/ddm_upchubi_anomalies.json'),
+  loadJSON('data/ddm_upchubi.json'),
+]);
+
+const venues = venueData.venues;
+const rows = rawData.rows;
+
+// hero meta
+document.getElementById('heroMeta').innerHTML = `
+  <span><b>기간</b> ${summary.totals.date_min} ~ ${summary.totals.date_max}</span>
+  <span><b>커버</b> ${summary.totals.coverage_months}개월</span>
+  <span><b>총 집행액</b> ${won(summary.totals.total_amount)}</span>
+  <span><b>건수</b> ${summary.totals.total_count.toLocaleString()}건</span>
+`;
+
+// KPIs
+const totalAmount = summary.totals.total_amount;
+const totalCount = summary.totals.total_count;
+const avgPerCount = totalAmount / totalCount;
+const ppCount = rows.filter(r => r.headcount && r.headcount > 0).length;
+const ppAvg = ppCount ? rows.filter(r => r.headcount).reduce((s,x)=>s+x.amount/x.headcount,0) / ppCount : 0;
+
+const kpis = [
+  {label:'총 집행액', value: won(totalAmount), sub:`${summary.totals.coverage_months}개월 합계`},
+  {label:'총 건수', value: totalCount.toLocaleString()+'건', sub:`평균 ${fmt(totalCount/summary.totals.coverage_months,'건/월')}`},
+  {label:'평균 1건 단가', value: won(avgPerCount), sub:'전체 행 기준'},
+  {label:'평균 1인당', value: won(ppAvg), sub:`인원 기재 ${ppCount}건 기준`},
+  {label:'식당 수', value: summary.totals.distinct_venues.toLocaleString()+'곳', sub:'fuzzy 그룹핑 후'},
+  {label:'사용자(직책)', value: summary.totals.distinct_users.toLocaleString()+'개', sub:'원본 표기 그대로'},
+];
+document.getElementById('kpiGrid').innerHTML = kpis.map(k => `
+  <div class="kpi"><div class="label">${k.label}</div><div class="value">${k.value}</div><div class="sub">${k.sub}</div></div>
+`).join('');
+
+// 1) 시계열 차트
+const tsCtx = document.getElementById('tsChart');
+let tsChart;
+function renderTS(mode){
+  const cov = mode === 'all' ? summary.coverage : summary.coverage.filter(c => c.year_month.startsWith(mode));
+  const labels = cov.map(c => c.year_month);
+  const amounts = cov.map(c => c.total_amount);
+  const counts = cov.map(c => c.row_count);
+  if (tsChart) tsChart.destroy();
+  tsChart = new Chart(tsCtx, {
+    data: {
+      labels,
+      datasets: [
+        {type:'bar', label:'건수', data: counts, backgroundColor:'rgba(41,128,185,.25)', borderColor:'#2980B9', yAxisID:'y2', order:2},
+        {type:'line', label:'금액(원)', data: amounts, borderColor:'#00A88E', backgroundColor:'rgba(0,168,142,.12)', tension:.3, fill:true, yAxisID:'y1', order:1, pointRadius:3},
+      ],
+    },
+    options: {
+      responsive:true, maintainAspectRatio:false,
+      plugins:{tooltip:{callbacks:{label:(ctx)=>{
+        const v = ctx.parsed.y;
+        return ctx.dataset.label === '금액(원)' ? `${ctx.dataset.label}: ${won(v)}` : `${ctx.dataset.label}: ${v.toLocaleString()}건`;
+      }}}},
+      scales:{
+        y1:{type:'linear',position:'left',ticks:{callback:(v)=>(v/1e6).toFixed(0)+'M'},title:{display:true,text:'금액(원)'}},
+        y2:{type:'linear',position:'right',grid:{drawOnChartArea:false},title:{display:true,text:'건수'}},
+      },
+    },
+  });
+}
+renderTS('all');
+document.querySelectorAll('section .toolbar button[data-mode]').forEach(b => b.onclick = () => {
+  b.parentElement.querySelectorAll('button').forEach(x => x.classList.remove('active'));
+  b.classList.add('active');
+  renderTS(b.dataset.mode);
+});
+
+// 2) 식당 TOP 20 테이블
+function renderVenues(sortKey='amount'){
+  const sorted = [...venues].sort((a,b) => sortKey === 'amount' ? b.total_amount - a.total_amount : b.total_count - a.total_count);
+  const top = sorted.slice(0, 20);
+  const tbody = document.querySelector('#venueTable tbody');
+  tbody.innerHTML = top.map((v,i) => `
+    <tr class="clickable" data-key="${v.venue_norm.replace(/"/g,'&quot;')}">
+      <td><span class="rank-pill">${i+1}</span></td>
+      <td><b>${v.display_name}</b>${v.aliases.length>1?` <span class="muted" style="font-size:11px;">(별칭 ${v.aliases.length}개)</span>`:''}</td>
+      <td class="num"><b>${won(v.total_amount)}</b></td>
+      <td class="num">${v.total_count}건</td>
+      <td class="num">${won(v.avg_amount)}</td>
+      <td>${v.top_users.slice(0,3).map(u => `<span class="tag">${u.user_raw} ${u.count}회</span>`).join('')}</td>
+    </tr>
+  `).join('');
+  tbody.querySelectorAll('tr.clickable').forEach(tr => tr.onclick = () => openVenueModal(tr.dataset.key));
+}
+renderVenues();
+document.querySelectorAll('section .toolbar button[data-sort]').forEach(b => b.onclick = () => {
+  b.parentElement.querySelectorAll('button').forEach(x => x.classList.remove('active'));
+  b.classList.add('active');
+  renderVenues(b.dataset.sort);
+});
+
+// 식당 모달
+const modal = document.getElementById('venueModal');
+let modalChart;
+document.getElementById('modalClose').onclick = () => modal.close();
+modal.addEventListener('click', e => { if (e.target === modal) modal.close(); });
+function openVenueModal(key){
+  const v = venues.find(x => x.venue_norm === key);
+  if (!v) return;
+  document.getElementById('modalTitle').textContent = v.display_name;
+  document.getElementById('modalStats').innerHTML = `
+    <div class="stat"><div class="label">총 금액</div><div class="value">${won(v.total_amount)}</div></div>
+    <div class="stat"><div class="label">건수</div><div class="value">${v.total_count}건</div></div>
+    <div class="stat"><div class="label">평균</div><div class="value">${won(v.avg_amount)}</div></div>
+    <div class="stat"><div class="label">최초/최근</div><div class="value" style="font-size:13px;">${v.first_used} ~ ${v.last_used}</div></div>
+    <div class="stat"><div class="label">amount 순위</div><div class="value">#${v.rank_by_amount}</div></div>
+    <div class="stat"><div class="label">건수 순위</div><div class="value">#${v.rank_by_count}</div></div>
+  `;
+  document.getElementById('modalUsers').innerHTML = v.top_users.map(u => `
+    <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;">
+      <span><b>${u.user_raw}</b></span>
+      <span class="muted">${u.count}건 · ${won(u.amount)}</span>
+    </div>
+  `).join('');
+  if (modalChart) modalChart.destroy();
+  modalChart = new Chart(document.getElementById('modalChart'), {
+    type:'bar',
+    data:{
+      labels: v.by_year_month.map(x => x.ym),
+      datasets:[{label:'금액(원)',data:v.by_year_month.map(x=>x.amount),backgroundColor:'#00A88E'}],
+    },
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>(v/1000).toFixed(0)+'K'}}}},
+  });
+  modal.showModal();
+}
+
+// 3) 사용자 차트
+const uTop = summary.by_user.slice(0, 15);
+new Chart(document.getElementById('userChart'), {
+  type: 'bar',
+  data: {
+    labels: uTop.map(u => u.user_raw),
+    datasets: [
+      {label:'금액(원)', data: uTop.map(u => u.total_amount), backgroundColor:'#00A88E', yAxisID:'y'},
+    ],
+  },
+  options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+    plugins:{tooltip:{callbacks:{label:(ctx)=>`${won(ctx.parsed.x)} (${uTop[ctx.dataIndex].count}건)`}}},
+    scales:{x:{ticks:{callback:v=>(v/1e6).toFixed(0)+'M'}}}},
+});
+
+// 4) method, category 도넛
+function donut(canvasId, items, key){
+  const filtered = items.filter(i => i[key] && i[key].length < 30 && i[key].length > 0).slice(0, 6);
+  const labels = filtered.map(i => i[key]);
+  const data = filtered.map(i => i.total_amount);
+  new Chart(document.getElementById(canvasId), {
+    type:'doughnut',
+    data:{labels,datasets:[{data,backgroundColor:COLORS.slice(0,labels.length)}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{tooltip:{callbacks:{label:(ctx)=>`${ctx.label}: ${won(ctx.parsed)}`}},legend:{position:'right',labels:{boxWidth:12}}}},
+  });
+}
+donut('methodChart', summary.by_method, 'method');
+donut('categoryChart', summary.by_category, 'category');
+
+// 5) weekday + hour
+const wdLabels = ['일','월','화','수','목','금','토'];
+new Chart(document.getElementById('weekdayChart'), {
+  type:'bar',
+  data:{labels:summary.by_weekday.map(w => wdLabels[w.weekday]),datasets:[{label:'건수',data:summary.by_weekday.map(w=>w.count),backgroundColor:'#2980B9'}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}}},
+});
+new Chart(document.getElementById('hourChart'), {
+  type:'bar',
+  data:{labels:summary.by_hour_bucket.map(h=>h.bucket),datasets:[{label:'건수',data:summary.by_hour_bucket.map(h=>h.count),backgroundColor:'#F39C12'}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}}},
+});
+
+// 6) anomalies
+const t = anomalies.thresholds;
+document.getElementById('thresholdBox').innerHTML = `
+  <b>임계값:</b>
+  1인당 단가 P99 = <code>${won(t.per_person_p99 || 0)}</code> ·
+  식당 누적 P95 = <code>${won(t.venue_total_p95 || 0)}</code> ·
+  반복 사용 P95 = <code>${(t.venue_burst_p95||0).toFixed(1)}회/30일</code> ·
+  동일사용자·일자 = <code>${t.same_day_min}건+</code> ·
+  심야 = <code>${t.late_night_hour_min}시 이후</code>
+`;
+function renderAnomalies(rule='all'){
+  const list = anomalies.anomalies.filter(a => rule === 'all' || a.rule === rule);
+  document.getElementById('anomalyList').innerHTML = list.length === 0
+    ? '<div class="muted">해당 룰에 해당하는 항목이 없습니다.</div>'
+    : list.slice(0, 60).map(a => `
+        <div class="anomaly ${a.severity}">
+          <div style="flex:1">
+            <div class="rule-label" style="margin-bottom:4px;">${a.rule}</div>
+            <div>${a.message_ko}</div>
+          </div>
+        </div>
+      `).join('') + (list.length > 60 ? `<div class="muted" style="text-align:center;padding:10px;">… 총 ${list.length}건 중 60건 표시. 전체는 JSON 다운로드 참고.</div>` : '');
+}
+renderAnomalies();
+document.querySelectorAll('section .toolbar button[data-rule]').forEach(b => b.onclick = () => {
+  b.parentElement.querySelectorAll('button').forEach(x => x.classList.remove('active'));
+  b.classList.add('active');
+  renderAnomalies(b.dataset.rule);
+});
+</script>
+</body>
+</html>

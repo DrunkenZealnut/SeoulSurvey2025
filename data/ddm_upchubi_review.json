@@ -1,0 +1,118 @@
+{
+  "generated_at": "2026-05-09T13:28:00.501Z",
+  "reviews": [
+    {
+      "source_folder": "2025-09_180294_업무추진비집행내역(9월)",
+      "source_year_month": "2025-09",
+      "page": 0,
+      "cells_raw": [
+        "12 <sup>°</sup>",
+        "의사담당",
+        "$2025 - 09 - 09$",
+        "12:28:30",
+        "우정김밥분식",
+        "제346회 임시회 예결위 관련 협의 등",
+        "$\\overline{7}$",
+        "",
+        "90.000 제로페이",
+        "시책"
+      ],
+      "flags": [
+        "amount_invalid"
+      ],
+      "reason": "amount_invalid_or_zero"
+    },
+    {
+      "source_folder": "20260509_075342_2025-03_174439_업무추진비집행내역_3월_",
+      "source_year_month": "2025-03",
+      "page": 2,
+      "cells_raw": [
+        "10",
+        "의사담당",
+        "2025-03-28",
+        "11:16:59",
+        "고래한입피자 청량리점",
+        "제341회 임시회 일정 관련 협의 등",
+        "$\\overline{4}$",
+        "",
+        "77,000법인카드결제",
+        "시책"
+      ],
+      "flags": [
+        "amount_invalid"
+      ],
+      "reason": "amount_invalid_or_zero"
+    },
+    {
+      "source_folder": "20260509_085645_2025-08_180293_업무추진비집행내역_8월_",
+      "source_year_month": "2025-08",
+      "page": 3,
+      "cells_raw": [
+        "30",
+        "인사담당",
+        "2025-08-27",
+        "13:42:28",
+        "동대문구청구내매점<br>(도란도란)",
+        "인사 업무 관련 간담회",
+        "$\\tau$",
+        "",
+        "16,000법인카드결제",
+        "시책"
+      ],
+      "flags": [
+        "headcount_invalid",
+        "amount_invalid"
+      ],
+      "reason": "amount_invalid_or_zero"
+    },
+    {
+      "source_folder": "20260509_090109_2022-09_155191_업무추진비집행내역_9월_",
+      "source_year_month": "2022-09",
+      "page": 4,
+      "cells_raw": [
+        "",
+        "의회홍보팀장",
+        "2022-09-27",
+        "12:49:44",
+        "시그널커피",
+        "지역매체 보도 관련 협의",
+        "",
+        "",
+        "54,000│ 제로페이",
+        "시책"
+      ],
+      "flags": [
+        "seq_corrupt",
+        "headcount_missing",
+        "amount_invalid"
+      ],
+      "reason": "amount_invalid_or_zero"
+    },
+    {
+      "source_folder": "20260509_091704_2024-03_152285_업무추진비집행내역_3월_",
+      "source_year_month": "2024-03",
+      "page": 3,
+      "cells_raw": [
+        "",
+        "승인액 계",
+        "",
+        "",
+        "",
+        "3,628,680",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "flags": [
+        "seq_corrupt",
+        "venue_missing",
+        "date_invalid",
+        "headcount_missing",
+        "amount_invalid"
+      ],
+      "reason": "date_invalid"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "seoul-survey-2025",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "parse": "node scripts/parse_ddm_upchubi.js",
+    "aggregate": "node scripts/aggregate_ddm_upchubi.js",
+    "build:data": "npm run parse && npm run aggregate"
+  }
+}
