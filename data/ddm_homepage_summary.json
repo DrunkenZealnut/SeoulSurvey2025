@@ -1,0 +1,5453 @@
+{
+  "generated_at": "2026-05-10T06:15:04.283Z",
+  "totals": {
+    "total_amount": 79172900,
+    "total_count": 490,
+    "distinct_venues": 234,
+    "distinct_users": 5,
+    "coverage_months": 9,
+    "date_min": "2025-06",
+    "date_max": "2026-02"
+  },
+  "coverage": [
+    {
+      "ym": "2025-06",
+      "count": 41,
+      "amount": 5984300
+    },
+    {
+      "ym": "2025-07",
+      "count": 70,
+      "amount": 10508700
+    },
+    {
+      "ym": "2025-08",
+      "count": 41,
+      "amount": 5440600
+    },
+    {
+      "ym": "2025-09",
+      "count": 76,
+      "amount": 13275900
+    },
+    {
+      "ym": "2025-10",
+      "count": 49,
+      "amount": 6899000
+    },
+    {
+      "ym": "2025-11",
+      "count": 53,
+      "amount": 8926200
+    },
+    {
+      "ym": "2025-12",
+      "count": 43,
+      "amount": 8321200
+    },
+    {
+      "ym": "2026-01",
+      "count": 69,
+      "amount": 11450800
+    },
+    {
+      "ym": "2026-02",
+      "count": 48,
+      "amount": 8366200
+    }
+  ],
+  "members": [
+    {
+      "user": "의장",
+      "total_count": 252,
+      "total_amount": 41925000,
+      "avg_per_event": 166369.04761904763,
+      "avg_headcount": 8.05084745762712,
+      "top_venues": [
+        {
+          "venue_norm": "조영환의대양한방숯",
+          "count": 11,
+          "amount": 3100000,
+          "display_name": "조영환의 대양한방숯"
+        },
+        {
+          "venue_norm": "최강낙지",
+          "count": 18,
+          "amount": 2677000,
+          "display_name": "최강낙지"
+        },
+        {
+          "venue_norm": "경성농장",
+          "count": 7,
+          "amount": 1630000,
+          "display_name": "경성농장"
+        },
+        {
+          "venue_norm": "주문진",
+          "count": 4,
+          "amount": 1248000,
+          "display_name": "주문진"
+        },
+        {
+          "venue_norm": "장어시대",
+          "count": 6,
+          "amount": 1244000,
+          "display_name": "장어시대"
+        },
+        {
+          "venue_norm": "나누리흑염소전문",
+          "count": 11,
+          "amount": 1108100,
+          "display_name": "나누리 흑염소 전문"
+        },
+        {
+          "venue_norm": "동강오리",
+          "count": 4,
+          "amount": 1034000,
+          "display_name": "동강오리"
+        },
+        {
+          "venue_norm": "동호일식",
+          "count": 3,
+          "amount": 861000,
+          "display_name": "동호일식"
+        }
+      ],
+      "by_year_month": [
+        {
+          "ym": "2025-06",
+          "count": 33,
+          "amount": 5262500
+        },
+        {
+          "ym": "2025-07",
+          "count": 24,
+          "amount": 3577500
+        },
+        {
+          "ym": "2025-08",
+          "count": 1,
+          "amount": 400000
+        },
+        {
+          "ym": "2025-09",
+          "count": 69,
+          "amount": 12292900
+        },
+        {
+          "ym": "2025-10",
+          "count": 37,
+          "amount": 5381200
+        },
+        {
+          "ym": "2025-11",
+          "count": 24,
+          "amount": 3894700
+        },
+        {
+          "ym": "2025-12",
+          "count": 21,
+          "amount": 4110100
+        },
+        {
+          "ym": "2026-01",
+          "count": 25,
+          "amount": 3780800
+        },
+        {
+          "ym": "2026-02",
+          "count": 18,
+          "amount": 3225300
+        }
+      ],
+      "purpose_breakdown": [
+        {
+          "key": "관계자 간담",
+          "count": 201,
+          "amount": 35666600
+        },
+        {
+          "key": "경조사·격려",
+          "count": 44,
+          "amount": 5411900
+        },
+        {
+          "key": "현안 협의",
+          "count": 7,
+          "amount": 846500
+        }
+      ],
+      "time_buckets": {
+        "점심(11-14)": 92,
+        "오후(14-18)": 14,
+        "저녁(18-22)": 136,
+        "심야(22-06)": 2,
+        "오전(06-11)": 8,
+        "미상": 0
+      },
+      "samples": [
+        {
+          "date": "2025-10-30",
+          "time": "21:04:11",
+          "venue_raw": "주문진",
+          "purpose": "민원 및 현안 관련 관계자 간담회",
+          "amount": 450000,
+          "headcount": 17
+        },
+        {
+          "date": "2025-09-24",
+          "time": "13:19:41",
+          "venue_raw": "(주)유성집",
+          "purpose": "민원 및 현안 관련 관계자 간담회",
+          "amount": 422000,
+          "headcount": null
+        },
+        {
+          "date": "2026-02-06",
+          "time": "17:44:44",
+          "venue_raw": "수영상회",
+          "purpose": "설명절 사무국 직원격려 물품 구매",
+          "amount": 420000,
+          "headcount": 13
+        },
+        {
+          "date": "2026-02-09",
+          "time": "10:27:20",
+          "venue_raw": "면목과일",
+          "purpose": "설명절 사무국 직원격려 물품 구매",
+          "amount": 420000,
+          "headcount": 13
+        },
+        {
+          "date": "2025-06-20",
+          "time": "19:17:18",
+          "venue_raw": "우리돈",
+          "purpose": "민원 및 현안 관련 관계자 간담회",
+          "amount": 403000,
+          "headcount": 17
+        }
+      ]
+    },
+    {
+      "user": "부의장",
+      "total_count": 63,
+      "total_amount": 10369900,
+      "avg_per_event": 164601.5873015873,
+      "avg_headcount": 7.887096774193548,
+      "top_venues": [
+        {
+          "venue_norm": "토담마을",
+          "count": 4,
+          "amount": 987000,
+          "display_name": "토담마을"
+        },
+        {
+          "venue_norm": "풍천숯불장어세상",
+          "count": 4,
+          "amount": 927000,
+          "display_name": "풍천숯불장어세상"
+        },
+        {
+          "venue_norm": "광주회관",
+          "count": 4,
+          "amount": 720000,
+          "display_name": "광주회관"
+        },
+        {
+          "venue_norm": "수제왕갈비",
+          "count": 2,
+          "amount": 513000,
+          "display_name": "수제왕갈비"
+        },
+        {
+          "venue_norm": "씨마트",
+          "count": 4,
+          "amount": 463000,
+          "display_name": "씨마트"
+        },
+        {
+          "venue_norm": "부산횟집",
+          "count": 2,
+          "amount": 442000,
+          "display_name": "부산횟집"
+        },
+        {
+          "venue_norm": "솔낭구",
+          "count": 1,
+          "amount": 358000,
+          "display_name": "솔낭구"
+        },
+        {
+          "venue_norm": "샹그라",
+          "count": 1,
+          "amount": 348000,
+          "display_name": "샹그라"
+        }
+      ],
+      "by_year_month": [
+        {
+          "ym": "2025-06",
+          "count": 3,
+          "amount": 178600
+        },
+        {
+          "ym": "2025-07",
+          "count": 13,
+          "amount": 2024000
+        },
+        {
+          "ym": "2025-09",
+          "count": 1,
+          "amount": 44000
+        },
+        {
+          "ym": "2025-10",
+          "count": 4,
+          "amount": 429500
+        },
+        {
+          "ym": "2025-11",
+          "count": 10,
+          "amount": 1985000
+        },
+        {
+          "ym": "2025-12",
+          "count": 12,
+          "amount": 1950000
+        },
+        {
+          "ym": "2026-01",
+          "count": 14,
+          "amount": 2261500
+        },
+        {
+          "ym": "2026-02",
+          "count": 6,
+          "amount": 1497300
+        }
+      ],
+      "purpose_breakdown": [
+        {
+          "key": "관계자 간담",
+          "count": 47,
+          "amount": 8032100
+        },
+        {
+          "key": "현안 협의",
+          "count": 10,
+          "amount": 1621500
+        },
+        {
+          "key": "의회 회의",
+          "count": 5,
+          "amount": 715300
+        },
+        {
+          "key": "미상",
+          "count": 1,
+          "amount": 1000
+        }
+      ],
+      "time_buckets": {
+        "점심(11-14)": 29,
+        "오후(14-18)": 8,
+        "저녁(18-22)": 22,
+        "심야(22-06)": 4,
+        "오전(06-11)": 0,
+        "미상": 0
+      },
+      "samples": [
+        {
+          "date": "2026-02-09",
+          "time": "20:16:43",
+          "venue_raw": "부산횟집",
+          "purpose": "지역현안 유관기관 관계자 간담회",
+          "amount": 372000,
+          "headcount": 8
+        },
+        {
+          "date": "2026-01-28",
+          "time": "12:43:21",
+          "venue_raw": "풍천숯불장어세상",
+          "purpose": "의회 현안사항 관계자 간담회",
+          "amount": 369000,
+          "headcount": 8
+        },
+        {
+          "date": "2025-12-26",
+          "time": "17:12:56",
+          "venue_raw": "솔낭구",
+          "purpose": "현안 관련 유관기관 관계자 간담회",
+          "amount": 358000,
+          "headcount": 15
+        },
+        {
+          "date": "2026-01-15",
+          "time": "20:43:55",
+          "venue_raw": "토담마을",
+          "purpose": "현안 관련 유관기관 관계자 간담회",
+          "amount": 353000,
+          "headcount": 13
+        },
+        {
+          "date": "2025-11-17",
+          "time": "13:06:07",
+          "venue_raw": "샹그라",
+          "purpose": "현안 관련 관계자 간담회",
+          "amount": 348000,
+          "headcount": 15
+        }
+      ]
+    },
+    {
+      "user": "복지건설위원장",
+      "total_count": 66,
+      "total_amount": 9603700,
+      "avg_per_event": 145510.60606060605,
+      "avg_headcount": 5.323076923076923,
+      "top_venues": [
+        {
+          "venue_norm": "동강오리",
+          "count": 15,
+          "amount": 2302000,
+          "display_name": "동강오리"
+        },
+        {
+          "venue_norm": "오리명가",
+          "count": 3,
+          "amount": 667000,
+          "display_name": "오리명가"
+        },
+        {
+          "venue_norm": "엄지집밥",
+          "count": 2,
+          "amount": 460000,
+          "display_name": "엄지집밥"
+        },
+        {
+          "venue_norm": "다옴감자탕양평해장",
+          "count": 2,
+          "amount": 457000,
+          "display_name": "다옴감자탕 양평해장"
+        },
+        {
+          "venue_norm": "최강낙지",
+          "count": 3,
+          "amount": 430000,
+          "display_name": "최강낙지"
+        },
+        {
+          "venue_norm": "우돈마루",
+          "count": 2,
+          "amount": 410000,
+          "display_name": "우돈마루"
+        },
+        {
+          "venue_norm": "마포갈비",
+          "count": 2,
+          "amount": 386000,
+          "display_name": "마포갈비"
+        },
+        {
+          "venue_norm": "(주)늘봄처럼",
+          "count": 1,
+          "amount": 370000,
+          "display_name": "(주)늘봄처럼"
+        }
+      ],
+      "by_year_month": [
+        {
+          "ym": "2025-06",
+          "count": 3,
+          "amount": 347200
+        },
+        {
+          "ym": "2025-07",
+          "count": 12,
+          "amount": 1334400
+        },
+        {
+          "ym": "2025-08",
+          "count": 6,
+          "amount": 824000
+        },
+        {
+          "ym": "2025-09",
+          "count": 3,
+          "amount": 669000
+        },
+        {
+          "ym": "2025-10",
+          "count": 5,
+          "amount": 786000
+        },
+        {
+          "ym": "2025-11",
+          "count": 11,
+          "amount": 1722500
+        },
+        {
+          "ym": "2025-12",
+          "count": 6,
+          "amount": 1262600
+        },
+        {
+          "ym": "2026-01",
+          "count": 10,
+          "amount": 1437000
+        },
+        {
+          "ym": "2026-02",
+          "count": 10,
+          "amount": 1221000
+        }
+      ],
+      "purpose_breakdown": [
+        {
+          "key": "관계자 간담",
+          "count": 51,
+          "amount": 7843700
+        },
+        {
+          "key": "경조사·격려",
+          "count": 13,
+          "amount": 1508000
+        },
+        {
+          "key": "현안 협의",
+          "count": 2,
+          "amount": 252000
+        }
+      ],
+      "time_buckets": {
+        "점심(11-14)": 34,
+        "오후(14-18)": 4,
+        "저녁(18-22)": 28,
+        "심야(22-06)": 0,
+        "오전(06-11)": 0,
+        "미상": 0
+      },
+      "samples": [
+        {
+          "date": "2025-11-12",
+          "time": "19:29:56",
+          "venue_raw": "(주)늘봄처럼",
+          "purpose": "민원 및 현안 관련 유관기관 관계자 간담회",
+          "amount": 370000,
+          "headcount": 10
+        },
+        {
+          "date": "2025-12-18",
+          "time": "13:53:01",
+          "venue_raw": "엄지집밥",
+          "purpose": "현안 관련 관계자 간담회",
+          "amount": 370000,
+          "headcount": 15
+        },
+        {
+          "date": "2025-12-23",
+          "time": "11:18:16",
+          "venue_raw": "동강오리",
+          "purpose": "현안 관련 유관기관 관계자 간담회",
+          "amount": 285000,
+          "headcount": 9
+        },
+        {
+          "date": "2025-07-07",
+          "time": "12:40:40",
+          "venue_raw": "조영환의 대양한방숯",
+          "purpose": "현안 관련 관계자 간담회",
+          "amount": 280000,
+          "headcount": 8
+        },
+        {
+          "date": "2025-11-05",
+          "time": "17:07:58",
+          "venue_raw": "오리명가",
+          "purpose": "현안업무 추진 사무국 직원 격려 간담회",
+          "amount": 275000,
+          "headcount": 8
+        }
+      ]
+    },
+    {
+      "user": "행정기획위원장",
+      "total_count": 61,
+      "total_amount": 9083200,
+      "avg_per_event": 148904.9180327869,
+      "avg_headcount": 7.649122807017544,
+      "top_venues": [
+        {
+          "venue_norm": "주문진",
+          "count": 2,
+          "amount": 820000,
+          "display_name": "주문진"
+        },
+        {
+          "venue_norm": "전골마을",
+          "count": 4,
+          "amount": 628000,
+          "display_name": "전골마을"
+        },
+        {
+          "venue_norm": "송가네",
+          "count": 2,
+          "amount": 605000,
+          "display_name": "송가네"
+        },
+        {
+          "venue_norm": "부산횟집",
+          "count": 2,
+          "amount": 522000,
+          "display_name": "부산횟집"
+        },
+        {
+          "venue_norm": "솔낭구",
+          "count": 1,
+          "amount": 487000,
+          "display_name": "솔낭구"
+        },
+        {
+          "venue_norm": "갈비명가이상답십리",
+          "count": 1,
+          "amount": 480000,
+          "display_name": "갈비명가이상답십리"
+        },
+        {
+          "venue_norm": "최강낙지",
+          "count": 4,
+          "amount": 418000,
+          "display_name": "최강낙지"
+        },
+        {
+          "venue_norm": "가마치통닭장안휘경",
+          "count": 3,
+          "amount": 369500,
+          "display_name": "가마치통닭 장안휘경"
+        }
+      ],
+      "by_year_month": [
+        {
+          "ym": "2025-07",
+          "count": 8,
+          "amount": 1748000
+        },
+        {
+          "ym": "2025-08",
+          "count": 29,
+          "amount": 3736600
+        },
+        {
+          "ym": "2025-09",
+          "count": 3,
+          "amount": 270000
+        },
+        {
+          "ym": "2025-10",
+          "count": 3,
+          "amount": 302300
+        },
+        {
+          "ym": "2025-11",
+          "count": 8,
+          "amount": 1324000
+        },
+        {
+          "ym": "2025-12",
+          "count": 4,
+          "amount": 998500
+        },
+        {
+          "ym": "2026-01",
+          "count": 3,
+          "amount": 497200
+        },
+        {
+          "ym": "2026-02",
+          "count": 3,
+          "amount": 206600
+        }
+      ],
+      "purpose_breakdown": [
+        {
+          "key": "관계자 간담",
+          "count": 54,
+          "amount": 8469500
+        },
+        {
+          "key": "현안 협의",
+          "count": 5,
+          "amount": 465700
+        },
+        {
+          "key": "경조사·격려",
+          "count": 2,
+          "amount": 148000
+        }
+      ],
+      "time_buckets": {
+        "점심(11-14)": 28,
+        "오후(14-18)": 3,
+        "저녁(18-22)": 29,
+        "심야(22-06)": 0,
+        "오전(06-11)": 1,
+        "미상": 0
+      },
+      "samples": [
+        {
+          "date": "2025-08-28",
+          "time": "19:02:34",
+          "venue_raw": "솔낭구",
+          "purpose": "민원 및 현안 관련 유관단체 관계자 간담회",
+          "amount": 487000,
+          "headcount": 20
+        },
+        {
+          "date": "2025-12-23",
+          "time": "13:08:29",
+          "venue_raw": "갈비명가이상답십리",
+          "purpose": "민원 및 현안 관련 유관단체 관계자 간담회",
+          "amount": 480000,
+          "headcount": 15
+        },
+        {
+          "date": "2026-01-26",
+          "time": "21:00:44",
+          "venue_raw": "주문진",
+          "purpose": "지역 현안 관련 관계자 간단회",
+          "amount": 480000,
+          "headcount": 16
+        },
+        {
+          "date": "2025-07-29",
+          "time": "13:18:32",
+          "venue_raw": "송가네",
+          "purpose": "현안 관련 관계자 간담회",
+          "amount": 345000,
+          "headcount": 15
+        },
+        {
+          "date": "2025-11-11",
+          "time": "19:57:09",
+          "venue_raw": "주문진",
+          "purpose": "현안 관련 관계자 간담회",
+          "amount": 340000,
+          "headcount": 16
+        }
+      ]
+    },
+    {
+      "user": "운영위원장",
+      "total_count": 48,
+      "total_amount": 8191100,
+      "avg_per_event": 170647.91666666666,
+      "avg_headcount": 4.833333333333333,
+      "top_venues": [
+        {
+          "venue_norm": "용두동복집",
+          "count": 2,
+          "amount": 685000,
+          "display_name": "용두동복집"
+        },
+        {
+          "venue_norm": "롯데백화점(주)청량",
+          "count": 2,
+          "amount": 605000,
+          "display_name": "롯데백화점(주)청량"
+        },
+        {
+          "venue_norm": "용두동쭈꾸미",
+          "count": 3,
+          "amount": 524000,
+          "display_name": "용두동쭈꾸미"
+        },
+        {
+          "venue_norm": "와규스타(WAGYUSTAR)",
+          "count": 2,
+          "amount": 443000,
+          "display_name": "와규스타(WAGYUSTAR)"
+        },
+        {
+          "venue_norm": "우리돈",
+          "count": 1,
+          "amount": 370000,
+          "display_name": "우리돈"
+        },
+        {
+          "venue_norm": "다퍼줘",
+          "count": 1,
+          "amount": 336000,
+          "display_name": "다퍼줘"
+        },
+        {
+          "venue_norm": "참치본가",
+          "count": 2,
+          "amount": 334000,
+          "display_name": "참치본가"
+        },
+        {
+          "venue_norm": "장어시대",
+          "count": 1,
+          "amount": 314000,
+          "display_name": "장어시대"
+        }
+      ],
+      "by_year_month": [
+        {
+          "ym": "2025-06",
+          "count": 2,
+          "amount": 196000
+        },
+        {
+          "ym": "2025-07",
+          "count": 13,
+          "amount": 1824800
+        },
+        {
+          "ym": "2025-08",
+          "count": 5,
+          "amount": 480000
+        },
+        {
+          "ym": "2026-01",
+          "count": 17,
+          "amount": 3474300
+        },
+        {
+          "ym": "2026-02",
+          "count": 11,
+          "amount": 2216000
+        }
+      ],
+      "purpose_breakdown": [
+        {
+          "key": "관계자 간담",
+          "count": 40,
+          "amount": 7365800
+        },
+        {
+          "key": "현안 협의",
+          "count": 6,
+          "amount": 555900
+        },
+        {
+          "key": "경조사·격려",
+          "count": 2,
+          "amount": 269400
+        }
+      ],
+      "time_buckets": {
+        "점심(11-14)": 16,
+        "오후(14-18)": 3,
+        "저녁(18-22)": 27,
+        "심야(22-06)": 1,
+        "오전(06-11)": 1,
+        "미상": 0
+      },
+      "samples": [
+        {
+          "date": "2025-07-10",
+          "time": "20:08:46",
+          "venue_raw": "용두동복집",
+          "purpose": "현안 관련 유관기관 관계자 간담회",
+          "amount": 446000,
+          "headcount": 10
+        },
+        {
+          "date": "2026-01-06",
+          "time": "19:30:28",
+          "venue_raw": "우리돈",
+          "purpose": "현안 관련 관계자 간담회",
+          "amount": 370000,
+          "headcount": 8
+        },
+        {
+          "date": "2026-02-06",
+          "time": "19:16:35",
+          "venue_raw": "롯데백화점(주)청량",
+          "purpose": "현안 관련 관계자 간담회",
+          "amount": 357000,
+          "headcount": 8
+        },
+        {
+          "date": "2026-01-23",
+          "time": "19:01:15",
+          "venue_raw": "다퍼줘",
+          "purpose": "현안 관련 유관단체 관계자 간담회",
+          "amount": 336000,
+          "headcount": 7
+        },
+        {
+          "date": "2025-07-03",
+          "time": "13:36:18",
+          "venue_raw": "장어시대",
+          "purpose": "민원 및 현안 관련 유관기관 관계자 간담회",
+          "amount": 314000,
+          "headcount": 7
+        }
+      ]
+    }
+  ],
+  "venues": [
+    {
+      "venue_norm": "최강낙지",
+      "display_name": "최강낙지",
+      "total_count": 27,
+      "total_amount": 3895000,
+      "avg_amount": 144259.25925925927,
+      "first_used": "2025-06-24",
+      "last_used": "2026-02-10",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 18,
+          "amount": 2677000
+        },
+        {
+          "user": "복지건설위원장",
+          "count": 3,
+          "amount": 430000
+        },
+        {
+          "user": "행정기획위원장",
+          "count": 4,
+          "amount": 418000
+        },
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 259000
+        },
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 111000
+        }
+      ],
+      "rank_by_amount": 1
+    },
+    {
+      "venue_norm": "동강오리",
+      "display_name": "동강오리",
+      "total_count": 20,
+      "total_amount": 3586000,
+      "avg_amount": 179300,
+      "first_used": "2025-06-09",
+      "last_used": "2026-02-25",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 15,
+          "amount": 2302000
+        },
+        {
+          "user": "의장",
+          "count": 4,
+          "amount": 1034000
+        },
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 250000
+        }
+      ],
+      "rank_by_amount": 2
+    },
+    {
+      "venue_norm": "조영환의대양한방숯",
+      "display_name": "조영환의 대양한방숯",
+      "total_count": 13,
+      "total_amount": 3520000,
+      "avg_amount": 270769.23076923075,
+      "first_used": "2025-07-07",
+      "last_used": "2026-02-10",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 11,
+          "amount": 3100000
+        },
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 280000
+        },
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 140000
+        }
+      ],
+      "rank_by_amount": 3
+    },
+    {
+      "venue_norm": "주문진",
+      "display_name": "주문진",
+      "total_count": 6,
+      "total_amount": 2068000,
+      "avg_amount": 344666.6666666667,
+      "first_used": "2025-09-25",
+      "last_used": "2026-01-26",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 4,
+          "amount": 1248000
+        },
+        {
+          "user": "행정기획위원장",
+          "count": 2,
+          "amount": 820000
+        }
+      ],
+      "rank_by_amount": 4
+    },
+    {
+      "venue_norm": "경성농장",
+      "display_name": "경성농장",
+      "total_count": 8,
+      "total_amount": 1798000,
+      "avg_amount": 224750,
+      "first_used": "2025-06-10",
+      "last_used": "2026-01-12",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 7,
+          "amount": 1630000
+        },
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 168000
+        }
+      ],
+      "rank_by_amount": 5
+    },
+    {
+      "venue_norm": "부산횟집",
+      "display_name": "부산횟집",
+      "total_count": 8,
+      "total_amount": 1639000,
+      "avg_amount": 204875,
+      "first_used": "2025-06-30",
+      "last_used": "2026-02-09",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 3,
+          "amount": 565000
+        },
+        {
+          "user": "행정기획위원장",
+          "count": 2,
+          "amount": 522000
+        },
+        {
+          "user": "부의장",
+          "count": 2,
+          "amount": 442000
+        },
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 110000
+        }
+      ],
+      "rank_by_amount": 6
+    },
+    {
+      "venue_norm": "솔낭구",
+      "display_name": "솔낭구",
+      "total_count": 5,
+      "total_amount": 1608000,
+      "avg_amount": 321600,
+      "first_used": "2025-08-28",
+      "last_used": "2026-01-05",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 3,
+          "amount": 763000
+        },
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 487000
+        },
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 358000
+        }
+      ],
+      "rank_by_amount": 7
+    },
+    {
+      "venue_norm": "장어시대",
+      "display_name": "장어시대",
+      "total_count": 7,
+      "total_amount": 1558000,
+      "avg_amount": 222571.42857142858,
+      "first_used": "2025-07-03",
+      "last_used": "2025-12-18",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 6,
+          "amount": 1244000
+        },
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 314000
+        }
+      ],
+      "rank_by_amount": 8
+    },
+    {
+      "venue_norm": "오리명가",
+      "display_name": "오리명가",
+      "total_count": 8,
+      "total_amount": 1477000,
+      "avg_amount": 184625,
+      "first_used": "2025-08-11",
+      "last_used": "2026-01-09",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 3,
+          "amount": 667000
+        },
+        {
+          "user": "의장",
+          "count": 3,
+          "amount": 574000
+        },
+        {
+          "user": "행정기획위원장",
+          "count": 2,
+          "amount": 236000
+        }
+      ],
+      "rank_by_amount": 9
+    },
+    {
+      "venue_norm": "풍천숯불장어세상",
+      "display_name": "풍천숯불장어세상",
+      "total_count": 6,
+      "total_amount": 1257000,
+      "avg_amount": 209500,
+      "first_used": "2025-07-22",
+      "last_used": "2026-02-27",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 4,
+          "amount": 927000
+        },
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 330000
+        }
+      ],
+      "rank_by_amount": 10
+    },
+    {
+      "venue_norm": "우리돈",
+      "display_name": "우리돈",
+      "total_count": 3,
+      "total_amount": 1128000,
+      "avg_amount": 376000,
+      "first_used": "2025-06-20",
+      "last_used": "2026-01-06",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 758000
+        },
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 370000
+        }
+      ],
+      "rank_by_amount": 11
+    },
+    {
+      "venue_norm": "나누리흑염소전문",
+      "display_name": "나누리 흑염소 전문",
+      "total_count": 11,
+      "total_amount": 1108100,
+      "avg_amount": 100736.36363636363,
+      "first_used": "2025-06-09",
+      "last_used": "2026-01-12",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 11,
+          "amount": 1108100
+        }
+      ],
+      "rank_by_amount": 12
+    },
+    {
+      "venue_norm": "전골마을",
+      "display_name": "전골마을",
+      "total_count": 6,
+      "total_amount": 1107000,
+      "avg_amount": 184500,
+      "first_used": "2025-06-19",
+      "last_used": "2025-11-18",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 4,
+          "amount": 628000
+        },
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 479000
+        }
+      ],
+      "rank_by_amount": 13
+    },
+    {
+      "venue_norm": "동호일식",
+      "display_name": "동호일식",
+      "total_count": 4,
+      "total_amount": 1061000,
+      "avg_amount": 265250,
+      "first_used": "2025-07-04",
+      "last_used": "2026-01-07",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 3,
+          "amount": 861000
+        },
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 200000
+        }
+      ],
+      "rank_by_amount": 14
+    },
+    {
+      "venue_norm": "청마루한우",
+      "display_name": "청마루 한우",
+      "total_count": 6,
+      "total_amount": 1043000,
+      "avg_amount": 173833.33333333334,
+      "first_used": "2025-09-03",
+      "last_used": "2026-01-23",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 5,
+          "amount": 858000
+        },
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 185000
+        }
+      ],
+      "rank_by_amount": 15
+    },
+    {
+      "venue_norm": "광주회관",
+      "display_name": "광주회관",
+      "total_count": 5,
+      "total_amount": 993000,
+      "avg_amount": 198600,
+      "first_used": "2025-07-30",
+      "last_used": "2026-01-22",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 4,
+          "amount": 720000
+        },
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 273000
+        }
+      ],
+      "rank_by_amount": 16
+    },
+    {
+      "venue_norm": "토담마을",
+      "display_name": "토담마을",
+      "total_count": 4,
+      "total_amount": 987000,
+      "avg_amount": 246750,
+      "first_used": "2025-06-02",
+      "last_used": "2026-02-05",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 4,
+          "amount": 987000
+        }
+      ],
+      "rank_by_amount": 17
+    },
+    {
+      "venue_norm": "용두똥돼지",
+      "display_name": "용두똥돼지",
+      "total_count": 4,
+      "total_amount": 924000,
+      "avg_amount": 231000,
+      "first_used": "2025-07-28",
+      "last_used": "2025-12-16",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 330000
+        },
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 297000
+        },
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 297000
+        }
+      ],
+      "rank_by_amount": 18
+    },
+    {
+      "venue_norm": "용두동복집",
+      "display_name": "용두동복집",
+      "total_count": 3,
+      "total_amount": 904000,
+      "avg_amount": 301333.3333333333,
+      "first_used": "2025-07-10",
+      "last_used": "2026-02-20",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 2,
+          "amount": 685000
+        },
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 219000
+        }
+      ],
+      "rank_by_amount": 19
+    },
+    {
+      "venue_norm": "송가네",
+      "display_name": "송가네",
+      "total_count": 3,
+      "total_amount": 896000,
+      "avg_amount": 298666.6666666667,
+      "first_used": "2025-06-18",
+      "last_used": "2025-07-29",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 2,
+          "amount": 605000
+        },
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 291000
+        }
+      ],
+      "rank_by_amount": 20
+    },
+    {
+      "venue_norm": "갈비명가이상답십리",
+      "display_name": "갈비명가이상답십리",
+      "total_count": 2,
+      "total_amount": 880000,
+      "avg_amount": 440000,
+      "first_used": "2025-09-30",
+      "last_used": "2025-12-23",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 480000
+        },
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 400000
+        }
+      ],
+      "rank_by_amount": 21
+    },
+    {
+      "venue_norm": "남원",
+      "display_name": "남원",
+      "total_count": 8,
+      "total_amount": 803000,
+      "avg_amount": 100375,
+      "first_used": "2025-06-18",
+      "last_used": "2026-02-11",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 6,
+          "amount": 622000
+        },
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 111000
+        },
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 70000
+        }
+      ],
+      "rank_by_amount": 22
+    },
+    {
+      "venue_norm": "씨마트",
+      "display_name": "씨마트",
+      "total_count": 6,
+      "total_amount": 786000,
+      "avg_amount": 131000,
+      "first_used": "2025-06-30",
+      "last_used": "2026-01-27",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 4,
+          "amount": 463000
+        },
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 323000
+        }
+      ],
+      "rank_by_amount": 23
+    },
+    {
+      "venue_norm": "(주)유성집",
+      "display_name": "(주)유성집",
+      "total_count": 4,
+      "total_amount": 735000,
+      "avg_amount": 183750,
+      "first_used": "2025-06-16",
+      "last_used": "2025-12-03",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 529000
+        },
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 104000
+        },
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 102000
+        }
+      ],
+      "rank_by_amount": 24
+    },
+    {
+      "venue_norm": "김연례대원한방능이",
+      "display_name": "김연례 대원한방능이",
+      "total_count": 4,
+      "total_amount": 729000,
+      "avg_amount": 182250,
+      "first_used": "2025-06-23",
+      "last_used": "2025-12-02",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 2,
+          "amount": 290000
+        },
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 289000
+        },
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 150000
+        }
+      ],
+      "rank_by_amount": 25
+    },
+    {
+      "venue_norm": "사조회참치장한평점",
+      "display_name": "사조회참치장한평점",
+      "total_count": 4,
+      "total_amount": 712000,
+      "avg_amount": 178000,
+      "first_used": "2025-06-02",
+      "last_used": "2026-02-27",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 4,
+          "amount": 712000
+        }
+      ],
+      "rank_by_amount": 26
+    },
+    {
+      "venue_norm": "면목과일",
+      "display_name": "면목과일",
+      "total_count": 2,
+      "total_amount": 710000,
+      "avg_amount": 355000,
+      "first_used": "2025-09-26",
+      "last_used": "2026-02-09",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 710000
+        }
+      ],
+      "rank_by_amount": 27
+    },
+    {
+      "venue_norm": "아쿠아플러스",
+      "display_name": "아쿠아플러스",
+      "total_count": 2,
+      "total_amount": 666000,
+      "avg_amount": 333000,
+      "first_used": "2025-09-12",
+      "last_used": "2025-09-17",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 666000
+        }
+      ],
+      "rank_by_amount": 28
+    },
+    {
+      "venue_norm": "다미옥함흥냉면",
+      "display_name": "다미옥 함흥냉면",
+      "total_count": 2,
+      "total_amount": 625000,
+      "avg_amount": 312500,
+      "first_used": "2025-09-16",
+      "last_used": "2025-11-06",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 331000
+        },
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 294000
+        }
+      ],
+      "rank_by_amount": 29
+    },
+    {
+      "venue_norm": "롯데백화점(주)청량",
+      "display_name": "롯데백화점(주)청량",
+      "total_count": 2,
+      "total_amount": 605000,
+      "avg_amount": 302500,
+      "first_used": "2026-01-13",
+      "last_used": "2026-02-06",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 2,
+          "amount": 605000
+        }
+      ],
+      "rank_by_amount": 30
+    },
+    {
+      "venue_norm": "동문엔터프라이즈",
+      "display_name": "동문엔터프라이즈",
+      "total_count": 2,
+      "total_amount": 600000,
+      "avg_amount": 300000,
+      "first_used": "2025-09-25",
+      "last_used": "2025-09-29",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 600000
+        }
+      ],
+      "rank_by_amount": 31
+    },
+    {
+      "venue_norm": "전시회제기본점",
+      "display_name": "전시회제기본점",
+      "total_count": 2,
+      "total_amount": 596000,
+      "avg_amount": 298000,
+      "first_used": "2025-11-20",
+      "last_used": "2026-01-14",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 596000
+        }
+      ],
+      "rank_by_amount": 32
+    },
+    {
+      "venue_norm": "골목막창",
+      "display_name": "골목막창",
+      "total_count": 2,
+      "total_amount": 585000,
+      "avg_amount": 292500,
+      "first_used": "2025-06-20",
+      "last_used": "2025-09-15",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 585000
+        }
+      ],
+      "rank_by_amount": 33
+    },
+    {
+      "venue_norm": "하루원",
+      "display_name": "하루원",
+      "total_count": 3,
+      "total_amount": 585000,
+      "avg_amount": 195000,
+      "first_used": "2025-06-24",
+      "last_used": "2025-08-29",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 245000
+        },
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 190000
+        },
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 150000
+        }
+      ],
+      "rank_by_amount": 34
+    },
+    {
+      "venue_norm": "더테이블",
+      "display_name": "더테이블",
+      "total_count": 2,
+      "total_amount": 561500,
+      "avg_amount": 280750,
+      "first_used": "2025-06-24",
+      "last_used": "2026-01-12",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 284000
+        },
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 277500
+        }
+      ],
+      "rank_by_amount": 35
+    },
+    {
+      "venue_norm": "여기한과",
+      "display_name": "여기한과",
+      "total_count": 2,
+      "total_amount": 560000,
+      "avg_amount": 280000,
+      "first_used": "2026-02-10",
+      "last_used": "2026-02-12",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 560000
+        }
+      ],
+      "rank_by_amount": 36
+    },
+    {
+      "venue_norm": "북배산흑염소요리",
+      "display_name": "북배산흑염소요리",
+      "total_count": 4,
+      "total_amount": 535000,
+      "avg_amount": 133750,
+      "first_used": "2025-08-18",
+      "last_used": "2026-01-05",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 3,
+          "amount": 415000
+        },
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 120000
+        }
+      ],
+      "rank_by_amount": 37
+    },
+    {
+      "venue_norm": "(주)태성푸드",
+      "display_name": "(주)태성푸드",
+      "total_count": 5,
+      "total_amount": 533000,
+      "avg_amount": 106600,
+      "first_used": "2025-09-04",
+      "last_used": "2026-02-13",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 3,
+          "amount": 408000
+        },
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 81000
+        },
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 44000
+        }
+      ],
+      "rank_by_amount": 38
+    },
+    {
+      "venue_norm": "용두동쭈꾸미",
+      "display_name": "용두동쭈꾸미",
+      "total_count": 3,
+      "total_amount": 524000,
+      "avg_amount": 174666.66666666666,
+      "first_used": "2025-07-09",
+      "last_used": "2026-02-27",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 3,
+          "amount": 524000
+        }
+      ],
+      "rank_by_amount": 39
+    },
+    {
+      "venue_norm": "수제왕갈비",
+      "display_name": "수제왕갈비",
+      "total_count": 2,
+      "total_amount": 513000,
+      "avg_amount": 256500,
+      "first_used": "2025-12-08",
+      "last_used": "2026-01-26",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 2,
+          "amount": 513000
+        }
+      ],
+      "rank_by_amount": 40
+    },
+    {
+      "venue_norm": "여기가게",
+      "display_name": "여기가게",
+      "total_count": 2,
+      "total_amount": 500000,
+      "avg_amount": 250000,
+      "first_used": "2025-09-24",
+      "last_used": "2025-09-30",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 500000
+        }
+      ],
+      "rank_by_amount": 41
+    },
+    {
+      "venue_norm": "다옴감자탕양평해장",
+      "display_name": "다옴감자탕 양평해장",
+      "total_count": 3,
+      "total_amount": 493000,
+      "avg_amount": 164333.33333333334,
+      "first_used": "2025-08-08",
+      "last_used": "2026-01-15",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 2,
+          "amount": 457000
+        },
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 36000
+        }
+      ],
+      "rank_by_amount": 42
+    },
+    {
+      "venue_norm": "홍가네",
+      "display_name": "홍가네",
+      "total_count": 2,
+      "total_amount": 472000,
+      "avg_amount": 236000,
+      "first_used": "2025-07-08",
+      "last_used": "2026-02-20",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 292000
+        },
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 180000
+        }
+      ],
+      "rank_by_amount": 43
+    },
+    {
+      "venue_norm": "아우내병천순대",
+      "display_name": "아우내병천순대",
+      "total_count": 2,
+      "total_amount": 464000,
+      "avg_amount": 232000,
+      "first_used": "2025-09-05",
+      "last_used": "2025-11-28",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 464000
+        }
+      ],
+      "rank_by_amount": 44
+    },
+    {
+      "venue_norm": "(주)고깃집공간",
+      "display_name": "(주)고깃집공간",
+      "total_count": 2,
+      "total_amount": 463000,
+      "avg_amount": 231500,
+      "first_used": "2025-07-17",
+      "last_used": "2026-01-27",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 233000
+        },
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 230000
+        }
+      ],
+      "rank_by_amount": 45
+    },
+    {
+      "venue_norm": "우돈마루",
+      "display_name": "우돈마루",
+      "total_count": 3,
+      "total_amount": 463000,
+      "avg_amount": 154333.33333333334,
+      "first_used": "2025-10-30",
+      "last_used": "2026-01-16",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 2,
+          "amount": 410000
+        },
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 53000
+        }
+      ],
+      "rank_by_amount": 46
+    },
+    {
+      "venue_norm": "수영상회",
+      "display_name": "수영상회",
+      "total_count": 2,
+      "total_amount": 462000,
+      "avg_amount": 231000,
+      "first_used": "2026-02-06",
+      "last_used": "2026-02-12",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 462000
+        }
+      ],
+      "rank_by_amount": 47
+    },
+    {
+      "venue_norm": "엄지집밥",
+      "display_name": "엄지집밥",
+      "total_count": 2,
+      "total_amount": 460000,
+      "avg_amount": 230000,
+      "first_used": "2025-10-14",
+      "last_used": "2025-12-18",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 2,
+          "amount": 460000
+        }
+      ],
+      "rank_by_amount": 48
+    },
+    {
+      "venue_norm": "할머니홍어집",
+      "display_name": "할머니홍어집",
+      "total_count": 2,
+      "total_amount": 444000,
+      "avg_amount": 222000,
+      "first_used": "2026-01-06",
+      "last_used": "2026-02-19",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 254000
+        },
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 190000
+        }
+      ],
+      "rank_by_amount": 49
+    },
+    {
+      "venue_norm": "와규스타(WAGYUSTAR)",
+      "display_name": "와규스타(WAGYUSTAR)",
+      "total_count": 2,
+      "total_amount": 443000,
+      "avg_amount": 221500,
+      "first_used": "2025-08-01",
+      "last_used": "2026-01-16",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 2,
+          "amount": 443000
+        }
+      ],
+      "rank_by_amount": 50
+    },
+    {
+      "venue_norm": "일번지푸드(주)",
+      "display_name": "일번지푸드(주)",
+      "total_count": 2,
+      "total_amount": 400000,
+      "avg_amount": 200000,
+      "first_used": "2025-07-09",
+      "last_used": "2025-12-24",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 400000
+        }
+      ],
+      "rank_by_amount": 51
+    },
+    {
+      "venue_norm": "한방양꼬치앤마라",
+      "display_name": "한방양꼬치 앤 마라",
+      "total_count": 1,
+      "total_amount": 386000,
+      "avg_amount": 386000,
+      "first_used": "2025-11-10",
+      "last_used": "2025-11-10",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 386000
+        }
+      ],
+      "rank_by_amount": 52
+    },
+    {
+      "venue_norm": "마포갈비",
+      "display_name": "마포갈비",
+      "total_count": 2,
+      "total_amount": 386000,
+      "avg_amount": 193000,
+      "first_used": "2025-11-14",
+      "last_used": "2026-02-19",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 2,
+          "amount": 386000
+        }
+      ],
+      "rank_by_amount": 53
+    },
+    {
+      "venue_norm": "원성집",
+      "display_name": "원성집",
+      "total_count": 5,
+      "total_amount": 385000,
+      "avg_amount": 77000,
+      "first_used": "2025-07-25",
+      "last_used": "2026-02-12",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 4,
+          "amount": 325000
+        },
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 60000
+        }
+      ],
+      "rank_by_amount": 54
+    },
+    {
+      "venue_norm": "한근숯불닭갈비",
+      "display_name": "한근숯불닭갈비",
+      "total_count": 2,
+      "total_amount": 382000,
+      "avg_amount": 191000,
+      "first_used": "2025-06-11",
+      "last_used": "2025-07-31",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 382000
+        }
+      ],
+      "rank_by_amount": 55
+    },
+    {
+      "venue_norm": "대가숯불갈비",
+      "display_name": "대가숯불갈비",
+      "total_count": 2,
+      "total_amount": 379000,
+      "avg_amount": 189500,
+      "first_used": "2025-09-12",
+      "last_used": "2026-02-06",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 379000
+        }
+      ],
+      "rank_by_amount": 56
+    },
+    {
+      "venue_norm": "(주)늘봄처럼",
+      "display_name": "(주)늘봄처럼",
+      "total_count": 1,
+      "total_amount": 370000,
+      "avg_amount": 370000,
+      "first_used": "2025-11-12",
+      "last_used": "2025-11-12",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 370000
+        }
+      ],
+      "rank_by_amount": 57
+    },
+    {
+      "venue_norm": "가마치통닭장안휘경",
+      "display_name": "가마치통닭 장안휘경",
+      "total_count": 3,
+      "total_amount": 369500,
+      "avg_amount": 123166.66666666667,
+      "first_used": "2025-10-14",
+      "last_used": "2026-02-11",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 3,
+          "amount": 369500
+        }
+      ],
+      "rank_by_amount": 58
+    },
+    {
+      "venue_norm": "장어세상",
+      "display_name": "장어세상",
+      "total_count": 3,
+      "total_amount": 367000,
+      "avg_amount": 122333.33333333333,
+      "first_used": "2025-07-03",
+      "last_used": "2026-02-19",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 2,
+          "amount": 291000
+        },
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 76000
+        }
+      ],
+      "rank_by_amount": 59
+    },
+    {
+      "venue_norm": "광주식당",
+      "display_name": "광주식당",
+      "total_count": 2,
+      "total_amount": 360000,
+      "avg_amount": 180000,
+      "first_used": "2025-10-01",
+      "last_used": "2025-10-29",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 215000
+        },
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 145000
+        }
+      ],
+      "rank_by_amount": 60
+    },
+    {
+      "venue_norm": "풍천만물장어",
+      "display_name": "풍천만물장어",
+      "total_count": 3,
+      "total_amount": 357400,
+      "avg_amount": 119133.33333333333,
+      "first_used": "2025-07-22",
+      "last_used": "2025-12-12",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 3,
+          "amount": 357400
+        }
+      ],
+      "rank_by_amount": 61
+    },
+    {
+      "venue_norm": "흑선",
+      "display_name": "흑선",
+      "total_count": 3,
+      "total_amount": 350600,
+      "avg_amount": 116866.66666666667,
+      "first_used": "2025-08-04",
+      "last_used": "2026-02-26",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 3,
+          "amount": 350600
+        }
+      ],
+      "rank_by_amount": 62
+    },
+    {
+      "venue_norm": "샹그라",
+      "display_name": "샹그라",
+      "total_count": 1,
+      "total_amount": 348000,
+      "avg_amount": 348000,
+      "first_used": "2025-11-17",
+      "last_used": "2025-11-17",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 348000
+        }
+      ],
+      "rank_by_amount": 63
+    },
+    {
+      "venue_norm": "천호낙지",
+      "display_name": "천호낙지",
+      "total_count": 3,
+      "total_amount": 345000,
+      "avg_amount": 115000,
+      "first_used": "2025-06-19",
+      "last_used": "2025-09-25",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 3,
+          "amount": 345000
+        }
+      ],
+      "rank_by_amount": 64
+    },
+    {
+      "venue_norm": "삼순이시골감자탕",
+      "display_name": "삼순이시골감자탕",
+      "total_count": 1,
+      "total_amount": 342000,
+      "avg_amount": 342000,
+      "first_used": "2025-09-29",
+      "last_used": "2025-09-29",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 342000
+        }
+      ],
+      "rank_by_amount": 65
+    },
+    {
+      "venue_norm": "미성",
+      "display_name": "미성",
+      "total_count": 1,
+      "total_amount": 339000,
+      "avg_amount": 339000,
+      "first_used": "2025-11-13",
+      "last_used": "2025-11-13",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 339000
+        }
+      ],
+      "rank_by_amount": 66
+    },
+    {
+      "venue_norm": "제일정육식당",
+      "display_name": "제일정육식당",
+      "total_count": 2,
+      "total_amount": 338000,
+      "avg_amount": 169000,
+      "first_used": "2025-09-02",
+      "last_used": "2025-11-06",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 338000
+        }
+      ],
+      "rank_by_amount": 67
+    },
+    {
+      "venue_norm": "본스치킨휘경점",
+      "display_name": "본스치킨 휘경점",
+      "total_count": 1,
+      "total_amount": 336000,
+      "avg_amount": 336000,
+      "first_used": "2025-09-29",
+      "last_used": "2025-09-29",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 336000
+        }
+      ],
+      "rank_by_amount": 68
+    },
+    {
+      "venue_norm": "다퍼줘",
+      "display_name": "다퍼줘",
+      "total_count": 1,
+      "total_amount": 336000,
+      "avg_amount": 336000,
+      "first_used": "2026-01-23",
+      "last_used": "2026-01-23",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 336000
+        }
+      ],
+      "rank_by_amount": 69
+    },
+    {
+      "venue_norm": "참치본가",
+      "display_name": "참치본가",
+      "total_count": 2,
+      "total_amount": 334000,
+      "avg_amount": 167000,
+      "first_used": "2026-01-28",
+      "last_used": "2026-02-04",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 2,
+          "amount": 334000
+        }
+      ],
+      "rank_by_amount": 70
+    },
+    {
+      "venue_norm": "본가남원추어탕",
+      "display_name": "본가남원추어탕",
+      "total_count": 2,
+      "total_amount": 333000,
+      "avg_amount": 166500,
+      "first_used": "2025-07-08",
+      "last_used": "2025-11-25",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 333000
+        }
+      ],
+      "rank_by_amount": 71
+    },
+    {
+      "venue_norm": "알리고",
+      "display_name": "알리고",
+      "total_count": 2,
+      "total_amount": 319000,
+      "avg_amount": 159500,
+      "first_used": "2025-07-02",
+      "last_used": "2026-02-26",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 296000
+        },
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 23000
+        }
+      ],
+      "rank_by_amount": 72
+    },
+    {
+      "venue_norm": "소문난집",
+      "display_name": "소문난집",
+      "total_count": 2,
+      "total_amount": 315000,
+      "avg_amount": 157500,
+      "first_used": "2025-12-08",
+      "last_used": "2026-02-12",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 315000
+        }
+      ],
+      "rank_by_amount": 73
+    },
+    {
+      "venue_norm": "네남자",
+      "display_name": "네남자",
+      "total_count": 2,
+      "total_amount": 312500,
+      "avg_amount": 156250,
+      "first_used": "2025-12-09",
+      "last_used": "2025-12-19",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 312500
+        }
+      ],
+      "rank_by_amount": 74
+    },
+    {
+      "venue_norm": "이대헌스시",
+      "display_name": "이대헌 스시",
+      "total_count": 1,
+      "total_amount": 311000,
+      "avg_amount": 311000,
+      "first_used": "2026-01-07",
+      "last_used": "2026-01-07",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 311000
+        }
+      ],
+      "rank_by_amount": 75
+    },
+    {
+      "venue_norm": "꼬기9.2",
+      "display_name": "꼬기9.2",
+      "total_count": 1,
+      "total_amount": 299000,
+      "avg_amount": 299000,
+      "first_used": "2026-02-05",
+      "last_used": "2026-02-05",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 299000
+        }
+      ],
+      "rank_by_amount": 76
+    },
+    {
+      "venue_norm": "장군뽈따구",
+      "display_name": "장군뽈따구",
+      "total_count": 1,
+      "total_amount": 297000,
+      "avg_amount": 297000,
+      "first_used": "2025-07-09",
+      "last_used": "2025-07-09",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 297000
+        }
+      ],
+      "rank_by_amount": 77
+    },
+    {
+      "venue_norm": "정정당당",
+      "display_name": "정정당당",
+      "total_count": 1,
+      "total_amount": 292000,
+      "avg_amount": 292000,
+      "first_used": "2025-10-01",
+      "last_used": "2025-10-01",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 292000
+        }
+      ],
+      "rank_by_amount": 78
+    },
+    {
+      "venue_norm": "짬뽕명가",
+      "display_name": "짬뽕명가",
+      "total_count": 1,
+      "total_amount": 291000,
+      "avg_amount": 291000,
+      "first_used": "2025-10-13",
+      "last_used": "2025-10-13",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 291000
+        }
+      ],
+      "rank_by_amount": 79
+    },
+    {
+      "venue_norm": "풍미담",
+      "display_name": "풍미담",
+      "total_count": 1,
+      "total_amount": 289000,
+      "avg_amount": 289000,
+      "first_used": "2025-07-15",
+      "last_used": "2025-07-15",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 289000
+        }
+      ],
+      "rank_by_amount": 80
+    },
+    {
+      "venue_norm": "고기여행",
+      "display_name": "고기여행",
+      "total_count": 2,
+      "total_amount": 289000,
+      "avg_amount": 144500,
+      "first_used": "2025-07-29",
+      "last_used": "2025-12-24",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 167000
+        },
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 122000
+        }
+      ],
+      "rank_by_amount": 81
+    },
+    {
+      "venue_norm": "미스사이공장안점",
+      "display_name": "미스사이공 장안점",
+      "total_count": 4,
+      "total_amount": 288000,
+      "avg_amount": 72000,
+      "first_used": "2025-06-17",
+      "last_used": "2026-02-19",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 4,
+          "amount": 288000
+        }
+      ],
+      "rank_by_amount": 82
+    },
+    {
+      "venue_norm": "바닷가에서",
+      "display_name": "바닷가에서",
+      "total_count": 1,
+      "total_amount": 286000,
+      "avg_amount": 286000,
+      "first_used": "2025-09-16",
+      "last_used": "2025-09-16",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 286000
+        }
+      ],
+      "rank_by_amount": 83
+    },
+    {
+      "venue_norm": "이천농장",
+      "display_name": "이천농장",
+      "total_count": 1,
+      "total_amount": 286000,
+      "avg_amount": 286000,
+      "first_used": "2025-12-15",
+      "last_used": "2025-12-15",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 286000
+        }
+      ],
+      "rank_by_amount": 84
+    },
+    {
+      "venue_norm": "산촌쌈밥",
+      "display_name": "산촌쌈밥",
+      "total_count": 1,
+      "total_amount": 285000,
+      "avg_amount": 285000,
+      "first_used": "2026-02-27",
+      "last_used": "2026-02-27",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 285000
+        }
+      ],
+      "rank_by_amount": 85
+    },
+    {
+      "venue_norm": "박가네고깃관",
+      "display_name": "박가네 고깃관",
+      "total_count": 1,
+      "total_amount": 284000,
+      "avg_amount": 284000,
+      "first_used": "2025-12-23",
+      "last_used": "2025-12-23",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 284000
+        }
+      ],
+      "rank_by_amount": 86
+    },
+    {
+      "venue_norm": "구이선생",
+      "display_name": "구이선생",
+      "total_count": 1,
+      "total_amount": 284000,
+      "avg_amount": 284000,
+      "first_used": "2026-01-20",
+      "last_used": "2026-01-20",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 284000
+        }
+      ],
+      "rank_by_amount": 87
+    },
+    {
+      "venue_norm": "다돈왕족발",
+      "display_name": "다돈왕족발",
+      "total_count": 1,
+      "total_amount": 281000,
+      "avg_amount": 281000,
+      "first_used": "2025-12-01",
+      "last_used": "2025-12-01",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 281000
+        }
+      ],
+      "rank_by_amount": 88
+    },
+    {
+      "venue_norm": "장안골",
+      "display_name": "장안골",
+      "total_count": 1,
+      "total_amount": 268000,
+      "avg_amount": 268000,
+      "first_used": "2025-09-03",
+      "last_used": "2025-09-03",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 268000
+        }
+      ],
+      "rank_by_amount": 89
+    },
+    {
+      "venue_norm": "씨마트2",
+      "display_name": "씨마트2",
+      "total_count": 2,
+      "total_amount": 267000,
+      "avg_amount": 133500,
+      "first_used": "2025-06-23",
+      "last_used": "2025-09-15",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 267000
+        }
+      ],
+      "rank_by_amount": 90
+    },
+    {
+      "venue_norm": "다래식당",
+      "display_name": "다래식당",
+      "total_count": 2,
+      "total_amount": 266000,
+      "avg_amount": 133000,
+      "first_used": "2025-09-19",
+      "last_used": "2025-10-20",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 266000
+        }
+      ],
+      "rank_by_amount": 91
+    },
+    {
+      "venue_norm": "풍년해물탕",
+      "display_name": "풍년해물탕",
+      "total_count": 1,
+      "total_amount": 264000,
+      "avg_amount": 264000,
+      "first_used": "2025-11-24",
+      "last_used": "2025-11-24",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 264000
+        }
+      ],
+      "rank_by_amount": 92
+    },
+    {
+      "venue_norm": "돼지왕",
+      "display_name": "돼지왕",
+      "total_count": 1,
+      "total_amount": 264000,
+      "avg_amount": 264000,
+      "first_used": "2026-01-30",
+      "last_used": "2026-01-30",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 264000
+        }
+      ],
+      "rank_by_amount": 93
+    },
+    {
+      "venue_norm": "(주)유래회관",
+      "display_name": "(주)유래회관",
+      "total_count": 2,
+      "total_amount": 262000,
+      "avg_amount": 131000,
+      "first_used": "2025-06-13",
+      "last_used": "2025-06-30",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 154000
+        },
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 108000
+        }
+      ],
+      "rank_by_amount": 94
+    },
+    {
+      "venue_norm": "란이네먹거리",
+      "display_name": "란이네먹거리",
+      "total_count": 1,
+      "total_amount": 260000,
+      "avg_amount": 260000,
+      "first_used": "2025-11-11",
+      "last_used": "2025-11-11",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 260000
+        }
+      ],
+      "rank_by_amount": 95
+    },
+    {
+      "venue_norm": "엄마네명품한우",
+      "display_name": "엄마네 명품 한우",
+      "total_count": 1,
+      "total_amount": 256000,
+      "avg_amount": 256000,
+      "first_used": "2026-02-10",
+      "last_used": "2026-02-10",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 256000
+        }
+      ],
+      "rank_by_amount": 96
+    },
+    {
+      "venue_norm": "다이닝원청량리점",
+      "display_name": "다이닝원 청량리점",
+      "total_count": 1,
+      "total_amount": 255200,
+      "avg_amount": 255200,
+      "first_used": "2025-12-03",
+      "last_used": "2025-12-03",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 255200
+        }
+      ],
+      "rank_by_amount": 97
+    },
+    {
+      "venue_norm": "흥부골숯불돼지갈비",
+      "display_name": "흥부골숯불돼지갈비",
+      "total_count": 2,
+      "total_amount": 252000,
+      "avg_amount": 126000,
+      "first_used": "2025-11-04",
+      "last_used": "2026-01-02",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 2,
+          "amount": 252000
+        }
+      ],
+      "rank_by_amount": 98
+    },
+    {
+      "venue_norm": "오뚝식당",
+      "display_name": "오뚝식당",
+      "total_count": 1,
+      "total_amount": 250000,
+      "avg_amount": 250000,
+      "first_used": "2025-12-23",
+      "last_used": "2025-12-23",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 250000
+        }
+      ],
+      "rank_by_amount": 99
+    },
+    {
+      "venue_norm": "가도",
+      "display_name": "가도",
+      "total_count": 1,
+      "total_amount": 247000,
+      "avg_amount": 247000,
+      "first_used": "2026-02-11",
+      "last_used": "2026-02-11",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 247000
+        }
+      ],
+      "rank_by_amount": 100
+    },
+    {
+      "venue_norm": "장수식당",
+      "display_name": "장수식당",
+      "total_count": 3,
+      "total_amount": 246000,
+      "avg_amount": 82000,
+      "first_used": "2025-10-21",
+      "last_used": "2026-02-11",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 180000
+        },
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 66000
+        }
+      ],
+      "rank_by_amount": 101
+    },
+    {
+      "venue_norm": "우리식당",
+      "display_name": "우일식당",
+      "total_count": 2,
+      "total_amount": 240000,
+      "avg_amount": 120000,
+      "first_used": "2025-07-16",
+      "last_used": "2026-01-22",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 198000
+        },
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 42000
+        }
+      ],
+      "rank_by_amount": 102
+    },
+    {
+      "venue_norm": "㈜피크트리",
+      "display_name": "㈜피크트리",
+      "total_count": 1,
+      "total_amount": 225400,
+      "avg_amount": 225400,
+      "first_used": "2026-01-21",
+      "last_used": "2026-01-21",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 225400
+        }
+      ],
+      "rank_by_amount": 103
+    },
+    {
+      "venue_norm": "(주)미진미트미진축",
+      "display_name": "(주)미진미트 미진축",
+      "total_count": 1,
+      "total_amount": 225300,
+      "avg_amount": 225300,
+      "first_used": "2026-02-03",
+      "last_used": "2026-02-03",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 225300
+        }
+      ],
+      "rank_by_amount": 104
+    },
+    {
+      "venue_norm": "한우천국",
+      "display_name": "한우천국",
+      "total_count": 1,
+      "total_amount": 222000,
+      "avg_amount": 222000,
+      "first_used": "2025-06-11",
+      "last_used": "2025-06-11",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 222000
+        }
+      ],
+      "rank_by_amount": 105
+    },
+    {
+      "venue_norm": "일번지정육식당",
+      "display_name": "일번지정육식당",
+      "total_count": 1,
+      "total_amount": 215000,
+      "avg_amount": 215000,
+      "first_used": "2025-09-10",
+      "last_used": "2025-09-10",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 215000
+        }
+      ],
+      "rank_by_amount": 106
+    },
+    {
+      "venue_norm": "이수사횟집",
+      "display_name": "이수사횟집",
+      "total_count": 1,
+      "total_amount": 215000,
+      "avg_amount": 215000,
+      "first_used": "2025-09-11",
+      "last_used": "2025-09-11",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 215000
+        }
+      ],
+      "rank_by_amount": 107
+    },
+    {
+      "venue_norm": "산천가든",
+      "display_name": "산천가든",
+      "total_count": 2,
+      "total_amount": 210000,
+      "avg_amount": 105000,
+      "first_used": "2025-09-29",
+      "last_used": "2025-11-10",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 135000
+        },
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 75000
+        }
+      ],
+      "rank_by_amount": 108
+    },
+    {
+      "venue_norm": "한옥정",
+      "display_name": "한옥정",
+      "total_count": 1,
+      "total_amount": 210000,
+      "avg_amount": 210000,
+      "first_used": "2026-01-20",
+      "last_used": "2026-01-20",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 210000
+        }
+      ],
+      "rank_by_amount": 109
+    },
+    {
+      "venue_norm": "봉화골생고기",
+      "display_name": "봉화골생고기",
+      "total_count": 1,
+      "total_amount": 210000,
+      "avg_amount": 210000,
+      "first_used": "2026-02-12",
+      "last_used": "2026-02-12",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 210000
+        }
+      ],
+      "rank_by_amount": 110
+    },
+    {
+      "venue_norm": "대왕도숯불갈비",
+      "display_name": "대왕도숯불갈비",
+      "total_count": 1,
+      "total_amount": 202000,
+      "avg_amount": 202000,
+      "first_used": "2025-12-26",
+      "last_used": "2025-12-26",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 202000
+        }
+      ],
+      "rank_by_amount": 111
+    },
+    {
+      "venue_norm": "구알쏭달쏭맛집",
+      "display_name": "구알쏭달쏭맛집",
+      "total_count": 1,
+      "total_amount": 201000,
+      "avg_amount": 201000,
+      "first_used": "2025-11-05",
+      "last_used": "2025-11-05",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 201000
+        }
+      ],
+      "rank_by_amount": 112
+    },
+    {
+      "venue_norm": "깡통집",
+      "display_name": "깡통집",
+      "total_count": 1,
+      "total_amount": 200000,
+      "avg_amount": 200000,
+      "first_used": "2025-11-19",
+      "last_used": "2025-11-19",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 200000
+        }
+      ],
+      "rank_by_amount": 113
+    },
+    {
+      "venue_norm": "삼거리정육식당",
+      "display_name": "삼거리 정육식당",
+      "total_count": 1,
+      "total_amount": 196000,
+      "avg_amount": 196000,
+      "first_used": "2025-09-04",
+      "last_used": "2025-09-04",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 196000
+        }
+      ],
+      "rank_by_amount": 114
+    },
+    {
+      "venue_norm": "쿠우쿠우",
+      "display_name": "쿠우쿠우",
+      "total_count": 1,
+      "total_amount": 194500,
+      "avg_amount": 194500,
+      "first_used": "2026-01-28",
+      "last_used": "2026-01-28",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 194500
+        }
+      ],
+      "rank_by_amount": 115
+    },
+    {
+      "venue_norm": "모리야롯데청량리점",
+      "display_name": "모리야 롯데 청량리점",
+      "total_count": 2,
+      "total_amount": 194000,
+      "avg_amount": 97000,
+      "first_used": "2025-06-24",
+      "last_used": "2025-07-15",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 132000
+        },
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 62000
+        }
+      ],
+      "rank_by_amount": 116
+    },
+    {
+      "venue_norm": "민속마을",
+      "display_name": "민속마을",
+      "total_count": 2,
+      "total_amount": 192000,
+      "avg_amount": 96000,
+      "first_used": "2025-10-17",
+      "last_used": "2025-11-10",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 124000
+        },
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 68000
+        }
+      ],
+      "rank_by_amount": 117
+    },
+    {
+      "venue_norm": "김가네보쌈명태찜",
+      "display_name": "김가네보쌈 명태찜",
+      "total_count": 2,
+      "total_amount": 186000,
+      "avg_amount": 93000,
+      "first_used": "2025-07-03",
+      "last_used": "2025-08-28",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 114000
+        },
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 72000
+        }
+      ],
+      "rank_by_amount": 118
+    },
+    {
+      "venue_norm": "우마루(중화점)",
+      "display_name": "우마루(중화점)",
+      "total_count": 2,
+      "total_amount": 185000,
+      "avg_amount": 92500,
+      "first_used": "2025-09-26",
+      "last_used": "2026-02-20",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 185000
+        }
+      ],
+      "rank_by_amount": 119
+    },
+    {
+      "venue_norm": "제주은희네해장국",
+      "display_name": "제주은희네해장국",
+      "total_count": 3,
+      "total_amount": 181000,
+      "avg_amount": 60333.333333333336,
+      "first_used": "2025-07-24",
+      "last_used": "2026-01-26",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 107000
+        },
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 50000
+        },
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 24000
+        }
+      ],
+      "rank_by_amount": 120
+    },
+    {
+      "venue_norm": "동호식당",
+      "display_name": "동호식당",
+      "total_count": 2,
+      "total_amount": 180000,
+      "avg_amount": 90000,
+      "first_used": "2025-08-14",
+      "last_used": "2025-08-18",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 2,
+          "amount": 180000
+        }
+      ],
+      "rank_by_amount": 121
+    },
+    {
+      "venue_norm": "거물집",
+      "display_name": "거물집",
+      "total_count": 1,
+      "total_amount": 180000,
+      "avg_amount": 180000,
+      "first_used": "2025-09-22",
+      "last_used": "2025-09-22",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 180000
+        }
+      ],
+      "rank_by_amount": 122
+    },
+    {
+      "venue_norm": "황금코다리",
+      "display_name": "황금코다리",
+      "total_count": 2,
+      "total_amount": 179000,
+      "avg_amount": 89500,
+      "first_used": "2026-01-16",
+      "last_used": "2026-01-23",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 2,
+          "amount": 179000
+        }
+      ],
+      "rank_by_amount": 123
+    },
+    {
+      "venue_norm": "북경영빈관",
+      "display_name": "북경영빈관",
+      "total_count": 1,
+      "total_amount": 174000,
+      "avg_amount": 174000,
+      "first_used": "2025-11-19",
+      "last_used": "2025-11-19",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 174000
+        }
+      ],
+      "rank_by_amount": 124
+    },
+    {
+      "venue_norm": "두리양대창",
+      "display_name": "두리양대창",
+      "total_count": 1,
+      "total_amount": 173000,
+      "avg_amount": 173000,
+      "first_used": "2025-08-13",
+      "last_used": "2025-08-13",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 173000
+        }
+      ],
+      "rank_by_amount": 125
+    },
+    {
+      "venue_norm": "허뚱돼지나라",
+      "display_name": "허뚱돼지나라",
+      "total_count": 1,
+      "total_amount": 172000,
+      "avg_amount": 172000,
+      "first_used": "2025-11-13",
+      "last_used": "2025-11-13",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 172000
+        }
+      ],
+      "rank_by_amount": 126
+    },
+    {
+      "venue_norm": "빛나는바다",
+      "display_name": "빛나는 바다",
+      "total_count": 1,
+      "total_amount": 169000,
+      "avg_amount": 169000,
+      "first_used": "2025-08-05",
+      "last_used": "2025-08-05",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 169000
+        }
+      ],
+      "rank_by_amount": 127
+    },
+    {
+      "venue_norm": "아사쿠사",
+      "display_name": "아사쿠사",
+      "total_count": 1,
+      "total_amount": 163000,
+      "avg_amount": 163000,
+      "first_used": "2025-07-01",
+      "last_used": "2025-07-01",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 163000
+        }
+      ],
+      "rank_by_amount": 128
+    },
+    {
+      "venue_norm": "조선감저",
+      "display_name": "조선감저",
+      "total_count": 1,
+      "total_amount": 163000,
+      "avg_amount": 163000,
+      "first_used": "2025-07-18",
+      "last_used": "2025-07-18",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 163000
+        }
+      ],
+      "rank_by_amount": 129
+    },
+    {
+      "venue_norm": "해다원해물찜",
+      "display_name": "해다원해물찜",
+      "total_count": 2,
+      "total_amount": 161000,
+      "avg_amount": 80500,
+      "first_used": "2025-07-22",
+      "last_used": "2026-01-15",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 161000
+        }
+      ],
+      "rank_by_amount": 130
+    },
+    {
+      "venue_norm": "김시우초밥",
+      "display_name": "김시우초밥",
+      "total_count": 1,
+      "total_amount": 161000,
+      "avg_amount": 161000,
+      "first_used": "2025-11-26",
+      "last_used": "2025-11-26",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 161000
+        }
+      ],
+      "rank_by_amount": 131
+    },
+    {
+      "venue_norm": "해송",
+      "display_name": "해송",
+      "total_count": 2,
+      "total_amount": 160000,
+      "avg_amount": 80000,
+      "first_used": "2025-07-01",
+      "last_used": "2026-02-09",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 2,
+          "amount": 160000
+        }
+      ],
+      "rank_by_amount": 132
+    },
+    {
+      "venue_norm": "명품한방삼계탕",
+      "display_name": "명품한방삼계탕",
+      "total_count": 1,
+      "total_amount": 158000,
+      "avg_amount": 158000,
+      "first_used": "2025-07-14",
+      "last_used": "2025-07-14",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 158000
+        }
+      ],
+      "rank_by_amount": 133
+    },
+    {
+      "venue_norm": "다올낙지",
+      "display_name": "다올낙지",
+      "total_count": 2,
+      "total_amount": 152000,
+      "avg_amount": 76000,
+      "first_used": "2025-07-07",
+      "last_used": "2026-01-23",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 152000
+        }
+      ],
+      "rank_by_amount": 134
+    },
+    {
+      "venue_norm": "장안정",
+      "display_name": "장안정",
+      "total_count": 1,
+      "total_amount": 150000,
+      "avg_amount": 150000,
+      "first_used": "2025-08-11",
+      "last_used": "2025-08-11",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 150000
+        }
+      ],
+      "rank_by_amount": 135
+    },
+    {
+      "venue_norm": "유미찌개마당",
+      "display_name": "유미찌개마당",
+      "total_count": 1,
+      "total_amount": 150000,
+      "avg_amount": 150000,
+      "first_used": "2026-01-06",
+      "last_used": "2026-01-06",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 150000
+        }
+      ],
+      "rank_by_amount": 136
+    },
+    {
+      "venue_norm": "이층냉삼집",
+      "display_name": "이층냉삼집",
+      "total_count": 1,
+      "total_amount": 149300,
+      "avg_amount": 149300,
+      "first_used": "2025-10-01",
+      "last_used": "2025-10-01",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 149300
+        }
+      ],
+      "rank_by_amount": 137
+    },
+    {
+      "venue_norm": "마루샤브용두직영점",
+      "display_name": "마루샤브 용두직영점",
+      "total_count": 1,
+      "total_amount": 148800,
+      "avg_amount": 148800,
+      "first_used": "2025-10-14",
+      "last_used": "2025-10-14",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 148800
+        }
+      ],
+      "rank_by_amount": 138
+    },
+    {
+      "venue_norm": "기와집정육식당",
+      "display_name": "기와집 정육식당",
+      "total_count": 1,
+      "total_amount": 145000,
+      "avg_amount": 145000,
+      "first_used": "2025-11-03",
+      "last_used": "2025-11-03",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 145000
+        }
+      ],
+      "rank_by_amount": 139
+    },
+    {
+      "venue_norm": "종로청진동해장국",
+      "display_name": "종로청진동해장국",
+      "total_count": 1,
+      "total_amount": 145000,
+      "avg_amount": 145000,
+      "first_used": "2025-11-14",
+      "last_used": "2025-11-14",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 145000
+        }
+      ],
+      "rank_by_amount": 140
+    },
+    {
+      "venue_norm": "등대횟집",
+      "display_name": "등대횟집",
+      "total_count": 1,
+      "total_amount": 143000,
+      "avg_amount": 143000,
+      "first_used": "2025-09-18",
+      "last_used": "2025-09-18",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 143000
+        }
+      ],
+      "rank_by_amount": 141
+    },
+    {
+      "venue_norm": "수진궁한식부페",
+      "display_name": "수진궁한식부페",
+      "total_count": 1,
+      "total_amount": 140000,
+      "avg_amount": 140000,
+      "first_used": "2025-11-17",
+      "last_used": "2025-11-17",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 140000
+        }
+      ],
+      "rank_by_amount": 142
+    },
+    {
+      "venue_norm": "제일유통",
+      "display_name": "제일유통",
+      "total_count": 1,
+      "total_amount": 140000,
+      "avg_amount": 140000,
+      "first_used": "2026-01-08",
+      "last_used": "2026-01-08",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 140000
+        }
+      ],
+      "rank_by_amount": 143
+    },
+    {
+      "venue_norm": "경북칼국수",
+      "display_name": "경북칼국수",
+      "total_count": 3,
+      "total_amount": 138000,
+      "avg_amount": 46000,
+      "first_used": "2025-07-29",
+      "last_used": "2025-12-24",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 2,
+          "amount": 97000
+        },
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 41000
+        }
+      ],
+      "rank_by_amount": 144
+    },
+    {
+      "venue_norm": "용두포구",
+      "display_name": "용두포구",
+      "total_count": 1,
+      "total_amount": 138000,
+      "avg_amount": 138000,
+      "first_used": "2026-01-09",
+      "last_used": "2026-01-09",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 138000
+        }
+      ],
+      "rank_by_amount": 145
+    },
+    {
+      "venue_norm": "부뚜막흑염소",
+      "display_name": "부뚜막흑염소",
+      "total_count": 1,
+      "total_amount": 136000,
+      "avg_amount": 136000,
+      "first_used": "2026-01-20",
+      "last_used": "2026-01-20",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 136000
+        }
+      ],
+      "rank_by_amount": 146
+    },
+    {
+      "venue_norm": "꼬지사께서일핵밥",
+      "display_name": "꼬지사께 서일핵밥",
+      "total_count": 1,
+      "total_amount": 135700,
+      "avg_amount": 135700,
+      "first_used": "2025-08-18",
+      "last_used": "2025-08-18",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 135700
+        }
+      ],
+      "rank_by_amount": 147
+    },
+    {
+      "venue_norm": "압구정찌개마을",
+      "display_name": "압구정찌개마을",
+      "total_count": 1,
+      "total_amount": 130000,
+      "avg_amount": 130000,
+      "first_used": "2025-07-16",
+      "last_used": "2025-07-16",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 130000
+        }
+      ],
+      "rank_by_amount": 148
+    },
+    {
+      "venue_norm": "메가엠지씨커피동대",
+      "display_name": "메가엠지씨커피 동대",
+      "total_count": 4,
+      "total_amount": 129200,
+      "avg_amount": 32300,
+      "first_used": "2025-06-10",
+      "last_used": "2025-08-07",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 3,
+          "amount": 109200
+        },
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 20000
+        }
+      ],
+      "rank_by_amount": 149
+    },
+    {
+      "venue_norm": "이프로",
+      "display_name": "이프로",
+      "total_count": 2,
+      "total_amount": 129000,
+      "avg_amount": 64500,
+      "first_used": "2025-06-20",
+      "last_used": "2025-09-26",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 129000
+        }
+      ],
+      "rank_by_amount": 150
+    },
+    {
+      "venue_norm": "아름다운짜장",
+      "display_name": "아름다운짜장",
+      "total_count": 1,
+      "total_amount": 127000,
+      "avg_amount": 127000,
+      "first_used": "2025-07-11",
+      "last_used": "2025-07-11",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 127000
+        }
+      ],
+      "rank_by_amount": 151
+    },
+    {
+      "venue_norm": "찌마기용두점",
+      "display_name": "찌마기용두점",
+      "total_count": 1,
+      "total_amount": 126500,
+      "avg_amount": 126500,
+      "first_used": "2025-07-02",
+      "last_used": "2025-07-02",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 126500
+        }
+      ],
+      "rank_by_amount": 152
+    },
+    {
+      "venue_norm": "산골오리",
+      "display_name": "산골오리",
+      "total_count": 1,
+      "total_amount": 125000,
+      "avg_amount": 125000,
+      "first_used": "2025-09-23",
+      "last_used": "2025-09-23",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 125000
+        }
+      ],
+      "rank_by_amount": 153
+    },
+    {
+      "venue_norm": "다복",
+      "display_name": "다복",
+      "total_count": 1,
+      "total_amount": 122000,
+      "avg_amount": 122000,
+      "first_used": "2025-09-09",
+      "last_used": "2025-09-09",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 122000
+        }
+      ],
+      "rank_by_amount": 154
+    },
+    {
+      "venue_norm": "역전숯불바베큐",
+      "display_name": "역전숯불바베큐",
+      "total_count": 2,
+      "total_amount": 121000,
+      "avg_amount": 60500,
+      "first_used": "2025-12-26",
+      "last_used": "2025-12-26",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 2,
+          "amount": 121000
+        }
+      ],
+      "rank_by_amount": 155
+    },
+    {
+      "venue_norm": "회기족발",
+      "display_name": "회기족발",
+      "total_count": 1,
+      "total_amount": 111000,
+      "avg_amount": 111000,
+      "first_used": "2025-09-03",
+      "last_used": "2025-09-03",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 111000
+        }
+      ],
+      "rank_by_amount": 156
+    },
+    {
+      "venue_norm": "오늘은밥대장",
+      "display_name": "오늘은 밥대장",
+      "total_count": 1,
+      "total_amount": 110400,
+      "avg_amount": 110400,
+      "first_used": "2025-06-16",
+      "last_used": "2025-06-16",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 110400
+        }
+      ],
+      "rank_by_amount": 157
+    },
+    {
+      "venue_norm": "고봉산뼈칼국수",
+      "display_name": "고봉산 뼈칼국수",
+      "total_count": 1,
+      "total_amount": 110000,
+      "avg_amount": 110000,
+      "first_used": "2025-08-22",
+      "last_used": "2025-08-22",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 110000
+        }
+      ],
+      "rank_by_amount": 158
+    },
+    {
+      "venue_norm": "이문동그집회기역직",
+      "display_name": "이문동그집 회기역직",
+      "total_count": 1,
+      "total_amount": 107000,
+      "avg_amount": 107000,
+      "first_used": "2025-10-31",
+      "last_used": "2025-10-31",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 107000
+        }
+      ],
+      "rank_by_amount": 159
+    },
+    {
+      "venue_norm": "박만배아리랑보쌈장안점",
+      "display_name": "박만배아리랑보쌈 장안점",
+      "total_count": 1,
+      "total_amount": 99000,
+      "avg_amount": 99000,
+      "first_used": "2025-12-04",
+      "last_used": "2025-12-04",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 99000
+        }
+      ],
+      "rank_by_amount": 160
+    },
+    {
+      "venue_norm": "식탐한식부페",
+      "display_name": "식탐한식부페",
+      "total_count": 1,
+      "total_amount": 93500,
+      "avg_amount": 93500,
+      "first_used": "2025-06-17",
+      "last_used": "2025-06-17",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 93500
+        }
+      ],
+      "rank_by_amount": 161
+    },
+    {
+      "venue_norm": "팬스테이크키친",
+      "display_name": "팬스테이크키친",
+      "total_count": 1,
+      "total_amount": 92000,
+      "avg_amount": 92000,
+      "first_used": "2025-07-28",
+      "last_used": "2025-07-28",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 92000
+        }
+      ],
+      "rank_by_amount": 162
+    },
+    {
+      "venue_norm": "마구로준",
+      "display_name": "마구로준",
+      "total_count": 1,
+      "total_amount": 91000,
+      "avg_amount": 91000,
+      "first_used": "2025-06-19",
+      "last_used": "2025-06-19",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 91000
+        }
+      ],
+      "rank_by_amount": 163
+    },
+    {
+      "venue_norm": "직화대장",
+      "display_name": "직화대장",
+      "total_count": 1,
+      "total_amount": 91000,
+      "avg_amount": 91000,
+      "first_used": "2025-10-13",
+      "last_used": "2025-10-13",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 91000
+        }
+      ],
+      "rank_by_amount": 164
+    },
+    {
+      "venue_norm": "또바기치킨",
+      "display_name": "또바기치킨",
+      "total_count": 1,
+      "total_amount": 90000,
+      "avg_amount": 90000,
+      "first_used": "2026-01-13",
+      "last_used": "2026-01-13",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 90000
+        }
+      ],
+      "rank_by_amount": 165
+    },
+    {
+      "venue_norm": "본가칼국수",
+      "display_name": "본가칼국수",
+      "total_count": 1,
+      "total_amount": 89000,
+      "avg_amount": 89000,
+      "first_used": "2025-07-17",
+      "last_used": "2025-07-17",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 89000
+        }
+      ],
+      "rank_by_amount": 166
+    },
+    {
+      "venue_norm": "우리곱창",
+      "display_name": "우리곱창",
+      "total_count": 1,
+      "total_amount": 88000,
+      "avg_amount": 88000,
+      "first_used": "2025-06-04",
+      "last_used": "2025-06-04",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 88000
+        }
+      ],
+      "rank_by_amount": 167
+    },
+    {
+      "venue_norm": "지호한방삼계탕",
+      "display_name": "지호한방삼계탕",
+      "total_count": 1,
+      "total_amount": 88000,
+      "avg_amount": 88000,
+      "first_used": "2025-07-09",
+      "last_used": "2025-07-09",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 88000
+        }
+      ],
+      "rank_by_amount": 168
+    },
+    {
+      "venue_norm": "밤푸스치킨",
+      "display_name": "밤푸스치킨",
+      "total_count": 1,
+      "total_amount": 85000,
+      "avg_amount": 85000,
+      "first_used": "2025-07-22",
+      "last_used": "2025-07-22",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 85000
+        }
+      ],
+      "rank_by_amount": 169
+    },
+    {
+      "venue_norm": "카페이티씨.",
+      "display_name": "카페 이티씨.",
+      "total_count": 3,
+      "total_amount": 84500,
+      "avg_amount": 28166.666666666668,
+      "first_used": "2025-10-20",
+      "last_used": "2025-11-11",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 61000
+        },
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 23500
+        }
+      ],
+      "rank_by_amount": 170
+    },
+    {
+      "venue_norm": "본추추어탕",
+      "display_name": "본추추어탕",
+      "total_count": 1,
+      "total_amount": 84000,
+      "avg_amount": 84000,
+      "first_used": "2025-08-07",
+      "last_used": "2025-08-07",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 84000
+        }
+      ],
+      "rank_by_amount": 171
+    },
+    {
+      "venue_norm": "싸왓디타이",
+      "display_name": "싸왓디타이",
+      "total_count": 1,
+      "total_amount": 81000,
+      "avg_amount": 81000,
+      "first_used": "2025-08-13",
+      "last_used": "2025-08-13",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 81000
+        }
+      ],
+      "rank_by_amount": 172
+    },
+    {
+      "venue_norm": "천복집흑염소상봉1호",
+      "display_name": "천복집흑염소상봉1호",
+      "total_count": 1,
+      "total_amount": 80000,
+      "avg_amount": 80000,
+      "first_used": "2025-07-30",
+      "last_used": "2025-07-30",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 80000
+        }
+      ],
+      "rank_by_amount": 173
+    },
+    {
+      "venue_norm": "스타벅스코리아",
+      "display_name": "스타벅스코리아",
+      "total_count": 3,
+      "total_amount": 79800,
+      "avg_amount": 26600,
+      "first_used": "2025-06-02",
+      "last_used": "2025-06-09",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 49200
+        },
+        {
+          "user": "부의장",
+          "count": 2,
+          "amount": 30600
+        }
+      ],
+      "rank_by_amount": 174
+    },
+    {
+      "venue_norm": "한춘상일미간장게장",
+      "display_name": "한춘상 일미간장게장",
+      "total_count": 1,
+      "total_amount": 79000,
+      "avg_amount": 79000,
+      "first_used": "2025-07-15",
+      "last_used": "2025-07-15",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 79000
+        }
+      ],
+      "rank_by_amount": 175
+    },
+    {
+      "venue_norm": "춘천닭갈비",
+      "display_name": "춘천닭갈비",
+      "total_count": 1,
+      "total_amount": 79000,
+      "avg_amount": 79000,
+      "first_used": "2026-02-05",
+      "last_used": "2026-02-05",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 79000
+        }
+      ],
+      "rank_by_amount": 176
+    },
+    {
+      "venue_norm": "만나네마라탕",
+      "display_name": "만나네 마라탕",
+      "total_count": 2,
+      "total_amount": 76800,
+      "avg_amount": 38400,
+      "first_used": "2025-08-05",
+      "last_used": "2025-10-23",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 43900
+        },
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 32900
+        }
+      ],
+      "rank_by_amount": 177
+    },
+    {
+      "venue_norm": "달콤제빵소",
+      "display_name": "달콤제빵소",
+      "total_count": 1,
+      "total_amount": 76200,
+      "avg_amount": 76200,
+      "first_used": "2025-09-30",
+      "last_used": "2025-09-30",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 76200
+        }
+      ],
+      "rank_by_amount": 178
+    },
+    {
+      "venue_norm": "아소정청량리",
+      "display_name": "아소정 청량리",
+      "total_count": 1,
+      "total_amount": 76000,
+      "avg_amount": 76000,
+      "first_used": "2025-07-28",
+      "last_used": "2025-07-28",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 76000
+        }
+      ],
+      "rank_by_amount": 179
+    },
+    {
+      "venue_norm": "허브영양족발",
+      "display_name": "허브영양족발",
+      "total_count": 1,
+      "total_amount": 76000,
+      "avg_amount": 76000,
+      "first_used": "2026-02-10",
+      "last_used": "2026-02-10",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 76000
+        }
+      ],
+      "rank_by_amount": 180
+    },
+    {
+      "venue_norm": "서리재(미아점)",
+      "display_name": "서리재(미아점)",
+      "total_count": 1,
+      "total_amount": 74000,
+      "avg_amount": 74000,
+      "first_used": "2025-10-13",
+      "last_used": "2025-10-13",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 74000
+        }
+      ],
+      "rank_by_amount": 181
+    },
+    {
+      "venue_norm": "해뜰날",
+      "display_name": "해뜰날",
+      "total_count": 1,
+      "total_amount": 72000,
+      "avg_amount": 72000,
+      "first_used": "2026-01-16",
+      "last_used": "2026-01-16",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 72000
+        }
+      ],
+      "rank_by_amount": 182
+    },
+    {
+      "venue_norm": "중국성",
+      "display_name": "중국성",
+      "total_count": 1,
+      "total_amount": 70000,
+      "avg_amount": 70000,
+      "first_used": "2025-09-01",
+      "last_used": "2025-09-01",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 70000
+        }
+      ],
+      "rank_by_amount": 183
+    },
+    {
+      "venue_norm": "페리카나외대점",
+      "display_name": "페리카나 외대점",
+      "total_count": 1,
+      "total_amount": 69000,
+      "avg_amount": 69000,
+      "first_used": "2025-10-31",
+      "last_used": "2025-10-31",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 69000
+        }
+      ],
+      "rank_by_amount": 184
+    },
+    {
+      "venue_norm": "빽다방신이문역점",
+      "display_name": "빽다방 신이문역점",
+      "total_count": 1,
+      "total_amount": 68000,
+      "avg_amount": 68000,
+      "first_used": "2025-07-24",
+      "last_used": "2025-07-24",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 68000
+        }
+      ],
+      "rank_by_amount": 185
+    },
+    {
+      "venue_norm": "비비큐(BBQ)중랑역점",
+      "display_name": "비비큐(BBQ)중랑역점",
+      "total_count": 1,
+      "total_amount": 67500,
+      "avg_amount": 67500,
+      "first_used": "2025-07-04",
+      "last_used": "2025-07-04",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 67500
+        }
+      ],
+      "rank_by_amount": 186
+    },
+    {
+      "venue_norm": "장안칼국수",
+      "display_name": "장안칼국수",
+      "total_count": 1,
+      "total_amount": 65000,
+      "avg_amount": 65000,
+      "first_used": "2025-08-04",
+      "last_used": "2025-08-04",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 65000
+        }
+      ],
+      "rank_by_amount": 187
+    },
+    {
+      "venue_norm": "토성옥",
+      "display_name": "토성옥",
+      "total_count": 1,
+      "total_amount": 64000,
+      "avg_amount": 64000,
+      "first_used": "2026-01-16",
+      "last_used": "2026-01-16",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 64000
+        }
+      ],
+      "rank_by_amount": 188
+    },
+    {
+      "venue_norm": "용두동동태탕동태찜",
+      "display_name": "용두동동태탕동태찜",
+      "total_count": 2,
+      "total_amount": 63000,
+      "avg_amount": 31500,
+      "first_used": "2025-09-22",
+      "last_used": "2025-12-17",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 36000
+        },
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 27000
+        }
+      ],
+      "rank_by_amount": 189
+    },
+    {
+      "venue_norm": "만선애꿈",
+      "display_name": "만선애꿈",
+      "total_count": 1,
+      "total_amount": 58000,
+      "avg_amount": 58000,
+      "first_used": "2026-02-09",
+      "last_used": "2026-02-09",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 58000
+        }
+      ],
+      "rank_by_amount": 190
+    },
+    {
+      "venue_norm": "강박사쌈밥",
+      "display_name": "강박사 쌈밥",
+      "total_count": 1,
+      "total_amount": 56000,
+      "avg_amount": 56000,
+      "first_used": "2025-07-21",
+      "last_used": "2025-07-21",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 56000
+        }
+      ],
+      "rank_by_amount": 191
+    },
+    {
+      "venue_norm": "스마일Smile",
+      "display_name": "스마일 Smile",
+      "total_count": 1,
+      "total_amount": 55000,
+      "avg_amount": 55000,
+      "first_used": "2025-11-24",
+      "last_used": "2025-11-24",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 55000
+        }
+      ],
+      "rank_by_amount": 192
+    },
+    {
+      "venue_norm": "버드나무",
+      "display_name": "버드나무",
+      "total_count": 1,
+      "total_amount": 54000,
+      "avg_amount": 54000,
+      "first_used": "2025-10-31",
+      "last_used": "2025-10-31",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 54000
+        }
+      ],
+      "rank_by_amount": 193
+    },
+    {
+      "venue_norm": "공차외대",
+      "display_name": "공차 외대",
+      "total_count": 1,
+      "total_amount": 50700,
+      "avg_amount": 50700,
+      "first_used": "2025-10-14",
+      "last_used": "2025-10-14",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 50700
+        }
+      ],
+      "rank_by_amount": 194
+    },
+    {
+      "venue_norm": "태화루앤도화",
+      "display_name": "태화루앤도화",
+      "total_count": 1,
+      "total_amount": 48000,
+      "avg_amount": 48000,
+      "first_used": "2025-11-24",
+      "last_used": "2025-11-24",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 48000
+        }
+      ],
+      "rank_by_amount": 195
+    },
+    {
+      "venue_norm": "스타벅스코리아(외대점)",
+      "display_name": "스타벅스코리아(외대점)",
+      "total_count": 1,
+      "total_amount": 47100,
+      "avg_amount": 47100,
+      "first_used": "2025-10-24",
+      "last_used": "2025-10-24",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 47100
+        }
+      ],
+      "rank_by_amount": 196
+    },
+    {
+      "venue_norm": "상무초밥왕십리점",
+      "display_name": "상무초밥 왕십리점",
+      "total_count": 1,
+      "total_amount": 45700,
+      "avg_amount": 45700,
+      "first_used": "2025-09-30",
+      "last_used": "2025-09-30",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 45700
+        }
+      ],
+      "rank_by_amount": 197
+    },
+    {
+      "venue_norm": "제이에이치베이커리",
+      "display_name": "제이에이치베이커리",
+      "total_count": 1,
+      "total_amount": 45000,
+      "avg_amount": 45000,
+      "first_used": "2025-07-16",
+      "last_used": "2025-07-16",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 45000
+        }
+      ],
+      "rank_by_amount": 198
+    },
+    {
+      "venue_norm": "상주연제농원",
+      "display_name": "상주연제농원",
+      "total_count": 2,
+      "total_amount": 45000,
+      "avg_amount": 22500,
+      "first_used": "2025-09-25",
+      "last_used": "2025-09-25",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 45000
+        }
+      ],
+      "rank_by_amount": 199
+    },
+    {
+      "venue_norm": "골목냉면",
+      "display_name": "골목냉면",
+      "total_count": 1,
+      "total_amount": 44000,
+      "avg_amount": 44000,
+      "first_used": "2025-08-05",
+      "last_used": "2025-08-05",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 44000
+        }
+      ],
+      "rank_by_amount": 200
+    },
+    {
+      "venue_norm": "가치로아",
+      "display_name": "가치로아",
+      "total_count": 1,
+      "total_amount": 43000,
+      "avg_amount": 43000,
+      "first_used": "2025-09-26",
+      "last_used": "2025-09-26",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 43000
+        }
+      ],
+      "rank_by_amount": 201
+    },
+    {
+      "venue_norm": "무교동맷돌파전",
+      "display_name": "무교동맷돌파전",
+      "total_count": 1,
+      "total_amount": 42000,
+      "avg_amount": 42000,
+      "first_used": "2025-07-25",
+      "last_used": "2025-07-25",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 42000
+        }
+      ],
+      "rank_by_amount": 202
+    },
+    {
+      "venue_norm": "남해바다",
+      "display_name": "남해바다",
+      "total_count": 1,
+      "total_amount": 40000,
+      "avg_amount": 40000,
+      "first_used": "2025-07-30",
+      "last_used": "2025-07-30",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 40000
+        }
+      ],
+      "rank_by_amount": 203
+    },
+    {
+      "venue_norm": "짬뽕관(장한평역점)",
+      "display_name": "짬뽕관(장한평역점)",
+      "total_count": 2,
+      "total_amount": 39000,
+      "avg_amount": 19500,
+      "first_used": "2025-10-15",
+      "last_used": "2025-12-02",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 2,
+          "amount": 39000
+        }
+      ],
+      "rank_by_amount": 204
+    },
+    {
+      "venue_norm": "포천냉면",
+      "display_name": "포천냉면",
+      "total_count": 1,
+      "total_amount": 36000,
+      "avg_amount": 36000,
+      "first_used": "2025-11-13",
+      "last_used": "2025-11-13",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 36000
+        }
+      ],
+      "rank_by_amount": 205
+    },
+    {
+      "venue_norm": "오슬로우커피답십리",
+      "display_name": "오슬로우커피 답십리",
+      "total_count": 1,
+      "total_amount": 35600,
+      "avg_amount": 35600,
+      "first_used": "2025-07-01",
+      "last_used": "2025-07-01",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 35600
+        }
+      ],
+      "rank_by_amount": 206
+    },
+    {
+      "venue_norm": "카페상상",
+      "display_name": "카페 상상",
+      "total_count": 2,
+      "total_amount": 33600,
+      "avg_amount": 16800,
+      "first_used": "2025-09-02",
+      "last_used": "2025-12-24",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 19600
+        },
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 14000
+        }
+      ],
+      "rank_by_amount": 207
+    },
+    {
+      "venue_norm": "춘향골남원추어탕성",
+      "display_name": "춘향골남원추어탕성",
+      "total_count": 1,
+      "total_amount": 30000,
+      "avg_amount": 30000,
+      "first_used": "2025-08-21",
+      "last_used": "2025-08-21",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 30000
+        }
+      ],
+      "rank_by_amount": 208
+    },
+    {
+      "venue_norm": "1(2)한가로이",
+      "display_name": "1(2) 한가로이",
+      "total_count": 1,
+      "total_amount": 28500,
+      "avg_amount": 28500,
+      "first_used": "2026-01-06",
+      "last_used": "2026-01-06",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 28500
+        }
+      ],
+      "rank_by_amount": 209
+    },
+    {
+      "venue_norm": "장안설렁탕",
+      "display_name": "장안설렁탕",
+      "total_count": 1,
+      "total_amount": 28000,
+      "avg_amount": 28000,
+      "first_used": "2025-11-13",
+      "last_used": "2025-11-13",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 28000
+        }
+      ],
+      "rank_by_amount": 210
+    },
+    {
+      "venue_norm": "빈칸(BEANKHAN)",
+      "display_name": "빈칸(BEAN KHAN)",
+      "total_count": 1,
+      "total_amount": 27000,
+      "avg_amount": 27000,
+      "first_used": "2026-01-16",
+      "last_used": "2026-01-16",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 27000
+        }
+      ],
+      "rank_by_amount": 211
+    },
+    {
+      "venue_norm": "(주)에스푸드",
+      "display_name": "(주)에스푸드",
+      "total_count": 1,
+      "total_amount": 26000,
+      "avg_amount": 26000,
+      "first_used": "2026-01-16",
+      "last_used": "2026-01-16",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 26000
+        }
+      ],
+      "rank_by_amount": 212
+    },
+    {
+      "venue_norm": "본죽&비빔밥카페제",
+      "display_name": "본죽&비빔밥카페 제",
+      "total_count": 1,
+      "total_amount": 22000,
+      "avg_amount": 22000,
+      "first_used": "2025-08-08",
+      "last_used": "2025-08-08",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 22000
+        }
+      ],
+      "rank_by_amount": 213
+    },
+    {
+      "venue_norm": "고센기와집갈비25",
+      "display_name": "고센 기와집갈비25",
+      "total_count": 1,
+      "total_amount": 22000,
+      "avg_amount": 22000,
+      "first_used": "2025-11-03",
+      "last_used": "2025-11-03",
+      "top_users": [
+        {
+          "user": "부의장",
+          "count": 1,
+          "amount": 22000
+        }
+      ],
+      "rank_by_amount": 214
+    },
+    {
+      "venue_norm": "우정김밥분식",
+      "display_name": "우정김밥분식",
+      "total_count": 1,
+      "total_amount": 22000,
+      "avg_amount": 22000,
+      "first_used": "2026-02-10",
+      "last_used": "2026-02-10",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 22000
+        }
+      ],
+      "rank_by_amount": 215
+    },
+    {
+      "venue_norm": "곰소전통젓갈",
+      "display_name": "곰소전통젓갈",
+      "total_count": 1,
+      "total_amount": 20000,
+      "avg_amount": 20000,
+      "first_used": "2025-09-25",
+      "last_used": "2025-09-25",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 20000
+        }
+      ],
+      "rank_by_amount": 216
+    },
+    {
+      "venue_norm": "우리칼국수",
+      "display_name": "우리칼국수",
+      "total_count": 1,
+      "total_amount": 19800,
+      "avg_amount": 19800,
+      "first_used": "2025-07-02",
+      "last_used": "2025-07-02",
+      "top_users": [
+        {
+          "user": "복지건설위원장",
+          "count": 1,
+          "amount": 19800
+        }
+      ],
+      "rank_by_amount": 217
+    },
+    {
+      "venue_norm": "로커보어테이블청량리",
+      "display_name": "로커보어테이블 청량리",
+      "total_count": 1,
+      "total_amount": 17900,
+      "avg_amount": 17900,
+      "first_used": "2025-07-28",
+      "last_used": "2025-07-28",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 17900
+        }
+      ],
+      "rank_by_amount": 218
+    },
+    {
+      "venue_norm": "마호가니커피청량리",
+      "display_name": "마호가니 커피 청량리",
+      "total_count": 1,
+      "total_amount": 16900,
+      "avg_amount": 16900,
+      "first_used": "2025-07-25",
+      "last_used": "2025-07-25",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 16900
+        }
+      ],
+      "rank_by_amount": 219
+    },
+    {
+      "venue_norm": "카페브룩",
+      "display_name": "카페 브룩",
+      "total_count": 1,
+      "total_amount": 16300,
+      "avg_amount": 16300,
+      "first_used": "2026-02-10",
+      "last_used": "2026-02-10",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 16300
+        }
+      ],
+      "rank_by_amount": 220
+    },
+    {
+      "venue_norm": "카페비",
+      "display_name": "카페비",
+      "total_count": 1,
+      "total_amount": 15000,
+      "avg_amount": 15000,
+      "first_used": "2025-11-24",
+      "last_used": "2025-11-24",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 15000
+        }
+      ],
+      "rank_by_amount": 221
+    },
+    {
+      "venue_norm": "이디야(시립대점)",
+      "display_name": "이디야(시립대점)",
+      "total_count": 1,
+      "total_amount": 14400,
+      "avg_amount": 14400,
+      "first_used": "2025-06-30",
+      "last_used": "2025-06-30",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 14400
+        }
+      ],
+      "rank_by_amount": 222
+    },
+    {
+      "venue_norm": "이삭",
+      "display_name": "이삭",
+      "total_count": 1,
+      "total_amount": 13800,
+      "avg_amount": 13800,
+      "first_used": "2026-01-15",
+      "last_used": "2026-01-15",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 13800
+        }
+      ],
+      "rank_by_amount": 223
+    },
+    {
+      "venue_norm": "더벤티장한평역점",
+      "display_name": "더벤티 장한평역점",
+      "total_count": 1,
+      "total_amount": 13500,
+      "avg_amount": 13500,
+      "first_used": "2025-12-24",
+      "last_used": "2025-12-24",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 13500
+        }
+      ],
+      "rank_by_amount": 224
+    },
+    {
+      "venue_norm": "서산민속생강한과",
+      "display_name": "서산민속생강한과",
+      "total_count": 1,
+      "total_amount": 12000,
+      "avg_amount": 12000,
+      "first_used": "2025-09-25",
+      "last_used": "2025-09-25",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 12000
+        }
+      ],
+      "rank_by_amount": 225
+    },
+    {
+      "venue_norm": "이디야동부병원사거",
+      "display_name": "이디야동부병원사거",
+      "total_count": 1,
+      "total_amount": 11000,
+      "avg_amount": 11000,
+      "first_used": "2025-08-07",
+      "last_used": "2025-08-07",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 11000
+        }
+      ],
+      "rank_by_amount": 226
+    },
+    {
+      "venue_norm": "커피베이청량리점",
+      "display_name": "커피베이 청량리점",
+      "total_count": 1,
+      "total_amount": 9600,
+      "avg_amount": 9600,
+      "first_used": "2025-10-29",
+      "last_used": "2025-10-29",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 9600
+        }
+      ],
+      "rank_by_amount": 227
+    },
+    {
+      "venue_norm": "커피니여의도순복음",
+      "display_name": "커피니여의도순복음",
+      "total_count": 1,
+      "total_amount": 8600,
+      "avg_amount": 8600,
+      "first_used": "2025-10-29",
+      "last_used": "2025-10-29",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 8600
+        }
+      ],
+      "rank_by_amount": 228
+    },
+    {
+      "venue_norm": "언더그라운드커피웍",
+      "display_name": "언더그라운드 커피웍",
+      "total_count": 1,
+      "total_amount": 8000,
+      "avg_amount": 8000,
+      "first_used": "2025-11-13",
+      "last_used": "2025-11-13",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 8000
+        }
+      ],
+      "rank_by_amount": 229
+    },
+    {
+      "venue_norm": "이디야커피장한평군",
+      "display_name": "이디야커피 장한평군",
+      "total_count": 1,
+      "total_amount": 7700,
+      "avg_amount": 7700,
+      "first_used": "2026-01-20",
+      "last_used": "2026-01-20",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 7700
+        }
+      ],
+      "rank_by_amount": 230
+    },
+    {
+      "venue_norm": "바나프레소동대문구",
+      "display_name": "바나프레소 동대문구",
+      "total_count": 1,
+      "total_amount": 7200,
+      "avg_amount": 7200,
+      "first_used": "2025-11-18",
+      "last_used": "2025-11-18",
+      "top_users": [
+        {
+          "user": "의장",
+          "count": 1,
+          "amount": 7200
+        }
+      ],
+      "rank_by_amount": 231
+    },
+    {
+      "venue_norm": "템포커피용두동중앙",
+      "display_name": "템포커피 용두동중앙",
+      "total_count": 1,
+      "total_amount": 7000,
+      "avg_amount": 7000,
+      "first_used": "2025-07-28",
+      "last_used": "2025-07-28",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 7000
+        }
+      ],
+      "rank_by_amount": 232
+    },
+    {
+      "venue_norm": "이디야커피용두동점",
+      "display_name": "이디야커피 용두동점",
+      "total_count": 1,
+      "total_amount": 6400,
+      "avg_amount": 6400,
+      "first_used": "2026-01-26",
+      "last_used": "2026-01-26",
+      "top_users": [
+        {
+          "user": "운영위원장",
+          "count": 1,
+          "amount": 6400
+        }
+      ],
+      "rank_by_amount": 233
+    },
+    {
+      "venue_norm": "메가MGC커피용두동",
+      "display_name": "메가MGC커피 용두동",
+      "total_count": 1,
+      "total_amount": 3400,
+      "avg_amount": 3400,
+      "first_used": "2026-01-27",
+      "last_used": "2026-01-27",
+      "top_users": [
+        {
+          "user": "행정기획위원장",
+          "count": 1,
+          "amount": 3400
+        }
+      ],
+      "rank_by_amount": 234
+    }
+  ],
+  "member_coverage": [
+    {
+      "ym": "2025-06",
+      "의장": 33,
+      "의장_amount": 5262500,
+      "부의장": 3,
+      "부의장_amount": 178600,
+      "복지건설위원장": 3,
+      "복지건설위원장_amount": 347200,
+      "운영위원장": 2,
+      "운영위원장_amount": 196000
+    },
+    {
+      "ym": "2025-07",
+      "의장": 24,
+      "의장_amount": 3577500,
+      "부의장": 13,
+      "부의장_amount": 2024000,
+      "복지건설위원장": 12,
+      "복지건설위원장_amount": 1334400,
+      "행정기획위원장": 8,
+      "행정기획위원장_amount": 1748000,
+      "운영위원장": 13,
+      "운영위원장_amount": 1824800
+    },
+    {
+      "ym": "2025-08",
+      "의장": 1,
+      "의장_amount": 400000,
+      "복지건설위원장": 6,
+      "복지건설위원장_amount": 824000,
+      "행정기획위원장": 29,
+      "행정기획위원장_amount": 3736600,
+      "운영위원장": 5,
+      "운영위원장_amount": 480000
+    },
+    {
+      "ym": "2025-09",
+      "의장": 69,
+      "의장_amount": 12292900,
+      "부의장": 1,
+      "부의장_amount": 44000,
+      "복지건설위원장": 3,
+      "복지건설위원장_amount": 669000,
+      "행정기획위원장": 3,
+      "행정기획위원장_amount": 270000
+    },
+    {
+      "ym": "2025-10",
+      "의장": 37,
+      "의장_amount": 5381200,
+      "부의장": 4,
+      "부의장_amount": 429500,
+      "복지건설위원장": 5,
+      "복지건설위원장_amount": 786000,
+      "행정기획위원장": 3,
+      "행정기획위원장_amount": 302300
+    },
+    {
+      "ym": "2025-11",
+      "의장": 24,
+      "의장_amount": 3894700,
+      "부의장": 10,
+      "부의장_amount": 1985000,
+      "복지건설위원장": 11,
+      "복지건설위원장_amount": 1722500,
+      "행정기획위원장": 8,
+      "행정기획위원장_amount": 1324000
+    },
+    {
+      "ym": "2025-12",
+      "의장": 21,
+      "의장_amount": 4110100,
+      "부의장": 12,
+      "부의장_amount": 1950000,
+      "복지건설위원장": 6,
+      "복지건설위원장_amount": 1262600,
+      "행정기획위원장": 4,
+      "행정기획위원장_amount": 998500
+    },
+    {
+      "ym": "2026-01",
+      "의장": 25,
+      "의장_amount": 3780800,
+      "부의장": 14,
+      "부의장_amount": 2261500,
+      "복지건설위원장": 10,
+      "복지건설위원장_amount": 1437000,
+      "행정기획위원장": 3,
+      "행정기획위원장_amount": 497200,
+      "운영위원장": 17,
+      "운영위원장_amount": 3474300
+    },
+    {
+      "ym": "2026-02",
+      "의장": 18,
+      "의장_amount": 3225300,
+      "부의장": 6,
+      "부의장_amount": 1497300,
+      "복지건설위원장": 10,
+      "복지건설위원장_amount": 1221000,
+      "행정기획위원장": 3,
+      "행정기획위원장_amount": 206600,
+      "운영위원장": 11,
+      "운영위원장_amount": 2216000
+    }
+  ],
+  "venue_by_user_matrix": [
+    {
+      "venue_norm": "최강낙지",
+      "display_name": "최강낙지",
+      "의장": 18,
+      "복지건설위원장": 3,
+      "행정기획위원장": 4,
+      "운영위원장": 1,
+      "부의장": 1,
+      "total_count": 27,
+      "total_amount": 3895000
+    },
+    {
+      "venue_norm": "동강오리",
+      "display_name": "동강오리",
+      "복지건설위원장": 15,
+      "의장": 4,
+      "운영위원장": 1,
+      "total_count": 20,
+      "total_amount": 3586000
+    },
+    {
+      "venue_norm": "조영환의대양한방숯",
+      "display_name": "조영환의 대양한방숯",
+      "의장": 11,
+      "복지건설위원장": 1,
+      "행정기획위원장": 1,
+      "total_count": 13,
+      "total_amount": 3520000
+    },
+    {
+      "venue_norm": "주문진",
+      "display_name": "주문진",
+      "의장": 4,
+      "행정기획위원장": 2,
+      "total_count": 6,
+      "total_amount": 2068000
+    },
+    {
+      "venue_norm": "경성농장",
+      "display_name": "경성농장",
+      "의장": 7,
+      "부의장": 1,
+      "total_count": 8,
+      "total_amount": 1798000
+    },
+    {
+      "venue_norm": "부산횟집",
+      "display_name": "부산횟집",
+      "의장": 3,
+      "행정기획위원장": 2,
+      "부의장": 2,
+      "운영위원장": 1,
+      "total_count": 8,
+      "total_amount": 1639000
+    },
+    {
+      "venue_norm": "솔낭구",
+      "display_name": "솔낭구",
+      "의장": 3,
+      "행정기획위원장": 1,
+      "부의장": 1,
+      "total_count": 5,
+      "total_amount": 1608000
+    },
+    {
+      "venue_norm": "장어시대",
+      "display_name": "장어시대",
+      "의장": 6,
+      "운영위원장": 1,
+      "total_count": 7,
+      "total_amount": 1558000
+    },
+    {
+      "venue_norm": "오리명가",
+      "display_name": "오리명가",
+      "복지건설위원장": 3,
+      "의장": 3,
+      "행정기획위원장": 2,
+      "total_count": 8,
+      "total_amount": 1477000
+    },
+    {
+      "venue_norm": "풍천숯불장어세상",
+      "display_name": "풍천숯불장어세상",
+      "부의장": 4,
+      "의장": 2,
+      "total_count": 6,
+      "total_amount": 1257000
+    },
+    {
+      "venue_norm": "우리돈",
+      "display_name": "우리돈",
+      "의장": 2,
+      "운영위원장": 1,
+      "total_count": 3,
+      "total_amount": 1128000
+    },
+    {
+      "venue_norm": "나누리흑염소전문",
+      "display_name": "나누리 흑염소 전문",
+      "의장": 11,
+      "total_count": 11,
+      "total_amount": 1108100
+    },
+    {
+      "venue_norm": "전골마을",
+      "display_name": "전골마을",
+      "행정기획위원장": 4,
+      "의장": 2,
+      "total_count": 6,
+      "total_amount": 1107000
+    },
+    {
+      "venue_norm": "동호일식",
+      "display_name": "동호일식",
+      "의장": 3,
+      "부의장": 1,
+      "total_count": 4,
+      "total_amount": 1061000
+    },
+    {
+      "venue_norm": "청마루한우",
+      "display_name": "청마루 한우",
+      "의장": 5,
+      "복지건설위원장": 1,
+      "total_count": 6,
+      "total_amount": 1043000
+    }
+  ]
+}

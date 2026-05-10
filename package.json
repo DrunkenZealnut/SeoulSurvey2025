@@ -5,6 +5,8 @@
   "scripts": {
     "parse": "node scripts/parse_ddm_upchubi.js",
     "aggregate": "node scripts/aggregate_ddm_upchubi.js",
-    "build:data": "npm run parse && npm run aggregate"
+    "parse:hp": "node scripts/parse_council_homepage.js",
+    "aggregate:hp": "node scripts/aggregate_council_homepage.js",
+    "build:data": "npm run parse && npm run aggregate && npm run parse:hp && npm run aggregate:hp"
   }
 }

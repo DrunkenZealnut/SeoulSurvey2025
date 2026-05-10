@@ -8,5 +8,7 @@
 # 동대문구의회 업무추진비 PDF→마크다운 원본 추출 (60MB)
 # Pages 배포에 불필요. data/ 와 scripts/로 재생성 가능.
 ddm_council_upchubi/
+ddm_council_homepage/
 node_modules/
 data/ddm_upchubi.raw.json
+data/ddm_homepage.raw.json

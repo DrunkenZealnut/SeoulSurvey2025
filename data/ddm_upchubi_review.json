@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T23:45:09.125Z",
+  "generated_at": "2026-05-10T06:13:42.922Z",
   "reviews": [
     {
       "source_folder": "2025-09_180294_업무추진비집행내역(9월)",
@@ -23,6 +23,97 @@
       "reason": "amount_invalid_or_zero"
     },
     {
+      "source_folder": "20260509_074226_2023-01_124252_업무추진비집행내역_1월_",
+      "source_year_month": "2023-01",
+      "page": 3,
+      "cells_raw": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "flags": [
+        "seq_corrupt",
+        "purpose_corrupt",
+        "user_missing",
+        "venue_missing",
+        "date_invalid",
+        "headcount_missing",
+        "amount_invalid"
+      ],
+      "reason": "date_invalid"
+    },
+    {
+      "source_folder": "20260509_074946_2025-07_180292_업무추진비집행내역_7월_",
+      "source_year_month": "2025-07",
+      "page": 4,
+      "cells_raw": [
+        "12 <sup>12</sup>",
+        "의회홍보팀장",
+        "$2025 - 07 - 07$",
+        "12:52:28",
+        "카페노란코끼리",
+        "보도사항 및 의원 인터뷰 협의를 위한 지역지 기자 간담회",
+        "$\\overline{7}$",
+        "",
+        "29.000 제로페이",
+        "시책"
+      ],
+      "flags": [
+        "amount_invalid"
+      ],
+      "reason": "amount_invalid_or_zero"
+    },
+    {
+      "source_folder": "20260509_074946_2025-07_180292_업무추진비집행내역_7월_",
+      "source_year_month": "2025-07",
+      "page": 4,
+      "cells_raw": [
+        "15",
+        "의사담당",
+        "$2025 - 07 - 09$",
+        "12:10:18",
+        "통나무집",
+        "제344회 정례회 회의록 교정 관련 협의 등",
+        "$\\overline{4}$",
+        "",
+        "36.000 제로페이",
+        "시책"
+      ],
+      "flags": [
+        "amount_invalid"
+      ],
+      "reason": "amount_invalid_or_zero"
+    },
+    {
+      "source_folder": "20260509_074946_2025-07_180292_업무추진비집행내역_7월_",
+      "source_year_month": "2025-07",
+      "page": 4,
+      "cells_raw": [
+        "18",
+        "의사담당",
+        "$2025 - 07 - 10$",
+        "12:25:59",
+        "담솥 청량리역점",
+        "제345회 임시회 운영위 관련 협의 등",
+        "$\\mathbf{2}$",
+        "",
+        "34.000 제로페이",
+        "사책"
+      ],
+      "flags": [
+        "amount_invalid",
+        "category_normalized"
+      ],
+      "reason": "amount_invalid_or_zero"
+    },
+    {
       "source_folder": "20260509_075342_2025-03_174439_업무추진비집행내역_3월_",
       "source_year_month": "2025-03",
       "page": 2,
@@ -36,6 +127,27 @@
         "$\\overline{4}$",
         "",
         "77,000법인카드결제",
+        "시책"
+      ],
+      "flags": [
+        "amount_invalid"
+      ],
+      "reason": "amount_invalid_or_zero"
+    },
+    {
+      "source_folder": "20260509_085645_2025-08_180293_업무추진비집행내역_8월_",
+      "source_year_month": "2025-08",
+      "page": 3,
+      "cells_raw": [
+        "15",
+        "홍보담당",
+        "$2025 - 08 - 14$",
+        "12:11:57",
+        "나주곰탕 나주전",
+        "의원 인터뷰 관련 협의",
+        "3",
+        "",
+        "44.000 법인카드",
         "시책"
       ],
       "flags": [

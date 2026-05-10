@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-09T23:45:09.278Z",
+  "generated_at": "2026-05-10T06:14:08.034Z",
   "thresholds": {
-    "per_person_p99": 36069.64285714284,
-    "venue_total_p95": 2153596.635,
-    "venue_burst_p95": 4,
+    "per_person_p99": 40000,
+    "venue_total_p95": 2828599.9999999995,
+    "venue_burst_p95": 6,
     "same_day_min": 3,
     "late_night_hour_min": 22
   },
@@ -12,12 +12,23 @@
       "rule": "per_person_outlier",
       "severity": "warn",
       "evidence": {
+        "id": "2022-11-17-dbac20",
+        "metric": "per_person",
+        "value": 50000,
+        "threshold": 40000
+      },
+      "message_ko": "1인당 단가 50,000원이 P99(40,000원) 초과 — 사무국장 / 경조사비 / 2022-11-05"
+    },
+    {
+      "rule": "per_person_outlier",
+      "severity": "warn",
+      "evidence": {
         "id": "2022-12-3-7c71e4",
         "metric": "per_person",
         "value": 50000,
-        "threshold": 36069.64285714284
+        "threshold": 40000
       },
-      "message_ko": "1인당 단가 50,000원이 P99(36,070원) 초과 — 사무국장 직무대리 / 경조사비 / 2022-12-03"
+      "message_ko": "1인당 단가 50,000원이 P99(40,000원) 초과 — 사무국장 직무대리 / 경조사비 / 2022-12-03"
     },
     {
       "rule": "per_person_outlier",
@@ -26,9 +37,20 @@
         "id": "2022-12-42-46e1cf",
         "metric": "per_person",
         "value": 50000,
-        "threshold": 36069.64285714284
+        "threshold": 40000
       },
-      "message_ko": "1인당 단가 50,000원이 P99(36,070원) 초과 — 사무국장 직무대리 / 경조사비 / 2022-12-24"
+      "message_ko": "1인당 단가 50,000원이 P99(40,000원) 초과 — 사무국장 직무대리 / 경조사비 / 2022-12-24"
+    },
+    {
+      "rule": "per_person_outlier",
+      "severity": "warn",
+      "evidence": {
+        "id": "2023-05-15-40c390",
+        "metric": "per_person",
+        "value": 50000,
+        "threshold": 40000
+      },
+      "message_ko": "1인당 단가 50,000원이 P99(40,000원) 초과 — 사무국장 직무대리 / 집무실 / 2023-05-07"
     },
     {
       "rule": "per_person_outlier",
@@ -37,9 +59,9 @@
         "id": "2023-08-8-c7af15",
         "metric": "per_person",
         "value": 50000,
-        "threshold": 36069.64285714284
+        "threshold": 40000
       },
-      "message_ko": "1인당 단가 50,000원이 P99(36,070원) 초과 — 사무국장 직무대리 /  / 2023-08-03"
+      "message_ko": "1인당 단가 50,000원이 P99(40,000원) 초과 — 사무국장 직무대리 /  / 2023-08-03"
     },
     {
       "rule": "per_person_outlier",
@@ -48,9 +70,9 @@
         "id": "2024-11-23-249a77",
         "metric": "per_person",
         "value": 50000,
-        "threshold": 36069.64285714284
+        "threshold": 40000
       },
-      "message_ko": "1인당 단가 50,000원이 P99(36,070원) 초과 — 사무국장 /  / 2024-11-16"
+      "message_ko": "1인당 단가 50,000원이 P99(40,000원) 초과 — 사무국장 /  / 2024-11-16"
     },
     {
       "rule": "per_person_outlier",
@@ -59,9 +81,31 @@
         "id": "2024-11-33-2f081b",
         "metric": "per_person",
         "value": 50000,
-        "threshold": 36069.64285714284
+        "threshold": 40000
       },
-      "message_ko": "1인당 단가 50,000원이 P99(36,070원) 초과 — 사무국장 /  / 2024-11-23"
+      "message_ko": "1인당 단가 50,000원이 P99(40,000원) 초과 — 사무국장 /  / 2024-11-23"
+    },
+    {
+      "rule": "per_person_outlier",
+      "severity": "warn",
+      "evidence": {
+        "id": "2024-12-39-5f4c6f",
+        "metric": "per_person",
+        "value": 40000,
+        "threshold": 40000
+      },
+      "message_ko": "1인당 단가 40,000원이 P99(40,000원) 초과 — 서무주임 / 카페노란코끼리 / 2024-12-26"
+    },
+    {
+      "rule": "per_person_outlier",
+      "severity": "warn",
+      "evidence": {
+        "id": "2024-12-40-e6159a",
+        "metric": "per_person",
+        "value": 40000,
+        "threshold": 40000
+      },
+      "message_ko": "1인당 단가 40,000원이 P99(40,000원) 초과 — 서무주임 / 알리고 / 2024-12-26"
     },
     {
       "rule": "per_person_outlier",
@@ -70,20 +114,31 @@
         "id": "2024-12-41-28cb09",
         "metric": "per_person",
         "value": 40000,
-        "threshold": 36069.64285714284
+        "threshold": 40000
       },
-      "message_ko": "1인당 단가 40,000원이 P99(36,070원) 초과 — 사무국장 / 청마루 한우 / 2024-12-26"
+      "message_ko": "1인당 단가 40,000원이 P99(40,000원) 초과 — 사무국장 / 청마루 한우 / 2024-12-26"
     },
     {
       "rule": "per_person_outlier",
       "severity": "warn",
       "evidence": {
-        "id": "2025-09-28-64b81d",
+        "id": "2025-07-13-eb6503",
         "metric": "per_person",
-        "value": 36857.142857142855,
-        "threshold": 36069.64285714284
+        "value": 41750,
+        "threshold": 40000
       },
-      "message_ko": "1인당 단가 36,857.143원이 P99(36,070원) 초과 — 의회홍보팀장 / 갈비명가이상 답십리점 / 2025-09-18"
+      "message_ko": "1인당 단가 41,750원이 P99(40,000원) 초과 — 전문위원 / 상상상회 / 2025-07-07"
+    },
+    {
+      "rule": "per_person_outlier",
+      "severity": "warn",
+      "evidence": {
+        "id": "2025-08-10-44526f",
+        "metric": "per_person",
+        "value": 44166.666666666664,
+        "threshold": 40000
+      },
+      "message_ko": "1인당 단가 44,166.667원이 P99(40,000원) 초과 — 의회홍보팀장 / 야끼니꾸 청량 / 2025-08-07"
     },
     {
       "rule": "per_person_outlier",
@@ -92,9 +147,9 @@
         "id": "2025-09-29-5f6d4c",
         "metric": "per_person",
         "value": 47383.333333333336,
-        "threshold": 36069.64285714284
+        "threshold": 40000
       },
-      "message_ko": "1인당 단가 47,383.333원이 P99(36,070원) 초과 — 행정정책지원관 / 무명스키야키 / 2025-09-19"
+      "message_ko": "1인당 단가 47,383.333원이 P99(40,000원) 초과 — 행정정책지원관 / 무명스키야키 / 2025-09-19"
     },
     {
       "rule": "per_person_outlier",
@@ -103,9 +158,31 @@
         "id": "2025-09-30-2c13db",
         "metric": "per_person",
         "value": 41666.666666666664,
-        "threshold": 36069.64285714284
+        "threshold": 40000
       },
-      "message_ko": "1인당 단가 41,666.667원이 P99(36,070원) 초과 — 의회홍보팀장 / 갈비명가이상 답십리점 / 2025-09-23"
+      "message_ko": "1인당 단가 41,666.667원이 P99(40,000원) 초과 — 의회홍보팀장 / 갈비명가이상 답십리점 / 2025-09-23"
+    },
+    {
+      "rule": "per_person_outlier",
+      "severity": "warn",
+      "evidence": {
+        "id": "2025-10-5-fa7366",
+        "metric": "per_person",
+        "value": 44500,
+        "threshold": 40000
+      },
+      "message_ko": "1인당 단가 44,500원이 P99(40,000원) 초과 — 의회홍보팀장 / 갈비명가이상 답십리점 / 2025-10-02"
+    },
+    {
+      "rule": "per_person_outlier",
+      "severity": "warn",
+      "evidence": {
+        "id": "2025-10-8-06407a",
+        "metric": "per_person",
+        "value": 50000,
+        "threshold": 40000
+      },
+      "message_ko": "1인당 단가 50,000원이 P99(40,000원) 초과 — 사무국장 / 경조사비 / 2025-10-11"
     },
     {
       "rule": "per_person_outlier",
@@ -114,9 +191,9 @@
         "id": "2025-11-23-4aa7ac",
         "metric": "per_person",
         "value": 50000,
-        "threshold": 36069.64285714284
+        "threshold": 40000
       },
-      "message_ko": "1인당 단가 50,000원이 P99(36,070원) 초과 — 사무국장 /  / 2025-11-16"
+      "message_ko": "1인당 단가 50,000원이 P99(40,000원) 초과 — 사무국장 /  / 2025-11-16"
     },
     {
       "rule": "per_person_outlier",
@@ -125,9 +202,31 @@
         "id": "2025-11-33-0baffa",
         "metric": "per_person",
         "value": 50000,
-        "threshold": 36069.64285714284
+        "threshold": 40000
       },
-      "message_ko": "1인당 단가 50,000원이 P99(36,070원) 초과 — 사무국장 /  / 2025-11-23"
+      "message_ko": "1인당 단가 50,000원이 P99(40,000원) 초과 — 사무국장 /  / 2025-11-23"
+    },
+    {
+      "rule": "per_person_outlier",
+      "severity": "warn",
+      "evidence": {
+        "id": "2025-12-39-bec69b",
+        "metric": "per_person",
+        "value": 40000,
+        "threshold": 40000
+      },
+      "message_ko": "1인당 단가 40,000원이 P99(40,000원) 초과 — 서무주임 / 카페노란코끼리 / 2025-12-26"
+    },
+    {
+      "rule": "per_person_outlier",
+      "severity": "warn",
+      "evidence": {
+        "id": "2025-12-40-8bcacf",
+        "metric": "per_person",
+        "value": 40000,
+        "threshold": 40000
+      },
+      "message_ko": "1인당 단가 40,000원이 P99(40,000원) 초과 — 서무주임 / 알리고 / 2025-12-26"
     },
     {
       "rule": "per_person_outlier",
@@ -136,9 +235,9 @@
         "id": "2025-12-41-fa4cb8",
         "metric": "per_person",
         "value": 40000,
-        "threshold": 36069.64285714284
+        "threshold": 40000
       },
-      "message_ko": "1인당 단가 40,000원이 P99(36,070원) 초과 — 사무국장 / 청마루 한우 / 2025-12-26"
+      "message_ko": "1인당 단가 40,000원이 P99(40,000원) 초과 — 사무국장 / 청마루 한우 / 2025-12-26"
     },
     {
       "rule": "per_person_outlier",
@@ -147,9 +246,9 @@
         "id": "2026-02-3-0ab3c7",
         "metric": "per_person",
         "value": 48800,
-        "threshold": 36069.64285714284
+        "threshold": 40000
       },
-      "message_ko": "1인당 단가 48,800원이 P99(36,070원) 초과 — 의회홍보팀장 / 김낙천 참치 / 2026-02-02"
+      "message_ko": "1인당 단가 48,800원이 P99(40,000원) 초과 — 의회홍보팀장 / 김낙천 참치 / 2026-02-02"
     },
     {
       "rule": "per_person_outlier",
@@ -158,9 +257,9 @@
         "id": "2026-02-7-c818aa",
         "metric": "per_person",
         "value": 41000,
-        "threshold": 36069.64285714284
+        "threshold": 40000
       },
-      "message_ko": "1인당 단가 41,000원이 P99(36,070원) 초과 — 의회홍보팀장 / 샤로스톤(이문동점) / 2026-02-03"
+      "message_ko": "1인당 단가 41,000원이 P99(40,000원) 초과 — 의회홍보팀장 / 샤로스톤(이문동점) / 2026-02-03"
     },
     {
       "rule": "venue_total_outlier",
@@ -168,10 +267,10 @@
       "evidence": {
         "venue_norm": "청마루한우",
         "metric": "venue_total_amount",
-        "value": 21723000,
-        "threshold": 2153596.635
+        "value": 28637000,
+        "threshold": 2828599.9999999995
       },
-      "message_ko": "청마루한우 누적 사용액 21,723,000원이 P95(2,153,597원) 초과 (134건)"
+      "message_ko": "청마루한우 누적 사용액 28,637,000원이 P95(2,828,600원) 초과 (179건)"
     },
     {
       "rule": "venue_total_outlier",
@@ -179,10 +278,32 @@
       "evidence": {
         "venue_norm": "최강낙자",
         "metric": "venue_total_amount",
-        "value": 9947000,
-        "threshold": 2153596.635
+        "value": 14378000,
+        "threshold": 2828599.9999999995
       },
-      "message_ko": "최강낙지 누적 사용액 9,947,000원이 P95(2,153,597원) 초과 (74건)"
+      "message_ko": "최강낙지 누적 사용액 14,378,000원이 P95(2,828,600원) 초과 (110건)"
+    },
+    {
+      "rule": "venue_total_outlier",
+      "severity": "high",
+      "evidence": {
+        "venue_norm": "경성농장",
+        "metric": "venue_total_amount",
+        "value": 7754600,
+        "threshold": 2828599.9999999995
+      },
+      "message_ko": "경성농장 누적 사용액 7,754,600원이 P95(2,828,600원) 초과 (64건)"
+    },
+    {
+      "rule": "venue_total_outlier",
+      "severity": "high",
+      "evidence": {
+        "venue_norm": "참숯갈비화로촌",
+        "metric": "venue_total_amount",
+        "value": 7502000,
+        "threshold": 2828599.9999999995
+      },
+      "message_ko": "참숯갈비 화로촌 누적 사용액 7,502,000원이 P95(2,828,600원) 초과 (61건)"
     },
     {
       "rule": "venue_total_outlier",
@@ -191,31 +312,9 @@
         "venue_norm": "마루샤브용두직영점",
         "metric": "venue_total_amount",
         "value": 6915800,
-        "threshold": 2153596.635
+        "threshold": 2828599.9999999995
       },
-      "message_ko": "마루샤브 용두직영점 누적 사용액 6,915,800원이 P95(2,153,597원) 초과 (5건)"
-    },
-    {
-      "rule": "venue_total_outlier",
-      "severity": "high",
-      "evidence": {
-        "venue_norm": "참숯갈비화로촌",
-        "metric": "venue_total_amount",
-        "value": 6212000,
-        "threshold": 2153596.635
-      },
-      "message_ko": "참숯갈비화로촌 누적 사용액 6,212,000원이 P95(2,153,597원) 초과 (50건)"
-    },
-    {
-      "rule": "venue_total_outlier",
-      "severity": "high",
-      "evidence": {
-        "venue_norm": "경성농장",
-        "metric": "venue_total_amount",
-        "value": 5792400,
-        "threshold": 2153596.635
-      },
-      "message_ko": "경성농장 누적 사용액 5,792,400원이 P95(2,153,597원) 초과 (48건)"
+      "message_ko": "마루샤브 용두직영점 누적 사용액 6,915,800원이 P95(2,828,600원) 초과 (5건)"
     },
     {
       "rule": "venue_total_outlier",
@@ -223,10 +322,10 @@
       "evidence": {
         "venue_norm": "옥돌",
         "metric": "venue_total_amount",
-        "value": 4439000,
-        "threshold": 2153596.635
+        "value": 5900000,
+        "threshold": 2828599.9999999995
       },
-      "message_ko": "옥돌 누적 사용액 4,439,000원이 P95(2,153,597원) 초과 (44건)"
+      "message_ko": "옥돌 누적 사용액 5,900,000원이 P95(2,828,600원) 초과 (58건)"
     },
     {
       "rule": "venue_total_outlier",
@@ -234,21 +333,21 @@
       "evidence": {
         "venue_norm": "할머니홍어집",
         "metric": "venue_total_amount",
-        "value": 3564000,
-        "threshold": 2153596.635
+        "value": 4395000,
+        "threshold": 2828599.9999999995
       },
-      "message_ko": "할머니홍어집 누적 사용액 3,564,000원이 P95(2,153,597원) 초과 (24건)"
+      "message_ko": "할머니홍어집 누적 사용액 4,395,000원이 P95(2,828,600원) 초과 (31건)"
     },
     {
       "rule": "venue_total_outlier",
       "severity": "high",
       "evidence": {
-        "venue_norm": "조영환의대양한방숯불갈비",
+        "venue_norm": "나주곰탕나주전",
         "metric": "venue_total_amount",
-        "value": 3376000,
-        "threshold": 2153596.635
+        "value": 4394000,
+        "threshold": 2828599.9999999995
       },
-      "message_ko": "조영환의대양한방숯불 누적 사용액 3,376,000원이 P95(2,153,597원) 초과 (18건)"
+      "message_ko": "나주곰탕 나주전 누적 사용액 4,394,000원이 P95(2,828,600원) 초과 (53건)"
     },
     {
       "rule": "venue_total_outlier",
@@ -256,10 +355,21 @@
       "evidence": {
         "venue_norm": "우리식당",
         "metric": "venue_total_amount",
-        "value": 3317000,
-        "threshold": 2153596.635
+        "value": 4294000,
+        "threshold": 2828599.9999999995
       },
-      "message_ko": "우리식당 누적 사용액 3,317,000원이 P95(2,153,597원) 초과 (29건)"
+      "message_ko": "우리식당 누적 사용액 4,294,000원이 P95(2,828,600원) 초과 (40건)"
+    },
+    {
+      "rule": "venue_total_outlier",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "조영환의대양한방숯불갈비",
+        "metric": "venue_total_amount",
+        "value": 3969000,
+        "threshold": 2828599.9999999995
+      },
+      "message_ko": "조영환의대양한방숯불 누적 사용액 3,969,000원이 P95(2,828,600원) 초과 (21건)"
     },
     {
       "rule": "venue_total_outlier",
@@ -267,32 +377,10 @@
       "evidence": {
         "venue_norm": "우정김밥분식",
         "metric": "venue_total_amount",
-        "value": 2809000,
-        "threshold": 2153596.635
+        "value": 3813500,
+        "threshold": 2828599.9999999995
       },
-      "message_ko": "우정김밥분식 누적 사용액 2,809,000원이 P95(2,153,597원) 초과 (32건)"
-    },
-    {
-      "rule": "venue_total_outlier",
-      "severity": "warn",
-      "evidence": {
-        "venue_norm": "장어시대",
-        "metric": "venue_total_amount",
-        "value": 2578000,
-        "threshold": 2153596.635
-      },
-      "message_ko": "장어시대 누적 사용액 2,578,000원이 P95(2,153,597원) 초과 (10건)"
-    },
-    {
-      "rule": "venue_total_outlier",
-      "severity": "warn",
-      "evidence": {
-        "venue_norm": "나주곰탕나주전",
-        "metric": "venue_total_amount",
-        "value": 2538000,
-        "threshold": 2153596.635
-      },
-      "message_ko": "나주곰탕 나주전 누적 사용액 2,538,000원이 P95(2,153,597원) 초과 (32건)"
+      "message_ko": "우정김밥분식 누적 사용액 3,813,500원이 P95(2,828,600원) 초과 (42건)"
     },
     {
       "rule": "venue_total_outlier",
@@ -300,21 +388,21 @@
       "evidence": {
         "venue_norm": "중국성",
         "metric": "venue_total_amount",
-        "value": 2423500,
-        "threshold": 2153596.635
+        "value": 3788500,
+        "threshold": 2828599.9999999995
       },
-      "message_ko": "중국성 누적 사용액 2,423,500원이 P95(2,153,597원) 초과 (22건)"
+      "message_ko": "중국성 누적 사용액 3,788,500원이 P95(2,828,600원) 초과 (32건)"
     },
     {
       "rule": "venue_total_outlier",
       "severity": "warn",
       "evidence": {
-        "venue_norm": "청마루",
+        "venue_norm": "장어시대",
         "metric": "venue_total_amount",
-        "value": 2364800,
-        "threshold": 2153596.635
+        "value": 3484000,
+        "threshold": 2828599.9999999995
       },
-      "message_ko": "청마루 누적 사용액 2,364,800원이 P95(2,153,597원) 초과 (10건)"
+      "message_ko": "장어시대 누적 사용액 3,484,000원이 P95(2,828,600원) 초과 (15건)"
     },
     {
       "rule": "venue_total_outlier",
@@ -322,10 +410,78 @@
       "evidence": {
         "venue_norm": "친친",
         "metric": "venue_total_amount",
-        "value": 2155000,
-        "threshold": 2153596.635
+        "value": 3455000,
+        "threshold": 2828599.9999999995
       },
-      "message_ko": "친친 누적 사용액 2,155,000원이 P95(2,153,597원) 초과 (27건)"
+      "message_ko": "친친 누적 사용액 3,455,000원이 P95(2,828,600원) 초과 (41건)"
+    },
+    {
+      "rule": "venue_total_outlier",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "알리고",
+        "metric": "venue_total_amount",
+        "value": 3276500,
+        "threshold": 2828599.9999999995
+      },
+      "message_ko": "알리고 누적 사용액 3,276,500원이 P95(2,828,600원) 초과 (14건)"
+    },
+    {
+      "rule": "venue_total_outlier",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "카페노란코끼리",
+        "metric": "venue_total_amount",
+        "value": 2933732.7,
+        "threshold": 2828599.9999999995
+      },
+      "message_ko": "카페노란코끼리 누적 사용액 2,933,732.7원이 P95(2,828,600원) 초과 (42건)"
+    },
+    {
+      "rule": "venue_total_outlier",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루",
+        "metric": "venue_total_amount",
+        "value": 2893800,
+        "threshold": 2828599.9999999995
+      },
+      "message_ko": "청마루 누적 사용액 2,893,800원이 P95(2,828,600원) 초과 (14건)"
+    },
+    {
+      "rule": "venue_total_outlier",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "산천가든",
+        "metric": "venue_total_amount",
+        "value": 2831000,
+        "threshold": 2828599.9999999995
+      },
+      "message_ko": "산천가든 누적 사용액 2,831,000원이 P95(2,828,600원) 초과 (28건)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "참숯갈비화로촌",
+        "window": "30d ending 2024-04-12",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "참숯갈비화로촌 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2022-09-07",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -334,10 +490,34 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2022-09-16",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
+        "value": 6,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 5회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2022-11-10",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2022-11-11",
+        "metric": "rolling_count",
+        "value": 7,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -346,10 +526,46 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2022-11-15",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
+        "value": 8,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 5회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 8회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2022-11-22",
+        "metric": "rolling_count",
+        "value": 7,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2023-06-29",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2023-07-05",
+        "metric": "rolling_count",
+        "value": 7,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -358,10 +574,10 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2023-07-12",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
+        "value": 7,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 5회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -370,70 +586,46 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2023-07-17",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
+        "value": 6,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 5회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
-      "severity": "high",
+      "severity": "warn",
       "evidence": {
         "venue_norm": "청마루한우",
         "window": "30d ending 2023-07-18",
         "metric": "rolling_count",
-        "value": 6,
-        "threshold": 4
+        "value": 7,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
-      "severity": "high",
+      "severity": "warn",
       "evidence": {
         "venue_norm": "청마루한우",
         "window": "30d ending 2023-07-24",
         "metric": "rolling_count",
-        "value": 6,
-        "threshold": 4
+        "value": 7,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
       "severity": "warn",
-      "evidence": {
-        "venue_norm": "청마루한우",
-        "window": "30d ending 2023-09-13",
-        "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
-      },
-      "message_ko": "청마루한우 최근 30일 내 5회 사용 (P95 4.0 초과)"
-    },
-    {
-      "rule": "venue_burst",
-      "severity": "warn",
-      "evidence": {
-        "venue_norm": "청마루한우",
-        "window": "30d ending 2023-09-25",
-        "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
-      },
-      "message_ko": "청마루한우 최근 30일 내 5회 사용 (P95 4.0 초과)"
-    },
-    {
-      "rule": "venue_burst",
-      "severity": "high",
       "evidence": {
         "venue_norm": "청마루한우",
         "window": "30d ending 2023-09-27",
         "metric": "rolling_count",
         "value": 6,
-        "threshold": 4
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -442,10 +634,34 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2023-11-13",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
+        "value": 6,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 5회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2023-11-28",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2023-11-29",
+        "metric": "rolling_count",
+        "value": 7,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -454,10 +670,10 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2023-11-30",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
+        "value": 8,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 5회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 8회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -466,10 +682,10 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2023-11-30",
         "metric": "rolling_count",
-        "value": 6,
-        "threshold": 4
+        "value": 9,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 9회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -478,10 +694,10 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2023-12-04",
         "metric": "rolling_count",
-        "value": 6,
-        "threshold": 4
+        "value": 9,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 9회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -490,10 +706,10 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2023-12-05",
         "metric": "rolling_count",
-        "value": 7,
-        "threshold": 4
+        "value": 10,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 10회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -502,10 +718,10 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2023-12-06",
         "metric": "rolling_count",
-        "value": 8,
-        "threshold": 4
+        "value": 11,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 8회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 11회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -514,10 +730,10 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2023-12-11",
         "metric": "rolling_count",
-        "value": 8,
-        "threshold": 4
+        "value": 10,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 8회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 10회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -526,10 +742,10 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2023-12-13",
         "metric": "rolling_count",
-        "value": 9,
-        "threshold": 4
+        "value": 11,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 9회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 11회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -538,10 +754,10 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2023-12-14",
         "metric": "rolling_count",
-        "value": 9,
-        "threshold": 4
+        "value": 11,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 9회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 11회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -550,10 +766,10 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2023-12-18",
         "metric": "rolling_count",
-        "value": 10,
-        "threshold": 4
+        "value": 12,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 10회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 12회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -562,10 +778,10 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2023-12-26",
         "metric": "rolling_count",
-        "value": 11,
-        "threshold": 4
+        "value": 13,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 11회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 13회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -574,10 +790,10 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2023-12-28",
         "metric": "rolling_count",
-        "value": 11,
-        "threshold": 4
+        "value": 13,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 11회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 13회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -587,9 +803,9 @@
         "window": "30d ending 2024-01-02",
         "metric": "rolling_count",
         "value": 10,
-        "threshold": 4
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 10회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 10회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -599,9 +815,9 @@
         "window": "30d ending 2024-01-05",
         "metric": "rolling_count",
         "value": 9,
-        "threshold": 4
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 9회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 9회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -611,9 +827,9 @@
         "window": "30d ending 2024-01-10",
         "metric": "rolling_count",
         "value": 9,
-        "threshold": 4
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 9회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 9회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -623,9 +839,21 @@
         "window": "30d ending 2024-01-11",
         "metric": "rolling_count",
         "value": 9,
-        "threshold": 4
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 9회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 9회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2024-01-17",
+        "metric": "rolling_count",
+        "value": 8,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 8회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -634,58 +862,46 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2024-01-29",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
+        "value": 6,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 5회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
       "severity": "warn",
-      "evidence": {
-        "venue_norm": "청마루한우",
-        "window": "30d ending 2024-03-14",
-        "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
-      },
-      "message_ko": "청마루한우 최근 30일 내 5회 사용 (P95 4.0 초과)"
-    },
-    {
-      "rule": "venue_burst",
-      "severity": "warn",
-      "evidence": {
-        "venue_norm": "청마루한우",
-        "window": "30d ending 2024-03-25",
-        "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
-      },
-      "message_ko": "청마루한우 최근 30일 내 5회 사용 (P95 4.0 초과)"
-    },
-    {
-      "rule": "venue_burst",
-      "severity": "high",
       "evidence": {
         "venue_norm": "청마루한우",
         "window": "30d ending 2024-03-29",
         "metric": "rolling_count",
         "value": 6,
-        "threshold": 4
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
-      "severity": "high",
+      "severity": "warn",
       "evidence": {
         "venue_norm": "청마루한우",
         "window": "30d ending 2024-04-02",
         "metric": "rolling_count",
         "value": 7,
-        "threshold": 4
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2024-04-22",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -694,10 +910,34 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2024-04-23",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
+        "value": 7,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 5회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2024-05-01",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2024-05-13",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -706,10 +946,10 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2024-05-28",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
+        "value": 6,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 5회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -718,46 +958,58 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2024-06-03",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
+        "value": 6,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 5회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
-      "severity": "high",
+      "severity": "warn",
       "evidence": {
         "venue_norm": "청마루한우",
         "window": "30d ending 2024-06-04",
         "metric": "rolling_count",
-        "value": 6,
-        "threshold": 4
+        "value": 7,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
-      "severity": "high",
+      "severity": "warn",
       "evidence": {
         "venue_norm": "청마루한우",
         "window": "30d ending 2024-06-10",
         "metric": "rolling_count",
-        "value": 7,
-        "threshold": 4
+        "value": 8,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 8회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
-      "severity": "high",
+      "severity": "warn",
       "evidence": {
         "venue_norm": "청마루한우",
         "window": "30d ending 2024-06-13",
         "metric": "rolling_count",
-        "value": 7,
-        "threshold": 4
+        "value": 8,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 8회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2024-06-20",
+        "metric": "rolling_count",
+        "value": 8,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 8회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -766,10 +1018,10 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2024-06-26",
         "metric": "rolling_count",
-        "value": 8,
-        "threshold": 4
+        "value": 9,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 8회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 9회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -778,10 +1030,46 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2024-07-04",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
+        "value": 6,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 5회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2024-07-10",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2024-07-12",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2024-07-15",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -790,22 +1078,22 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2024-07-16",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
+        "value": 7,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 5회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
-      "severity": "high",
+      "severity": "warn",
       "evidence": {
         "venue_norm": "청마루한우",
         "window": "30d ending 2024-07-16",
         "metric": "rolling_count",
-        "value": 6,
-        "threshold": 4
+        "value": 8,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 8회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -814,46 +1102,94 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2024-07-19",
         "metric": "rolling_count",
-        "value": 7,
-        "threshold": 4
+        "value": 9,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 4.0 초과)"
-    },
-    {
-      "rule": "venue_burst",
-      "severity": "high",
-      "evidence": {
-        "venue_norm": "청마루한우",
-        "window": "30d ending 2024-07-29",
-        "metric": "rolling_count",
-        "value": 7,
-        "threshold": 4
-      },
-      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 4.0 초과)"
-    },
-    {
-      "rule": "venue_burst",
-      "severity": "high",
-      "evidence": {
-        "venue_norm": "청마루한우",
-        "window": "30d ending 2024-08-13",
-        "metric": "rolling_count",
-        "value": 6,
-        "threshold": 4
-      },
-      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 9회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
       "severity": "warn",
       "evidence": {
         "venue_norm": "청마루한우",
-        "window": "30d ending 2024-09-24",
+        "window": "30d ending 2024-07-29",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
+        "value": 8,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 5회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 8회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2024-08-13",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2024-09-03",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2024-09-19",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2024-11-07",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2024-12-04",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2024-12-06",
+        "metric": "rolling_count",
+        "value": 7,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -862,34 +1198,34 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2024-12-17",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
-      },
-      "message_ko": "청마루한우 최근 30일 내 5회 사용 (P95 4.0 초과)"
-    },
-    {
-      "rule": "venue_burst",
-      "severity": "high",
-      "evidence": {
-        "venue_norm": "청마루한우",
-        "window": "30d ending 2024-12-18",
-        "metric": "rolling_count",
         "value": 6,
-        "threshold": 4
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
-      "severity": "high",
+      "severity": "warn",
       "evidence": {
         "venue_norm": "청마루한우",
         "window": "30d ending 2024-12-18",
         "metric": "rolling_count",
         "value": 7,
-        "threshold": 4
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2024-12-18",
+        "metric": "rolling_count",
+        "value": 8,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 8회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -898,10 +1234,10 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2024-12-19",
         "metric": "rolling_count",
-        "value": 8,
-        "threshold": 4
+        "value": 9,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 8회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 9회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -910,22 +1246,58 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2024-12-26",
         "metric": "rolling_count",
-        "value": 9,
-        "threshold": 4
+        "value": 10,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 9회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 10회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
-      "severity": "high",
+      "severity": "warn",
       "evidence": {
         "venue_norm": "청마루한우",
         "window": "30d ending 2025-01-06",
         "metric": "rolling_count",
         "value": 6,
-        "threshold": 4
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2025-11-07",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2025-12-04",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2025-12-06",
+        "metric": "rolling_count",
+        "value": 7,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -934,34 +1306,34 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2025-12-17",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
-      },
-      "message_ko": "청마루한우 최근 30일 내 5회 사용 (P95 4.0 초과)"
-    },
-    {
-      "rule": "venue_burst",
-      "severity": "high",
-      "evidence": {
-        "venue_norm": "청마루한우",
-        "window": "30d ending 2025-12-18",
-        "metric": "rolling_count",
         "value": 6,
-        "threshold": 4
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
-      "severity": "high",
+      "severity": "warn",
       "evidence": {
         "venue_norm": "청마루한우",
         "window": "30d ending 2025-12-18",
         "metric": "rolling_count",
         "value": 7,
-        "threshold": 4
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2025-12-18",
+        "metric": "rolling_count",
+        "value": 8,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 8회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -970,10 +1342,10 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2025-12-19",
         "metric": "rolling_count",
-        "value": 8,
-        "threshold": 4
+        "value": 9,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 8회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 9회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -982,34 +1354,82 @@
         "venue_norm": "청마루한우",
         "window": "30d ending 2025-12-26",
         "metric": "rolling_count",
-        "value": 9,
-        "threshold": 4
+        "value": 10,
+        "threshold": 6
       },
-      "message_ko": "청마루한우 최근 30일 내 9회 사용 (P95 4.0 초과)"
-    },
-    {
-      "rule": "venue_burst",
-      "severity": "high",
-      "evidence": {
-        "venue_norm": "청마루한우",
-        "window": "30d ending 2026-01-05",
-        "metric": "rolling_count",
-        "value": 6,
-        "threshold": 4
-      },
-      "message_ko": "청마루한우 최근 30일 내 6회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 10회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
       "severity": "warn",
       "evidence": {
-        "venue_norm": "최강낙자",
-        "window": "30d ending 2023-07-28",
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2026-01-05",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
+        "value": 7,
+        "threshold": 6
       },
-      "message_ko": "최강낙자 최근 30일 내 5회 사용 (P95 4.0 초과)"
+      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "청마루한우",
+        "window": "30d ending 2026-01-12",
+        "metric": "rolling_count",
+        "value": 7,
+        "threshold": 6
+      },
+      "message_ko": "청마루한우 최근 30일 내 7회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "경성농장",
+        "window": "30d ending 2023-08-24",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "경성농장 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "경성농장",
+        "window": "30d ending 2023-08-30",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "경성농장 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "경성농장",
+        "window": "30d ending 2023-09-06",
+        "metric": "rolling_count",
+        "value": 7,
+        "threshold": 6
+      },
+      "message_ko": "경성농장 최근 30일 내 7회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "경성농장",
+        "window": "30d ending 2023-09-13",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "경성농장 최근 30일 내 6회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -1018,10 +1438,178 @@
         "venue_norm": "최강낙자",
         "window": "30d ending 2024-06-11",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
+        "value": 6,
+        "threshold": 6
       },
-      "message_ko": "최강낙자 최근 30일 내 5회 사용 (P95 4.0 초과)"
+      "message_ko": "최강낙자 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "최강낙자",
+        "window": "30d ending 2024-06-14",
+        "metric": "rolling_count",
+        "value": 7,
+        "threshold": 6
+      },
+      "message_ko": "최강낙자 최근 30일 내 7회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "최강낙자",
+        "window": "30d ending 2024-06-20",
+        "metric": "rolling_count",
+        "value": 8,
+        "threshold": 6
+      },
+      "message_ko": "최강낙자 최근 30일 내 8회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "최강낙자",
+        "window": "30d ending 2024-12-05",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "최강낙자 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "최강낙자",
+        "window": "30d ending 2024-12-11",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "최강낙자 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "최강낙자",
+        "window": "30d ending 2025-04-04",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "최강낙자 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "최강낙자",
+        "window": "30d ending 2025-08-06",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "최강낙자 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "최강낙자",
+        "window": "30d ending 2025-08-14",
+        "metric": "rolling_count",
+        "value": 7,
+        "threshold": 6
+      },
+      "message_ko": "최강낙자 최근 30일 내 7회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "최강낙자",
+        "window": "30d ending 2025-08-25",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "최강낙자 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "최강낙자",
+        "window": "30d ending 2025-08-26",
+        "metric": "rolling_count",
+        "value": 7,
+        "threshold": 6
+      },
+      "message_ko": "최강낙자 최근 30일 내 7회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "최강낙자",
+        "window": "30d ending 2025-11-06",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "최강낙자 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "최강낙자",
+        "window": "30d ending 2025-11-11",
+        "metric": "rolling_count",
+        "value": 7,
+        "threshold": 6
+      },
+      "message_ko": "최강낙자 최근 30일 내 7회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "최강낙자",
+        "window": "30d ending 2025-12-05",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "최강낙자 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "최강낙자",
+        "window": "30d ending 2025-12-11",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "최강낙자 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "동대문구청구내매점",
+        "window": "30d ending 2022-08-10",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "동대문구청구내매점 최근 30일 내 6회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -1030,58 +1618,46 @@
         "venue_norm": "동대문구청구내매점",
         "window": "30d ending 2022-08-11",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
+        "value": 7,
+        "threshold": 6
       },
-      "message_ko": "동대문구청구내매점 최근 30일 내 5회 사용 (P95 4.0 초과)"
+      "message_ko": "동대문구청구내매점 최근 30일 내 7회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
-      "severity": "high",
+      "severity": "warn",
       "evidence": {
         "venue_norm": "동대문구청구내매점",
         "window": "30d ending 2022-08-23",
         "metric": "rolling_count",
-        "value": 6,
-        "threshold": 4
+        "value": 8,
+        "threshold": 6
       },
-      "message_ko": "동대문구청구내매점 최근 30일 내 6회 사용 (P95 4.0 초과)"
+      "message_ko": "동대문구청구내매점 최근 30일 내 8회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
       "severity": "warn",
       "evidence": {
-        "venue_norm": "참숯갈비화로촌",
-        "window": "30d ending 2024-04-12",
-        "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
-      },
-      "message_ko": "참숯갈비화로촌 최근 30일 내 5회 사용 (P95 4.0 초과)"
-    },
-    {
-      "rule": "venue_burst",
-      "severity": "high",
-      "evidence": {
-        "venue_norm": "참숯갈비화로촌",
-        "window": "30d ending 2024-04-12",
+        "venue_norm": "우정김밥분식",
+        "window": "30d ending 2022-11-24",
         "metric": "rolling_count",
         "value": 6,
-        "threshold": 4
+        "threshold": 6
       },
-      "message_ko": "참숯갈비화로촌 최근 30일 내 6회 사용 (P95 4.0 초과)"
+      "message_ko": "우정김밥분식 최근 30일 내 6회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
       "severity": "warn",
       "evidence": {
-        "venue_norm": "카페노란코끼리",
-        "window": "30d ending 2025-06-04",
+        "venue_norm": "옥돌",
+        "window": "30d ending 2024-12-04",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
+        "value": 6,
+        "threshold": 6
       },
-      "message_ko": "카페노란코끼리 최근 30일 내 5회 사용 (P95 4.0 초과)"
+      "message_ko": "옥돌 최근 30일 내 6회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -1090,34 +1666,34 @@
         "venue_norm": "옥돌",
         "window": "30d ending 2024-12-05",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
+        "value": 7,
+        "threshold": 6
       },
-      "message_ko": "옥돌 최근 30일 내 5회 사용 (P95 4.0 초과)"
+      "message_ko": "옥돌 최근 30일 내 7회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
-      "severity": "high",
+      "severity": "warn",
       "evidence": {
         "venue_norm": "옥돌",
         "window": "30d ending 2024-12-16",
         "metric": "rolling_count",
         "value": 6,
-        "threshold": 4
+        "threshold": 6
       },
-      "message_ko": "옥돌 최근 30일 내 6회 사용 (P95 4.0 초과)"
+      "message_ko": "옥돌 최근 30일 내 6회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
-      "severity": "high",
+      "severity": "warn",
       "evidence": {
         "venue_norm": "옥돌",
         "window": "30d ending 2024-12-16",
         "metric": "rolling_count",
         "value": 7,
-        "threshold": 4
+        "threshold": 6
       },
-      "message_ko": "옥돌 최근 30일 내 7회 사용 (P95 4.0 초과)"
+      "message_ko": "옥돌 최근 30일 내 7회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -1126,10 +1702,22 @@
         "venue_norm": "옥돌",
         "window": "30d ending 2025-05-01",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
+        "value": 6,
+        "threshold": 6
       },
-      "message_ko": "옥돌 최근 30일 내 5회 사용 (P95 4.0 초과)"
+      "message_ko": "옥돌 최근 30일 내 6회 사용 (P95 6.0 초과)"
+    },
+    {
+      "rule": "venue_burst",
+      "severity": "warn",
+      "evidence": {
+        "venue_norm": "옥돌",
+        "window": "30d ending 2025-12-04",
+        "metric": "rolling_count",
+        "value": 6,
+        "threshold": 6
+      },
+      "message_ko": "옥돌 최근 30일 내 6회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
@@ -1138,34 +1726,34 @@
         "venue_norm": "옥돌",
         "window": "30d ending 2025-12-05",
         "metric": "rolling_count",
-        "value": 5,
-        "threshold": 4
+        "value": 7,
+        "threshold": 6
       },
-      "message_ko": "옥돌 최근 30일 내 5회 사용 (P95 4.0 초과)"
+      "message_ko": "옥돌 최근 30일 내 7회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
-      "severity": "high",
+      "severity": "warn",
       "evidence": {
         "venue_norm": "옥돌",
         "window": "30d ending 2025-12-16",
         "metric": "rolling_count",
         "value": 6,
-        "threshold": 4
+        "threshold": 6
       },
-      "message_ko": "옥돌 최근 30일 내 6회 사용 (P95 4.0 초과)"
+      "message_ko": "옥돌 최근 30일 내 6회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "venue_burst",
-      "severity": "high",
+      "severity": "warn",
       "evidence": {
         "venue_norm": "옥돌",
         "window": "30d ending 2025-12-16",
         "metric": "rolling_count",
         "value": 7,
-        "threshold": 4
+        "threshold": 6
       },
-      "message_ko": "옥돌 최근 30일 내 7회 사용 (P95 4.0 초과)"
+      "message_ko": "옥돌 최근 30일 내 7회 사용 (P95 6.0 초과)"
     },
     {
       "rule": "same_day_multi",
@@ -1195,7 +1783,27 @@
         "value": 3,
         "threshold": 3
       },
+      "message_ko": "사무국장 2022-09-01에 3건 집행 (합계 148,740원)"
+    },
+    {
+      "rule": "same_day_multi",
+      "severity": "warn",
+      "evidence": {
+        "metric": "same_day_count",
+        "value": 3,
+        "threshold": 3
+      },
       "message_ko": "사무국장 2022-10-21에 3건 집행 (합계 200,000원)"
+    },
+    {
+      "rule": "same_day_multi",
+      "severity": "warn",
+      "evidence": {
+        "metric": "same_day_count",
+        "value": 3,
+        "threshold": 3
+      },
+      "message_ko": "의정팀장 2022-12-22에 3건 집행 (합계 632,500원)"
     },
     {
       "rule": "same_day_multi",
@@ -1235,7 +1843,37 @@
         "value": 3,
         "threshold": 3
       },
+      "message_ko": "사무국장 직무대리 2024-09-10에 3건 집행 (합계 819,000원)"
+    },
+    {
+      "rule": "same_day_multi",
+      "severity": "warn",
+      "evidence": {
+        "metric": "same_day_count",
+        "value": 3,
+        "threshold": 3
+      },
       "message_ko": "국서무 2025-01-07에 3건 집행 (합계 2,620,000원)"
+    },
+    {
+      "rule": "same_day_multi",
+      "severity": "warn",
+      "evidence": {
+        "metric": "same_day_count",
+        "value": 3,
+        "threshold": 3
+      },
+      "message_ko": "인사담당 2025-04-02에 3건 집행 (합계 163,950원)"
+    },
+    {
+      "rule": "same_day_multi",
+      "severity": "warn",
+      "evidence": {
+        "metric": "same_day_count",
+        "value": 3,
+        "threshold": 3
+      },
+      "message_ko": "인사담당 2025-04-04에 3건 집행 (합계 134,500원)"
     },
     {
       "rule": "same_day_multi",
@@ -1299,6 +1937,28 @@
         "threshold": 22
       },
       "message_ko": "심야/이른새벽 집행 — 의회홍보팀장 / 안주 / 2024-07-22 22:20:51"
+    },
+    {
+      "rule": "late_night",
+      "severity": "info",
+      "evidence": {
+        "id": "2024-10-11-e651c8",
+        "metric": "hour",
+        "value": 22,
+        "threshold": 22
+      },
+      "message_ko": "심야/이른새벽 집행 — 의정팀장 / 닭으로가 / 2024-10-12 22:06:10"
+    },
+    {
+      "rule": "late_night",
+      "severity": "info",
+      "evidence": {
+        "id": "2025-07-13-eb6503",
+        "metric": "hour",
+        "value": 22,
+        "threshold": 22
+      },
+      "message_ko": "심야/이른새벽 집행 — 전문위원 / 상상상회 / 2025-07-07 22:00:51"
     }
   ]
 }
